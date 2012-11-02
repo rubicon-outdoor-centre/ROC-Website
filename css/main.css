@@ -746,6 +746,9 @@ body {
 /*****************/
 
 @media (max-width: 30em) { /* 480 */
+    html {
+        font-size: 85%;
+    }
     .grid {
         margin: 0;
     }
