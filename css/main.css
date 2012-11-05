@@ -500,6 +500,11 @@ body {
 .section__back-to-top:hover,
 .section__back-to-top:focus {
     background-color: hsla(0,0%,0%,.1);
+    -webkit-animation: back-to-top 1s infinite ease;
+       -moz-animation: back-to-top 1s infinite ease;
+        -ms-animation: back-to-top 1s infinite ease;
+         -o-animation: back-to-top 1s infinite ease;
+            animation: back-to-top 1s infinite ease;
 }
 .section__title {
     background-color: #9d6;
@@ -757,6 +762,26 @@ body {
 }
 .icon-font--up-arrow:before {
     content: '\f062';
+}
+
+  /**************/
+ /* Animations */
+/**************/
+
+@-webkit-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-moz-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-ms-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-o-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@keyframes back-to-top {
+    50% { line-height: 2; }
 }
 
   /*****************/
