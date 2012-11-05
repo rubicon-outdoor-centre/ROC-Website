@@ -17,17 +17,10 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
 });
 
-// Back to Top
+// Stop horizontal scrolling
 
-var $top = $('.section__back-to-top');
-
-$top.hover(
-    function() {
-        
-    },
-    function() {
-        
-    }
-);
+$(window).scroll( function() {
+    $(window).scrollLeft(0);
+});
 
 })(jQuery);
