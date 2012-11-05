@@ -5,12 +5,12 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @font-face {
-    font-family: 'Typicons';
-    src: url('fonts/typicons/typicons-regular-webfont.eot');
-    src: url('fonts/typicons/typicons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/typicons/typicons-regular-webfont.woff') format('woff'),
-        url('fonts/typicons/typicons-regular-webfont.ttf') format('truetype'),
-        url('fonts/typicons/typicons-regular-webfont.svg#TypiconsRegular') format('svg');
+    font-family: 'awesome';
+    src: url('fonts/awesome/fontawesome-webfont.eot');
+    src: url('fonts/awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/awesome/fontawesome-webfont.woff') format('woff'),
+        url('fonts/awesome/fontawesome-webfont.ttf') format('truetype'),
+        url('fonts/awesome/fontawesome-webfont.svg#AwesomeRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -453,8 +453,7 @@ body {
 }
 .main-buttons__icon {
     color: #d96;
-    font-family: Typicons;
-    font-size: 2.5em;
+    font-size: 2em;
     font-style: normal;
     font-weight: normal;
     left: 0;
@@ -462,12 +461,13 @@ body {
     position: absolute;
     text-align: center;
     top: 0;
-    width: 1.5em;
+    width: 1.875em;
     -webkit-transition: .25s;
        -moz-transition: .25s;
         -ms-transition: .25s;
          -o-transition: .25s;
             transition: .25s;
+    
 }
 .main-buttons__anchor:hover .main-buttons__icon,
 .main-buttons__anchor:focus .main-buttons__icon {
@@ -486,17 +486,16 @@ body {
 }
 .section__back-to-top {
     color: #fff;
-    font-family: Typicons;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
-    height: 1.5em;
-    line-height: 1.75;
+    height: 2.25em;
+    line-height: 2.25;
     position: absolute;
     right: 0;
     text-align: center;
     text-decoration: none;
     top: 0;
-    width: 1.5em;
+    width: 2.25em;
 }
 .section__back-to-top:hover,
 .section__back-to-top:focus {
@@ -739,7 +738,26 @@ body {
  /* Other Styles */
 /****************/
 
-
+.icon-font:before {
+    font-family: awesome;
+    font-style: normal;
+    font-weight: normal;
+}
+.icon-font--bullhorn:before {
+    content: '\f0a1';
+}
+.icon-font--comment:before {
+    content: '\f075';
+}
+.icon-font--pencil:before {
+    content: '\f040';
+}
+.icon-font--picture:before {
+    content: '\f03e';
+}
+.icon-font--up-arrow:before {
+    content: '\f062';
+}
 
   /*****************/
  /* Media Queries */
