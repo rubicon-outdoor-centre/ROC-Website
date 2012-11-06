@@ -738,6 +738,7 @@ table p {
 }
 .footer__nav__list {
     margin-bottom: 2em;
+    margin-left: 0;
 }
 .footer__nav__list-item {
     display: inline-block;
