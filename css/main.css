@@ -666,6 +666,15 @@ textarea {
 input[type="submit"] {
     padding: .75em 0;
 }
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+    margin-right: .5em;
+    width: auto;
+}
+textarea {
+    resize: vertical;
+}
 form table {
     margin-bottom: 1.5em;
     width: 100%;
