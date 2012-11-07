@@ -788,7 +788,14 @@ table p {
 .footer__nav__anchor:focus {
     color: #69d;
 }
-.footer__nav__anchor--current {
+.page--home .footer__nav__anchor--home,
+.page--teachers .footer__nav__anchor--teachers,
+.page--students .footer__nav__anchor--students,
+.page--media .footer__nav__anchor--media,
+.page--venue-hire .footer__nav__anchor--venue-hire,
+.page--activities .footer__nav__anchor--activities,
+.page--about .footer__nav__anchor--about,
+.page--contact .footer__nav__anchor--contact {
     font-weight: bold;
 }
 

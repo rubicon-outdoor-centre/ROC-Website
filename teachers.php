@@ -1,11 +1,7 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/main.css">
+<?php include("/includes/head.php"); ?>
+        <title>Rubicon Outdoor Centre - Teachers</title>
     </head>
-    <body id="top">
+    <body id="top" class="page--teachers">
         <header>
             <nav class="campus-select">
                 <ul class="campus-select__list">
@@ -114,12 +110,12 @@
                             <p class="form-list__list-item__description">The Visiting Teacher plays a vital role in the success of the program. Please download the Information Package and give to the staff who are attending the camp.</p>
                         </li>
                         <li class="form-list__list-item  form-list__list-item--attention">
-                            <a class="form-list__anchor  form-list__anchor--submit" href="forms/student_room_allocations.php">Submit</a>
+                            <a class="form-list__anchor  form-list__anchor--submit" href="/teachers/student_room_allocations.php">Submit</a>
                             <h6 class="form-list__list-item__title">Student Room Allocations</h6>
                             <p class="form-list__list-item__description">Please complete this 2 weeks prior to the program.</p>
                         </li>
                         <li class="form-list__list-item  form-list__list-item--attention">
-                            <a class="form-list__anchor  form-list__anchor--submit" href="forms/visiting_teacher_details.php">Submit</a>
+                            <a class="form-list__anchor  form-list__anchor--submit" href="/teachers/visiting_teacher_details.php">Submit</a>
                             <h6 class="form-list__list-item__title">Visiting Teacher Details</h6>
                             <p class="form-list__list-item__description">Please complete this 2 weeks prior to the program.</p>
                         </li>
@@ -284,22 +280,4 @@
                 </section>
             </div>
         </div>
-        <footer class="footer">
-            <p class="copyright">&copy; 2012 Rubicon Outdoor Centre</p>
-            <nav class="footer__nav">
-                <ul class="footer__nav__list">
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/index.php">Home</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--current" href="/teachers.php">Teachers</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/students.php">Students</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/media.php">Media</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/venue_hire.php">Venue Hire</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/activities.php">Activities</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/about.php">About</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/contact.php">Contact</a></li>
-                </ul>
-            </nav>
-        </footer>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-</html>
+<?php include("/includes/footer.php"); ?>
