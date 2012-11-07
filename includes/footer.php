@@ -1,4 +1,4 @@
-		<footer class="footer">
+        <footer class="footer">
             <p class="copyright">&copy; 2012 Rubicon Outdoor Centre</p>
             <nav class="footer__nav">
                 <ul class="footer__nav__list">
