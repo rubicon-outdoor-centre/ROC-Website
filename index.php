@@ -1,5 +1,7 @@
 <?php include("/includes/head.php"); ?>
-    <body>
+        <title>Rubicon Outdoor Centre - Rubicon Campus</title>
+    </head>
+    <body id="top" class="page--home">
         <header>
             <nav class="campus-select">
                 <ul class="campus-select__list">
