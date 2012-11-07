@@ -3,30 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body id="top">
         <header>
             <nav class="campus-select">
                 <ul class="campus-select__list">
-                    <li class="campus-select__list-item"><a class="campus-select__anchor" href="../nayook/index.html">Nayook Campus</a></li>
-                    <li class="campus-select__list-item"><a class="campus-select__anchor  campus-select__anchor--current" href="../index.html">Rubicon Campus</a></li>
+                    <li class="campus-select__list-item"><a class="campus-select__anchor" href="/nayook/index.php">Nayook Campus</a></li>
+                    <li class="campus-select__list-item"><a class="campus-select__anchor  campus-select__anchor--current" href="/index.php">Rubicon Campus</a></li>
                 </ul>
             </nav>
             <hgroup class="site-title">
-                <h1 class="site-title__main"><a class="site-title__anchor" href="../index.html">Rubicon Outdoor Centre</a></h1>
+                <h1 class="site-title__main"><a class="site-title__anchor" href="/index.php">Rubicon Outdoor Centre</a></h1>
                 <h2 class="site-title__sub">Rubicon Campus</h2>
             </hgroup>
             <nav class="main-nav">
                 <ul class="main-nav__list">
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../index.html">Home</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--current" href="../teachers.html">Teachers</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../students.html">Students</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../media.html">Media</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../venue_hire.html">Venue Hire</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../activities.html">Activities</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../about.html">About</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="../contact.html">Contact</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/index.php">Home</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--current" href="/teachers.php">Teachers</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/students.php">Students</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/media.php">Media</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/venue_hire.php">Venue Hire</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/activities.php">Activities</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/about.php">About</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
             <img class="main-banner" src="http://www.intangibility.com/Photography/Collections/GP/GP_126-Wyoming-5/GP_126_11-13-%5Bweb%5D.jpg" alt="Banner Image">
@@ -35,9 +35,9 @@
             <div class="page-links  grid__col--33">
                 <h3 class="page-links__title">Page Sections</h3>
                 <ul class="page-links__list">
-                    <li><a class="page-links__anchor" href="../teachers.html#forms_and_information">Forms and Information</a></li>
-                    <li><a class="page-links__anchor" href="../teachers.html#programs">Programs</a></li>
-                    <li><a class="page-links__anchor" href="../teachers.html#student_teacher_application">Student Teacher Application</a></li>
+                    <li><a class="page-links__anchor" href="/teachers.php#forms_and_information">Forms and Information</a></li>
+                    <li><a class="page-links__anchor" href="/teachers.php#programs">Programs</a></li>
+                    <li><a class="page-links__anchor" href="/teachers.php#student_teacher_application">Student Teacher Application</a></li>
                 </ul>
             </div>
             <div class="grid__col--66">
@@ -752,14 +752,14 @@
             <p class="copyright">&copy; 2012 Rubicon Outdoor Centre</p>
             <nav class="footer__nav">
                 <ul class="footer__nav__list">
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../index.html">Home</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--current" href="../teachers.html">Teachers</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../students.html">Students</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../media.html">Media</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../venue_hire.html">Venue Hire</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../activities.html">Activities</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../about.html">About</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="../contact.html">Contact</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/index.php">Home</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--current" href="/teachers.php">Teachers</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/students.php">Students</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/media.php">Media</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/venue_hire.php">Venue Hire</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/activities.php">Activities</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/about.php">About</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </footer>

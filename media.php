@@ -3,30 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body id="top">
         <header>
             <nav class="campus-select">
                 <ul class="campus-select__list">
-                    <li class="campus-select__list-item"><a class="campus-select__anchor" href="nayook/index.html">Nayook Campus</a></li>
-                    <li class="campus-select__list-item"><a class="campus-select__anchor  campus-select__anchor--current" href="index.html">Rubicon Campus</a></li>
+                    <li class="campus-select__list-item"><a class="campus-select__anchor" href="/nayook/index.php">Nayook Campus</a></li>
+                    <li class="campus-select__list-item"><a class="campus-select__anchor  campus-select__anchor--current" href="/index.php">Rubicon Campus</a></li>
                 </ul>
             </nav>
             <hgroup class="site-title">
-                <h1 class="site-title__main"><a class="site-title__anchor" href="index.html">Rubicon Outdoor Centre</a></h1>
+                <h1 class="site-title__main"><a class="site-title__anchor" href="/index.php">Rubicon Outdoor Centre</a></h1>
                 <h2 class="site-title__sub">Rubicon Campus</h2>
             </hgroup>
             <nav class="main-nav">
                 <ul class="main-nav__list">
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="index.html">Home</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="teachers.html">Teachers</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="students.html">Students</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--current" href="media.html">Media</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="venue_hire.html">Venue Hire</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="activities.html">Activities</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="about.html">About</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="contact.html">Contact</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/index.php">Home</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/teachers.php">Teachers</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/students.php">Students</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--current" href="/media.php">Media</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/venue_hire.php">Venue Hire</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/activities.php">Activities</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/about.php">About</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor" href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
             <img class="main-banner" src="http://www.intangibility.com/Photography/Collections/GP/GP_126-Wyoming-5/GP_126_11-13-%5Bweb%5D.jpg" alt="Banner Image">
@@ -45,67 +45,67 @@
                     <a class="section__back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
                     <ul class="photo-list">
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/1large.jpg" target="_blank"><img src="images/photos/1small.jpg" alt="Photo 1" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/1large.jpg" target="_blank"><img src="/images/photos/1small.jpg" alt="Photo 1" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/2large.jpg" target="_blank"><img src="images/photos/2small.jpg" alt="Photo 2" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/2large.jpg" target="_blank"><img src="/images/photos/2small.jpg" alt="Photo 2" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/3large.jpg" target="_blank"><img src="images/photos/3small.jpg" alt="Photo 3" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/3large.jpg" target="_blank"><img src="/images/photos/3small.jpg" alt="Photo 3" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/4large.jpg" target="_blank"><img src="images/photos/4small.jpg" alt="Photo 4" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/4large.jpg" target="_blank"><img src="/images/photos/4small.jpg" alt="Photo 4" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/5large.jpg" target="_blank"><img src="images/photos/5small.jpg" alt="Photo 5" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/5large.jpg" target="_blank"><img src="/images/photos/5small.jpg" alt="Photo 5" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/6large.jpg" target="_blank"><img src="images/photos/6small.jpg" alt="Photo 6" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/6large.jpg" target="_blank"><img src="/images/photos/6small.jpg" alt="Photo 6" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/7large.jpg" target="_blank"><img src="images/photos/7small.jpg" alt="Photo 7" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/7large.jpg" target="_blank"><img src="/images/photos/7small.jpg" alt="Photo 7" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/8large.jpg" target="_blank"><img src="images/photos/8small.jpg" alt="Photo 8" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/8large.jpg" target="_blank"><img src="/images/photos/8small.jpg" alt="Photo 8" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/9large.jpg" target="_blank"><img src="images/photos/9small.jpg" alt="Photo 9" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/9large.jpg" target="_blank"><img src="/images/photos/9small.jpg" alt="Photo 9" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/10large.jpg" target="_blank"><img src="images/photos/10small.jpg" alt="Photo 10" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/10large.jpg" target="_blank"><img src="/images/photos/10small.jpg" alt="Photo 10" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/11large.jpg" target="_blank"><img src="images/photos/11small.jpg" alt="Photo 11" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/11large.jpg" target="_blank"><img src="/images/photos/11small.jpg" alt="Photo 11" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/12large.jpg" target="_blank"><img src="images/photos/12small.jpg" alt="Photo 12" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/12large.jpg" target="_blank"><img src="/images/photos/12small.jpg" alt="Photo 12" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/13large.jpg" target="_blank"><img src="images/photos/13small.jpg" alt="Photo 13" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/13large.jpg" target="_blank"><img src="/images/photos/13small.jpg" alt="Photo 13" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/14large.jpg" target="_blank"><img src="images/photos/14small.jpg" alt="Photo 14" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/14large.jpg" target="_blank"><img src="/images/photos/14small.jpg" alt="Photo 14" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/15large.jpg" target="_blank"><img src="images/photos/15small.jpg" alt="Photo 15" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/15large.jpg" target="_blank"><img src="/images/photos/15small.jpg" alt="Photo 15" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/16large.jpg" target="_blank"><img src="images/photos/16small.jpg" alt="Photo 16" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/16large.jpg" target="_blank"><img src="/images/photos/16small.jpg" alt="Photo 16" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/17large.jpg" target="_blank"><img src="images/photos/17small.jpg" alt="Photo 17" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/17large.jpg" target="_blank"><img src="/images/photos/17small.jpg" alt="Photo 17" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/18large.jpg" target="_blank"><img src="images/photos/18small.jpg" alt="Photo 18" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/18large.jpg" target="_blank"><img src="/images/photos/18small.jpg" alt="Photo 18" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/19large.jpg" target="_blank"><img src="images/photos/19small.jpg" alt="Photo 19" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/19large.jpg" target="_blank"><img src="/images/photos/19small.jpg" alt="Photo 19" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/20large.jpg" target="_blank"><img src="images/photos/20small.jpg" alt="Photo 20" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/20large.jpg" target="_blank"><img src="/images/photos/20small.jpg" alt="Photo 20" class="gallery frame left"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="images/photos/21large.jpg" target="_blank"><img src="images/photos/21small.jpg" alt="Photo 21" class="gallery frame left"></a>
+                            <a class="photo-list__anchor" href="/images/photos/21large.jpg" target="_blank"><img src="/images/photos/21small.jpg" alt="Photo 21" class="gallery frame left"></a>
                         </li>
                     </ul>
                 </section>
@@ -584,14 +584,14 @@
             <p class="copyright">&copy; 2012 Rubicon Outdoor Centre</p>
             <nav class="footer__nav">
                 <ul class="footer__nav__list">
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="index.html">Home</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="teachers.html">Teachers</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="students.html">Students</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--current" href="media.html">Media</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="venue_hire.html">Venue Hire</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="activities.html">Activities</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="about.html">About</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="contact.html">Contact</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/index.php">Home</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/teachers.php">Teachers</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/students.php">Students</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--current" href="/media.php">Media</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/venue_hire.php">Venue Hire</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/activities.php">Activities</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/about.php">About</a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </footer>
