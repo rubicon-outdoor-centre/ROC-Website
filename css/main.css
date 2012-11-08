@@ -432,9 +432,9 @@ body {
 .page--contact .main-nav__anchor--contact,
 .page--contact .main-nav__anchor--contact:hover,
 .page--contact .main-nav__anchor--contact:focus {
-    background-color: #69d !important;
-    color: #fff !important;
-    cursor: default !important;
+    background-color: #69d;
+    color: #fff;
+    cursor: default;
 }
 
 /* Main Banner */
