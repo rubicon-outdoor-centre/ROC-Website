@@ -1,5 +1,5 @@
 <?php include("/includes/head.php"); ?>
-        <title>Rubicon Outdoor Centre - Students</title>
+        <title>Rubicon Outdoor Centre - Rubicon Campus - Students</title>
     </head>
     <body id="top" class="page--students">
         <?php include("/includes/header.php"); ?>
