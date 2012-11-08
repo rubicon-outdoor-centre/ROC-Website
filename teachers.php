@@ -16,7 +16,7 @@
                 <section id="forms_and_information" class="section">
                     <h2 class="section__title">Forms and Information</h2>
                     <a class="section__back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
-                    <h3>Application Form</h3>
+                    <h3>Application Forms</h3>
                     <p>Please complete the online form using a <a href="http://203.113.215.85/fmi/iwp/cgi?-db=webROC&-startsession">guest account</a>.</p>
                     <hr>
                     <h3>Student Forms</h3>
