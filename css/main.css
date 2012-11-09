@@ -249,8 +249,8 @@ h6 {
 }
 p {
     font-size: 1em; /* 16 */
-    margin: 0 0 1.5em; /* 24 / 16 */
     line-height: 1.5; /* 24 / 16 */
+    margin: 0 0 1.5em; /* 24 / 16 */
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
         -ms-hyphens: auto;
@@ -477,7 +477,7 @@ body {
     font-style: normal;
     font-weight: normal;
     left: 0;
-    line-height: 1.75;
+    line-height: 1.875;
     position: absolute;
     text-align: center;
     top: 0;
