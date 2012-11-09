@@ -260,7 +260,6 @@ p a:link,
 p a:visited {
     border-bottom: 2px solid #69d;
     color: #333;
-    padding-bottom: 1px;
     text-decoration: none;
 }
 p a:hover,
