@@ -814,6 +814,25 @@ table p {
 .page--contact .footer__nav__anchor--contact {
     font-weight: bold;
 }
+.page--home .footer__nav__anchor--home:hover,
+.page--home .footer__nav__anchor--home:focus,
+.page--teachers .footer__nav__anchor--teachers:hover,
+.page--teachers .footer__nav__anchor--teachers:focus,
+.page--students .footer__nav__anchor--students:hover,
+.page--students .footer__nav__anchor--students:focus,
+.page--media .footer__nav__anchor--media:hover,
+.page--media .footer__nav__anchor--media:focus,
+.page--venue-hire .footer__nav__anchor--venue-hire:hover,
+.page--venue-hire .footer__nav__anchor--venue-hire:focus,
+.page--activities .footer__nav__anchor--activities:hover,
+.page--activities .footer__nav__anchor--activities:focus,
+.page--about .footer__nav__anchor--about:hover,
+.page--about .footer__nav__anchor--about:focus,
+.page--contact .footer__nav__anchor--contact:hover,
+.page--contact .footer__nav__anchor--contact:focus {
+    color: #888;
+    cursor: default;
+}
 
   /****************/
  /* Other Styles */
