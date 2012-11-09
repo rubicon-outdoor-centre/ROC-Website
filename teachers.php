@@ -5,7 +5,6 @@
         <?php include("/includes/header.php"); ?>
         <div class="main-content  grid">
             <div class="page-links  grid__col--33">
-                <h3 class="page-links__title">Page Sections</h3>
                 <ul class="page-links__list">
                     <li><a class="page-links__anchor" href="#forms_and_information">Forms and Information</a></li>
                     <li><a class="page-links__anchor" href="#programs">Programs</a></li>
