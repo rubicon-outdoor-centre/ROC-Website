@@ -5,7 +5,6 @@
         <?php include("/includes/header.php"); ?>
         <div class="main-content  grid">
             <div class="page-links  grid__col--33">
-                <h3 class="page-links__title">Page Sections</h3>
                 <ul class="page-links__list">
                     <li><a class="page-links__anchor" href="#forms_and_information">Forms and Information</a></li>
                     <li><a class="page-links__anchor" href="#code_of_conduct">Code of Conduct</a></li>
@@ -113,7 +112,7 @@
                     </ul>
                     <hr>
                     <p>To be eligible for Work Experience at Rubicon, students must be in Year 10 or above. Successful applicants are assigned to a qualified teacher to work with duing the placement. Work experience students assist the Rubicon staff in providing a range of outdoor adventure activities and general duties whilst on site.</p>
-                    <p>Accommodation and meals are provided for the duration of the experience; a fee is charged for meals. Further information will be provided to successful applicants.</p> 
+                    <p>Accommodation and meals are provided for the duration of the experience; a fee is charged for meals. Further information will be provided to successful applicants.</p>
                     <p>Please download an Application form, complete it, then send to the Rubicon Campus (details on the form).</p>
                 </section>
             </div>

@@ -5,7 +5,6 @@
         <?php include("/includes/header.php"); ?>
         <div class="main-content  grid">
             <div class="page-links  grid__col--33">
-                <h3 class="page-links__title">Page Sections</h3>
                 <ul class="page-links__list">
                     <li><a class="page-links__anchor" href="#photos">Photos</a></li>
                     <li><a class="page-links__anchor" href="#podcasts">Podcasts</a></li>
@@ -134,7 +133,7 @@
                                         <li class="podcast-list__list-item">
                                             <a class="podcast-list__anchor  podcast-list__anchor--mp3" href="#"></a>
                                             <h6 class="podcast-list__list-item__title">Jaedon</h6>
-                                            <p class="podcast-list__list-item__description">31/08/2012 &ndash; 4.26 MB</p>                    
+                                            <p class="podcast-list__list-item__description">31/08/2012 &ndash; 4.26 MB</p>
                                         </li>
                                         <li class="podcast-list__list-item">
                                             <a class="podcast-list__anchor  podcast-list__anchor--mp3" href="#"></a>
@@ -361,7 +360,7 @@
                                             <a class="podcast-list__anchor  podcast-list__anchor--mp3" href="#"></a>
                                             <h6 class="podcast-list__list-item__title">Michael</h6>
                                             <p class="podcast-list__list-item__description">27/05/2011 &ndash; 3.62 MB</p>
-                    
+
                                         </li>
                                         <li class="podcast-list__list-item">
                                             <a class="podcast-list__anchor  podcast-list__anchor--mp3" href="#"></a>

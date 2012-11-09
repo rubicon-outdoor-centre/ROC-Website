@@ -5,7 +5,6 @@
         <?php include("../includes/header.php"); ?>
         <div class="main-content  grid">
             <div class="page-links  grid__col--33">
-                <h3 class="page-links__title">Page Sections</h3>
                 <ul class="page-links__list">
                     <li><a class="page-links__anchor" href="/teachers.php#forms_and_information">Forms and Information</a></li>
                     <li><a class="page-links__anchor" href="/teachers.php#programs">Programs</a></li>
@@ -24,7 +23,7 @@
                         <label for="fullname">Contact Name (required):</label>
                         <input id="fullname" class="input details" name="fullname" type="text" required/>
                         <label for="from">Contact Email (required):</label>
-                        <input id="from" class="input details" name="from" type="email" required/>            
+                        <input id="from" class="input details" name="from" type="email" required/>
                         <label for="phone">Contact Phone Number:</label>
                         <input id="phone" class="input details" name="phone" type="text"/>
                         <label for="startdate">Camp Start Date:</label>
