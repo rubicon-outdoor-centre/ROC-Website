@@ -9,7 +9,7 @@
                     <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--activities" href="/nayook/activities.php">Activities</a></li>
                     <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--about" href="/nayook/about.php">About</a></li>
                     <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--contact" href="/nayook/contact.php">Contact</a></li>
-                    <li class="footer__nav__list-item"><a class="footer__nav__anchor  footer__nav__anchor--contact" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a></li>
+                    <li class="footer__nav__list-item"><a class="footer__nav__anchor" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a></li>
                 </ul>
             </nav>
         </footer>
