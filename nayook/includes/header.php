@@ -20,5 +20,5 @@
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--contact" href="/nayook/contact.php">Contact</a></li>
                 </ul>
             </nav>
-            <img class="main-banner" src="http://valleyviewhomestay.in/embedded-slideshow/images/1.jpg" alt="Banner Image">
+            <img class="main-banner" src="/images/nayook-campus-banner.jpg" alt="Banner Image">
         </header>

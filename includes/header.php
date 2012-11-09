@@ -21,5 +21,5 @@
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--contact" href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
-            <img class="main-banner" src="http://www.intangibility.com/Photography/Collections/GP/GP_126-Wyoming-5/GP_126_11-13-%5Bweb%5D.jpg" alt="Banner Image">
+            <img class="main-banner" src="/images/rubicon-campus-banner.jpg" alt="Banner Image">
         </header>
