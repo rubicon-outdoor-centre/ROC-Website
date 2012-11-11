@@ -585,7 +585,6 @@ body {
 .form-list__anchor--submit {
     background-color: #9d6;
     border-radius: .2em;
-    box-shadow: inset 0 0 0 .25em hsla(0,0%,0%,.025);
     color: #fff;
     font-size: .75em;
     font-weight: bold;
@@ -600,7 +599,6 @@ body {
 .form-list__anchor--submit:hover,
 .form-list__anchor--submit:focus {
     background-color: #69d;
-    box-shadow: inset 0 0 0 .25em #69d;
 }
 .photo-list {
     letter-spacing: -.25em;
