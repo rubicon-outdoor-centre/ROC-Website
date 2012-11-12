@@ -266,15 +266,6 @@ p a:hover,
 p a:focus {
     color: #69d;
 }
-p a:active {
-    position: relative;
-    top: 1px;
-    -webkit-transition: none;
-       -moz-transition: none;
-        -ms-transition: none;
-         -o-transition: none;
-            transition: none;
-}
 ul,
 ol {
     margin: 0 0 1.5em 1.5em;
