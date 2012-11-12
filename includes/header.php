@@ -15,8 +15,8 @@
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--teachers" href="/teachers.php">Teachers</a></li>
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--students" href="/students.php">Students</a></li>
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--media" href="/media.php">Media</a></li>
-                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--venue-hire" href="/venue_hire.php">Venue Hire</a></li>
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--activities" href="/activities.php">Activities</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--venue-hire" href="/venue_hire.php">Venue Hire</a></li>
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--about" href="/about.php">About</a></li>
                     <li class="main-nav__list-item"><a class="main-nav__anchor  main-nav__anchor--contact" href="/contact.php">Contact</a></li>
                 </ul>
