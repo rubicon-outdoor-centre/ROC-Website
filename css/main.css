@@ -2,7 +2,7 @@
  /* Fonts */
 /*********/
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700);
 @font-face {
     font-family: 'awesome';
     src: url('fonts/awesome/fontawesome-webfont.eot');
