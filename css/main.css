@@ -667,6 +667,11 @@ body {
 .podcast-list__anchor--mp3 {
     background-image: url('../images/mp3.png');
 }
+.activity-image {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    max-width: 750px;
+}
 
 /* Forms */
 
@@ -734,6 +739,7 @@ table p {
     margin: 0;
 }
 .page-links__anchor {
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.025);
     color: #333;
     display: block;
     font-weight: bold;
