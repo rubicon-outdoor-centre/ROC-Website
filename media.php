@@ -16,67 +16,67 @@
                     <a class="section__back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
                     <ul class="photo-list">
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/1large.jpg" target="_blank"><img src="/images/photos/1small.jpg" alt="Photo 1"></a>
+                            <a class="photo-list__anchor" href="/images/photos/1large.jpg"><img src="/images/photos/1small.jpg" alt="Photo 1"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/2large.jpg" target="_blank"><img src="/images/photos/2small.jpg" alt="Photo 2"></a>
+                            <a class="photo-list__anchor" href="/images/photos/2large.jpg"><img src="/images/photos/2small.jpg" alt="Photo 2"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/3large.jpg" target="_blank"><img src="/images/photos/3small.jpg" alt="Photo 3"></a>
+                            <a class="photo-list__anchor" href="/images/photos/3large.jpg"><img src="/images/photos/3small.jpg" alt="Photo 3"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/4large.jpg" target="_blank"><img src="/images/photos/4small.jpg" alt="Photo 4"></a>
+                            <a class="photo-list__anchor" href="/images/photos/4large.jpg"><img src="/images/photos/4small.jpg" alt="Photo 4"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/5large.jpg" target="_blank"><img src="/images/photos/5small.jpg" alt="Photo 5"></a>
+                            <a class="photo-list__anchor" href="/images/photos/5large.jpg"><img src="/images/photos/5small.jpg" alt="Photo 5"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/6large.jpg" target="_blank"><img src="/images/photos/6small.jpg" alt="Photo 6"></a>
+                            <a class="photo-list__anchor" href="/images/photos/6large.jpg"><img src="/images/photos/6small.jpg" alt="Photo 6"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/7large.jpg" target="_blank"><img src="/images/photos/7small.jpg" alt="Photo 7"></a>
+                            <a class="photo-list__anchor" href="/images/photos/7large.jpg"><img src="/images/photos/7small.jpg" alt="Photo 7"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/8large.jpg" target="_blank"><img src="/images/photos/8small.jpg" alt="Photo 8"></a>
+                            <a class="photo-list__anchor" href="/images/photos/8large.jpg"><img src="/images/photos/8small.jpg" alt="Photo 8"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/9large.jpg" target="_blank"><img src="/images/photos/9small.jpg" alt="Photo 9"></a>
+                            <a class="photo-list__anchor" href="/images/photos/9large.jpg"><img src="/images/photos/9small.jpg" alt="Photo 9"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/10large.jpg" target="_blank"><img src="/images/photos/10small.jpg" alt="Photo 10"></a>
+                            <a class="photo-list__anchor" href="/images/photos/10large.jpg"><img src="/images/photos/10small.jpg" alt="Photo 10"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/11large.jpg" target="_blank"><img src="/images/photos/11small.jpg" alt="Photo 11"></a>
+                            <a class="photo-list__anchor" href="/images/photos/11large.jpg"><img src="/images/photos/11small.jpg" alt="Photo 11"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/12large.jpg" target="_blank"><img src="/images/photos/12small.jpg" alt="Photo 12"></a>
+                            <a class="photo-list__anchor" href="/images/photos/12large.jpg"><img src="/images/photos/12small.jpg" alt="Photo 12"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/13large.jpg" target="_blank"><img src="/images/photos/13small.jpg" alt="Photo 13"></a>
+                            <a class="photo-list__anchor" href="/images/photos/13large.jpg"><img src="/images/photos/13small.jpg" alt="Photo 13"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/14large.jpg" target="_blank"><img src="/images/photos/14small.jpg" alt="Photo 14"></a>
+                            <a class="photo-list__anchor" href="/images/photos/14large.jpg"><img src="/images/photos/14small.jpg" alt="Photo 14"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/15large.jpg" target="_blank"><img src="/images/photos/15small.jpg" alt="Photo 15"></a>
+                            <a class="photo-list__anchor" href="/images/photos/15large.jpg"><img src="/images/photos/15small.jpg" alt="Photo 15"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/16large.jpg" target="_blank"><img src="/images/photos/16small.jpg" alt="Photo 16"></a>
+                            <a class="photo-list__anchor" href="/images/photos/16large.jpg"><img src="/images/photos/16small.jpg" alt="Photo 16"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/17large.jpg" target="_blank"><img src="/images/photos/17small.jpg" alt="Photo 17"></a>
+                            <a class="photo-list__anchor" href="/images/photos/17large.jpg"><img src="/images/photos/17small.jpg" alt="Photo 17"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/18large.jpg" target="_blank"><img src="/images/photos/18small.jpg" alt="Photo 18"></a>
+                            <a class="photo-list__anchor" href="/images/photos/18large.jpg"><img src="/images/photos/18small.jpg" alt="Photo 18"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/19large.jpg" target="_blank"><img src="/images/photos/19small.jpg" alt="Photo 19"></a>
+                            <a class="photo-list__anchor" href="/images/photos/19large.jpg"><img src="/images/photos/19small.jpg" alt="Photo 19"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/20large.jpg" target="_blank"><img src="/images/photos/20small.jpg" alt="Photo 20"></a>
+                            <a class="photo-list__anchor" href="/images/photos/20large.jpg"><img src="/images/photos/20small.jpg" alt="Photo 20"></a>
                         </li>
                         <li class="photo-list__list-item">
-                            <a class="photo-list__anchor" href="/images/photos/21large.jpg" target="_blank"><img src="/images/photos/21small.jpg" alt="Photo 21"></a>
+                            <a class="photo-list__anchor" href="/images/photos/21large.jpg"><img src="/images/photos/21small.jpg" alt="Photo 21"></a>
                         </li>
                     </ul>
                 </section>

@@ -25,7 +25,7 @@
                     <h2 class="section__title">Bush Walking</h2>
                     <a class="section__back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
                     <p>Bushwalks may be conducted in the Rubicon, Royston or Cathedral Ranges.</p>
-                    <p>Overnight Campouts may be negotiated as a part of a two or three day bushwalk. Students participating in an Overnight campout must consult the <a href="#" target="_blank">Student Equipment List</a>.</p>
+                    <p>Overnight Campouts may be negotiated as a part of a two or three day bushwalk. Students participating in an Overnight campout must consult the <a href="#">Student Equipment List</a>.</p>
                     <img class="activity-image" src="/images/rubicon-activities/foo.jpg" alt="foo"/>
                 </section>
                 <section id="canoeing" class="section">

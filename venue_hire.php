@@ -25,7 +25,7 @@
                     <p><em>Sugarloaf</em> is self contained with a kitchen which allows for self catering within the dormitory. This dormitory accommodates up to 13 persons. There are 3 rooms which have two double bunks (4 persons) and 1 room with a single bed. This dormitory has one bathroom (disabled access) with a toilet, handbasin and a shower. The second bathroom has a shower and handbasin. There is also a second, separate indoor toilet.</p>
                     <p>Exclusive use of the site may be negotiated. A Cleaning Fee of $60 per extra dormitory will apply.</p>
                     <p>Linen Hire is available at $15.00 per set and must be ordered upon booking.</p>
-                    <p>View Accommodation Layout: <a href="downloads/accommodation%20layout.pdf" target="_blank">PDF</a></p>
+                    <p>View Accommodation Layout: <a href="downloads/accommodation%20layout.pdf">PDF</a></p>
                     <h3>Accommodation (all costs inclde GST):</h3>
                     <table class="table">
                         <tr>
@@ -156,8 +156,8 @@
                     <p><strong>Disclaimer:</strong> All activities involve some degree of risk. Participants will be reqired to sign a waiver before participating.</p>
                     <p>For bookings and further information contact:</p>
                     <p><strong>Rubicon Campus</strong> Phone: (03) 5773 2285  Fax: (03) 5773 2441 <a href="mailto:rubicon.oc@edumail.vic.gov.au" data-tooltip="Email us using your email client">rubicon.oc@edumail.vic.gov.au</a></p>
-                    <p>View Booking Conditions: <a href="downloads/booking%20conditions.pdf" target="_blank">PDF</a></p>
-                    <p>Download Booking Form: <a href="downloads/booking%20form.pdf" target="_blank">PDF</a> <a href="downloads/booking%20form.xls">XLS</a></p>
+                    <p>View Booking Conditions: <a href="downloads/booking%20conditions.pdf">PDF</a></p>
+                    <p>Download Booking Form: <a href="downloads/booking%20form.pdf">PDF</a> <a href="downloads/booking%20form.xls">XLS</a></p>
                     <p>All correspondence should be directed to:</p>
                     <p><strong>Rubicon Outdoor Centre</strong> RMB 264 Rubicon Road Thornton VIC 3712</p>
                 </section>
@@ -173,7 +173,7 @@
                     <p>A fire pit is located within the grounds.</p>
                     <p>Power is supplied by a generator.</p>
                     <p>Telephone reception is not available.</p>
-                    <p>View House Layout: <a href="downloads/royston%20house%20layout.pdf" target="_blank">PDF</a></p>
+                    <p>View House Layout: <a href="downloads/royston%20house%20layout.pdf">PDF</a></p>
                     <h3>Location:</h3>
                     <p>The Rubicon Campus is located in the Rubicon Valley at the foot of the Blue Range, approximately 130 kms northeast of Melbourne. The Centre is situated approximately 18 kms &ndash; 15 minutes travel by road from both Alexandra and Eildon and is an ideal base for a range of activities.</p>
                     <p>Royston Community House is a further 13 km south &mdash; specific instructions will be provided upon successful application.</p>
@@ -181,7 +181,7 @@
                     <p>Log trucks work in the area and great care needs to be taken on this single lane road.</p>
                     <p>For bookings and further information contact:</p>
                     <p><strong>Rubicon Campus</strong> Phone: (03) 5773 2285 Fax: (03) 5773 2441 <a href="mailto:rubicon.oc@edumail.vic.gov.au" data-tooltip="Email us using your email client">rubicon.oc@edumail.vic.gov.au</a></p>
-                    <p>Download Booking Form: <a href="downloads/booking%20form.pdf" target="_blank">PDF</a> <a href="downloads/booking%20form.xls">XLS</a></p>
+                    <p>Download Booking Form: <a href="downloads/booking%20form.pdf">PDF</a> <a href="downloads/booking%20form.xls">XLS</a></p>
                     <p>All correspondence should be directed to:</p>
                     <p><strong>Rubicon Outdoor Centre</strong> RMB 264 Rubicon Road Thornton VIC 3712</p>
                 </section>
@@ -194,7 +194,7 @@
                     <p>Wander through magnificent forests to picnic beside fern gullies and cascading waterfalls, cast a line in search of fresh trout for dinner, or sample the mouth-watering delights of local berry farms, orchards and vineyards.</p>
                     <p>Water-ski on the waters of Lake Eildon, take to the snow-covered slopes of Lake Mountain in winter or hike to the peaks of the Cathedral Range for breathtaking views over the surrounding countryside. Explore arts and culture at artist studios and craft galleries, and gain a glimpse into the past at fascinating historic attractions.</p>
                     <p>It's easy to relax amid the tranquil beauty of Murrindindi.</p>
-                    <p>For further information on: Destinations/Townships, Attractions, Activities, Scenic Drives, What's New and the Calendar of Events go to the <a href="http://www.murrindindi.vic.gov.au" target="_blank">Murrindindi Shire site</a>.</p>
+                    <p>For further information on: Destinations/Townships, Attractions, Activities, Scenic Drives, What's New and the Calendar of Events go to the <a href="http://www.murrindindi.vic.gov.au">Murrindindi Shire site</a>.</p>
                     <h3>Local Visitor Information Centres:</h3>
                     <p><strong>Alexandra</strong> 36 Grant Street Alexandra, VIC, 3714 Ph: (03) 5772 1100 or 1800 652 298 <a href="mailto:alexvic@virtual.net.au" data-tooltip="Email using your email client">alexvic@virtual.net.au</a></p>
                     <p><strong>Eildon</strong> Main Street Eildon, VIC, 3713 Ph: (03) 5774 2909 <a href="mailto:eildoninfo@lakeeildon.com" data-tooltip="Email using your email client">eildoninfo@lakeeildon.com</a></p>
