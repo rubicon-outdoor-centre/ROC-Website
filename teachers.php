@@ -102,7 +102,7 @@
                         </li>
                     </ul>
                     <hr>
-                    <p><em>If you have trouble viewing these files please download the latest version of <a href="http://www.adobe.com/products/acrobat/readstep2.php" target="_blank">Acrobat Reader</a>.</em></p>
+                    <p><em>If you have trouble viewing these files please download the latest version of <a href="http://www.adobe.com/products/acrobat/readstep2.php">Acrobat Reader</a>.</em></p>
                 </section>
                 <section id="programs" class="section">
                     <h2 class="section__title">Programs</h2>
@@ -251,7 +251,7 @@
                         </li>
                     </ul>
                     <hr>
-                    <p><em>If you have trouble viewing these files please download the latest version of <a href="http://www.adobe.com/products/acrobat/readstep2.php" target="_blank">Acrobat Reader</a>.</em></p>
+                    <p><em>If you have trouble viewing these files please download the latest version of <a href="http://www.adobe.com/products/acrobat/readstep2.php">Acrobat Reader</a>.</em></p>
                 </section>
             </div>
         </div>
