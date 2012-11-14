@@ -180,7 +180,7 @@
                         <li class="form-list__list-item">
                             <a class="form-list__anchor  form-list__anchor--pdf" href="#"></a>
                             <h6 class="form-list__list-item__title  form-list__list-item__title--single">Booking Form</h6>
-                            <p class="form-list__list-item__description  form-list__list-item__description--single">&hellip;</p>
+                            <p class="form-list__list-item__description  form-list__list-item__description--single">Please return, along with the deposit, at least four weeks prior to your arrival.</p>
                         </li>
                     </ul>
                     <hr>
@@ -227,7 +227,7 @@
                         <li class="form-list__list-item">
                             <a class="form-list__anchor  form-list__anchor--pdf" href="#"></a>
                             <h6 class="form-list__list-item__title  form-list__list-item__title--single">Booking Form</h6>
-                            <p class="form-list__list-item__description  form-list__list-item__description--single">&hellip;</p>
+                            <p class="form-list__list-item__description  form-list__list-item__description--single">Please return, along with the deposit, at least four weeks prior to your arrival.</p>
                         </li>
                     </ul>
                     <hr>
