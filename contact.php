@@ -37,7 +37,7 @@
                         <dt>Email</dt>
                         <dd><a href="mailto:rubicon.oc.nayook@edumail.vic.gov.au">rubicon.oc.nayook@edumail.vic.gov.au</a></dd>
                     </dl>
-                    </section>
+                </section>
 
                 <section id="rubicon_campus" class="section">
                     <h2 class="section__title">Rubicon Campus</h2>
