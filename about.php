@@ -23,10 +23,10 @@
                     <p>The grounds and buildings, including administration, kitchen, dormitories and other external facilities, are extremely well maintained. The Nayook site has recently undergone extensive building refurbishment with further development planned.</p>
                     <p>The school offers programs for schools under the following categories:</p>
                         <ol>
-                            <li>Years 7-10; VELS levels 4, 5 &amp; 6; Domains Outdoor Education, and Personal Development</li>
-                            <li>VCE Outdoor and Environmental Studies</li>
-                            <li>The VCAL program is specifically focused on personal development skills, teamwork, challenge, and leadership</li>
-                            <li>Students with Special Needs attend programs negotiated with schools that are designed to meet individual needs</li>
+                            <li><p>Years 7-10; VELS levels 4, 5 &amp; 6; Domains Outdoor Education, and Personal Development</p></li>
+                            <li><p>VCE Outdoor and Environmental Studies</p></li>
+                            <li><p>The VCAL program is specifically focused on personal development skills, teamwork, challenge, and leadership</p></li>
+                            <li><p>Students with Special Needs attend programs negotiated with schools that are designed to meet individual needs</p></li>
                         </ol>
                     <p>Activities to compliment these programs include bush walking, canoeing (flat or moving water), caving, cross-country skiing, environmental studies, expeditions, high ropes, horse riding, initiative activities, mountain biking, rafting, rock climbing and rogaining.</p>
                     <p>The environment is used as a medium for building leadership, personal development and teamwork, through residential, single-day and off-campus programs. Environmental sustainability is a very strong focus of all programs offered.</p>
@@ -39,18 +39,18 @@
                     <p>Travel directions differ dependant upon where you are travelling from.</p>
                     <p><strong>Southern and Eastern suburbs of Melbourne:</strong></p>
                     <ol>
-                        <li>Follow Maroondah Highway north through Lilydale and Healesville, over the Black Spur.</li>
-                        <li>Turn right at Taggerty, towards Eildon. </li>
-                        <li>Approximately 9km from Taggerty look for the Rubicon Road turnoff on the right, (signposted &lsquo;Rubicon Outdoor Centre&rsquo;) just before the Rubicon River Bridge.</li>
-                        <li>The Rubicon Campus is approximately 2.5km on the right.</li>
-                        <li>Please use the entrance just past the oval.</li>
+                        <li><p>Follow Maroondah Highway north through Lilydale and Healesville, over the Black Spur.</p></li>
+                        <li><p>Turn right at Taggerty, towards Eildon. </p></li>
+                        <li><p>Approximately 9km from Taggerty look for the Rubicon Road turnoff on the right, (signposted &lsquo;Rubicon Outdoor Centre&rsquo;) just before the Rubicon River Bridge.</p></li>
+                        <li><p>The Rubicon Campus is approximately 2.5km on the right.</p></li>
+                        <li><p>Please use the entrance just past the oval.</p></li>
                     </ol>
                     <p><strong>Northern and Western suburbs of Melbourne, Central or Northern Victorian visitors may find it easier to travel through Yea:</strong></p>
                     <ol>
-                        <li>From Yea, follow signs to Alexandra. At Alexandra, turn left towards Eildon.</li>
-                        <li>At Thornton turn right and in 2km look for the Rubicon Road turnoff on the left, (signposted &lsquo;Rubicon Outdoor Centre&rsquo;) just after the Rubicon River Bridge.</li>
-                        <li>The Rubicon Campus is approximately 2.5km on the right.</li>
-                        <li>Please use the entrance just past the oval.</li>
+                        <li><p>From Yea, follow signs to Alexandra. At Alexandra, turn left towards Eildon.</p></li>
+                        <li><p>At Thornton turn right and in 2km look for the Rubicon Road turnoff on the left, (signposted &lsquo;Rubicon Outdoor Centre&rsquo;) just after the Rubicon River Bridge.</p></li>
+                        <li><p>The Rubicon Campus is approximately 2.5km on the right.</p></li>
+                        <li><p>Please use the entrance just past the oval.</p></li>
                     </ol>
                     <div id="map_canvas" class="frame"></div>
                     <p><a href="http://goo.gl/maps/R792" target="_blank">View using Google Maps</a></p>
@@ -109,32 +109,32 @@
                             <li>December &ndash; 351 kWh</li>
                         </ul>
                     </p>
-                    <img id="solar-panels" src="images/sustainability/solar-panels.jpg" alt="Solar Panels"/>
+                    <img src="images/sustainability/solar-panels.jpg" alt="Solar Panels"/>
                     <p><strong>Recycling Case Study 2012:</strong> <a href="downloads/recycling-case-study-2012.pdf" target="_blank">PDF</a></p>
                     <h3>Green Purchasing Initiatives in 2011:</h3>
                     <p>
                         <ul>
-                            <li>Purchased a new worm farm from CERES constructed from a reused wheelie bin.</li>
-                            <li>Started replacing our cheap over pants with One Planet Goretex pants which will last much longer and be more suitable for the conditions we use them in.</li>
-                            <li>Energy efficient photocopier with double sided capacity.</li>
+                            <li><p>Purchased a new worm farm from CERES constructed from a reused wheelie bin.</p></li>
+                            <li><p>Started replacing our cheap over pants with One Planet Goretex pants which will last much longer and be more suitable for the conditions we use them in.</p></li>
+                            <li><p>Energy efficient photocopier with double sided capacity.</p></li>
                         </ul>
                     </p>
                     <h3>Other Sustainability Initiatives in 2011:</h3>
                     <p>
                         <ul>
-                            <li>Motion sensors in student bathrooms.</li>
-                            <li>New veggie patch.</li>
-                            <li>Worm farm castings and liquid is used to fertilize veggie patch.</li>
-                            <li>New double glazed door on student drying room resulting in greatly improved heat retention.</li>
-                            <li>Old bike parts and bike helmets reused and recycled with <a href="http://www.theage.com.au/news/national/recycling/2007/10/30/1193618878006.html">Bill the bike man</a> at human powered cycles.</li>
-                            <li>Old daypacks and coats donated to the <a href="http://www.asrc.org.au">Asylum Seeker Resource Centre</a>.</li>
-                            <li>Obsolete ICT equipment sent to <a href="http://cashforcomputers.com.au">Cash 4 Computers</a> to be reused in developing world environments and non-functioning machines pulled apart and metals salvaged.</li>
-                            <li>Water capturing water cans for student showers (water then used on veggie garden).</li>
-                            <li>Food scraps going to feed animals rather than land fill.</li>
+                            <li><p>Motion sensors in student bathrooms.</p></li>
+                            <li><p>New veggie patch.</p></li>
+                            <li><p>Worm farm castings and liquid is used to fertilize veggie patch.</p></li>
+                            <li><p>New double glazed door on student drying room resulting in greatly improved heat retention.</p></li>
+                            <li><p>Old bike parts and bike helmets reused and recycled with <a href="http://www.theage.com.au/news/national/recycling/2007/10/30/1193618878006.html">Bill the bike man</a> at human powered cycles.</p></li>
+                            <li><p>Old daypacks and coats donated to the <a href="http://www.asrc.org.au">Asylum Seeker Resource Centre</a>.</p></li>
+                            <li><p>Obsolete ICT equipment sent to <a href="http://cashforcomputers.com.au">Cash 4 Computers</a> to be reused in developing world environments and non-functioning machines pulled apart and metals salvaged.</p></li>
+                            <li><p>Water capturing water cans for student showers (water then used on veggie garden).</p></li>
+                            <li><p>Food scraps going to feed animals rather than land fill.</p></li>
                         </ul>
                     </p>
-                    <img id="solar-panels" src="images/sustainability/veggie-garden.jpg" alt="Veggie Garden"/>
-                    <img id="solar-panels" src="images/sustainability/food-scraps.jpg" alt="Food Scraps"/>
+                    <img src="images/sustainability/veggie-garden.jpg" alt="Veggie Garden"/>
+                    <img src="images/sustainability/food-scraps.jpg" alt="Food Scraps"/>
                 </section>
 
                 <section id="privacy_statement" class="section">
