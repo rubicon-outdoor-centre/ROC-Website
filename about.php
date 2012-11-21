@@ -134,6 +134,7 @@
                         </ul>
                     </p>
                     <img src="images/sustainability/veggie-garden.jpg" alt="Veggie Garden"/>
+                    <br>
                     <img src="images/sustainability/food-scraps.jpg" alt="Food Scraps"/>
                 </section>
 
