@@ -453,6 +453,9 @@ body {
 
 /* Main Content */
 
+.main-content img {
+    margin-bottom: 1.5em;
+}
 .main-buttons {
     margin-left: 0;
 }
@@ -630,6 +633,10 @@ body {
 .photo-list__anchor:hover,
 .photo-list__anchor:focus {
     border-color: #b6b6b6;
+    box-shadow: 0 0 0 1px #b6b6b6;
+}
+.photo-list__anchor img {
+    margin-bottom: 0;
 }
 .podcast-list {
     list-style: none;
