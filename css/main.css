@@ -285,6 +285,9 @@ li {
     line-height: 1.5;
     margin: 0;
 }
+li p {
+    margin-bottom: 0;
+}
 dt {
     font-weight: bold;
 }
