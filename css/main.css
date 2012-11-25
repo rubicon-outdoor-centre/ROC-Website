@@ -183,18 +183,8 @@ table {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-.grid__col--20  { width: 18%; }
-.grid__col--25  { width: 23%; }
-.grid__col--30  { width: 28%; }
 .grid__col--33  { width: 31.333333333%; }
-.grid__col--40  { width: 38%; }
-.grid__col--50  { width: 48%; }
-.grid__col--60  { width: 58%; }
 .grid__col--66  { width: 64.6%; }
-.grid__col--70  { width: 68%; }
-.grid__col--75  { width: 73%; }
-.grid__col--80  { width: 78%; }
-.grid__col--100 { width: 98%; }
 @media (max-width: 30em) { /* 480 */
     [class*="grid__col--"] {
         width: 100%;
