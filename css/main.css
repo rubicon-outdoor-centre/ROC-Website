@@ -701,9 +701,39 @@ textarea {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-input[type="text"],
-input[type="email"] {
+input[type="date"],
+input[type="email"],
+input[type="text"] {
     padding: .75em;
+}
+input[type="date"] {
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #eee;
+    bottom: 0;
+    cursor: pointer;
+    padding: 1.1em 1.25em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: .25s;
+       -moz-transition: .25s;
+        -ms-transition: .25s;
+         -o-transition: .25s;
+            transition: .25s;
+}
+::-webkit-validation-bubble-message {
+    border: 1px solid #aaa;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+}
+::-webkit-validation-bubble-arrow {
+    border-color: #aaa;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: #ddd;
 }
 input[type="checkbox"],
 input[type="radio"] {
