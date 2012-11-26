@@ -676,6 +676,7 @@ body {
 .activity-image {
     margin-left: -1.5em;
     margin-right: -1.5em;
+    margin-top: -1.5em;
     max-width: 750px;
 }
 .campus-info dd {
@@ -686,16 +687,23 @@ body {
 
 label {
     cursor: pointer;
+    display: block;
+    padding-bottom: 1.5em;
 }
 input,
 textarea {
     border: 1px solid #aaa;
+    color: #333;
     display: block;
     margin-bottom: 1.5em;
     width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+input[type="text"],
+input[type="email"] {
+    padding: .75em;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -705,6 +713,7 @@ input[type="radio"] {
     width: auto;
 }
 textarea {
+    padding: .75em;
     resize: vertical;
 }
 form table {
