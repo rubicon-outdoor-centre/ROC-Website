@@ -711,6 +711,7 @@ input[type="date"] {
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #eee;
+    border-left: 1px solid #aaa;
     bottom: 0;
     cursor: pointer;
     padding: 1.1em 1.25em;
@@ -723,6 +724,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
          -o-transition: .25s;
             transition: .25s;
 }
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: #ddd;
+}
 ::-webkit-validation-bubble-message {
     border: 1px solid #aaa;
     border-radius: 0;
@@ -731,9 +735,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 ::-webkit-validation-bubble-arrow {
     border-color: #aaa;
-}
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-    background-color: #ddd;
 }
 input[type="checkbox"],
 input[type="radio"] {
