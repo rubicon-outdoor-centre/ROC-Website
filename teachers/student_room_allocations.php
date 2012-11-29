@@ -18,11 +18,11 @@
                     <form action="student_room_allocations_email.php?action=send" method="post">
                         <input type="hidden" name="mailto" value="rubicon.oc@edumail.vic.gov.au"/>
                         <input type="hidden" name="subject" value="ROOM PAIRS FORM"/>
-                        <label for="schoolname">School Name (required):</label>
+                        <label for="schoolname">School Name <span class="required">(required)</span>:</label>
                         <input id="schoolname" class="input details" name="schoolname" type="text" required/>
-                        <label for="fullname">Contact Name (required):</label>
+                        <label for="fullname">Contact Name <span class="required">(required)</span>:</label>
                         <input id="fullname" class="input details" name="fullname" type="text" required/>
-                        <label for="from">Contact Email (required):</label>
+                        <label for="from">Contact Email <span class="required">(required)</span>:</label>
                         <input id="from" class="input details" name="from" type="email" required/>
                         <label for="phone">Contact Phone Number:</label>
                         <input id="phone" class="input details" name="phone" type="text"/>
