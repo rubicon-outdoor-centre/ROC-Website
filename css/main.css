@@ -908,6 +908,9 @@ table p {
  /* Other Styles */
 /****************/
 
+.required {
+    color: #d66;
+}
 .icon-font:before {
     font-family: awesome;
     font-style: normal;

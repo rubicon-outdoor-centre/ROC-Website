@@ -16,11 +16,11 @@
                     <h2 class="section__title">Got a Question?</h2>
                     <a class="section__back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
                     <form method="post" action="contact_us_email.php?action=send">
-                        <label for="name">Name (required):</label>
+                        <label for="name">Name <span class="required">(required)</span>:</label>
                         <input id="name" class="input" name="name" type="text" required/>
-                        <label for="email">E-mail (required):</label>
+                        <label for="email">E-mail <span class="required">(required)</span>:</label>
                         <input id="email" class="input" name="email" type="email" required/>
-                        <label for="message">Message (required):</label>
+                        <label for="message">Message <span class="required">(required)</span>:</label>
                         <textarea id="message" class="input" name="message" rows="5" required></textarea>
                         <input id="submit" class="submit" type="submit" value="Submit"/>
                     </form>
