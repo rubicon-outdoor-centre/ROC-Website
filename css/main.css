@@ -295,6 +295,7 @@ hr {
 /*****************/
 
 html {
+    border-top: .25em solid #69d;
     color: #333;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
@@ -307,59 +308,10 @@ body {
     max-width: 70em; /* 1120 */
 }
 
-/* Campus Select */
-
-.campus-select {
-    background-color: #eee;
-    box-shadow: inset 0 -.25em 0 #eaeaea;
-    margin: 0 -9999em 1.2em;
-    padding: 0 9999em;
-    text-align: center;
-}
-.campus-select__list {
-    list-style: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    text-align: right;
-    width: 100%;
-}
-.campus-select__list-item {
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-    zoom: 1;
-    *display: inline;
-}
-.campus-select__list-item:first-child {
-    margin-right: -.25em;
-}
-.campus-select__anchor {
-    color: #888;
-    display: block;
-    font-size: .75em;
-    font-weight: bold;
-    line-height: 2;
-    padding: .75em 1.5em;
-    text-decoration: none;
-}
-.campus-select__anchor:hover,
-.campus-select__anchor:focus {
-    background-color: #eaeaea;
-    color: #666;
-}
-.campus-select__anchor--current,
-.campus-select__anchor--current:hover,
-.campus-select__anchor--current:focus {
-    background-color: #fff;
-    box-shadow: .333333333em 0 0 #eaeaea,
-                -.333333333em 0 0 #eaeaea;
-    cursor: default;
-}
-
 /* Site Title */
 
 .site-title {
-    padding: 1.5em 0;
+    padding: 2.7em 0 1.5em;
 }
 .site-title__main {
     border-bottom: .1em solid #eee;
@@ -378,7 +330,7 @@ body {
     color: #69d;
 }
 .site-title__sub {
-    color: #bbb;
+    color: #ccc;
     margin-bottom: .4em;
 }
 
