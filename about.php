@@ -53,7 +53,7 @@
                         <li><p>Please use the entrance just past the oval.</p></li>
                     </ol>
                     <div id="map_canvas" class="frame"></div>
-                    <p><a href="http://goo.gl/maps/R792" target="_blank">View using Google Maps</a></p>
+                    <p><em><a href="http://goo.gl/maps/R792" target="_blank">View using Google Maps</a></em></p>
                 </section>
 
                 <section id="facilities" class="section">
