@@ -1,13 +1,9 @@
         <header>
-            <nav class="campus-select">
-                <ul class="campus-select__list">
-                    <li class="campus-select__list-item"><a class="campus-select__anchor" href="/nayook/index.php">Nayook Campus</a></li>
-                    <li class="campus-select__list-item"><a class="campus-select__anchor  campus-select__anchor--current" href="/index.php">Rubicon Campus</a></li>
-                </ul>
-            </nav>
             <hgroup class="site-title">
-                <h1 class="site-title__main"><a class="site-title__anchor" href="/index.php">Rubicon Outdoor Centre</a></h1>
-                <h2 class="site-title__sub">Rubicon Campus</h2>
+                <a class="site-title__anchor" href="/index.php">
+                    <h1 class="site-title__main">Rubicon Outdoor Centre</h1>
+                    <h2 class="site-title__sub">Nayook &amp; Rubicon Campuses</h2>
+                </a>
             </hgroup>
             <nav class="main-nav">
                 <ul class="main-nav__list">
