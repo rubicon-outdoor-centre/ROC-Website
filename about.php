@@ -156,3 +156,47 @@
             </div>
         </div>
 <?php include("/includes/footer.php"); ?>
+    <script src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=false&amp;key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var latlng = new google.maps.LatLng(-37.295291, 145.822048);
+            var myOptions = {
+                zoom: 11,
+                center: latlng,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_CENTER
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Rubicon Campus</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Address:</b><br>' +
+                '264 Rubicon Rd<br>'+
+                'Rubicon, VIC, 3712<br>'+
+                'Phone: (03) 5773 2285<br>'+
+                'Fax: (03) 5773 2441</p>'+
+                '</div>'+
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title:"Rubicon Campus"
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
+        }
+    </script>
