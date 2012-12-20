@@ -60,9 +60,6 @@
                         <p>Bus License:</p>
                             <input id="endorsedlicence1yes" type="radio" name="endorsedlicence1" value="Yes"/><label for="endorsedlicence1yes" class="radio">Yes</label>
                             <input id="endorsedlicence1no" type="radio" name="endorsedlicence1" value="No"/><label for="endorsedlicence1no" class="radio">No</label>
-                        <p>Taxi Directorate/Drivers Certificate:</p>
-                            <input id="driverslicence1yes" type="radio" name="driverslicence1" value="Yes"/><label for="driverslicence1yes" class="radio">Yes</label>
-                            <input id="driverslicence1no" type="radio" name="driverslicence1" value="No"/><label for="driverslicence1no" class="radio">No</label>
                         <p>Completed Rubicon Medical Form <a href="#" target="_blank">PDF</a>:</p>
                             <input id="medical1yes" type="radio" name="medical1" value="Yes"/><label for="medical1yes" class="radio">Yes</label>
                             <input id="medical1no" type="radio" name="medical1" value="No"/><label for="medical1no" class="radio">No</label>
@@ -96,9 +93,6 @@
                         <p>Bus License:</p>
                             <input id="endorsedlicence2yes" type="radio" name="endorsedlicence2" value="Yes"/><label for="endorsedlicence2yes" class="radio">Yes</label>
                             <input id="endorsedlicence2no" type="radio" name="endorsedlicence2" value="No"/><label for="endorsedlicence2no" class="radio">No</label>
-                        <p>Taxi Directorate/Drivers Certificate:</p>
-                            <input id="driverslicence2yes" type="radio" name="driverslicence2" value="Yes"/><label for="driverslicence2yes" class="radio">Yes</label>
-                            <input id="driverslicence2no" type="radio" name="driverslicence2" value="No"/><label for="driverslicence2no" class="radio">No</label>
                         <p>Completed Rubicon Medical Form <a href="#" target="_blank">PDF</a>:</p>
                             <input id="medical2yes" type="radio" name="medical2" value="Yes"/><label for="medical2yes" class="radio">Yes</label>
                             <input id="medical2no" type="radio" name="medical2" value="No"/><label for="medical2no" class="radio">No</label>
@@ -132,9 +126,6 @@
                         <p>Bus License:</p>
                             <input id="endorsedlicence3yes" type="radio" name="endorsedlicence3" value="Yes"/><label for="endorsedlicence3yes" class="radio">Yes</label>
                             <input id="endorsedlicence3no" type="radio" name="endorsedlicence3" value="No"/><label for="endorsedlicence3no" class="radio">No</label>
-                        <p>Taxi Directorate/Drivers Certificate:</p>
-                            <input id="driverslicence3yes" type="radio" name="driverslicence3" value="Yes"/><label for="driverslicence3yes" class="radio">Yes</label>
-                            <input id="driverslicence3no" type="radio" name="driverslicence3" value="No"/><label for="driverslicence3no" class="radio">No</label>
                         <p>Completed Rubicon Medical Form <a href="#" target="_blank">PDF</a>:</p>
                             <input id="medical3yes" type="radio" name="medical3" value="Yes"/><label for="medical3yes" class="radio">Yes</label>
                             <input id="medical3no" type="radio" name="medical3" value="No"/><label for="medical3no" class="radio">No</label>
@@ -168,9 +159,6 @@
                         <p>Bus License:</p>
                             <input id="endorsedlicence4yes" type="radio" name="endorsedlicence4" value="Yes"/><label for="endorsedlicence4yes" class="radio">Yes</label>
                             <input id="endorsedlicence4no" type="radio" name="endorsedlicence4" value="No"/><label for="endorsedlicence4no" class="radio">No</label>
-                        <p>Taxi Directorate/Drivers Certificate:</p>
-                            <input id="driverslicence4yes" type="radio" name="driverslicence4" value="Yes"/><label for="driverslicence4yes" class="radio">Yes</label>
-                            <input id="driverslicence4no" type="radio" name="driverslicence4" value="No"/><label for="driverslicence4no" class="radio">No</label>
                         <p>Completed Rubicon Medical Form <a href="#" target="_blank">PDF</a>:</p>
                             <input id="medical4yes" type="radio" name="medical4" value="Yes"/><label for="medical4yes" class="radio">Yes</label>
                             <input id="medical4no" type="radio" name="medical4" value="No"/><label for="medical4no" class="radio">No</label>
