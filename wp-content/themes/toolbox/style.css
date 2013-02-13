@@ -237,3 +237,14 @@ li {
 	line-height: 1.5; /* 24 / 16 */
 	margin: 0;
 }
+
+  /******************/
+ /* General Styles */
+/******************/
+
+/* Header */
+
+.site-title a {
+	color: #333;
+	text-decoration: none;
+}

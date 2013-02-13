@@ -4,7 +4,7 @@
 
 		<footer class="footer" role="contentinfo">
 
-
+			<p>© <?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
 
 		</footer>
 
