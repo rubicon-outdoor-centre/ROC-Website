@@ -18,7 +18,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
  /* Sass Variables */
 /******************/
 
-$blue: blue;
+$black: #444;
+$white: #fff;
+$grey: #eee;
+$blue: #69d;
 
   /*********************************************************/
  /* Normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -50,12 +53,12 @@ body {
 /* Remove text-shadow in selection highlight: h5bp.com/i */
 ::-moz-selection {
 	background-color: hsla(0,0%,0%,.5);
-	color: #fff;
+	color: $white;
 	text-shadow: none;
 }
 ::selection {
 	background-color: hsla(0,0%,0%,.5);
-	color: #fff;
+	color: $white;
 	text-shadow: none;
 }
 /* Addresses `outline` inconsistency between Chrome and other browsers. */
@@ -74,7 +77,7 @@ strong {
 /* Addresses styling not present in IE 8/9. */
 mark {
 	background: #ff6;
-	color: #444;
+	color: $black;
 }
 /* Corrects font family set oddly in Safari 5 and Chrome. */
 code,
@@ -152,7 +155,7 @@ table {
 /**********************/
 
 html {
-	color: #444;
+	color: $black;
 	font-family: sans-serif;
 	font-size: 100%;
 }
@@ -207,8 +210,8 @@ blockquote {
 }
 p a:link,
 p a:visited {
-	border-bottom: 2px solid #6af;
-	color: #444;
+	border-bottom: 2px solid $blue;
+	color: $black;
 	padding-bottom: 1px;
 	text-decoration: none;
 	-webkit-transition: .25s;
@@ -219,7 +222,7 @@ p a:visited {
 }
 p a:hover,
 p a:focus {
-	color: #6af;
+	color: $blue;
 }
 p a:active {
 	position: relative;
@@ -252,12 +255,33 @@ li {
 /* Header */
 
 .site-title a {
-	color: #333;
+	color: $black;
 	text-decoration: none;
 }
 
 /* Navigation */
 
-.primary-nav a {
+.primary-nav {
 
+	ul {
+		border-bottom: .25em solid $blue;
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+	}
+	a {
+		color: $black;
+		display: block;
+		padding: .75em 1.5em .5em;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		background-color: $grey;
+	}
+	.current-menu-item a {
+		background-color: $blue;
+		color: $white;
+	}
 }
