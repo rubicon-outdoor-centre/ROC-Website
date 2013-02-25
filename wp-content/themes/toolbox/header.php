@@ -45,12 +45,13 @@
 
 			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<nav class="navigation" role="navigation">
+			<nav class="primary-nav" role="navigation">
 				<?php
 
 					$args = array(
 								'theme_location' => 'primary',
-								'container' => false
+								'container' => false,
+								'items_wrap' => '<ul>%3$s</ul>'
 							);
 
 					wp_nav_menu( $args );
