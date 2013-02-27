@@ -39,7 +39,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="container">
+	<div id="top" class="container">
 
 		<header class="header" role="banner">
 

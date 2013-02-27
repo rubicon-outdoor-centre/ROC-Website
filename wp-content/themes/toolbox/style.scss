@@ -252,6 +252,27 @@ li {
  /* General Styles */
 /******************/
 
+/* Container */
+
+body {
+	position: relative;
+}
+body:after {
+		background-image: -webkit-linear-gradient(left, $blue 33%, darken($blue, 2.5%) 33%, darken($blue, 2.5%) 67%, lighten($blue, 2.5%) 67%);
+		background-size: 6em 6em;
+		content: '';
+		height: .25em;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+.container {
+	margin: 0 auto;
+	max-width: 60em;
+	padding-top: 1.5em;
+}
+
 /* Header */
 
 .site-title a {
@@ -283,5 +304,55 @@ li {
 	.current-menu-item a {
 		background-color: $blue;
 		color: $white;
+		cursor: default;
 	}
+}
+footer .primary-nav {
+	float: right;
+
+	ul {
+		border-bottom: none;
+		display: inline-block;
+		vertical-align: top;
+	}
+	li {
+		border-right: .125em solid $grey;
+		margin-right: -.25em;
+		position: relative;
+	}
+	a {
+		font-size: .875em;
+		line-height: 1.714285714;
+		padding: 0 .5em;
+	}
+	a:hover,
+	a:focus {
+		background-color: transparent;
+		color: $blue;
+	}
+	.current-menu-item a {
+		background-color: transparent;
+		color: $black;
+		font-weight: bold;
+	}
+	.back-to-top {
+		display: inline-block;
+		font-size: .875em;
+		line-height: 1.714285714;
+		vertical-align: top;
+	}
+}
+
+/* Footer */
+
+footer {
+	border-top: .25em solid $grey;
+	overflow: hidden;
+	padding-top: 1.5em;
+}
+.copyright {
+	float: left;
+	font-size: .875em;
+	line-height: 1.714285714;
+	margin-bottom: 1.714285714em;
 }

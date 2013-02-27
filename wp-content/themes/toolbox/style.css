@@ -307,6 +307,28 @@ li {
 /******************/
 /* General Styles */
 /******************/
+/* Container */
+body {
+  position: relative;
+}
+
+body:after {
+  background-image: -webkit-linear-gradient(left, #6699dd 33%, #5c92db 33%, #5c92db 67%, #70a0df 67%);
+  background-size: 6em 6em;
+  content: '';
+  height: .25em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 60em;
+  padding-top: 1.5em;
+}
+
 /* Header */
 .site-title a {
   color: #444444;
@@ -334,4 +356,54 @@ li {
 .primary-nav .current-menu-item a {
   background-color: #6699dd;
   color: white;
+  cursor: default;
+}
+
+footer .primary-nav {
+  float: right;
+}
+footer .primary-nav ul {
+  border-bottom: none;
+  display: inline-block;
+  vertical-align: top;
+}
+footer .primary-nav li {
+  border-right: 0.125em solid #eeeeee;
+  margin-right: -.25em;
+  position: relative;
+}
+footer .primary-nav a {
+  font-size: .875em;
+  line-height: 1.714285714;
+  padding: 0 0.5em;
+}
+footer .primary-nav a:hover,
+footer .primary-nav a:focus {
+  background-color: transparent;
+  color: #6699dd;
+}
+footer .primary-nav .current-menu-item a {
+  background-color: transparent;
+  color: #444444;
+  font-weight: bold;
+}
+footer .primary-nav .back-to-top {
+  display: inline-block;
+  font-size: .875em;
+  line-height: 1.714285714;
+  vertical-align: top;
+}
+
+/* Footer */
+footer {
+  border-top: 0.25em solid #eeeeee;
+  overflow: hidden;
+  padding-top: 1.5em;
+}
+
+.copyright {
+  float: left;
+  font-size: .875em;
+  line-height: 1.714285714;
+  margin-bottom: 1.714285714em;
 }
