@@ -31,6 +31,7 @@
 
 		?></title>
 
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700'>
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 
 	<?php wp_head(); ?>
