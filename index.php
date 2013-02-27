@@ -1,8 +1,8 @@
-<?php include("/includes/head.php"); ?>
+<?php include("includes/head.php"); ?>
         <title>Rubicon Outdoor Centre - Rubicon Campus</title>
     </head>
     <body id="top" class="page--home">
-        <?php include("/includes/header.php"); ?>
+        <?php include("includes/header.php"); ?>
         <div class="main-content  grid">
             <div class="grid__col--33">
                 <ul class="main-buttons">
@@ -18,4 +18,4 @@
                 </section>
             </div>
         </div>
-<?php include("/includes/footer.php"); ?>
+<?php include("includes/footer.php"); ?>
