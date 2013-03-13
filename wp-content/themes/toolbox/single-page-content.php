@@ -7,6 +7,6 @@
  */
 ?>
 
-<section>
-	<?php the_content(); ?>
-</section>
+					<section>
+						<?php the_content(); ?>
+					</section>
