@@ -7,19 +7,12 @@
  * @since Toolbox 0.1
  */
 
-get_header(); ?>
+get_header();
 
-			<div id="primary">
+while ( have_posts() ) : the_post();
 
-				<div id="content" role="main">
+	get_template_part( 'single-page-content' );
 
-					<?php while ( have_posts() ) : the_post(); ?>
+endwhile; // end of the loop.
 
-						<?php get_template_part( 'single-page-content' ); ?>
-
-					<?php endwhile; // end of the loop. ?>
-
-				</div><!-- #content -->
-
-			</div><!-- #primary -->
-<?php get_footer(); ?>
+get_footer(); ?>
