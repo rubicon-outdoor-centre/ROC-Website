@@ -20,7 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $black: #444;
 $white: #fff;
-$grey: #eee;
+$grey: #ddd;
 $blue: #69d;
 
   /*********************************************************/
@@ -155,13 +155,8 @@ table {
 /********/
 
 .grid {
-    letter-spacing: -.25em; /* Removes the margin introduced by using inline-block */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 70em; /* 1120 */
-}
-.grid > * {
-    letter-spacing: 0;
+    margin-left: -1.25%;
+    margin-right: -1.25%;
 }
 [class*="grid__col--"] {
     margin-left: 1.25%;
@@ -170,7 +165,7 @@ table {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-@media (min-width: 40em) { /* 640 */
+@media (min-width: 40em) { /* 640px */
     [class*="grid__col--"] {
         display: inline-block;
         vertical-align: top;
@@ -300,6 +295,7 @@ a {
 
 body {
 	position: relative;
+	padding: 0 1.5em;
 }
 body:after {
 		background-image: -webkit-linear-gradient(left, $blue 33%, darken($blue, 2.5%) 33%, darken($blue, 2.5%) 67%, lighten($blue, 2.5%) 67%);
