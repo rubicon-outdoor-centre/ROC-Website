@@ -344,9 +344,14 @@ body:after {
   text-decoration: none;
 }
 
+.banner {
+  margin-bottom: 1.5em;
+}
+
 /* Navigation */
 .primary-nav ul {
   border-bottom: 0.25em solid #6699dd;
+  margin-bottom: 0;
 }
 .primary-nav li {
   display: inline-block;

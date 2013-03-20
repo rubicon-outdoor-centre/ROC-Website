@@ -288,6 +288,9 @@ body:after {
 		text-decoration: none;
 	}
 }
+.banner {
+	margin-bottom: 1.5em;
+}
 
 /* Navigation */
 
@@ -295,6 +298,7 @@ body:after {
 
 	ul {
 		border-bottom: .25em solid $blue;
+		margin-bottom: 0;
 	}
 	li {
 		display: inline-block;
