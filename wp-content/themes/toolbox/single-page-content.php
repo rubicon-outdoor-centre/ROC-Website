@@ -5,6 +5,9 @@
  * @package Toolbox
  * @since Toolbox 1.0
  */
-?>
 
-			<?php the_content(); ?>
+remove_filter ('the_content',  'wpautop');
+
+the_content();
+
+?>
