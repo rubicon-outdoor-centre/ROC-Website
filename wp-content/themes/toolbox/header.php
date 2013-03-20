@@ -59,7 +59,7 @@
 				?>
 			</nav>
 
-			<img class="banner" src="/wp-content/themes/toolbox/img/banner.jpg" alt="banner">
+			<img class="banner" src="/wp-content/themes/toolbox/img/banner.jpg" alt="Banner Image">
 
 		</header>
 
