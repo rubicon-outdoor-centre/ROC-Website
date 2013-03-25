@@ -20,7 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $black: #444;
 $white: #fff;
-$grey: #ddd;
+$grey: #e6e6e6;
 $blue: #69d;
 
   /*********************************************************/
@@ -344,7 +344,7 @@ body:after {
 	a {
 		color: $black;
 		display: block;
-		padding: .75em 1.5em .5em;
+		padding: .75em 1.5em;
 		text-decoration: none;
 	}
 	a:hover,
@@ -371,6 +371,7 @@ footer .primary-nav {
 		position: relative;
 	}
 	a {
+		color: lighten($black, 10%);
 		font-size: .875em;
 		line-height: 1.714285714;
 		padding: 0 .5em;
@@ -382,7 +383,7 @@ footer .primary-nav {
 	}
 	.current-menu-item a {
 		background-color: transparent;
-		color: $black;
+		color: lighten($black, 10%);
 		font-weight: bold;
 	}
 	.back-to-top {
@@ -399,6 +400,10 @@ footer {
 	border-top: .25em solid $grey;
 	overflow: hidden;
 	padding-top: 1.5em;
+
+	p {
+		color: lighten($black, 10%);
+	}
 }
 .copyright {
 	float: left;

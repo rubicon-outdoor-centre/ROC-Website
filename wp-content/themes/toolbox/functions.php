@@ -63,6 +63,7 @@ function toolbox_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'toolbox' ),
+		'secondary' => __( 'Secondary Menu', 'toolbox' )
 	) );
 
 	/**
