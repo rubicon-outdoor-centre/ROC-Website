@@ -437,7 +437,7 @@ body:after {
   text-decoration: none;
 }
 .site-title .subtitle {
-  color: #aaaaaa;
+  color: #c4c4c4;
   font-size: 1.5em;
   font-style: italic;
   font-weight: normal;
@@ -479,12 +479,12 @@ footer .primary-nav ul {
   vertical-align: top;
 }
 footer .primary-nav li {
-  border-right: 0.125em solid #e6e6e6;
+  border-right: 0.125em solid #d9d9d9;
   margin-right: -.25em;
   position: relative;
 }
 footer .primary-nav a {
-  color: #777777;
+  color: #848484;
   font-size: .875em;
   line-height: 1.714285714;
   padding: 0 0.5em;
@@ -496,7 +496,7 @@ footer .primary-nav a:focus {
 }
 footer .primary-nav .current-menu-item a {
   background-color: transparent;
-  color: #777777;
+  color: #848484;
   font-weight: bold;
 }
 footer .primary-nav .back-to-top {
@@ -519,7 +519,7 @@ footer {
   padding: 1.5em 9999em 0;
 }
 footer p {
-  color: #777777;
+  color: #848484;
 }
 
 .copyright {
