@@ -437,12 +437,12 @@ body:after {
 .primary-nav a {
   color: #444444;
   display: block;
-  padding: 0.75em 1.5em 0.5em;
+  padding: 0.75em 1.5em;
   text-decoration: none;
 }
 .primary-nav a:hover,
 .primary-nav a:focus {
-  background-color: #dddddd;
+  background-color: #e6e6e6;
 }
 .primary-nav .current-menu-item a {
   background-color: #6699dd;
@@ -459,11 +459,12 @@ footer .primary-nav ul {
   vertical-align: top;
 }
 footer .primary-nav li {
-  border-right: 0.125em solid #dddddd;
+  border-right: 0.125em solid #e6e6e6;
   margin-right: -.25em;
   position: relative;
 }
 footer .primary-nav a {
+  color: #5e5e5e;
   font-size: .875em;
   line-height: 1.714285714;
   padding: 0 0.5em;
@@ -475,7 +476,7 @@ footer .primary-nav a:focus {
 }
 footer .primary-nav .current-menu-item a {
   background-color: transparent;
-  color: #444444;
+  color: #5e5e5e;
   font-weight: bold;
 }
 footer .primary-nav .back-to-top {
@@ -487,9 +488,12 @@ footer .primary-nav .back-to-top {
 
 /* Footer */
 footer {
-  border-top: 0.25em solid #dddddd;
+  border-top: 0.25em solid #e6e6e6;
   overflow: hidden;
   padding-top: 1.5em;
+}
+footer p {
+  color: #5e5e5e;
 }
 
 .copyright {
