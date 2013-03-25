@@ -316,6 +316,10 @@ body {
 
 .header {
 	margin-bottom: 3em;
+
+	.banner {
+		border-radius: .25em;
+	}
 }
 .site-title {
 	background-color: $blue;
@@ -327,6 +331,11 @@ body {
 	a {
 		color: $white;
 		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: lighten($blue, 25%);
+		}
 	}
 }
 
@@ -335,7 +344,7 @@ body {
 .primary-nav {
 
 	ul {
-		background-color: $blue;
+		background-color: lighten($blue, 25%);
 		margin: 0 -9999em 3em;
 		padding: 0 9999em;
 	}
@@ -344,17 +353,17 @@ body {
 		vertical-align: top;
 	}
 	a {
-		color: $white;
+		color: $black;
 		display: block;
 		padding: .75em 1.5em;
 		text-decoration: none;
 	}
 	a:hover,
 	a:focus {
-		background-color: hsla(0,0%,0%,.1);
+		background-color: lighten($blue, 30%);
 	}
 	.current-menu-item a {
-		background-color: hsla(0,0%,0%,.25);
+		background-color: $white;
 		cursor: default;
 	}
 }
