@@ -338,11 +338,11 @@ p a:visited {
   color: #444444;
   padding-bottom: 1px;
   text-decoration: none;
-  -webkit-transition: .25s;
-  -moz-transition: .25s;
-  -ms-transition: .25s;
-  -o-transition: .25s;
-  transition: .25s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
 }
 
 p a:hover,
@@ -385,10 +385,21 @@ li {
 /******************/
 a {
   -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
 }
 
 /* Container */
+html {
+  background-color: #e6e6e6;
+  overflow-y: scroll;
+}
+
 body {
+  background-color: white;
+  overflow-x: hidden;
   position: relative;
   padding: 0 1.5em;
 }
@@ -407,22 +418,31 @@ body:after {
 .container {
   margin: 0 auto;
   max-width: 60em;
-  padding-top: 2.25em;
+  padding-top: 2.75em;
 }
 
 /* Header */
-.site-title {
+.header {
+  margin-bottom: 3em;
+}
+
+.site-title h1 {
+  border-bottom: 0.111em solid #e6e6e6;
   font-size: 2.25em;
   line-height: 1.333333333;
-  margin-bottom: 1em;
+  margin-bottom: .25em;
 }
 .site-title a {
   color: #444444;
   text-decoration: none;
 }
-
-.banner {
-  margin-bottom: 1.5em;
+.site-title .subtitle {
+  color: #aaaaaa;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 2em;
 }
 
 /* Navigation */
@@ -464,7 +484,7 @@ footer .primary-nav li {
   position: relative;
 }
 footer .primary-nav a {
-  color: #5e5e5e;
+  color: #777777;
   font-size: .875em;
   line-height: 1.714285714;
   padding: 0 0.5em;
@@ -476,7 +496,7 @@ footer .primary-nav a:focus {
 }
 footer .primary-nav .current-menu-item a {
   background-color: transparent;
-  color: #5e5e5e;
+  color: #777777;
   font-weight: bold;
 }
 footer .primary-nav .back-to-top {
@@ -486,14 +506,20 @@ footer .primary-nav .back-to-top {
   vertical-align: top;
 }
 
+/* Content */
+.content {
+  margin-bottom: 1.5em;
+}
+
 /* Footer */
 footer {
-  border-top: 0.25em solid #e6e6e6;
+  background-color: #e6e6e6;
+  margin: 0 -9999em;
   overflow: hidden;
-  padding-top: 1.5em;
+  padding: 1.5em 9999em 0;
 }
 footer p {
-  color: #5e5e5e;
+  color: #777777;
 }
 
 .copyright {
