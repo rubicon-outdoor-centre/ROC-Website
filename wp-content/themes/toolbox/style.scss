@@ -310,7 +310,6 @@ body {
 .container {
 	margin: 0 auto;
 	max-width: 60em;
-	padding-top: 2.5em;
 }
 
 /* Header */
@@ -319,24 +318,15 @@ body {
 	margin-bottom: 3em;
 }
 .site-title {
+	background-color: $blue;
+	font-size: 2.25em;
+	line-height: 1.333333333;
+	margin: 0 -9999em 0;
+	padding: .666666666em 9999em;
 
-	h1 {
-		border-bottom: .111em solid $grey;
-		font-size: 2.25em;
-		line-height: 1.333333333;
-		margin-bottom: .25em;
-	}
 	a {
-		color: $black;
+		color: $white;
 		text-decoration: none;
-	}
-	.subtitle {
-		color: lighten($black, 50%);
-		font-size: 1.5em;
-		font-style: italic;
-		font-weight: normal;
-		line-height: 1;
-		margin-bottom: 2em;
 	}
 }
 
@@ -347,17 +337,16 @@ body {
 	ul {
 		background-color: $blue;
 		margin: 0 -9999em 3em;
-		padding: .5em 9999em;
+		padding: 0 9999em;
 	}
 	li {
 		display: inline-block;
 		vertical-align: top;
 	}
 	a {
-		border-radius: 1em;
 		color: $white;
 		display: block;
-		padding: .25em 1.5em;
+		padding: .75em 1.5em;
 		text-decoration: none;
 	}
 	a:hover,

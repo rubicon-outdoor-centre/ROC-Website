@@ -43,10 +43,7 @@
 
 		<header class="header" role="banner">
 
-			<hgroup class="site-title">
-				<h1><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="subtitle">Excellence in Outdoor Education</h2>
-			</hgroup>
+			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<nav class="primary-nav" role="navigation">
 				<?php
