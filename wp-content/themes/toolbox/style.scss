@@ -355,26 +355,28 @@ body:after {
 .primary-nav {
 
 	ul {
-		border-bottom: .25em solid $blue;
-		margin-bottom: 0;
+		background-color: $blue;
+		margin: 0 -9999em 3em;
+		padding: .25em 9999em;
 	}
 	li {
 		display: inline-block;
 		vertical-align: top;
 	}
 	a {
-		color: $black;
+		border-radius: 1.25em;
+		color: $white;
 		display: block;
-		padding: .75em 1.5em;
+		padding: .5em 1.5em;
 		text-decoration: none;
 	}
 	a:hover,
 	a:focus {
-		background-color: $grey;
+		background-color: hsla(0,0%,0%,.1);
 	}
 	.current-menu-item a {
-		background-color: $blue;
-		color: $white;
+		background-color: $white;
+		color: $black;
 		cursor: default;
 	}
 }
@@ -382,6 +384,7 @@ footer .primary-nav {
 	float: right;
 
 	ul {
+		background-color: transparent;
 		border-bottom: none;
 		display: inline-block;
 		vertical-align: top;

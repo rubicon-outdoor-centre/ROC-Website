@@ -447,26 +447,28 @@ body:after {
 
 /* Navigation */
 .primary-nav ul {
-  border-bottom: 0.25em solid #6699dd;
-  margin-bottom: 0;
+  background-color: #6699dd;
+  margin: 0 -9999em 3em;
+  padding: 0.25em 9999em;
 }
 .primary-nav li {
   display: inline-block;
   vertical-align: top;
 }
 .primary-nav a {
-  color: #444444;
+  border-radius: 1.25em;
+  color: white;
   display: block;
-  padding: 0.75em 1.5em;
+  padding: 0.5em 1.5em;
   text-decoration: none;
 }
 .primary-nav a:hover,
 .primary-nav a:focus {
-  background-color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .primary-nav .current-menu-item a {
-  background-color: #6699dd;
-  color: white;
+  background-color: white;
+  color: #444444;
   cursor: default;
 }
 
@@ -474,6 +476,7 @@ footer .primary-nav {
   float: right;
 }
 footer .primary-nav ul {
+  background-color: transparent;
   border-bottom: none;
   display: inline-block;
   vertical-align: top;
