@@ -413,12 +413,10 @@ body {
 .header {
   margin-bottom: 3em;
 }
-.header .banner {
-  border-radius: .25em;
-}
 
 .site-title {
   background-color: #6699dd;
+  box-shadow: inset 0 -0.05556em 0 rgba(0, 0, 0, 0.05);
   font-size: 2.25em;
   line-height: 1.333333333;
   margin: 0 -9999em 0;
@@ -427,15 +425,17 @@ body {
 .site-title a {
   color: white;
   text-decoration: none;
+  text-shadow: 0 2px 2px #518bd8;
 }
 .site-title a:hover, .site-title a:focus {
-  color: #cedff4;
+  color: #e3ecf9;
 }
 
 /* Navigation */
 .primary-nav ul {
   background-color: #cedff4;
-  margin: 0 -9999em 3em;
+  box-shadow: inset 0 -0.125em 0 rgba(0, 0, 0, 0.05);
+  margin: 0 -9999em;
   padding: 0 9999em;
 }
 .primary-nav li {
@@ -451,49 +451,107 @@ body {
 .primary-nav a:hover,
 .primary-nav a:focus {
   background-color: #e3ecf9;
+  box-shadow: inset 0 -0.125em 0 rgba(0, 0, 0, 0.05);
 }
 .primary-nav .current-menu-item a {
   background-color: white;
+  box-shadow: 0.25em 0 0 white, -0.25em 0 0 white;
   cursor: default;
+  position: relative;
+}
+.primary-nav .current-menu-item a:after, .primary-nav .current-menu-item a:before {
+  background-color: #cedff4;
+  border-radius: 0 0 0.25em 0;
+  box-shadow: inset -0.125em -0.0625em 0 rgba(0, 0, 0, 0.05);
+  bottom: 0;
+  content: '';
+  left: -.25em;
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+.primary-nav .current-menu-item a:before {
+  border-radius: 0 0 0 0.25em;
+  box-shadow: inset 0.125em -0.0625em 0 rgba(0, 0, 0, 0.05);
+  left: 100%;
+  right: -.25em;
 }
 
-footer .primary-nav {
+.secondary-nav {
   float: right;
 }
-footer .primary-nav ul {
+.secondary-nav ul {
   background-color: transparent;
   border-bottom: none;
   display: inline-block;
+  list-style: none;
   margin: 0;
   padding: 0;
   vertical-align: top;
 }
-footer .primary-nav li {
+.secondary-nav li {
   border-right: 0.125em solid #d9d9d9;
+  display: inline-block;
   margin-right: -.25em;
   position: relative;
+  vertical-align: top;
 }
-footer .primary-nav a {
+.secondary-nav a {
   color: #848484;
+  display: block;
   font-size: .875em;
   line-height: 1.714285714;
   padding: 0 0.5em;
+  text-decoration: none;
 }
-footer .primary-nav a:hover,
-footer .primary-nav a:focus {
+.secondary-nav a:hover,
+.secondary-nav a:focus {
   background-color: transparent;
   color: #6699dd;
 }
-footer .primary-nav .current-menu-item a {
+.secondary-nav .current-menu-item a {
   background-color: transparent;
   color: #848484;
+  cursor: default;
   font-weight: bold;
 }
-footer .primary-nav .back-to-top {
+.secondary-nav .back-to-top {
   display: inline-block;
   font-size: .875em;
   line-height: 1.714285714;
   vertical-align: top;
+}
+
+.side-nav {
+  background-color: #e6e6e6;
+  box-shadow: inset 0 0 0 0.125em rgba(0, 0, 0, 0.05);
+  border-radius: .25em;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.side-nav h4 {
+  background-color: #6699dd;
+  box-shadow: inset 0 0 0 0.125em rgba(0, 0, 0, 0.05);
+  color: white;
+  margin-bottom: 0;
+  padding: 0.57143em 1.14286em;
+}
+.side-nav ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+.side-nav li:first-child a {
+  border-top: 0;
+}
+.side-nav a {
+  border-top: 0.125em solid #d9d9d9;
+  color: #444444;
+  display: block;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+}
+.side-nav a:hover, .side-nav a:focus {
+  background-color: #d9d9d9;
 }
 
 /* Content */
@@ -501,9 +559,46 @@ footer .primary-nav .back-to-top {
   margin-bottom: 1.5em;
 }
 
+.banner {
+  border-radius: .25em;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.banner:after {
+  border-radius: .25em;
+  bottom: 0;
+  box-shadow: inset 0 0 0 0.125em rgba(0, 0, 0, 0.1);
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.banner img {
+  border-radius: .25em;
+}
+
+.content-section {
+  background-color: #e6e6e6;
+  box-shadow: inset 0 0 0 0.125em rgba(0, 0, 0, 0.05);
+  border-radius: .25em;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+.content-section h2 {
+  background-color: #6699dd;
+  box-shadow: inset 0 0 0 0.05556em rgba(0, 0, 0, 0.05);
+  color: white;
+  padding: 0.33333em 0.66667em;
+}
+.content-section p {
+  padding: 0 1.5em;
+}
+
 /* Footer */
 footer {
   background-color: #e6e6e6;
+  box-shadow: inset 0 0.125em 0 rgba(0, 0, 0, 0.05);
   margin: 0 -9999em;
   overflow: hidden;
   padding: 1.5em 9999em 0;
