@@ -59,8 +59,6 @@
 				?>
 			</nav>
 
-			<img class="banner" src="/wp-content/themes/toolbox/img/banner.jpg" alt="Banner Image">
-
 		</header>
 
 		<div class="content" role="main">

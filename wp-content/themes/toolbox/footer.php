@@ -6,7 +6,7 @@
 
 			<p class="copyright">© <?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
 
-			<nav class="primary-nav" role="navigation">
+			<nav class="secondary-nav" role="navigation">
 				<?php
 
 					$args = array(
