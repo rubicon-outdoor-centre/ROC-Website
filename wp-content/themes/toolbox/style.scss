@@ -21,6 +21,8 @@ $black: #444;
 $white: #fff;
 $grey: #e6e6e6;
 $blue: #69d;
+$orange: #d96;
+$green: #9d6;
 
   /*********************************************************/
  /* Normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -442,7 +444,7 @@ body {
 	margin-bottom: 1.5em;
 
 	h4 {
-		background-color: $blue;
+		background-color: $green;
 		box-shadow: inset 0 0 0 .125em hsla(0,0%,0%,.05);
 		color: $white;
 		margin-bottom: 0;
@@ -501,7 +503,7 @@ body {
 	overflow: hidden;
 
 	h2 {
-		background-color: $blue;
+		background-color: $orange;
 		box-shadow: inset 0 0 0 .055555556em hsla(0,0%,0%,.05);
 		color: $white;
 		padding: .333333333em .666666666em;
