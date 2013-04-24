@@ -13,6 +13,17 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+@font-face {
+    font-family: 'awesome';
+    src: url('fonts/awesome/fontawesome-webfont.eot');
+    src: url('fonts/awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/awesome/fontawesome-webfont.woff') format('woff'),
+        url('fonts/awesome/fontawesome-webfont.ttf') format('truetype'),
+        url('fonts/awesome/fontawesome-webfont.svg#AwesomeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
   /******************/
  /* Sass Variables */
 /******************/
@@ -311,7 +322,7 @@ body {
 }
 .container {
 	margin: 0 auto;
-	max-width: 60em;
+	max-width: 70em;
 }
 
 /* Header */
@@ -461,6 +472,7 @@ body {
 		border-top: .125em solid darken($grey, 5%);
 		color: $black;
 		display: block;
+		font-weight: bold;
 		padding: .75em 1.5em;
 		text-decoration: none;
 
@@ -540,9 +552,80 @@ body {
 
 		&:hover,
 		&:focus {
-			background-color: hsla(0,0%,0%,.1);
+		    background-color: hsla(0,0%,0%,.1);
+		    -webkit-animation: back-to-top 1s infinite ease;
+		       -moz-animation: back-to-top 1s infinite ease;
+		        -ms-animation: back-to-top 1s infinite ease;
+		         -o-animation: back-to-top 1s infinite ease;
+		            animation: back-to-top 1s infinite ease;
 		}
 	}
+}
+.form-list {
+    list-style: none;
+    margin: 0;
+}
+.form-list__list-item {
+    margin-bottom: 1.5em;
+}
+.form-list__list-item--attention {
+    background-color: #f6f6d6;
+    box-shadow: 0 0 0 1px #e6e6d6;
+    margin: -.5em -1.25em 1em;
+    padding: .5em 1.25em;
+}
+.form-list__list-item__title {
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+.form-list__list-item__title--single {
+    margin-left: 52px;
+}
+.form-list__list-item__description {
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+.form-list__list-item__description--single {
+    margin-left: 52px;
+}
+.form-list__anchor {
+    float: left;
+    height: 32px;
+    margin-right: 16px;
+    margin-top: 8px;
+    opacity: .65;
+    width: 32px;
+}
+.form-list__anchor:hover,
+.form-list__anchor:focus {
+    opacity: 1;
+}
+.form-list__anchor--doc {
+    background-image: url('img/icons/doc.png');
+}
+.form-list__anchor--pdf {
+    background-image: url('img/icons/pdf.png');
+}
+.form-list__anchor--xls {
+    background-image: url('img/icons/xls.png');
+}
+.form-list__anchor--submit {
+    background-color: #9d6;
+    border-radius: .2em;
+    color: #fff;
+    font-size: .75em;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 80px;
+}
+.form-list__anchor--submit:hover,
+.form-list__anchor--submit:focus {
+    background-color: #69d;
 }
 
 /* Footer */
@@ -567,6 +650,42 @@ footer {
 
 /* Other */
 
-.icon-font {
-	font-style: normal;
+.icon-font:before {
+    font-family: awesome;
+    font-style: normal;
+    font-weight: normal;
+}
+.icon-font--bullhorn:before {
+    content: '\f0a1';
+}
+.icon-font--comment:before {
+    content: '\f075';
+}
+.icon-font--pencil:before {
+    content: '\f040';
+}
+.icon-font--picture:before {
+    content: '\f03e';
+}
+.icon-font--up-arrow:before {
+    content: '\f062';
+    opacity: .75;
+}
+
+/* Animations */
+
+@-webkit-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-moz-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-ms-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@-o-keyframes back-to-top {
+    50% { line-height: 2; }
+}
+@keyframes back-to-top {
+    50% { line-height: 2; }
 }

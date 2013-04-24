@@ -18,8 +18,8 @@
 		$page_link = get_permalink();
 
 ?>
-		<li>
-			<a href="#<?php echo the_slug(); ?>"><?php the_title(); ?></a>
-		</li>
+	<li>
+		<a href="#<?php echo the_slug(); ?>"><?php the_title(); ?></a>
+	</li>
 
 <?php endwhile; ?>
