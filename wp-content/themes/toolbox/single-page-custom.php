@@ -7,6 +7,8 @@
  * @since Toolbox 0.1
  */
 
+remove_filter ('the_content', 'wpautop');
+
 get_header();
 
 while ( have_posts() ) : the_post();
@@ -15,20 +17,18 @@ while ( have_posts() ) : the_post();
 
 ?>
 
-		<div class="theContent">
-
 			<div class="banner">
-				<img src="/wp-content/themes/toolbox/img/banner.jpg" alt="Banner Image">
+				<img src="/wp-content/themes/toolbox/img/banners/<?php echo $slug; ?>.jpg" alt="Banner Image">
 			</div>
 
 			<div class="grid">
 
 				<div class="grid__col--33">
 					<nav class="side-nav">
-					<h4>Quick Links</h4>
-					<ul>
-						<?php get_template_part( 'nav', 'secondary' ); ?>
-					</ul>
+						<h4>Quick Links</h4>
+						<ul>
+							<?php get_template_part( 'nav', 'secondary' ); ?>
+						</ul>
 					</nav>
 				</div><!--
 
@@ -52,7 +52,7 @@ while ( have_posts() ) : the_post();
 
 						<h2 id="<?php echo the_slug(); ?>"><?php the_title(); ?></h2>
 
-						<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow">&uarr;</i></a>
+						<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
 
 						<?php the_content(); ?>
 
@@ -63,8 +63,6 @@ while ( have_posts() ) : the_post();
 				</div>
 
 			</div>
-
-		</div>
 
 <?php
 
