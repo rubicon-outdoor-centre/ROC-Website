@@ -501,15 +501,27 @@ body {
 	border-radius: .25em;
 	margin-bottom: 1.5em;
 	overflow: hidden;
+	padding: 1.5em 1.5em 0;
 
 	h2 {
 		background-color: $orange;
+		border-radius: .111111111em .111111111em 0 0;
 		box-shadow: inset 0 0 0 .055555556em hsla(0,0%,0%,.05);
 		color: $white;
+		margin: -.666666666em -.666666666em .666666666em;
 		padding: .333333333em .666666666em;
 	}
-	p {
-		padding: 0 1.5em;
+	hr {
+		border: 1px solid hsla(0,0%,0%,.05);
+		margin-bottom: 1.5em;
+	}
+	ol,
+	ul {
+		padding-left: 1.5em;
+	}
+	.form-list {
+		list-style: none;
+		padding-left: 0;
 	}
 }
 
