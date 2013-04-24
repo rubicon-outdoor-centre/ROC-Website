@@ -62,8 +62,7 @@ function toolbox_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'toolbox' ),
-		'secondary' => __( 'Secondary Menu', 'toolbox' )
+		'primary' => __( 'Primary Menu', 'toolbox' )
 	) );
 
 	/**
@@ -304,7 +303,6 @@ function toolbox_enhanced_image_navigation( $url ) {
 	return $url;
 }
 add_filter( 'attachment_link', 'toolbox_enhanced_image_navigation' );
-
 
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
