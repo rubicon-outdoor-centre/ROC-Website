@@ -502,6 +502,7 @@ body {
 	margin-bottom: 1.5em;
 	overflow: hidden;
 	padding: 1.5em 1.5em 0;
+	position: relative;
 
 	h2 {
 		background-color: $orange;
@@ -523,6 +524,25 @@ body {
 		list-style: none;
 		padding-left: 0;
 	}
+	.back-to-top {
+		border-radius: 0 .25em 0 0;
+		color: #fff;
+		font-size: 2em;
+		font-weight: bold;
+		height: 2.25em;
+		line-height: 2.25;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-decoration: none;
+		top: 0;
+		width: 2.25em;
+
+		&:hover,
+		&:focus {
+			background-color: hsla(0,0%,0%,.1);
+		}
+	}
 }
 
 /* Footer */
@@ -543,4 +563,10 @@ footer {
 	font-size: .875em;
 	line-height: 1.714285714;
 	margin-bottom: 1.714285714em;
+}
+
+/* Other */
+
+.icon-font {
+	font-style: normal;
 }
