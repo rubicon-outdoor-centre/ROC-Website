@@ -256,8 +256,8 @@ blockquote {
 	    -ms-hyphens: auto;
 	        hyphens: auto;
 }
-p a:link,
-p a:visited {
+p a,
+dd a {
 	border-bottom: 2px solid $blue;
 	color: $black;
 	padding-bottom: 1px;
