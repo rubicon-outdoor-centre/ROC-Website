@@ -340,8 +340,8 @@ blockquote {
   hyphens: auto;
 }
 
-p a:link,
-p a:visited {
+p a,
+dd a {
   border-bottom: 2px solid #6699dd;
   color: #444444;
   padding-bottom: 1px;
