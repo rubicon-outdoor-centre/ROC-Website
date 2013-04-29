@@ -30,7 +30,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $black: #444;
 $white: #fff;
-$grey: #e6e6e6;
+$grey: #eee;
 $blue: #69d;
 $orange: #d96;
 $green: #9d6;
@@ -655,6 +655,7 @@ footer {
     font-style: normal;
     font-weight: normal;
 }
+/*
 .icon-font--bullhorn:before {
     content: '\f0a1';
 }
@@ -667,6 +668,7 @@ footer {
 .icon-font--picture:before {
     content: '\f03e';
 }
+*/
 .icon-font--up-arrow:before {
     content: '\f062';
     opacity: .75;
