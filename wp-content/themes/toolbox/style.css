@@ -169,6 +169,7 @@ textarea {
   /* 1 */
   vertical-align: top;
   /* 2 */
+  resize: vertical;
 }
 
 /* Remove most spacing between table cells. */
@@ -400,17 +401,47 @@ a {
 }
 
 label {
+  cursor: pointer;
   display: block;
   line-height: 1.5;
 }
 
 input,
 textarea {
+  border: 2px solid #e1e1e1;
   margin-bottom: 1.5em;
+  padding: .75em;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #6699dd;
+}
+
+input[type="submit"] {
+  background-color: #99dd66;
+  border: 0;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #6699dd;
 }
 
 .required {
@@ -561,6 +592,7 @@ body {
   color: white;
   margin-bottom: 0;
   padding: 0.57143em 1.14286em;
+  text-transform: uppercase;
 }
 .side-nav ul {
   list-style: none;
@@ -621,6 +653,7 @@ body {
   color: white;
   margin: -0.66667em -0.66667em 0.66667em;
   padding: 0.33333em 0.66667em;
+  text-transform: uppercase;
 }
 .content-section hr {
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -629,6 +662,12 @@ body {
 .content-section ol,
 .content-section ul {
   padding-left: 1.5em;
+}
+.content-section li p {
+  margin-bottom: 0;
+}
+.content-section img {
+  margin-bottom: 1.5em;
 }
 .content-section .form-list,
 .content-section .photo-list,
@@ -680,6 +719,9 @@ body {
   margin: -1.5em -1.5em 1.5em;
   max-width: 750px;
 }
+.content-section .campus-info dd {
+  margin-bottom: 1.5em;
+}
 .content-section .back-to-top {
   border-radius: 0 0.25em 0 0;
   color: #fff;
@@ -687,7 +729,7 @@ body {
   font-weight: bold;
   height: 2.25em;
   line-height: 2.25;
-  opacity: .75;
+  opacity: .5;
   position: absolute;
   right: 0;
   text-align: center;
