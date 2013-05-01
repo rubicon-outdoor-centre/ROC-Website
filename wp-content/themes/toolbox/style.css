@@ -355,11 +355,14 @@ dd a {
 }
 
 p a:hover,
-p a:focus {
+p a:focus,
+dd a:hover,
+dd a:focus {
   color: #6699dd;
 }
 
-p a:active {
+p a:active,
+dd a:active {
   position: relative;
   top: 1px;
   -webkit-transition: none;
