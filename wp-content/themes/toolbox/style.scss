@@ -33,6 +33,7 @@ $white: #fff;
 $grey: #eee;
 $blue: #69d;
 $orange: #d96;
+$red: #d66;
 $green: #9d6;
 
   /*********************************************************/
@@ -306,6 +307,21 @@ a {
 	    -ms-transition: .1s;
 	     -o-transition: .1s;
 	        transition: .1s;
+}
+label {
+	display: block;
+	line-height: 1.5;
+}
+input,
+textarea {
+	margin-bottom: 1.5em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.required {
+	color: $red;
 }
 
 /* Container */
