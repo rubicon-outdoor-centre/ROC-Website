@@ -25,7 +25,7 @@ while ( have_posts() ) : the_post();
 
 				<div class="grid__col--33">
 					<nav class="side-nav">
-						<h4>Quick Links</h4>
+						<h4><?php the_title(); ?>:</h4>
 						<ul>
 							<?php get_template_part( 'nav', 'secondary' ); ?>
 						</ul>

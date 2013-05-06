@@ -28,6 +28,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
  /* Sass Variables */
 /******************/
 
+/* Colours */
+
 $black: #444;
 $white: #fff;
 $grey: #eee;
@@ -35,6 +37,10 @@ $blue: #69d;
 $orange: #d96;
 $red: #d66;
 $green: #9d6;
+
+/* Vertical Rhythm */
+
+$baseline: 1.5em;
 
   /*********************************************************/
  /* Normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -219,40 +225,40 @@ h6 {
 	margin: 0;
 }
 h1 {
-	font-size: 3em; /* 48 */
-	line-height: 1; /* 48 / 48 */
-	margin-bottom: .5em; /* 24 / 48 */
+	font-size: ($baseline*2);
+	line-height: 1;
+	margin-bottom: .5em;
 }
 h2 {
-	font-size: 2.25em; /* 36 */
-	line-height: 1.333333333; /* 48 / 36 */
-	margin-bottom: 0.666666666em; /* 24 / 36 */
+	font-size: ($baseline*1.5);
+	line-height: 1.333333333;
+	margin-bottom: .666666666em;
 }
 h3 {
-	font-size: 1.5em; /* 24 */
-	line-height: 1; /* 24 / 24 */
-	margin-bottom: 1em; /* 24 / 24 */
+	font-size: $baseline;
+	line-height: 1;
+	margin-bottom: 1em;
 }
 h4 {
-	font-size: 1.3125em; /* 21 */
-	line-height: 1.142857142; /* 24 / 21 */
-	margin-bottom: 1.142857142em; /* 24 / 21 */
+	font-size: ($baseline/1.142857143);
+	line-height: 1.142857143;
+	margin-bottom: 1.142857143em;
 }
 h5 {
-	font-size: 1.125em; /* 18 */
-	line-height: 1.333333333; /* 24 / 18 */
-	margin-bottom: 1.333333333em; /* 24 / 18 */
+	font-size: ($baseline/1.333333333);
+	line-height: 1.333333333;
+	margin-bottom: 1.333333333em;
 }
 h6 {
-	font-size: 1em; /* 16 */
-	line-height: 1.5; /* 24 / 16 */
-	margin-bottom: 1.5em; /* 24 / 16 */
+	font-size: ($baseline/1.5);
+	line-height: 1.5;
+	margin-bottom: 1.5em;
 }
 p,
 blockquote {
-	font-size: 1em; /* 16 */
-	margin: 0 0 1.5em; /* 24 / 16 */
-	line-height: 1.5; /* 24 / 16 */
+	font-size: ($baseline/1.5);
+	margin: 0 0 1.5em;
+	line-height: 1.5;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
 	    -ms-hyphens: auto;
@@ -312,16 +318,22 @@ a {
 	     -o-transition: .1s;
 	        transition: .1s;
 }
+
+/* Forms */
+
 label {
-	cursor: pointer;
 	display: block;
 	line-height: 1.5;
+
+	&[for] {
+		cursor: pointer;
+	}
 }
 input,
 textarea {
 	border: 2px solid darken($grey, 5%);
-	margin-bottom: 1.5em;
-	padding: .75em;
+	margin-bottom: $baseline;
+	padding: ($baseline/2);
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -369,7 +381,7 @@ body {
 	background-color: $white;
 	overflow-x: hidden;
 	position: relative;
-	padding: 0 1.5em;
+	padding: 0 $baseline;
 }
 .container {
 	margin: 0 auto;
@@ -418,7 +430,7 @@ body {
 	a {
 		color: $black;
 		display: block;
-		padding: .75em 1.5em;
+		padding: ($baseline/2) $baseline;
 		text-decoration: none;
 	}
 	a:hover,
@@ -454,6 +466,7 @@ body {
 	}
 }
 .secondary-nav {
+	margin-bottom: $baseline;
 	float: right;
 
 	ul {
@@ -503,7 +516,7 @@ body {
 	box-shadow: inset 0 0 0 .125em hsla(0,0%,0%,.05);
 	border-radius: .25em;
 	overflow: hidden;
-	margin-bottom: 1.5em;
+	margin-bottom: $baseline;
 
 	h4 {
 		background-color: $green;
@@ -518,14 +531,14 @@ body {
 		margin-bottom: 0;
 	}
 	li:first-child a {
-		border-top: 0;
+		box-shadow: none;
 	}
 	a {
-		border-top: .125em solid darken($grey, 5%);
+		box-shadow: inset 0 .125em 0 darken($grey, 5%);
 		color: $black;
 		display: block;
 		font-weight: bold;
-		padding: .75em 1.5em;
+		padding: ($baseline/2) $baseline;
 		text-decoration: none;
 
 		&:hover,
@@ -538,11 +551,11 @@ body {
 /* Content */
 
 .content {
-	margin-bottom: 1.5em;
+	margin-bottom: $baseline;
 }
 .banner {
 	border-radius: .25em;
-	margin-bottom: 1.5em;
+	margin-bottom: $baseline;
 	position: relative;
 
 	&:after {
@@ -563,9 +576,9 @@ body {
 	background-color: $grey;
 	box-shadow: inset 0 0 0 .125em hsla(0,0%,0%,.05);
 	border-radius: .25em;
-	margin-bottom: 1.5em;
+	margin-bottom: $baseline;
 	overflow: hidden;
-	padding: 1.5em 1.5em 0;
+	padding: $baseline $baseline 0;
 	position: relative;
 
 	h2 {
@@ -579,17 +592,17 @@ body {
 	}
 	hr {
 		border: 1px solid hsla(0,0%,0%,.05);
-		margin-bottom: 1.5em;
+		margin-bottom: $baseline;
 	}
 	ol,
 	ul {
-		padding-left: 1.5em;
+		padding-left: $baseline;
 	}
 	li p {
 		margin-bottom: 0;
 	}
 	img {
-		margin-bottom: 1.5em;
+		margin-bottom: $baseline;
 	}
 	.form-list,
 	.photo-list,
@@ -601,21 +614,25 @@ body {
 	.photo-list {
 		margin-bottom: 0;
 		margin-right: -1.25em;
-	}
-	.photo-list li {
-		display: inline-block;
-		margin-bottom: 1.5em;
-		margin-right: 1.25em;
-		vertical-align: top;
-	}
-	.photo-list a {
-		border: .25em solid $white;
-		box-shadow: 0 0 0 1px hsla(0,0%,0%,.1);
-		display: block;
 
-		&:hover,
-		&:focus {
-			box-shadow: 0 0 0 2px hsla(0,0%,0%,.15);
+		li {
+			display: inline-block;
+			margin-bottom: $baseline;
+			margin-right: 1.25em;
+			vertical-align: top;
+		}
+		a {
+			border: .25em solid $white;
+			box-shadow: 0 0 0 1px hsla(0,0%,0%,.1);
+			display: block;
+
+			&:hover,
+			&:focus {
+				box-shadow: 0 0 0 2px hsla(0,0%,0%,.15);
+			}
+		}
+		img {
+			margin-bottom: 0;
 		}
 	}
 	.podcast-list {
@@ -625,6 +642,9 @@ body {
 			font-size: 2em;
 			line-height: .75;
 			margin-bottom: .75em;
+		}
+		li {
+			margin-bottom: $baseline;
 		}
 		a {
 			background-image: url('img/icons/mp3.png');
@@ -645,11 +665,11 @@ body {
 		}
 	}
 	.activity-image {
-		margin: -1.5em -1.5em 1.5em;
+		margin: (-$baseline) (-$baseline) $baseline;
 		max-width: 750px;
 	}
 	.campus-info dd {
-		margin-bottom: 1.5em;
+		margin-bottom: $baseline;
 		}
 	.back-to-top {
 		border-radius: 0 .25em 0 0;
@@ -681,7 +701,7 @@ body {
 		border: 1px solid $white;
 		border-collapse: separate;
 		box-shadow: 0 0 0 1px #ccc;
-		margin-bottom: 1.5em;
+		margin-bottom: $baseline;
 		width: 100%;
 
 		td {
@@ -689,7 +709,7 @@ body {
 			border: 1px solid $white;
 			box-shadow: inset 0 0 0 1px #ccc;
 			margin: 0;
-			padding: .75em 1.5em;
+			padding: ($baseline/2) $baseline;
 
 			p {
 				margin-bottom: 0;
@@ -705,7 +725,7 @@ body {
     margin: 0;
 }
 .form-list__list-item {
-    margin-bottom: 1.5em;
+    margin-bottom: $baseline;
 }
 .form-list__list-item--attention {
     background-color: #f6f6d6;
@@ -774,7 +794,7 @@ footer {
 	box-shadow: inset 0 .125em 0 hsla(0,0%,0%,.05);
 	margin: 0 -9999em;
 	overflow: hidden;
-	padding: 1.5em 9999em 0;
+	padding: $baseline 9999em 0;
 
 	p {
 		color: lighten($black, 25%);
