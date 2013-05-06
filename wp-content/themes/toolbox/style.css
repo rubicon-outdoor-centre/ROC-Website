@@ -23,6 +23,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /******************/
 /* Sass Variables */
 /******************/
+/* Colours */
+/* Vertical Rhythm */
 /*********************************************************/
 /* Normalize.css v2.0.1 | MIT License | git.io/normalize */
 /*********************************************************/
@@ -275,66 +277,45 @@ h6 {
 
 h1 {
   font-size: 3em;
-  /* 48 */
   line-height: 1;
-  /* 48 / 48 */
   margin-bottom: .5em;
-  /* 24 / 48 */
 }
 
 h2 {
   font-size: 2.25em;
-  /* 36 */
   line-height: 1.333333333;
-  /* 48 / 36 */
-  margin-bottom: 0.666666666em;
-  /* 24 / 36 */
+  margin-bottom: .666666666em;
 }
 
 h3 {
   font-size: 1.5em;
-  /* 24 */
   line-height: 1;
-  /* 24 / 24 */
   margin-bottom: 1em;
-  /* 24 / 24 */
 }
 
 h4 {
   font-size: 1.3125em;
-  /* 21 */
-  line-height: 1.142857142;
-  /* 24 / 21 */
-  margin-bottom: 1.142857142em;
-  /* 24 / 21 */
+  line-height: 1.142857143;
+  margin-bottom: 1.142857143em;
 }
 
 h5 {
   font-size: 1.125em;
-  /* 18 */
   line-height: 1.333333333;
-  /* 24 / 18 */
   margin-bottom: 1.333333333em;
-  /* 24 / 18 */
 }
 
 h6 {
   font-size: 1em;
-  /* 16 */
   line-height: 1.5;
-  /* 24 / 16 */
   margin-bottom: 1.5em;
-  /* 24 / 16 */
 }
 
 p,
 blockquote {
   font-size: 1em;
-  /* 16 */
   margin: 0 0 1.5em;
-  /* 24 / 16 */
   line-height: 1.5;
-  /* 24 / 16 */
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -403,17 +384,20 @@ a {
   transition: .1s;
 }
 
+/* Forms */
 label {
-  cursor: pointer;
   display: block;
   line-height: 1.5;
+}
+label[for] {
+  cursor: pointer;
 }
 
 input,
 textarea {
   border: 2px solid #e1e1e1;
   margin-bottom: 1.5em;
-  padding: .75em;
+  padding: 0.75em;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -538,6 +522,7 @@ body {
 }
 
 .secondary-nav {
+  margin-bottom: 1.5em;
   float: right;
 }
 .secondary-nav ul {
@@ -602,10 +587,10 @@ body {
   margin-bottom: 0;
 }
 .side-nav li:first-child a {
-  border-top: 0;
+  box-shadow: none;
 }
 .side-nav a {
-  border-top: 0.125em solid #e1e1e1;
+  box-shadow: inset 0 0.125em 0 #e1e1e1;
   color: #444444;
   display: block;
   font-weight: bold;
@@ -697,11 +682,17 @@ body {
 .content-section .photo-list a:hover, .content-section .photo-list a:focus {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
 }
+.content-section .photo-list img {
+  margin-bottom: 0;
+}
 .content-section .podcast-list h3 {
   color: #d96;
   font-size: 2em;
   line-height: .75;
   margin-bottom: .75em;
+}
+.content-section .podcast-list li {
+  margin-bottom: 1.5em;
 }
 .content-section .podcast-list a {
   background-image: url("img/icons/mp3.png");
