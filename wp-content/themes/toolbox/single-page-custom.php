@@ -42,6 +42,14 @@ while ( have_posts() ) : the_post();
 					'orderby' => 'menu_order'
 				);
 
+				if ($slug == "activities") {
+					$args = array(
+						'post_type' => $slug,
+						'order' => 'ASC',
+						'orderby' => 'title'
+					);
+				}
+
 				$custom_query = new WP_Query($args);
 
 				while ($custom_query->have_posts()) : $custom_query->the_post();

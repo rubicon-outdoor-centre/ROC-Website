@@ -257,8 +257,8 @@ h6 {
 p,
 blockquote {
 	font-size: ($baseline/1.5);
-	margin: 0 0 1.5em;
 	line-height: 1.5;
+	margin: 0 0 1.5em;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
 	    -ms-hyphens: auto;
@@ -295,15 +295,15 @@ dd a:active {
 dl,
 ol,
 ul {
-	font-size: 1em; /* 16 */
-	margin: 0 0 1.5em; /* 24 / 16 */
+	font-size: ($baseline/1.5);
+	margin: 0 0 1.5em;
 	padding: 0;
 }
 dd,
 dt,
 li {
-	font-size: 1em; /* 16 */
-	line-height: 1.5; /* 24 / 16 */
+	font-size: ($baseline/1.5);
+	line-height: 1.5;
 	margin: 0;
 }
 
