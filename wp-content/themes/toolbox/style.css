@@ -314,8 +314,8 @@ h6 {
 p,
 blockquote {
   font-size: 1em;
-  margin: 0 0 1.5em;
   line-height: 1.5;
+  margin: 0 0 1.5em;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -357,9 +357,7 @@ dl,
 ol,
 ul {
   font-size: 1em;
-  /* 16 */
   margin: 0 0 1.5em;
-  /* 24 / 16 */
   padding: 0;
 }
 
@@ -367,9 +365,7 @@ dd,
 dt,
 li {
   font-size: 1em;
-  /* 16 */
   line-height: 1.5;
-  /* 24 / 16 */
   margin: 0;
 }
 
