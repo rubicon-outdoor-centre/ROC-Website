@@ -18,7 +18,7 @@
 					wp_nav_menu( $args );
 
 				?>
-				<a class="back-to-top" href="#top">&uarr;</a>
+				<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
 			</nav>
 
 		</footer>
