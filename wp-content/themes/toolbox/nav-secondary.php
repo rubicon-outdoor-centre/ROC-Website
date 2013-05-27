@@ -26,6 +26,7 @@
 		$page_link = get_permalink();
 
 ?>
+
 	<li>
 		<a href="#<?php echo the_slug(); ?>"><?php the_title(); ?></a>
 	</li>
