@@ -665,7 +665,7 @@ body {
 		}
 	}
 	.activity-image {
-		margin: (-$baseline) (-$baseline) $baseline;
+		margin: (-$baseline) (-$baseline) 0;
 		max-width: 750px;
 	}
 	.campus-info dd {
@@ -809,6 +809,19 @@ footer {
 
 /* Other */
 
+.wpcf7-form {
+
+	p {
+		margin-bottom: 0;
+	}
+	.ajax-loader {
+		display: none !important;
+	}
+	.wpcf7-response-output {
+		background-color: $white;
+		margin: 0 0 $baseline !important;
+	}
+}
 .icon-font:before {
     font-family: awesome;
     font-style: normal;
