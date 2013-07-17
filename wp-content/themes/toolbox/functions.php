@@ -315,3 +315,9 @@ function the_slug() {
 	$slug = $post_data['post_name'];
 	return $slug;
 }
+
+//	Reduce nav classes, leaving only 'current-menu-item'
+function nav_class_filter( $var ) {
+	return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
+}
+add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
