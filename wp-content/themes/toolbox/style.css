@@ -548,7 +548,8 @@ body {
   background-color: #dd9966;
   color: white;
   margin: -.666666666em -.666666666em .666666666em;
-  padding: .333333333em .666666666em;
+  padding: .333333333em 2em .333333333em .666666666em;
+  position: relative;
   text-transform: uppercase;
 }
 .content-section hr {
@@ -626,20 +627,19 @@ body {
 }
 .content-section .back-to-top {
   color: #fff;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
-  height: 2.25em;
-  line-height: 2.25;
+  height: 2em;
+  line-height: 2;
   opacity: .5;
   position: absolute;
   right: 0;
   text-align: center;
   text-decoration: none;
   top: 0;
-  width: 2.25em;
+  width: 2em;
 }
 .content-section .back-to-top:hover, .content-section .back-to-top:focus {
-  background-color: rgba(0, 0, 0, 0.1);
   opacity: 1;
   -webkit-animation: back-to-top 1s infinite ease;
   -moz-animation: back-to-top 1s infinite ease;
@@ -786,30 +786,30 @@ footer p {
 /* Animations */
 @-webkit-keyframes back-to-top {
   50% {
-    line-height: 2;
+    line-height: 1.75;
   }
 }
 
 @-moz-keyframes back-to-top {
   50% {
-    line-height: 2;
+    line-height: 1.75;
   }
 }
 
 @-ms-keyframes back-to-top {
   50% {
-    line-height: 2;
+    line-height: 1.75;
   }
 }
 
 @-o-keyframes back-to-top {
   50% {
-    line-height: 2;
+    line-height: 1.75;
   }
 }
 
 @keyframes back-to-top {
   50% {
-    line-height: 2;
+    line-height: 1.75;
   }
 }

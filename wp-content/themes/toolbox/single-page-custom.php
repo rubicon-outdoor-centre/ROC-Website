@@ -58,9 +58,10 @@ while ( have_posts() ) : the_post();
 
 					<div class="content-section">
 
-						<h2 id="<?php echo the_slug(); ?>"><?php the_title(); ?></h2>
-
-						<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
+						<h2 id="<?php echo the_slug(); ?>">
+							<?php the_title(); ?>
+							<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
+						</h2>
 
 						<?php the_content(); ?>
 
