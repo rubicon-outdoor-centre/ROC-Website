@@ -14,14 +14,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @font-face {
-    font-family: 'awesome';
-    src: url('fonts/awesome/fontawesome-webfont.eot');
-    src: url('fonts/awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/awesome/fontawesome-webfont.woff') format('woff'),
-        url('fonts/awesome/fontawesome-webfont.ttf') format('truetype'),
-        url('fonts/awesome/fontawesome-webfont.svg#AwesomeRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'awesome';
+	src: url('fonts/awesome/fontawesome-webfont.eot');
+	src: url('fonts/awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/awesome/fontawesome-webfont.woff') format('woff'),
+		url('fonts/awesome/fontawesome-webfont.ttf') format('truetype'),
+		url('fonts/awesome/fontawesome-webfont.svg#AwesomeRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
   /******************/
@@ -63,7 +63,7 @@ summary {
 /* Prevents iOS text size adjust after orientation change, without disabling user zoom. */
 html {
 	-webkit-text-size-adjust: 100%;
-	    -ms-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 }
 /* Removes default margin. */
 body {
@@ -175,35 +175,35 @@ table {
 /********/
 
 .grid {
-    margin-left: -1.25%;
-    margin-right: -1.25%;
+	margin-left: -1.25%;
+	margin-right: -1.25%;
 }
 [class*="grid__col--"] {
-    margin-left: 1.25%;
-    margin-right: 1.25%;
-    -webkit-box-sizing: border-box; /* Enables the use of padding without breaking the grid */
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+	-webkit-box-sizing: border-box; /* Enables the use of padding without breaking the grid */
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 @media (min-width: 40em) { /* 640px */
-    [class*="grid__col--"] {
-        display: inline-block;
-        vertical-align: top;
-        zoom: 1; /* Fix for IE7 */
-        *display: inline; /* Fix for IE7 */
-    }
-    .grid__col--20  { width: 17.5%; }
-    .grid__col--25  { width: 22.5%; }
-    .grid__col--30  { width: 27.5%; }
-    .grid__col--33  { width: 30.833333333%; }
-    .grid__col--40  { width: 37.5%; }
-    .grid__col--50  { width: 47.5%; }
-    .grid__col--60  { width: 57.5%; }
-    .grid__col--66  { width: 64.166666666%; }
-    .grid__col--70  { width: 67.5%; }
-    .grid__col--75  { width: 72.5%; }
-    .grid__col--80  { width: 77.5%; }
-    .grid__col--100 { width: 97.5%; }
+	[class*="grid__col--"] {
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1; /* Fix for IE7 */
+		*display: inline; /* Fix for IE7 */
+	}
+	.grid__col--20  { width: 17.5%; }
+	.grid__col--25  { width: 22.5%; }
+	.grid__col--30  { width: 27.5%; }
+	.grid__col--33  { width: 30.833333333%; }
+	.grid__col--40  { width: 37.5%; }
+	.grid__col--50  { width: 47.5%; }
+	.grid__col--60  { width: 57.5%; }
+	.grid__col--66  { width: 64.166666666%; }
+	.grid__col--70  { width: 67.5%; }
+	.grid__col--75  { width: 72.5%; }
+	.grid__col--80  { width: 77.5%; }
+	.grid__col--100 { width: 97.5%; }
 }
 
   /**************/
@@ -261,8 +261,8 @@ blockquote {
 	margin: 0 0 1.5em;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
-	    -ms-hyphens: auto;
-	        hyphens: auto;
+		-ms-hyphens: auto;
+			hyphens: auto;
 }
 p a,
 dd a {
@@ -272,9 +272,9 @@ dd a {
 	text-decoration: none;
 	-webkit-transition: .1s;
 	   -moz-transition: .1s;
-	    -ms-transition: .1s;
-	     -o-transition: .1s;
-	        transition: .1s;
+		-ms-transition: .1s;
+		 -o-transition: .1s;
+			transition: .1s;
 }
 p a:hover,
 p a:focus,
@@ -288,9 +288,9 @@ dd a:active {
 	top: 1px;
 	-webkit-transition: none;
 	   -moz-transition: none;
-	    -ms-transition: none;
-	     -o-transition: none;
-	        transition: none;
+		-ms-transition: none;
+		 -o-transition: none;
+			transition: none;
 }
 dl,
 ol,
@@ -314,9 +314,9 @@ li {
 a {
 	-webkit-transition: .1s;
 	   -moz-transition: .1s;
-	    -ms-transition: .1s;
-	     -o-transition: .1s;
-	        transition: .1s;
+		-ms-transition: .1s;
+		 -o-transition: .1s;
+			transition: .1s;
 }
 
 /* Container */
@@ -586,7 +586,7 @@ body {
 		font-weight: bold;
 		height: 2em;
 		line-height: 2;
-    	opacity: .5;
+		opacity: .5;
 		position: absolute;
 		right: 0;
 		text-align: center;
@@ -596,81 +596,93 @@ body {
 
 		&:hover,
 		&:focus {
-		    opacity: 1;
-		    -webkit-animation: back-to-top 1s infinite ease;
-		       -moz-animation: back-to-top 1s infinite ease;
-		        -ms-animation: back-to-top 1s infinite ease;
-		         -o-animation: back-to-top 1s infinite ease;
-		            animation: back-to-top 1s infinite ease;
+			opacity: 1;
+			-webkit-animation: back-to-top 1s infinite ease;
+			   -moz-animation: back-to-top 1s infinite ease;
+				-ms-animation: back-to-top 1s infinite ease;
+				 -o-animation: back-to-top 1s infinite ease;
+					animation: back-to-top 1s infinite ease;
 		}
 	}
 	dt {
 		font-weight: bold;
 	}
 }
+.form-list-titles {
+	list-style: none;
+	padding-left: 0 !important;
+
+	li {
+		display: inline-block;
+		font-style: italic;
+		font-weight: bold;
+		margin-right: 1.25em;
+		vertical-align: top;
+	}
+}
 .form-list {
-    list-style: none;
-    margin: 0;
+	list-style: none;
+	margin: 0;
 }
 .form-list__list-item {
-    margin-bottom: $baseline;
+	margin-bottom: $baseline;
 }
 .form-list__list-item--attention {
-    background-color: #f6f6d6;
-    margin: -.5em -1.4em 1em;
-    padding: .5em 1.4em;
+	background-color: #f6f6d6;
+	margin: -.5em -1.4em 1em;
+	padding: .5em 1.4em;
 }
 .form-list__list-item__title {
-    margin-bottom: 0;
-    margin-left: 100px;
+	margin-bottom: 0;
+	margin-left: 100px;
 }
 .form-list__list-item__title--single {
-    margin-left: 52px;
+	margin-left: 52px;
 }
 .form-list__list-item__description {
-    margin-bottom: 0;
-    margin-left: 100px;
+	margin-bottom: 0;
+	margin-left: 100px;
 }
 .form-list__list-item__description--single {
-    margin-left: 52px;
+	margin-left: 52px;
 }
 .form-list__anchor {
-    float: left;
-    height: 32px;
-    margin-right: 16px;
-    margin-top: 8px;
-    opacity: .65;
-    width: 32px;
+	float: left;
+	height: 32px;
+	margin-right: 16px;
+	margin-top: 8px;
+	opacity: .65;
+	width: 32px;
 }
 .form-list__anchor:hover,
 .form-list__anchor:focus {
-    opacity: 1;
+	opacity: 1;
 }
 .form-list__anchor--doc {
-    background-image: url('img/icons/doc.png');
+	background-image: url('img/icons/doc.png');
 }
 .form-list__anchor--pdf {
-    background-image: url('img/icons/pdf.png');
+	background-image: url('img/icons/pdf.png');
 }
 .form-list__anchor--xls {
-    background-image: url('img/icons/xls.png');
+	background-image: url('img/icons/xls.png');
 }
 .form-list__anchor--submit {
-    background-color: #9d6;
-    color: #fff;
-    font-size: .75em;
-    font-weight: bold;
-    height: 32px;
-    line-height: 32px;
-    opacity: 1;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 80px;
+	background-color: #9d6;
+	color: #fff;
+	font-size: .75em;
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+	opacity: 1;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 80px;
 }
 .form-list__anchor--submit:hover,
 .form-list__anchor--submit:focus {
-    background-color: #69d;
+	background-color: #69d;
 }
 
 /* Footer */
@@ -708,42 +720,42 @@ footer {
 	}
 }
 .icon-font:before {
-    font-family: awesome;
-    font-style: normal;
-    font-weight: normal;
+	font-family: awesome;
+	font-style: normal;
+	font-weight: normal;
 }
 /*
 .icon-font--bullhorn:before {
-    content: '\f0a1';
+	content: '\f0a1';
 }
 .icon-font--comment:before {
-    content: '\f075';
+	content: '\f075';
 }
 .icon-font--pencil:before {
-    content: '\f040';
+	content: '\f040';
 }
 .icon-font--picture:before {
-    content: '\f03e';
+	content: '\f03e';
 }
 */
 .icon-font--up-arrow:before {
-    content: '\f062';
+	content: '\f062';
 }
 
 /* Animations */
 
 @-webkit-keyframes back-to-top {
-    50% { line-height: 1.75; }
+	50% { line-height: 1.75; }
 }
 @-moz-keyframes back-to-top {
-    50% { line-height: 1.75; }
+	50% { line-height: 1.75; }
 }
 @-ms-keyframes back-to-top {
-    50% { line-height: 1.75; }
+	50% { line-height: 1.75; }
 }
 @-o-keyframes back-to-top {
-    50% { line-height: 1.75; }
+	50% { line-height: 1.75; }
 }
 @keyframes back-to-top {
-    50% { line-height: 1.75; }
+	50% { line-height: 1.75; }
 }
