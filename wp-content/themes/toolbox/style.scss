@@ -268,7 +268,6 @@ p a,
 dd a {
 	border-bottom: 2px solid $blue;
 	color: $black;
-	padding-bottom: 1px;
 	text-decoration: none;
 	-webkit-transition: .1s;
 	   -moz-transition: .1s;
@@ -339,30 +338,48 @@ body {
 /* Header */
 
 .header {
-	margin-bottom: 3em;
+	background-color: $blue;
+	margin: 0 -9999em 3em;
+	padding: 0 9999em;
 }
 .site-title {
-	background-color: $blue;
+	float: left;
 	font-size: 2.25em;
 	line-height: 1.333333333;
-	margin: 0 -9999em 0;
-	padding: 1em 9999em;
+	margin: 0;
 
 	a {
 		color: $white;
+		display: block;
+		margin-left: -1em;
+		padding: 1em;
 		text-decoration: none;
 		text-shadow: 0 1px 1px darken($blue, 5%);
 
 		&:hover,
 		&:focus {
-			color: lighten($blue, 30%);
+			opacity: .75;
 		}
+	}
+}
+.deecd-logo {
+	float: right;
+	margin-right: -2.25em;
+
+	img {
+		max-height: 3em;
+		padding: 2.25em;
+	}
+	&:hover,
+	&:focus {
+		opacity: .75;
 	}
 }
 
 /* Navigation */
 
 .primary-nav {
+	clear: both;
 
 	ul {
 		background-color: lighten($blue, 25%);
@@ -373,6 +390,9 @@ body {
 		display: inline-block;
 		margin-right: -.25em;
 		vertical-align: top;
+	}
+	li:first-child {
+		margin-left: -$baseline;
 	}
 	a {
 		color: $black;
@@ -574,7 +594,7 @@ body {
 		}
 	}
 	.activity-image {
-		margin: (-$baseline) (-$baseline) 0;
+		margin: (-$baseline) (-$baseline) $baseline;
 		max-width: 750px;
 	}
 	.campus-info dd {
