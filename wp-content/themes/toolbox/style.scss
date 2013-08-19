@@ -718,6 +718,19 @@ body {
 .form-list__anchor--submit:focus {
 	background-color: #69d;
 }
+.map-canvas {
+	height: 500px;
+
+	img {
+		max-width: none;
+	}
+	#firstHeading {
+		font-size: 1.5em;
+	}
+	#bodyContent {
+		font-size: 15px;
+	}
+}
 
 /* Footer */
 

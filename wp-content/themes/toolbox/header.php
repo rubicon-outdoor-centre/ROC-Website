@@ -37,7 +37,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="initialize()">
 
 	<div id="top" class="container">
 

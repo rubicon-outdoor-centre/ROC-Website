@@ -774,6 +774,19 @@ body {
   background-color: #69d;
 }
 
+.map-canvas {
+  height: 500px;
+}
+.map-canvas img {
+  max-width: none;
+}
+.map-canvas #firstHeading {
+  font-size: 1.5em;
+}
+.map-canvas #bodyContent {
+  font-size: 15px;
+}
+
 /* Footer */
 footer {
   background-color: #eeeeee;
