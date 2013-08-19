@@ -533,6 +533,32 @@ body {
 	img {
 		margin-bottom: $baseline;
 	}
+	.fluid-video {
+		padding-bottom: 56.12%;
+		position: relative;
+
+		& ~ .fluid-video {
+			margin-top: ($baseline * 2);
+		}
+		iframe {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+	.mp4-download {
+		margin-right: 1.25em;
+
+		&:before {
+			background-color: $grey;
+			content: url('/wp-content/themes/toolbox/img/icons/mp4.png');
+			margin-left: -.25em;
+			position: relative;
+			top: .75em;
+		}
+	}
 	.form-list,
 	.photo-list,
 	.podcast-list,

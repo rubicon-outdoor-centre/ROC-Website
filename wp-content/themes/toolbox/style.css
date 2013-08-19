@@ -587,6 +587,30 @@ body {
 .content-section img {
   margin-bottom: 1.5em;
 }
+.content-section .fluid-video {
+  padding-bottom: 56.12%;
+  position: relative;
+}
+.content-section .fluid-video ~ .fluid-video {
+  margin-top: 3em;
+}
+.content-section .fluid-video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.content-section .mp4-download {
+  margin-right: 1.25em;
+}
+.content-section .mp4-download:before {
+  background-color: #eeeeee;
+  content: url("/wp-content/themes/toolbox/img/icons/mp4.png");
+  margin-left: -.25em;
+  position: relative;
+  top: .75em;
+}
 .content-section .form-list,
 .content-section .photo-list,
 .content-section .podcast-list,
