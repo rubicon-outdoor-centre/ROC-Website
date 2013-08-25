@@ -653,6 +653,13 @@ body {
 	dt {
 		font-weight: bold;
 	}
+	.step {
+		color: $blue;
+		display: inline-block;
+		margin-right: -.25em;
+		width: 96px;
+		vertical-align: top;
+	}
 }
 .form-list {
 	list-style: none;
@@ -749,6 +756,25 @@ footer {
 	font-size: .875em;
 	line-height: 1.714285714;
 	margin-bottom: 1.714285714em;
+}
+
+/* Buttons */
+
+.button {
+	background-color: $green;
+	border-radius: .25em;
+	color: $white;
+	display: inline-block;
+	margin-bottom: $baseline;
+	margin-right: ($baseline - .25em);
+	padding: ($baseline/2) $baseline;
+	text-decoration: none;
+	vertical-align: baseline;
+
+	&:hover,
+	&:focus {
+		background-color: $blue;
+	}
 }
 
 /* Other */
