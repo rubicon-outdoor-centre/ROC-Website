@@ -88,3 +88,7 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/* Proxy */
+define('WP_PROXY_HOST', 'proxy.education.netspace.net.au');
+define('WP_PROXY_PORT', '8080');

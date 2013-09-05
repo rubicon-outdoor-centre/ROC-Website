@@ -761,7 +761,7 @@ footer {
 /* Buttons */
 
 .button {
-	background-color: $green;
+	background-color: $blue;
 	border-radius: .25em;
 	color: $white;
 	display: inline-block;
@@ -773,7 +773,7 @@ footer {
 
 	&:hover,
 	&:focus {
-		background-color: $blue;
+		background-color: $green;
 	}
 }
 

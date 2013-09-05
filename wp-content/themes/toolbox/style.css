@@ -814,7 +814,7 @@ footer p {
 
 /* Buttons */
 .button {
-  background-color: #99dd66;
+  background-color: #6699dd;
   border-radius: .25em;
   color: white;
   display: inline-block;
@@ -825,7 +825,7 @@ footer p {
   vertical-align: baseline;
 }
 .button:hover, .button:focus {
-  background-color: #6699dd;
+  background-color: #99dd66;
 }
 
 /* Other */
