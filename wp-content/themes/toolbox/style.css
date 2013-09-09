@@ -369,7 +369,7 @@ li {
 }
 
 em {
-  font-family: Merriweather;
+  font-family: 'Merriweather';
 }
 
 /******************/
@@ -845,7 +845,7 @@ footer p {
 }
 
 .icon-font:before {
-  font-family: awesome;
+  font-family: 'awesome';
   font-style: normal;
   font-weight: normal;
 }
