@@ -656,12 +656,20 @@ body {
 	dt {
 		font-weight: bold;
 	}
+	.stepTitle {
+		margin-bottom: .25em;
+	}
 	.step {
 		color: $blue;
 		display: inline-block;
 		margin-right: -.25em;
 		width: 96px;
 		vertical-align: top;
+	}
+	.timeline {
+		display: block;
+		margin-bottom: 1.5em;
+		margin-left: 6.1em;
 	}
 }
 .form-list {

@@ -699,12 +699,20 @@ body {
 .content-section dt {
   font-weight: bold;
 }
+.content-section .stepTitle {
+  margin-bottom: .25em;
+}
 .content-section .step {
   color: #6699dd;
   display: inline-block;
   margin-right: -.25em;
   width: 96px;
   vertical-align: top;
+}
+.content-section .timeline {
+  display: block;
+  margin-bottom: 1.5em;
+  margin-left: 6.1em;
 }
 
 .form-list {
