@@ -181,10 +181,10 @@ table {
     /* Enables the use of padding without breaking the grid */ }
 
   .grid__col--33 {
-    width: 30.833333333%; }
+    width: 33.333333333%; }
 
   .grid__col--66 {
-    width: 64.166666666%; } }
+    width: 66.666666667%; } }
 /**************/
 /* Typography */
 /**************/
