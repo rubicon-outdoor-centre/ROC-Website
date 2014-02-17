@@ -365,6 +365,24 @@ body {
 		opacity: .75;
 	}
 }
+@media (max-width: 40em) {
+
+	.header {
+		text-align: center;
+	}
+	.site-title {
+		float: none;
+		text-align: center;
+	}
+	.deecd-logo {
+		float: none;
+		margin-right: 0;
+
+		img {
+			padding-top: 0;
+		}
+	}
+}
 
 /* Navigation */
 
@@ -398,6 +416,14 @@ body {
 		background-color: $white;
 		cursor: default;
 		position: relative;
+	}
+}
+@media (max-width: 40em) {
+
+	.primary-nav li {
+		display: block;
+		margin-left: -$baseline !important;
+		margin-right: -$baseline;
 	}
 }
 .secondary-nav {
