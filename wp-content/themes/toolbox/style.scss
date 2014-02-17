@@ -391,16 +391,13 @@ body {
 
 	ul {
 		background-color: lighten($blue, 25%);
-		margin: 0 -9999em;
+		margin: 0 (-9999em + (-$baseline));
 		padding: 0 9999em;
 	}
 	li {
 		display: inline-block;
 		margin-right: -.25em;
 		vertical-align: top;
-	}
-	li:first-child {
-		margin-left: -$baseline;
 	}
 	a {
 		color: $black;
@@ -422,7 +419,7 @@ body {
 
 	.primary-nav li {
 		display: block;
-		margin-left: -$baseline !important;
+		margin-left: -$baseline;
 		margin-right: -$baseline;
 	}
 }

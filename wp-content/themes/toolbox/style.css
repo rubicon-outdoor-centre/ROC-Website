@@ -359,14 +359,12 @@ body {
   clear: both; }
   .primary-nav ul {
     background-color: #cedff4;
-    margin: 0 -9999em;
+    margin: 0 -10000.5em;
     padding: 0 9999em; }
   .primary-nav li {
     display: inline-block;
     margin-right: -.25em;
     vertical-align: top; }
-  .primary-nav li:first-child {
-    margin-left: -1.5em; }
   .primary-nav a {
     color: #444444;
     display: block;
@@ -383,7 +381,7 @@ body {
 @media (max-width: 40em) {
   .primary-nav li {
     display: block;
-    margin-left: -1.5em !important;
+    margin-left: -1.5em;
     margin-right: -1.5em; } }
 .secondary-nav {
   margin-bottom: 1.5em;
