@@ -639,9 +639,11 @@ body {
 			margin-bottom: (($baseline / 4) * -1);
 		}
 	}
-	.activity-image {
+	.activity-image-wrapper {
 		margin: (-$baseline) (-$baseline) $baseline;
-		max-width: 750px;
+	}
+	.activity-image {
+		width: 100%;
 	}
 	.campus-info dd {
 		margin-bottom: $baseline;
