@@ -343,6 +343,7 @@ body {
 
 @media (max-width: 40em) {
   .header {
+    margin-bottom: 1.5em;
     text-align: center; }
 
   .site-title {
