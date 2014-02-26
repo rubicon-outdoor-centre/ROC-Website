@@ -483,6 +483,9 @@ body {
     margin-bottom: 0; }
   .content-section img {
     margin-bottom: 1.5em; }
+  .content-section .video-wrapper {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important; }
   .content-section .fluid-video {
     padding-bottom: 56.12%;
     position: relative; }
