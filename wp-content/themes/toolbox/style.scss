@@ -367,6 +367,9 @@ body {
 }
 @media (max-width: 40em) {
 
+	body {
+		padding: 0;
+	}
 	.header {
 		margin-bottom: 1.5em;
 		text-align: center;
@@ -382,6 +385,14 @@ body {
 		img {
 			padding-top: 0;
 		}
+	}
+	footer p,
+	footer nav {
+		padding-left: $baseline;
+		padding-right: $baseline;
+	}
+	footer nav {
+		margin-left: -0.5em;
 	}
 }
 
