@@ -377,6 +377,10 @@ body {
 	.site-title {
 		float: none;
 		text-align: center;
+
+		a {
+			margin-right: -1em;
+		}
 	}
 	.deecd-logo {
 		float: none;

@@ -352,6 +352,8 @@ body {
   .site-title {
     float: none;
     text-align: center; }
+    .site-title a {
+      margin-right: -1em; }
 
   .deecd-logo {
     float: none;
