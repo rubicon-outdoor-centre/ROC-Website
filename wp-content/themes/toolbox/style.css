@@ -472,6 +472,12 @@ body {
     position: absolute;
     right: 0;
     top: 0; }
+  .home .banner {
+    background-image: url("/wp-content/themes/toolbox/img/header.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 45%; }
 
 .content-section {
   background-color: #eeeeee;
@@ -487,7 +493,7 @@ body {
     position: relative;
     text-transform: uppercase; }
   .content-section hr {
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid #d4d4d4;
     margin-bottom: 1.5em; }
   .content-section ol,
   .content-section ul {
@@ -675,6 +681,19 @@ body {
     font-size: 1.5em; }
   .map-canvas #bodyContent {
     font-size: 15px; }
+
+/* Tables */
+table {
+  margin-bottom: 1.5em;
+  width: 100%; }
+
+td {
+  background-color: #fbfbfb;
+  border: 2px solid #d4d4d4;
+  padding: 0.375em 0.75em;
+  vertical-align: top; }
+  td p {
+    margin-bottom: 0; }
 
 /* Footer */
 footer {

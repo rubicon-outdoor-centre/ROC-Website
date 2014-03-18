@@ -532,6 +532,13 @@ body {
 		right: 0;
 		top: 0;
 	}
+	.home & {
+		background-image: url('/wp-content/themes/toolbox/img/header.jpg');
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		padding-bottom: 45%;
+	}
 }
 .content-section {
 	background-color: $grey;
@@ -549,7 +556,7 @@ body {
 		text-transform: uppercase;
 	}
 	hr {
-		border: 1px solid hsla(0,0%,0%,.05);
+		border: 1px solid darken($grey, 10%);
 		margin-bottom: $baseline;
 	}
 	ol,
@@ -786,6 +793,23 @@ body {
 	}
 	#bodyContent {
 		font-size: 15px;
+	}
+}
+
+/* Tables */
+
+table {
+	margin-bottom: $baseline;
+	width: 100%;
+}
+td {
+	background-color: lighten($grey, 5%);
+	border: 2px solid darken($grey, 10%);
+	padding: ($baseline / 4) ($baseline / 2);
+	vertical-align: top;
+
+	p {
+		margin-bottom: 0;
 	}
 }
 
