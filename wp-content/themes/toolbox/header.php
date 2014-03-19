@@ -44,7 +44,12 @@
 
 		<header class="header" role="banner">
 
-			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+				<a href="<?php echo home_url( '/' ); ?>" rel="home">
+					<?php bloginfo( 'name' ); ?>
+					<em><?php bloginfo( 'description' ); ?></em>
+				</a>
+			</h1>
 
 			<!--<a class="deecd-logo" href="http://www.education.vic.gov.au/"><img src="/wp-content/themes/toolbox/img/deecd-logo.png" alt="DEECD Logo"/></a>-->
 

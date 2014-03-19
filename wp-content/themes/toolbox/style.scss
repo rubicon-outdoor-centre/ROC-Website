@@ -344,11 +344,21 @@ body {
 		margin-left: -1em;
 		padding: 0 1em;
 		text-decoration: none;
+		text-transform: uppercase;
 
 		&:hover,
 		&:focus {
 			// opacity: .75;
 		}
+	}
+	em {
+		color: lighten($blue, 25%);
+		font-size: .75em;
+		line-height: 1;
+		margin-left: .5em;
+		position: relative;
+		top: -1px;
+		text-transform: lowercase;
 	}
 }
 .deecd-logo {
@@ -547,6 +557,77 @@ body {
 		background-size: 100% auto;
 		margin-bottom: 0;
 		padding-bottom: 35.3309481%;
+		position: relative;
+
+		h2 {
+			color: $white;
+			color: hsla(0,0%,100%,.9);
+			font-size: 4em;
+			font-style: italic;
+			position: absolute;
+			right: ($baseline / 2);
+			top: ($baseline / 4);
+		}
+	}
+}
+.home .grid {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin-bottom: $baseline;
+		text-align: center;
+
+		a {
+			background-color: lighten($orange, 5%);
+			background-image: -webkit-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+			background-image: -moz-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+			background-image: -ms-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+			background-image: -o-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+			background-image: linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+			color: $white;
+			display: block;
+			font-size: 1.25em;
+			padding: ($baseline * .525) 0;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background-color: $orange;
+			}
+		}
+	}
+	.home-logos {
+		text-align: left;
+
+		a {
+			background-color: $white;
+			display: inline-block;
+			padding: 0;
+			vertical-align: top;
+
+			&:hover,
+			&:focus {
+				background-color: $white;
+			}
+		}
+		.rosa {
+			margin-left: $baseline;
+			margin-right: ($baseline * 1.75);
+		}
+	}
+	img {
+		margin: 0;
+		max-height: 62px;
+	}
+}
+@media (max-width: 40em) {
+
+	.home-logos {
+		text-align: center !important;
 	}
 }
 .content-section {
@@ -690,10 +771,9 @@ body {
 		}
 	}
 	.activity-image-wrapper {
-		margin: (-$baseline) (-$baseline) 0;
+		margin: (-$baseline) (-$baseline) $baseline;
 	}
 	.activity-image {
-		margin-bottom: 0;
 		width: 100%;
 	}
 	.campus-info dd {
@@ -886,7 +966,11 @@ footer {
 
 .button {
 	background-color: lighten($blue, 5%);
-	border-radius: .25em;
+	background-image: -webkit-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+	background-image: -moz-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+	background-image: -ms-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+	background-image: -o-linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
+	background-image: linear-gradient(0deg, transparent 50%, hsla(0,0%,100%,.15) 50%);
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
