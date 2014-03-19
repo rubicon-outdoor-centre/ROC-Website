@@ -567,7 +567,7 @@ body {
     margin-bottom: 0; }
   .content-section img {
     margin-bottom: 1.5em;
-    margin-right: 1.25em; }
+    margin-right: 1em; }
     .content-section img + img {
       margin-right: 0; }
   .content-section .video-wrapper {
@@ -609,7 +609,7 @@ body {
       margin-right: 1.5em;
       vertical-align: top; }
     .content-section .photo-list a {
-      border: 0.495em solid white;
+      border: 0.435em solid white;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
       display: block; }
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
@@ -764,6 +764,9 @@ body {
 
 .recycling {
   line-height: 3em; }
+
+.google-links {
+  margin-top: 1.5em; }
 
 /* Tables */
 table {

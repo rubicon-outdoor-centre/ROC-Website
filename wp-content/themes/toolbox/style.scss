@@ -662,7 +662,7 @@ body {
 	}
 	img {
 		margin-bottom: $baseline;
-		margin-right: 1.25em;
+		margin-right: 1em;
 
 		& + img {
 			margin-right: 0;
@@ -719,7 +719,7 @@ body {
 			vertical-align: top;
 		}
 		a {
-			border: .495em solid $white;
+			border: .435em solid $white;
 			box-shadow: 0 0 0 1px hsla(0,0%,0%,.15);
 			display: block;
 
@@ -909,6 +909,9 @@ body {
 }
 .recycling {
 	line-height: 3em;
+}
+.google-links {
+	margin-top: $baseline;
 }
 
 /* Tables */
