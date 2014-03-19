@@ -4,7 +4,7 @@
 
 		<footer class="footer" role="contentinfo">
 
-			<p class="copyright">© <?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
+			<p class="copyright">© 1978&ndash;<?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
 
 			<nav class="secondary-nav" role="navigation">
 				<?php
