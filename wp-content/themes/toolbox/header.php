@@ -31,7 +31,7 @@
 ?></title>
 
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'>
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic'>
+<!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic'>-->
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 
 <?php wp_head(); ?>
@@ -46,7 +46,7 @@
 
 			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<a class="deecd-logo" href="http://www.education.vic.gov.au/"><img src="/wp-content/themes/toolbox/img/deecd-logo.png" alt="DEECD Logo"/></a>
+			<!--<a class="deecd-logo" href="http://www.education.vic.gov.au/"><img src="/wp-content/themes/toolbox/img/deecd-logo.png" alt="DEECD Logo"/></a>-->
 
 			<nav class="primary-nav" role="navigation">
 				<?php
