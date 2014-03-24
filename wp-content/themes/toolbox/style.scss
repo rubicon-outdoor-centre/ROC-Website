@@ -561,7 +561,6 @@ body {
 
 		h2 {
 			color: $white;
-			color: hsla(0,0%,100%,.9);
 			font-size: 4em;
 			font-style: italic;
 			position: absolute;
@@ -889,19 +888,32 @@ body {
 .form-list__anchor--submit:focus {
 	background-color: #69d;
 }
-.map-canvas {
-	height: 500px;
+.map {
+	height: 350px;
+	margin-bottom: $baseline;
+	width: 100%;
+}
+@media (max-width: 40em) {
 
-	img {
-		max-width: none;
-	}
-	#firstHeading {
-		font-size: 1.5em;
-	}
-	#bodyContent {
-		font-size: 15px;
+	.map {
+		height: 250px;
 	}
 }
+/* <h3>Nayook Campus</h3>
+<div class="grid">
+<div class="grid__col--50">
+<h3>Nayook Campus</h3>
+<iframe class="map" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=610%20Nayook-Powelltown%20Road%2C%20Piedmont%2C%20Victoria%2C%20Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY"></iframe>
+</div><!--
+--><div class="grid__col--50">
+<h3>Thornton Campus</h3>
+<iframe class="map" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=264%20Rubicon%20Road%2C%20Rubicon%2C%20Victoria%2C%20Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY"></iframe>
+</div>
+*/
+// <p class="google-links"><em><a href="http://goo.gl/maps/GqT3" target="_blank">View using Google Maps</a></em> | <em><a href="https://maps.google.com.au/maps?saddr=current+location&daddr=610+Nayook-Powelltown+Rd,+Gentle+Annie+Victoria+3833" target="_blank">Get directions</a></em></p>
+// <p class="google-links"><em><a href="http://goo.gl/maps/R792" target="_blank">View using Google Maps</a></em> | <em><a href="https://maps.google.com.au/maps?saddr=current+location&daddr=264+Rubicon+Rd,+Rubicon+Victoria+3712" target="_blank">Get directions</a></em></p>
 .info-centres {
 	margin-left: -3em;
 }
