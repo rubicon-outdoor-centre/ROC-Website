@@ -561,11 +561,23 @@ body {
 
 		h2 {
 			color: $white;
-			font-size: 4em;
+			font-size: 3.5em;
 			font-style: italic;
 			position: absolute;
 			right: ($baseline / 2);
 			top: ($baseline / 4);
+		}
+		@media (max-width: 40em) {
+
+			h2 {
+				font-size: 3em;
+			}
+		}
+		@media (max-width: 30em) {
+
+			h2 {
+				font-size: 1.8em;
+			}
 		}
 	}
 }
@@ -600,6 +612,7 @@ body {
 		}
 	}
 	.home-logos {
+		overflow: hidden;
 		text-align: left;
 
 		a {
@@ -614,8 +627,17 @@ body {
 			}
 		}
 		.rosa {
-			margin-left: $baseline;
-			margin-right: ($baseline * 1.75);
+			margin-left: ($baseline / 2);
+		}
+		.greenfleet {
+			float: right;
+		}
+		@media (max-width: 40em) {
+
+			.greenfleet {
+				float: none;
+				margin-left: ($baseline / 2);
+			}
 		}
 	}
 	img {

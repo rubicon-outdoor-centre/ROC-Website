@@ -494,11 +494,17 @@ body {
     position: relative; }
     .home .banner h2 {
       color: white;
-      font-size: 4em;
+      font-size: 3.5em;
       font-style: italic;
       position: absolute;
       right: 0.75em;
       top: 0.375em; }
+    @media (max-width: 40em) {
+      .home .banner h2 {
+        font-size: 3em; } }
+    @media (max-width: 30em) {
+      .home .banner h2 {
+        font-size: 1.8em; } }
 
 .home .grid ul {
   list-style: none;
@@ -522,6 +528,7 @@ body {
     .home .grid li a:hover, .home .grid li a:focus {
       background-color: #dd9966; }
 .home .grid .home-logos {
+  overflow: hidden;
   text-align: left; }
   .home .grid .home-logos a {
     background-color: white;
@@ -531,8 +538,13 @@ body {
     .home .grid .home-logos a:hover, .home .grid .home-logos a:focus {
       background-color: white; }
   .home .grid .home-logos .rosa {
-    margin-left: 1.5em;
-    margin-right: 2.625em; }
+    margin-left: 0.75em; }
+  .home .grid .home-logos .greenfleet {
+    float: right; }
+  @media (max-width: 40em) {
+    .home .grid .home-logos .greenfleet {
+      float: none;
+      margin-left: 0.75em; } }
 .home .grid img {
   margin: 0;
   max-height: 62px; }
