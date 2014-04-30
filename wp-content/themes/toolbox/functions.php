@@ -316,8 +316,18 @@ function the_slug() {
 	return $slug;
 }
 
-//	Reduce nav classes, leaving only 'current-menu-item'
+// Reduce nav classes, leaving only 'current-menu-item'
 function nav_class_filter( $var ) {
 	return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
 }
 add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
+
+// Replace the default WordPress jQuery script with Google Libraries jQuery script
+function modify_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', false, '1.11.0');
+		wp_enqueue_script('jquery');
+	}
+}
+add_action('init', 'modify_jquery');
