@@ -65,7 +65,42 @@
 					wp_nav_menu( $args );
 
 				?>
+				<a href="#" id="openMenu"><i class="icon-font  icon-font--bars"></i></a>
 			</nav>
+
+			<script>
+
+				$(function() {
+
+					var openMenu = $('#openMenu');
+						primaryMenu = $('nav ul');
+						menuHeight = primaryMenu.height();
+
+					primaryMenu.hide();
+
+					$(openMenu).on('click', function(e) {
+
+						e.preventDefault();
+
+						openMenu.toggleClass('open');
+						primaryMenu.slideToggle();
+					});
+
+
+					$(window).resize( function() {
+
+						if ($(window).width() <= 640) {
+
+							primaryMenu.hide();
+						}
+
+						else if ($(window).width() > 640 && primaryMenu.attr('style') === 'display: none;') {
+
+							primaryMenu.show();
+						}
+					});
+				});
+			</script>
 
 		</header>
 

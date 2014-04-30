@@ -445,16 +445,42 @@ body {
 		cursor: default;
 		position: relative;
 	}
+	#openMenu {
+		display: none;
+	}
 }
 @media (max-width: 40em) {
 
 	.primary-nav {
-		border-bottom: .25em solid lighten($blue, 20%);
 
 		li {
+			border-top: 1px solid $blue;
 			display: block;
 			margin-left: -$baseline;
 			margin-right: -$baseline;
+		}
+		#openMenu {
+			background-color: darken($grey, 50%);
+			color: $white;
+			display: block;
+			font-weight: bold;
+			text-align: left;
+			text-transform: uppercase;
+
+			&:hover,
+			&:focus {
+				background-color: darken($grey, 60%);
+			}
+			&:before {
+				content: 'Open Menu';
+				opacity: .75;
+			}
+			&.open:before {
+				content: 'Close Menu';
+			}
+			i {
+				float: right;
+			}
 		}
 	}
 }
@@ -1107,6 +1133,9 @@ footer {
 	content: '\f03e';
 }
 */
+.icon-font--bars:before {
+	content: "\f0c9";
+}
 .icon-font--up-arrow:before {
 	content: '\f062';
 }
