@@ -311,7 +311,7 @@ a {
 /* Container */
 
 html {
-	background-color: $grey;
+	background-color: darken($grey, 10%);
 	overflow-y: scroll;
 }
 body {
