@@ -98,7 +98,7 @@
 
 							primaryMenu.show();
 						}
-					});
+					}).trigger('resize');
 				});
 			</script>
 
