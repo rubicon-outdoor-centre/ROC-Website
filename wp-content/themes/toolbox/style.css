@@ -364,7 +364,8 @@ body {
       padding-bottom: 0.75em;
       padding-top: 0.5em; }
     .site-title em {
-      display: block; }
+      display: block;
+      margin-left: 0; }
 
   .deecd-logo {
     float: none;

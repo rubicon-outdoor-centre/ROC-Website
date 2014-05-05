@@ -72,9 +72,8 @@
 
 				$(function() {
 
-					var openMenu = $('#openMenu');
-						primaryMenu = $('nav ul');
-						menuHeight = primaryMenu.height();
+					var openMenu = $('#openMenu'),
+						primaryMenu = $('.primary-nav ul');
 
 					primaryMenu.hide();
 
