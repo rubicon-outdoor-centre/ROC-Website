@@ -353,6 +353,7 @@ body {
 
 		&:hover,
 		&:focus {
+			background-color: hsla(0,0%,100%,.1);
 			// opacity: .75;
 		}
 	}
