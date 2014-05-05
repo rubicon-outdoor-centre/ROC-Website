@@ -75,6 +75,7 @@
 					var openMenu = $('#openMenu'),
 						primaryMenu = $('#primaryMenu');
 
+					// open menu when clicking on 'open menu' button and close menu when clicking on 'close menu' button
 					$(openMenu).on('click', function(e) {
 
 						e.preventDefault();
@@ -83,7 +84,7 @@
 						primaryMenu.slideToggle();
 					});
 
-
+					// When the window is resized, check for size and show/hide menu accordingly
 					$(window).resize( function() {
 
 						if ($(window).width() <= 626) {
