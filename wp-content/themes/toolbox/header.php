@@ -59,7 +59,7 @@
 					$args = array(
 								'theme_location' => 'primary',
 								'container' => false,
-								'items_wrap' => '<ul>%3$s</ul>'
+								'items_wrap' => '<ul id="primaryMenu">%3$s</ul>'
 							);
 
 					wp_nav_menu( $args );
@@ -73,9 +73,7 @@
 				$(function() {
 
 					var openMenu = $('#openMenu'),
-						primaryMenu = $('.primary-nav ul');
-
-					// primaryMenu.hide();
+						primaryMenu = $('#primaryMenu');
 
 					$(openMenu).on('click', function(e) {
 
@@ -88,12 +86,12 @@
 
 					$(window).resize( function() {
 
-						if ($(window).width() <= 640) {
+						if ($(window).width() <= 626) {
 
 							primaryMenu.hide();
 						}
 
-						else if ($(window).width() > 640 && primaryMenu.attr('style') === 'display: none;') {
+						else if ($(window).width() > 626) {
 
 							primaryMenu.show();
 						}
