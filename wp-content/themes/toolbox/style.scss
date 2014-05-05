@@ -201,6 +201,11 @@ html {
 	color: $black;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
+
+	@media (max-width: 25em) {
+
+		font-size: 90%;
+	}
 }
 h1,
 h2,
@@ -455,13 +460,17 @@ body {
 	.primary-nav {
 
 		li {
-			border-top: 1px solid $blue;
+			border-top: 1px solid lighten($blue, 15%);
 			display: block;
 			margin-left: -$baseline;
 			margin-right: -$baseline;
+
+			&:first-child {
+				border-top: 0;
+			}
 		}
 		#openMenu {
-			background-color: darken($grey, 50%);
+			background-color: darken($grey, 60%);
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -470,7 +479,7 @@ body {
 
 			&:hover,
 			&:focus {
-				background-color: darken($grey, 60%);
+				background-color: darken($grey, 55%);
 			}
 			&:before {
 				content: 'Open Menu';

@@ -192,6 +192,9 @@ html {
   color: #444444;
   font-family: 'Open Sans', sans-serif;
   font-size: 100%; }
+  @media (max-width: 25em) {
+    html {
+      font-size: 90%; } }
 
 h1,
 h2,
@@ -408,19 +411,21 @@ body {
 
 @media (max-width: 40em) {
   .primary-nav li {
-    border-top: 1px solid #6699dd;
+    border-top: 1px solid #a5c3eb;
     display: block;
     margin-left: -1.5em;
     margin-right: -1.5em; }
+    .primary-nav li:first-child {
+      border-top: 0; }
   .primary-nav #openMenu {
-    background-color: #757575;
+    background-color: #5b5b5b;
     color: white;
     display: block;
     font-weight: bold;
     text-align: left;
     text-transform: uppercase; }
     .primary-nav #openMenu:hover, .primary-nav #openMenu:focus {
-      background-color: #5b5b5b; }
+      background-color: #686868; }
     .primary-nav #openMenu:before {
       content: 'Open Menu';
       opacity: .75; }

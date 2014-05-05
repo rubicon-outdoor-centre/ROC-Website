@@ -75,7 +75,7 @@
 					var openMenu = $('#openMenu'),
 						primaryMenu = $('.primary-nav ul');
 
-					primaryMenu.hide();
+					// primaryMenu.hide();
 
 					$(openMenu).on('click', function(e) {
 
