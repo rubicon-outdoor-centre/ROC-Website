@@ -21,7 +21,7 @@ while ( have_posts() ) : the_post();
 				<img src="/wp-content/themes/toolbox/img/banners/<?php echo $slug; ?>.jpg" alt="Banner Image">
 			</div>
 
-			<div class="grid">
+			<div class="grid container">
 
 				<div class="grid__col--33">
 					<nav class="side-nav">

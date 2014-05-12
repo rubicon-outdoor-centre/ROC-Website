@@ -192,7 +192,9 @@ table {
 		   -moz-box-sizing: border-box;
 				box-sizing: border-box; /* Enables the use of padding without breaking the grid */
 	}
+	.grid__col--20 { width: 20%; }
 	.grid__col--25 { width: 25%; }
+	.grid__col--30 { width: 30%; }
 	.grid__col--33 { width: 33.333333333%; }
 	.grid__col--50 { width: 50%; }
 	.grid__col--66 { width: 66.666666667%; }
@@ -328,19 +330,21 @@ body {
 	background-color: darken($grey, 2.5%);
 	overflow-x: hidden;
 	position: relative;
-	padding: 0 $baseline;
+	padding: 0;
 }
 .container {
 	margin: 0 auto;
 	max-width: 69.85em;
+	padding: 0 $baseline;
 }
 
 /* Header */
 
 .header {
-	background-color: lighten($green, 42.5%);
-	margin: 0 -9999em 3em;
+	background-color: $grey;
+	margin: 0 -9999em;
 	padding: $baseline 9999em 0;
+	text-align: center;
 }
 .site-title {
 	margin: 0;
@@ -349,9 +353,10 @@ body {
 		background-image: url('/wp-content/themes/toolbox/img/rubicon-logo.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+		border: ($baseline / 3) solid transparent;
 		display: inline-block;
 		height: 150px;
-		margin-bottom: ($baseline / 3);
+		margin: (($baseline / 3) * -1) 0 0 (($baseline / 3) * -1);
 		text-decoration: none;
 		text-transform: uppercase;
 		width: 210px;
@@ -361,12 +366,6 @@ body {
 		overflow: hidden;
 		text-indent: 100%;
 		white-space: nowrap;
-
-		&:hover,
-		&:focus {
-			background-color: hsla(0,0%,100%,.1);
-			// opacity: .75;
-		}
 	}
 	em {
 		color: lighten($green, 25%);
@@ -397,8 +396,7 @@ body {
 		padding: 0;
 	}
 	.header {
-		margin-bottom: 1.5em;
-		text-align: center;
+		overflow: hidden;
 	}
 	.deecd-logo {
 		float: none;
@@ -424,8 +422,7 @@ body {
 	clear: both;
 
 	ul {
-		border-top: ($baseline / 4) solid lighten($green, 30%);
-		background-color: lighten($green, 10%);
+		background-color: $green;
 		margin: 0 (-9999em + (-$baseline));
 		padding: 0 9999em;
 	}
@@ -442,11 +439,10 @@ body {
 	}
 	a:hover,
 	a:focus {
-		background-color: lighten($green, 20%);
+		background-color: lighten($green, 10%);
 	}
 	.current-menu-item a {
-		background-color: darken($grey, 2.5%);
-		box-shadow: 0 (($baseline / 4) * -1) 0 $white;
+		background-color: $grey;
 		color: $black;
 		cursor: default;
 		position: relative;
@@ -458,9 +454,11 @@ body {
 @media (max-width: 40em) {
 
 	.primary-nav {
+		margin-left: ($baseline * -1);
+		margin-right: ($baseline * -1);
 
 		ul {
-			border-top: ($baseline / 4) solid lighten($green, 20%);
+			border-top: ($baseline / 4) solid lighten($green, 10%);
 		}
 		li {
 			border-top: 2px solid lighten($green, 30%);
@@ -488,7 +486,7 @@ body {
 			box-shadow: none;
 		}
 		#openMenu {
-			background-color: lighten($green, 10%);
+			background-color: $green;
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -497,7 +495,7 @@ body {
 
 			&:hover,
 			&:focus {
-				background-color: lighten($green, 20%);
+				background-color: lighten($green, 10%);
 			}
 			&:before {
 				content: 'Open Menu';
@@ -564,7 +562,7 @@ body {
 	margin-bottom: $baseline;
 
 	h4 {
-		background-color: lighten($green, 10%);
+		background-color: $green;
 		color: $white;
 		margin-bottom: 0;
 		padding: .571428571em 1.142857142em;
@@ -601,7 +599,7 @@ body {
 	margin-bottom: $baseline;
 
 	h2 {
-		background-color: lighten($orange, 10%);
+		background-color: $orange;
 		color: $white;
 		margin: 0;
 		padding: .333333333em 2em .333333333em .666666666em;
@@ -609,24 +607,25 @@ body {
 		text-transform: uppercase;
 	}
 }
+@media (max-width: 40em) {
+
+	.content {
+		margin-bottom: 0;
+	}
+}
 .banner {
-	margin-bottom: $baseline;
+	margin-bottom: ($baseline * 2);
 	position: relative;
 
-	@media (max-width: 40em) {
-
-		img {
-			margin-left: -50%;
-			max-width: 200%;
-		}
+	img {
+		width: 100%;
 	}
 	.home & {
 		background-image: url('/wp-content/themes/toolbox/img/header.jpg');
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		margin-bottom: 0;
-		padding-bottom: 35.3309481%;
+		padding-bottom: 26.75%;
 		position: relative;
 
 		h2 {
@@ -651,77 +650,92 @@ body {
 		}
 	}
 }
+@media (max-width: 40em) {
+
+	.banner {
+		margin-bottom: $baseline;
+	}
+}
 .home-links {
 	list-style: none;
-	margin: 0 ($baseline * -1);
+	margin: 0 0 $baseline;
 	padding: 0 !important;
 
 	li {
-		margin-bottom: $baseline;
 		text-align: center;
 
+		@media (max-width: 40em) {
+
+			margin-bottom: $baseline;
+		}
 		a {
-			background-color: lighten($orange, 5%);
 			color: $white;
 			display: block;
 			font-size: 1.25em;
+			position: relative;
 			text-decoration: none;
 
 			&:hover,
 			&:focus {
-				background-color: $orange;
+
+				p {
+					background-color: hsla(0,0%,0%,.8);
+					padding-bottom: ($baseline * 1.5);
+				}
 			}
 			img {
 				margin-bottom: 0;
-				max-height: 150px;
 				width: 100%;
 			}
 			p {
-				padding: ($baseline / 2) 0;
+				background-color: hsla(0,0%,0%,.7);
+				bottom: 0;
+				left: 0;
+				margin-bottom: 0;
+				padding: ($baseline / 2);
+				position: absolute;
+				right: 0;
+				-webkit-transition: .1s;
+				   -moz-transition: .1s;
+					-ms-transition: .1s;
+					 -o-transition: .1s;
+						transition: .1s;
 			}
 		}
 	}
 }
 .home-logos {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 ($baseline * 2);
 	overflow: hidden;
 	padding: 0 !important;
 	text-align: center;
 
 	a {
 		background-color: $white;
-		display: inline-block;
-		padding: 0;
-		vertical-align: top;
+		border: ($baseline / 4) solid darken($white, 15%);
+		display: block;
+		padding: $baseline;
 
 		&:hover,
 		&:focus {
 			background-color: $white;
+			border-color: lighten($green, 20%);
 		}
 	}
 	img {
 		margin: 0;
 		max-height: 62px;
 	}
-	@media (max-width: 40em) {
-
-		.greenfleet {
-			float: none;
-			margin-left: ($baseline / 2);
-		}
-	}
 }
-@media (min-width: 40em) {
+@media (max-width: 40em) {
 
-	.deecd {
-		text-align: left;
-	}
-	.rosa {
-		text-align: left;
-	}
-	.greenfleet {
-		text-align: right;
+	.home-logos {
+		margin-bottom: 0;
+
+		li {
+			margin-bottom: $baseline;
+		}
 	}
 }
 .content-section {
@@ -732,11 +746,8 @@ body {
 	padding: $baseline $baseline 0;
 	position: relative;
 
-	.home & {
-		margin-bottom: 3em;
-	}
 	h2 {
-		background-color: lighten($orange, 10%);
+		background-color: $orange;
 		color: $white;
 		margin: -.666666666em -.666666666em .666666666em;
 		padding: .333333333em 2em .333333333em .666666666em;
@@ -814,7 +825,7 @@ body {
 			vertical-align: top;
 		}
 		a {
-			border: .435em solid $white;
+			border: .3em solid $white;
 			box-shadow: 0 0 0 1px hsla(0,0%,0%,.15);
 			display: block;
 
@@ -908,7 +919,7 @@ body {
 		margin-bottom: .25em;
 	}
 	.step {
-		color: lighten($green, 10%);
+		color: $green;
 		display: inline-block;
 		margin-right: -.25em;
 		width: 96px;
@@ -1063,7 +1074,6 @@ td {
 /* Footer */
 
 footer {
-	border-bottom: ($baseline / 4) solid darken($grey, 30%);
 	background-color: darken($grey, 10%);
 	margin: 0 -9999em;
 	overflow: hidden;
@@ -1098,7 +1108,7 @@ footer {
 /* Buttons */
 
 .button {
-	background-color: lighten($green, 10%);
+	background-color: $green;
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
@@ -1109,7 +1119,7 @@ footer {
 
 	&:hover,
 	&:focus {
-		background-color: lighten($green, 20%);
+		background-color: lighten($green, 10%);
 	}
 }
 .application-button {

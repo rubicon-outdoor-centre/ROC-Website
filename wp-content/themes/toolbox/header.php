@@ -40,66 +40,66 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="top" class="container">
+	<div id="top">
 
 		<header class="header" role="banner">
+			<div class="container">
 
-			<h1 class="site-title">
-				<a href="<?php echo home_url( '/' ); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
-					<em><?php bloginfo( 'description' ); ?></em>
-				</a>
-			</h1>
+				<h1 class="site-title">
+					<a href="<?php echo home_url( '/' ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+						<em><?php bloginfo( 'description' ); ?></em>
+					</a>
+				</h1>
 
-			<!--<a class="deecd-logo" href="http://www.education.vic.gov.au/"><img src="/wp-content/themes/toolbox/img/deecd-logo.png" alt="DEECD Logo"/></a>-->
+				<nav class="primary-nav" role="navigation">
+					<?php
 
-			<nav class="primary-nav" role="navigation">
-				<?php
+						$args = array(
+									'theme_location' => 'primary',
+									'container' => false,
+									'items_wrap' => '<ul id="primaryMenu">%3$s</ul>'
+								);
 
-					$args = array(
-								'theme_location' => 'primary',
-								'container' => false,
-								'items_wrap' => '<ul id="primaryMenu">%3$s</ul>'
-							);
+						wp_nav_menu( $args );
 
-					wp_nav_menu( $args );
+					?>
+					<a href="#" id="openMenu"><i class="icon-font  icon-font--bars"></i></a>
+				</nav>
 
-				?>
-				<a href="#" id="openMenu"><i class="icon-font  icon-font--bars"></i></a>
-			</nav>
+				<script>
 
-			<script>
+					$(function() {
 
-				$(function() {
+						var openMenu = $('#openMenu'),
+							primaryMenu = $('#primaryMenu');
 
-					var openMenu = $('#openMenu'),
-						primaryMenu = $('#primaryMenu');
+						// open menu when clicking on 'open menu' button and close menu when clicking on 'close menu' button
+						$(openMenu).on('click', function(e) {
 
-					// open menu when clicking on 'open menu' button and close menu when clicking on 'close menu' button
-					$(openMenu).on('click', function(e) {
+							e.preventDefault();
 
-						e.preventDefault();
+							openMenu.toggleClass('open');
+							primaryMenu.slideToggle();
+						});
 
-						openMenu.toggleClass('open');
-						primaryMenu.slideToggle();
+						// When the window is resized, check for size and show/hide menu accordingly
+						$(window).resize( function() {
+
+							if ($(window).width() <= 626) {
+
+								primaryMenu.hide();
+							}
+
+							else if ($(window).width() > 626) {
+
+								primaryMenu.show();
+							}
+						}).trigger('resize');
 					});
+				</script>
 
-					// When the window is resized, check for size and show/hide menu accordingly
-					$(window).resize( function() {
-
-						if ($(window).width() <= 626) {
-
-							primaryMenu.hide();
-						}
-
-						else if ($(window).width() > 626) {
-
-							primaryMenu.show();
-						}
-					}).trigger('resize');
-				});
-			</script>
-
+			</div>
 		</header>
 
 		<div class="content" role="main">
