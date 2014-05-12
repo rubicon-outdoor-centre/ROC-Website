@@ -669,12 +669,32 @@ body {
 			margin-bottom: $baseline;
 		}
 		a {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 			color: $white;
 			display: block;
 			font-size: 1.25em;
+			padding-bottom: 75%;
 			position: relative;
 			text-decoration: none;
 
+			&.apply {
+				background-image: url('/wp-content/themes/toolbox/img/link-1.jpg');
+			}
+			&.facebook {
+				background-image: url('/wp-content/themes/toolbox/img/link-2.jpg');
+			}
+			&.venue {
+				background-image: url('/wp-content/themes/toolbox/img/link-3.jpg');
+			}
+			@media (max-width: 40em) {
+
+				& {
+					background-position: 50% 25%;
+					background-size: 100% 200%;
+					padding-bottom: 37.5%;
+				}
+			}
 			&:hover,
 			&:focus {
 

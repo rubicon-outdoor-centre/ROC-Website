@@ -573,11 +573,25 @@ body {
       .home-links li {
         margin-bottom: 1.5em; } }
     .home-links li a {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
       color: white;
       display: block;
       font-size: 1.25em;
+      padding-bottom: 75%;
       position: relative;
       text-decoration: none; }
+      .home-links li a.apply {
+        background-image: url("/wp-content/themes/toolbox/img/link-1.jpg"); }
+      .home-links li a.facebook {
+        background-image: url("/wp-content/themes/toolbox/img/link-2.jpg"); }
+      .home-links li a.venue {
+        background-image: url("/wp-content/themes/toolbox/img/link-3.jpg"); }
+      @media (max-width: 40em) {
+        .home-links li a {
+          background-position: 50% 25%;
+          background-size: 100% 200%;
+          padding-bottom: 37.5%; } }
       .home-links li a:hover p, .home-links li a:focus p {
         background-color: rgba(0, 0, 0, 0.8);
         padding-bottom: 2.25em; }
