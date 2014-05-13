@@ -346,6 +346,28 @@ body {
 	padding: $baseline 9999em 0;
 	text-align: center;
 }
+.social-links {
+	position: absolute;
+	right: $baseline;
+	top: $baseline;
+
+	a {
+		font-size: 2em;
+		margin-left: .3125em;
+		text-decoration: none;
+
+		&.facebook-link {
+			color: #3b5998;
+		}
+		&.instagram-link {
+			color: #3f729b;
+		}
+		&:hover,
+		&:focus {
+			color: $green;
+		}
+	}
+}
 .site-title {
 	margin: 0;
 
@@ -442,8 +464,7 @@ body {
 		background-color: lighten($green, 10%);
 	}
 	.current-menu-item a {
-		background-color: $grey;
-		color: $black;
+		background-color: darken($green, 10%);
 		cursor: default;
 		position: relative;
 	}
@@ -1170,25 +1191,17 @@ footer {
 	font-style: normal;
 	font-weight: normal;
 }
-/*
-.icon-font--bullhorn:before {
-	content: '\f0a1';
-}
-.icon-font--comment:before {
-	content: '\f075';
-}
-.icon-font--pencil:before {
-	content: '\f040';
-}
-.icon-font--picture:before {
-	content: '\f03e';
-}
-*/
 .icon-font--bars:before {
 	content: "\f0c9";
 }
 .icon-font--up-arrow:before {
 	content: '\f062';
+}
+.icon-font--facebook:before {
+	content: '\f082';
+}
+.icon-font--instagram:before {
+	content: '\f16d';
 }
 
 /* Animations */

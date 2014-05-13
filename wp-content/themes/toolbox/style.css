@@ -334,6 +334,21 @@ body {
   padding: 1.5em 9999em 0;
   text-align: center; }
 
+.social-links {
+  position: absolute;
+  right: 1.5em;
+  top: 1.5em; }
+  .social-links a {
+    font-size: 2em;
+    margin-left: .3125em;
+    text-decoration: none; }
+    .social-links a.facebook-link {
+      color: #3b5998; }
+    .social-links a.instagram-link {
+      color: #3f729b; }
+    .social-links a:hover, .social-links a:focus {
+      color: #63b453; }
+
 .site-title {
   margin: 0; }
   .site-title a {
@@ -409,8 +424,7 @@ body {
   .primary-nav a:focus {
     background-color: #83c377; }
   .primary-nav .current-menu-item a {
-    background-color: #f4f4f4;
-    color: #444444;
+    background-color: #4e9440;
     cursor: default;
     position: relative; }
   .primary-nav #openMenu {
@@ -964,25 +978,17 @@ footer {
   font-style: normal;
   font-weight: normal; }
 
-/*
-.icon-font--bullhorn:before {
-	content: '\f0a1';
-}
-.icon-font--comment:before {
-	content: '\f075';
-}
-.icon-font--pencil:before {
-	content: '\f040';
-}
-.icon-font--picture:before {
-	content: '\f03e';
-}
-*/
 .icon-font--bars:before {
   content: "\f0c9"; }
 
 .icon-font--up-arrow:before {
   content: '\f062'; }
+
+.icon-font--facebook:before {
+  content: '\f082'; }
+
+.icon-font--instagram:before {
+  content: '\f16d'; }
 
 /* Animations */
 @-webkit-keyframes back-to-top {
