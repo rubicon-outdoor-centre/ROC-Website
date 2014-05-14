@@ -630,7 +630,7 @@ body {
     .home-links li a {
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      border: 0.375em solid white;
+      border: 0.3em solid white;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0.1875em 0.1875em rgba(0, 0, 0, 0.1);
       color: white;
       display: block;
