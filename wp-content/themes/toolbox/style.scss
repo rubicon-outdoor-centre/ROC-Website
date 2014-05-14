@@ -580,11 +580,11 @@ body {
 	a:hover,
 	a:focus {
 		background-color: transparent;
-		color: $green;
+		color: lighten($green, 10%);
 	}
 	.current-menu-item a {
 		background-color: transparent;
-		color: $white;
+		color: lighten($green, 10%);
 		cursor: default;
 		font-weight: bold;
 	}
@@ -829,7 +829,7 @@ body {
 		text-transform: uppercase;
 	}
 	hr {
-		border: 2px solid darken($grey, 5%);
+		border: 1px solid darken($grey, 8%);
 		margin-bottom: $baseline;
 	}
 	ol,

@@ -512,10 +512,10 @@ body {
   .secondary-nav a:hover,
   .secondary-nav a:focus {
     background-color: transparent;
-    color: #63b453; }
+    color: #83c377; }
   .secondary-nav .current-menu-item a {
     background-color: transparent;
-    color: white;
+    color: #83c377;
     cursor: default;
     font-weight: bold; }
   .secondary-nav .back-to-top {
@@ -691,7 +691,7 @@ body {
     position: relative;
     text-transform: uppercase; }
   .content-section hr {
-    border: 2px solid #e7e7e7;
+    border: 1px solid #e0e0e0;
     margin-bottom: 1.5em; }
   .content-section ol,
   .content-section ul {
