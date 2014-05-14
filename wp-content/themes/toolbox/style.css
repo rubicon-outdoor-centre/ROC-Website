@@ -318,11 +318,11 @@ html {
 
 body {
   background-color: #eeeeee;
-  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-  background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.1)), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1)), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.1)), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.1)), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.1)), url("/wp-content/themes/toolbox/img/background.png");
   overflow-x: hidden;
   position: relative;
   padding: 0; }
@@ -335,11 +335,11 @@ body {
 /* Header */
 .header {
   background-color: #f4f4f4;
-  background-image: -webkit-linear-gradient(rgba(101, 180, 85, 0.1), rgba(101, 180, 85, 0) 75%);
-  background-image: -moz-linear-gradient(rgba(101, 180, 85, 0.1), rgba(101, 180, 85, 0) 75%);
-  background-image: -ms-linear-gradient(rgba(101, 180, 85, 0.1), rgba(101, 180, 85, 0) 75%);
-  background-image: -o-linear-gradient(rgba(101, 180, 85, 0.1), rgba(101, 180, 85, 0) 75%);
-  background-image: linear-gradient(rgba(101, 180, 85, 0.1), rgba(101, 180, 85, 0) 75%);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
   margin: 0 -9999em;
   padding: 1.5em 9999em 0;
   text-align: center; }
@@ -526,7 +526,7 @@ body {
 
 .side-nav {
   background-color: white;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.375em 0.375em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.1875em 0.1875em rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5em; }
   .side-nav h4 {
     background-color: #63b453;
@@ -678,7 +678,7 @@ body {
       margin-bottom: 1.5em; } }
 .content-section {
   background-color: white;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.375em 0.375em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.1875em 0.1875em rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5em;
   padding: 1.5em 1.5em 0.01em;
   position: relative; }
@@ -912,12 +912,16 @@ table {
 th,
 td {
   background-color: #fcfcfc;
-  border: 2px solid #dbdbdb;
+  border: 1px solid #a8a8a8;
   padding: 0.375em 0.75em;
   vertical-align: top; }
   th p,
   td p {
     margin-bottom: 0; }
+
+th {
+  background-color: #f2f2f2;
+  vertical-align: bottom; }
 
 @media (max-width: 40em) {
   table, thead, tbody, th, td, tr {
@@ -929,25 +933,25 @@ td {
     left: -9999em; }
 
   tbody tr {
-    border-bottom: 2px solid #dbdbdb;
+    border-bottom: 1px solid #a8a8a8;
     margin-bottom: 1.5em; }
 
   td {
     border-bottom-width: 0px;
-    position: relative;
-    padding-left: 50%; }
-
-  td:before {
-    position: absolute;
-    top: 0.42857em;
-    left: 0.75em;
-    width: 45%;
-    padding-right: 0.75em;
-    white-space: nowrap; }
+    position: relative; }
+    td p {
+      display: inline-block;
+      vertical-align: top; }
 
   td:before {
     content: attr(data-description) ":";
-    font-weight: bold; } }
+    display: inline-block;
+    font-weight: bold;
+    padding-right: 0.75em;
+    position: relative;
+    top: 1px;
+    width: 45%;
+    vertical-align: top; } }
 /* Footer */
 footer {
   background-color: #757575;

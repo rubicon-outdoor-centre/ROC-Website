@@ -328,11 +328,16 @@ html {
 }
 body {
 	background-color: darken($grey, 2.5%);
-	background-image: -webkit-linear-gradient(transparent, hsla(0,0%,0%,.1));
-	background-image: -moz-linear-gradient(transparent, hsla(0,0%,0%,.1));
-	background-image: -ms-linear-gradient(transparent, hsla(0,0%,0%,.1));
-	background-image: -o-linear-gradient(transparent, hsla(0,0%,0%,.1));
-	background-image: linear-gradient(transparent, hsla(0,0%,0%,.1));
+	background-image: -webkit-linear-gradient(transparent, hsla(0,0%,0%,.1)),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -moz-linear-gradient(transparent, hsla(0,0%,0%,.1)),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -ms-linear-gradient(transparent, hsla(0,0%,0%,.1)),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -o-linear-gradient(transparent, hsla(0,0%,0%,.1)),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: linear-gradient(transparent, hsla(0,0%,0%,.1)),
+					  url('/wp-content/themes/toolbox/img/background.png');
 	overflow-x: hidden;
 	position: relative;
 	padding: 0;
@@ -347,11 +352,16 @@ body {
 
 .header {
 	background-color: $grey;
-	background-image: -webkit-linear-gradient(hsla(110,39%,52%,.1), hsla(110,39%,52%,0) 75%);
-	background-image: -moz-linear-gradient(hsla(110,39%,52%,.1), hsla(110,39%,52%,0) 75%);
-	background-image: -ms-linear-gradient(hsla(110,39%,52%,.1), hsla(110,39%,52%,0) 75%);
-	background-image: -o-linear-gradient(hsla(110,39%,52%,.1), hsla(110,39%,52%,0) 75%);
-	background-image: linear-gradient(hsla(110,39%,52%,.1), hsla(110,39%,52%,0) 75%);
+	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -moz-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -ms-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: -o-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+					  url('/wp-content/themes/toolbox/img/background.png');
+	background-image: linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+					  url('/wp-content/themes/toolbox/img/background.png');
 	margin: 0 -9999em;
 	padding: $baseline 9999em 0;
 	text-align: center;
@@ -598,7 +608,7 @@ body {
 .side-nav {
 	background-color: $white;
 	box-shadow: 0 0 0 1px hsla(0,0%,0%,.25),
-				0 ($baseline / 4) ($baseline / 4) hsla(0,0%,0%,.1);
+				0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
 	margin-bottom: $baseline;
 
 	h4 {
@@ -813,7 +823,7 @@ body {
 .content-section {
 	background-color: $white;
 	box-shadow: 0 0 0 1px hsla(0,0%,0%,.25),
-				0 ($baseline / 4) ($baseline / 4) hsla(0,0%,0%,.1);
+				0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
 	margin-bottom: $baseline;
 	padding: $baseline $baseline .01em;
 	position: relative;
@@ -1105,13 +1115,17 @@ table {
 th,
 td {
 	background-color: darken($white, 1%);
-	border: 2px solid darken($grey, 10%);
+	border: 1px solid darken($grey, 30%);
 	padding: ($baseline / 4) ($baseline / 2);
 	vertical-align: top;
 
 	p {
 		margin-bottom: 0;
 	}
+}
+th {
+	background-color: darken($white, 5%);
+	vertical-align: bottom;
 }
 @media (max-width: 40em) {
 
@@ -1124,25 +1138,27 @@ td {
 		left: -9999em;
 	}
 	tbody tr {
-		border-bottom: 2px solid darken($grey, 10%);
+		border-bottom: 1px solid darken($grey, 30%);
 		margin-bottom: $baseline;
 	}
 	td {
 		border-bottom-width: 0px;
 		position: relative;
-		padding-left: 50%;
-	}
-	td:before {
-		position: absolute;
-		top: ($baseline / 3.5);
-		left: ($baseline / 2);
-		width: 45%;
-		padding-right: ($baseline / 2);
-		white-space: nowrap;
+
+		p {
+			display: inline-block;
+			vertical-align: top;
+		}
 	}
 	td:before {
 		content: attr(data-description) ':';
+		display: inline-block;
 		font-weight: bold;
+		padding-right: ($baseline / 2);
+		position: relative;
+		top: 1px;
+		width: 45%;
+		vertical-align: top;
 	}
 }
 
