@@ -500,7 +500,7 @@ body {
     padding: 0;
     vertical-align: top; }
   .secondary-nav li {
-    border-right: 0.125em solid #c1c1c1;
+    border-right: 0.125em solid #8e8e8e;
     display: inline-block;
     margin-right: -.25em;
     position: relative;
@@ -661,7 +661,7 @@ body {
 
 .home-logos {
   list-style: none;
-  margin: 0 0 1.5em;
+  margin: 0 0 3em;
   overflow: hidden;
   padding: 0 !important;
   text-align: center; }
@@ -680,18 +680,29 @@ body {
     .home-logos li {
       margin-bottom: 1.5em; } }
 .instagram-photos {
-  margin-bottom: 3em !important; }
+  margin-bottom: 1.5em; }
   .instagram-photos .si_feed {
-    display: block;
-    margin: 0 -0.75em; }
-    .instagram-photos .si_feed :after {
-      display: none; }
+    margin: 0 -0.75em;
+    max-width: inherit; }
     .instagram-photos .si_feed .si_item {
-      display: inline-block;
+      margin-bottom: 1.5em;
       padding: 0 0.75em;
       width: 25%;
-      vertical-align: top; }
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .instagram-photos .si_feed .si_item a {
+        border: 0.3em solid white;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+        display: block; }
+        .instagram-photos .si_feed .si_item a:hover, .instagram-photos .si_feed .si_item a:focus {
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4); }
+      .instagram-photos .si_feed .si_item img {
+        margin: 0; }
 
+@media (max-width: 40em) {
+  .si_feed .si_item {
+    width: 100% !important; } }
 .content-section {
   background-color: white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.1875em 0.1875em rgba(0, 0, 0, 0.1);
@@ -763,7 +774,6 @@ body {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
       display: block; }
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
-        border-color: #f4f4f4;
         box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4); }
     .content-section .photo-list img {
       margin-bottom: 0;
