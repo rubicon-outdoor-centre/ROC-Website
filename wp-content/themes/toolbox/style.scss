@@ -468,6 +468,11 @@ body {
 
 	ul {
 		background-color: $green;
+		background-image: -webkit-linear-gradient(transparent, hsla(0,0%,0%,.1));
+		background-image: -moz-linear-gradient(transparent, hsla(0,0%,0%,.1));
+		background-image: -ms-linear-gradient(transparent, hsla(0,0%,0%,.1));
+		background-image: -o-linear-gradient(transparent, hsla(0,0%,0%,.1));
+		background-image: linear-gradient(transparent, hsla(0,0%,0%,.1));
 		border-top: 1px solid darken($green, 15%);
 		box-shadow: 0 1px 0 hsla(0,0%,0%,.3),
 					0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1),
