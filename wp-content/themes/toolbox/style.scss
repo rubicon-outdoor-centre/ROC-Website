@@ -198,6 +198,7 @@ table {
 	.grid__col--33 { width: 33.333333333%; }
 	.grid__col--50 { width: 50%; }
 	.grid__col--66 { width: 66.666666667%; }
+	.grid__col--100 { width: 100%; }
 }
 
   /**************/
@@ -794,7 +795,7 @@ body {
 }
 .home-logos {
 	list-style: none;
-	margin: 0 0 ($baseline * 2);
+	margin: 0 0 $baseline;
 	overflow: hidden;
 	padding: 0 !important;
 	text-align: center;
@@ -817,6 +818,24 @@ body {
 
 		li {
 			margin-bottom: $baseline;
+		}
+	}
+}
+.instagram-photos {
+	margin-bottom: ($baseline * 2) !important;
+
+	.si_feed {
+		display: block;
+		margin: 0 (($baseline / 2) * -1);
+
+		:after {
+			display: none;
+		}
+		.si_item {
+			display: inline-block;
+			padding: 0 ($baseline / 2);
+			width: 25%;
+			vertical-align: top;
 		}
 	}
 }

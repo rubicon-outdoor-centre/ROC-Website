@@ -196,7 +196,10 @@ table {
     width: 50%; }
 
   .grid__col--66 {
-    width: 66.666666667%; } }
+    width: 66.666666667%; }
+
+  .grid__col--100 {
+    width: 100%; } }
 /**************/
 /* Typography */
 /**************/
@@ -658,7 +661,7 @@ body {
 
 .home-logos {
   list-style: none;
-  margin: 0 0 3em;
+  margin: 0 0 1.5em;
   overflow: hidden;
   padding: 0 !important;
   text-align: center; }
@@ -676,6 +679,19 @@ body {
     margin-bottom: 0; }
     .home-logos li {
       margin-bottom: 1.5em; } }
+.instagram-photos {
+  margin-bottom: 3em !important; }
+  .instagram-photos .si_feed {
+    display: block;
+    margin: 0 -0.75em; }
+    .instagram-photos .si_feed :after {
+      display: none; }
+    .instagram-photos .si_feed .si_item {
+      display: inline-block;
+      padding: 0 0.75em;
+      width: 25%;
+      vertical-align: top; }
+
 .content-section {
   background-color: white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0.1875em 0.1875em rgba(0, 0, 0, 0.1);
