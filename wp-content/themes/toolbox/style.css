@@ -542,7 +542,7 @@ body {
   margin-bottom: 1.5em; }
   .side-nav h4 {
     background-color: #63b453;
-    box-shadow: 0 0 0 1px #4e9440, inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 1px #458239, inset 0 1px 0 rgba(255, 255, 255, 0.25);
     color: white;
     margin-bottom: 1px;
     padding: .571428571em 1.142857142em;
@@ -721,7 +721,7 @@ body {
   position: relative; }
   .content-section h2 {
     background-color: #d77c5b;
-    box-shadow: 0 0 0 1px #cd5b32, inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 1px #b9522d, inset 0 1px 0 rgba(255, 255, 255, 0.25);
     color: white;
     margin: -.666666666em -.666666666em .666666666em;
     padding: .333333333em 2em .333333333em .666666666em;

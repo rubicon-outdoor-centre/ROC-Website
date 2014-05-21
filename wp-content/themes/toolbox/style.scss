@@ -623,7 +623,7 @@ body {
 
 	h4 {
 		background-color: $green;
-		box-shadow: 0 0 0 1px darken($green, 10%),
+		box-shadow: 0 0 0 1px darken($green, 15%),
 					inset 0 1px 0 hsla(0,0%,100%,.25);
 		color: $white;
 		margin-bottom: 1px;
@@ -879,7 +879,7 @@ body {
 
 	h2 {
 		background-color: $orange;
-		box-shadow: 0 0 0 1px darken($orange, 10%),
+		box-shadow: 0 0 0 1px darken($orange, 15%),
 					inset 0 1px 0 hsla(0,0%,100%,.25);
 		color: $white;
 		margin: -.666666666em -.666666666em .666666666em;
