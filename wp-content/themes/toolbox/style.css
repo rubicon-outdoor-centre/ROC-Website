@@ -390,15 +390,6 @@ body {
     top: -1px;
     text-transform: lowercase; }
 
-.deecd-logo {
-  float: right;
-  margin-right: -2.25em; }
-  .deecd-logo img {
-    max-height: 3em;
-    padding: 2.25em; }
-  .deecd-logo:hover, .deecd-logo:focus {
-    opacity: .75; }
-
 @media (max-width: 40em) {
   body {
     padding: 0; }

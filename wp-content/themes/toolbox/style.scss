@@ -422,19 +422,6 @@ body {
 		text-transform: lowercase;
 	}
 }
-.deecd-logo {
-	float: right;
-	margin-right: -2.25em;
-
-	img {
-		max-height: 3em;
-		padding: 2.25em;
-	}
-	&:hover,
-	&:focus {
-		opacity: .75;
-	}
-}
 @media (max-width: 40em) {
 
 	body {
