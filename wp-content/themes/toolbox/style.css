@@ -316,7 +316,7 @@ a {
 
 /* Container */
 html {
-  background-color: #dbdbdb;
+  background-color: #757575;
   overflow-y: scroll; }
 
 body {
@@ -594,14 +594,14 @@ body {
     top: 0; }
   .banner img {
     width: 100%; }
-  .home .banner {
+  .home .banner, .error404 .banner {
     background-image: url("/wp-content/themes/toolbox/img/header.jpg");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: 26.75%;
     position: relative; }
-    .home .banner h2 {
+    .home .banner h2, .error404 .banner h2 {
       color: white;
       font-size: 3.5em;
       font-style: italic;
@@ -609,11 +609,14 @@ body {
       right: 0.75em;
       top: 0.375em; }
     @media (max-width: 40em) {
-      .home .banner h2 {
+      .home .banner h2, .error404 .banner h2 {
         font-size: 3em; } }
     @media (max-width: 30em) {
-      .home .banner h2 {
+      .home .banner h2, .error404 .banner h2 {
         font-size: 1.8em; } }
+  .error404 .banner {
+    background-position: 50% 75.3%;
+    padding-bottom: 15%; }
 
 @media (max-width: 40em) {
   .banner {
@@ -1045,6 +1048,10 @@ footer {
   text-transform: uppercase; }
 
 /* Other */
+.error404 .entry-title {
+  margin-bottom: 1.125em;
+  text-align: center; }
+
 .wpcf7-form p {
   margin-bottom: 0; }
 .wpcf7-form .ajax-loader {
@@ -1059,7 +1066,7 @@ footer {
   font-weight: normal; }
 
 .icon-font--bars:before {
-  content: "\f0c9"; }
+  content: '\f0c9'; }
 
 .icon-font--up-arrow:before {
   content: '\f062'; }
@@ -1069,6 +1076,9 @@ footer {
 
 .icon-font--instagram:before {
   content: '\f16d'; }
+
+.icon-font--external-link:before {
+  content: '\f08e'; }
 
 /* Animations */
 @-webkit-keyframes back-to-top {
