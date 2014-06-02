@@ -1010,8 +1010,17 @@ body {
 	.vt-activity-list {
 
 		h6 {
-			line-height: 3;
 			margin-bottom: (($baseline / 4) * -1);
+			margin-top: ($baseline / 2);
+		}
+		@media (max-width: 40em) {
+
+			.form-list__list-item {
+				overflow: hidden;
+			}
+			h6 {
+				margin-bottom: 0;
+			}
 		}
 	}
 	.activity-image-wrapper {

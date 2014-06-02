@@ -812,8 +812,13 @@ body {
   .content-section .podcast-list h6 {
     margin-bottom: 0; }
   .content-section .vt-activity-list h6 {
-    line-height: 3;
-    margin-bottom: -0.375em; }
+    margin-bottom: -0.375em;
+    margin-top: 0.75em; }
+  @media (max-width: 40em) {
+    .content-section .vt-activity-list .form-list__list-item {
+      overflow: hidden; }
+    .content-section .vt-activity-list h6 {
+      margin-bottom: 0; } }
   .content-section .activity-image-wrapper {
     margin: -1.5em -1.5em 0; }
   .content-section .activity-image {
