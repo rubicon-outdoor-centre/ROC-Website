@@ -850,10 +850,12 @@ body {
   .content-section dt {
     font-weight: bold; }
   .content-section .stepTitle {
-    margin-bottom: .25em; }
+    margin-bottom: .25em;
+    margin-left: 96px; }
   .content-section .step {
     color: #63b453;
     display: inline-block;
+    margin-left: -96px;
     margin-right: -.25em;
     width: 96px;
     vertical-align: top; }

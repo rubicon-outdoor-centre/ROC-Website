@@ -1064,10 +1064,12 @@ body {
 	}
 	.stepTitle {
 		margin-bottom: .25em;
+		margin-left: 96px;
 	}
 	.step {
 		color: $green;
 		display: inline-block;
+		margin-left: -96px;
 		margin-right: -.25em;
 		width: 96px;
 		vertical-align: top;
