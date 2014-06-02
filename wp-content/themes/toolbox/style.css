@@ -766,6 +766,7 @@ body {
       background-color: white;
       content: url("/wp-content/themes/toolbox/img/icons/mp4.png");
       margin-left: -.25em;
+      opacity: 1;
       padding-right: 0.75em;
       position: relative;
       top: .75em; }
@@ -805,10 +806,10 @@ body {
     height: 32px;
     margin-right: 16px;
     margin-top: 8px;
-    opacity: .65;
+    opacity: 1;
     width: 32px; }
     .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
-      opacity: 1; }
+      opacity: .8; }
   .content-section .podcast-list h6 {
     margin-bottom: 0; }
   .content-section .vt-activity-list h6 {
@@ -895,12 +896,12 @@ body {
   height: 32px;
   margin-right: 16px;
   margin-top: 8px;
-  opacity: .75;
+  opacity: 1;
   width: 32px; }
 
 .form-list__anchor:hover,
 .form-list__anchor:focus {
-  opacity: 1; }
+  opacity: .8; }
 
 .form-list__anchor--doc {
   background-image: url("img/icons/doc.png"); }

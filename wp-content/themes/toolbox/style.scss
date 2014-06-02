@@ -941,6 +941,7 @@ body {
 			background-color: $white;
 			content: url('/wp-content/themes/toolbox/img/icons/mp4.png');
 			margin-left: -.25em;
+			opacity: 1;
 			padding-right: ($baseline / 2);
 			position: relative;
 			top: .75em;
@@ -995,12 +996,12 @@ body {
 			height: 32px;
 			margin-right: 16px;
 			margin-top: 8px;
-			opacity: .65;
+			opacity: 1;
 			width: 32px;
 
 			&:hover,
 			&:focus {
-				opacity: 1;
+				opacity: .8;
 			}
 		}
 		h6 {
@@ -1111,12 +1112,12 @@ body {
 	height: 32px;
 	margin-right: 16px;
 	margin-top: 8px;
-	opacity: .75;
+	opacity: 1;
 	width: 32px;
 }
 .form-list__anchor:hover,
 .form-list__anchor:focus {
-	opacity: 1;
+	opacity: .8;
 }
 .form-list__anchor--doc {
 	background-image: url('img/icons/doc.png');
