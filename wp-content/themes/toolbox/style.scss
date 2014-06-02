@@ -355,15 +355,15 @@ body {
 .header {
 	background-color: $grey;
 	background-image: url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.05), transparent 75%),
 					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -moz-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+	background-image: -moz-linear-gradient(hsla(0,0%,0%,.05), transparent 75%),
 					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -ms-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+	background-image: -ms-linear-gradient(hsla(0,0%,0%,.05), transparent 75%),
 					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -o-linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+	background-image: -o-linear-gradient(hsla(0,0%,0%,.05), transparent 75%),
 					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: linear-gradient(hsla(0,0%,0%,.1), transparent 75%),
+	background-image: linear-gradient(hsla(0,0%,0%,.05), transparent 75%),
 					  url('/wp-content/themes/toolbox/img/background.png');
 	margin: 0 -9999em;
 	padding: $baseline 9999em 0;

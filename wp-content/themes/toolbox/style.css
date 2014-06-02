@@ -340,11 +340,11 @@ body {
 .header {
   background-color: #f4f4f4;
   background-image: url("/wp-content/themes/toolbox/img/background.png");
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
-  background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
   margin: 0 -9999em;
   padding: 1.5em 9999em 0;
   text-align: center; }
