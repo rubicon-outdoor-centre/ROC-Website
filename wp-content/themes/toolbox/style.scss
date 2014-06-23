@@ -462,7 +462,7 @@ body {
 		background-image: linear-gradient(transparent, hsla(0,0%,0%,.1));
 		border-top: 1px solid darken($green, 15%);
 		box-shadow: 0 1px 0 hsla(0,0%,0%,.3),
-					0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1),
+					0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.05),
 					inset 0 1px 0 hsla(0,0%,100%,.25);
 		margin: 0 (-9999em + (-$baseline));
 		padding: 0 9999em;
