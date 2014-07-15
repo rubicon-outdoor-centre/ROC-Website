@@ -338,7 +338,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #f4f4f4;
+  background-color: white;
   background-image: url("/wp-content/themes/toolbox/img/background.png");
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
   background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.05), transparent 75%), url("/wp-content/themes/toolbox/img/background.png");
