@@ -11,24 +11,6 @@ class SLB_Admin extends SLB_Base {
 	
 	protected $mode = 'sub';
 
-	/* Files */
-	
-	protected $scripts = array (
-		'admin'	=> array (
-			'file'		=> 'client/js/lib.admin.js',
-			'deps'		=> array('[core]'),
-			'context'	=> array( 'admin_page_slb' ),
-			'in_footer'	=> true,
-		),
-	);
-	
-	protected $styles = array (
-		'admin'	=> array (
-			'file'		=> 'client/css/admin.css',
-			'context'	=> array( 'admin_page_slb', 'admin_page_plugins' )
-		)
-	);
-
 	/* Properties */
 	
 	/**
@@ -111,6 +93,34 @@ class SLB_Admin extends SLB_Base {
 		add_filter('plugin_row_meta', $this->m('plugin_row_meta'), 10, 4);
 		add_action('in_plugin_update_message-' . $this->util->get_plugin_base_name(), $this->m('plugin_update_message'), 10, 2);
 		add_filter('site_transient_update_plugins', $this->m('plugin_update_transient'));
+	}
+	
+	/**
+	 * Declare client files (scripts, styles)
+	 * @uses parent::_client_files()
+	 * @return void
+	 */
+	protected function _client_files($files = null) {
+		$js_path = 'client/js/';
+		$js_path .= ( SLB_DEV ) ? 'dev' : 'prod';
+		$pfx = $this->get_prefix();
+		$files = array (
+			'scripts' => array (
+				'admin'	=> array (
+					'file'		=> "$js_path/lib.admin.js",
+					'deps'		=> array('[core]'),
+					'context'	=> array( "admin_page_$pfx" ),
+					'in_footer'	=> true,
+				),
+			),
+			'styles' => array (
+				'admin'	=> array (
+					'file'		=> 'client/css/admin.css',
+					'context'	=> array( "admin_page_$pfx", 'admin_page_plugins' )
+				)
+			)
+		);
+		parent::_client_files($files);
 	}
 	
 	/* Handlers */
@@ -542,13 +552,15 @@ class SLB_Admin extends SLB_Base {
 	 * @return array Updated plugin metadata
 	 */
 	public function plugin_row_meta($plugin_meta, $plugin_file, $plugin_data, $status) {
-		if ( $plugin_file == $this->util->get_plugin_base_name() ) {
-			//Add metadata
-			//Support
-			$t = __('Get Support', 'simple-lightbox');
-			$l = $this->util->get_plugin_info('SupportURI');
+		$u = ( is_object($this->parent) && isset($this->parent->util) ) ? $this->parent->util : $this->util;
+		$hook_base = 'admin_plugin_row_meta_';
+		if ( $plugin_file == $u->get_plugin_base_name() ) {
+			// Add metadata
+			//  Support
+			$l = $u->get_plugin_info('SupportURI');
 			if ( !empty($l) ) {
-				$plugin_meta[] = $this->util->build_html_link($l, $t);
+				$t = __( $this->util->apply_filters($hook_base . 'support', 'Get Support'), 'simple-lightbox');
+				$plugin_meta[] = $u->build_html_link($l, $t);
 			}
 		}
 		return $plugin_meta;

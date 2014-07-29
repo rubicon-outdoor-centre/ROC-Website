@@ -1,7 +1,6 @@
 <?php 
-
 /**
- * Model (Core functionality)
+ * Controller
  * @package Simple Lightbox
  * @author Archetyped
  */
@@ -11,23 +10,6 @@ class SLB_Lightbox extends SLB_Base {
 	
 	protected $model = true;
 		
-	/* Files */
-	
-	var $scripts = array (
-		'core'			=> array (
-			'file'		=> 'client/js/lib.core.js',
-			'deps'		=> 'jquery',
-			'enqueue'	=> false,
-			'in_footer'	=> true,
-		),
-		'view'			=> array (
-			'file'		=> 'client/js/lib.view.js',
-			'deps'		=> array('jquery', '[core]'),
-			'context'	=> array( array('public', '[is_request_valid]') ),
-			'in_footer'	=> true,
-		),
-	);
-
 	/**
 	 * Fields
 	 * @var SLB_Fields
@@ -73,6 +55,17 @@ class SLB_Lightbox extends SLB_Base {
 	private $media_items_raw = array();
 	
 	/**
+	 * Manage excluded content
+	 * @var object
+	 */
+	private $exclude = null;
+	
+	private $groups = array (
+		'auto'		=> 0,
+		'manual'	=> array(),
+	);
+	
+	/**
 	 * Validated URIs
 	 * Caches validation of parsed URIs
 	 * > Key: URI
@@ -82,6 +75,12 @@ class SLB_Lightbox extends SLB_Base {
 	private $validated_uris = array();
 	
 	/* Widget properties */
+	
+	/**
+	 * IDs widgets that have been processed
+	 * @var array
+	 */
+	var $widgets_processed = array();
 	
 	/**
 	 * Widget callback key
@@ -97,7 +96,8 @@ class SLB_Lightbox extends SLB_Base {
 
 	/**
 	 * Used to track if widget is currently being processed or not
-	 * @var bool
+	 * Set to Widget ID currently being processed
+	 * @var bool|string
 	 */
 	var $widget_processing = false;
 
@@ -116,6 +116,44 @@ class SLB_Lightbox extends SLB_Base {
 	
 	/* Init */
 	
+	public function _init() {
+		parent::_init();
+		$this->util->do_action('init');
+	}
+	
+	/**
+	 * Declare client files (scripts, styles)
+	 * @uses parent::_client_files()
+	 * @return void
+	 */
+	protected function _client_files($files = null) {
+		$js_path = 'client/js/';
+		$js_path .= ( SLB_DEV ) ? 'dev' : 'prod';
+		$files = array (
+			'scripts' => array (
+				'core'			=> array (
+					'file'		=> "$js_path/lib.core.js",
+					'deps'		=> 'jquery',
+					'enqueue'	=> false,
+					'in_footer'	=> true,
+				),
+				'view'			=> array (
+					'file'		=> "$js_path/lib.view.js",
+					'deps'		=> array('[core]'),
+					'context'	=> array( array('public', $this->m('is_request_valid')) ),
+					'in_footer'	=> true,
+				),
+			),
+			'styles' => array (
+				'core'			=> array (
+					'file'		=> 'client/css/app.css',
+					'context'	=> array('public'),
+				)
+			)
+		);
+		parent::_client_files($files);
+	}
+	
 	/**
 	 * Register hooks
 	 * @uses parent::_hooks()
@@ -125,9 +163,10 @@ class SLB_Lightbox extends SLB_Base {
 
 		/* Admin */
 		add_action('admin_menu', $this->m('admin_menus'));
+		$this->util->add_filter('admin_plugin_row_meta_support', $this->m('admin_plugin_row_meta_support'));
 		
 		/* Init */
-		add_action('init', $this->m('_hooks_init'));
+		add_action('wp', $this->m('_hooks_init'));
 	}
 	
 	/**
@@ -142,23 +181,46 @@ class SLB_Lightbox extends SLB_Base {
 			$this->util->add_action('footer_script', $this->m('client_init'), 1);
 			$this->util->add_filter('footer_script', $this->m('client_script_media'), 2);
 			
-			//Link activation
+			// Link activation
 			add_filter('the_content', $this->m('activate_links'), $priority);
 			add_filter('get_post_galleries', $this->m('activate_galleries'), $priority);
+			$this->util->add_filter('post_process_links', $this->m('activate_groups'), 11);
 			$this->util->add_filter('validate_uri_regex', $this->m('validate_uri_regex_default'), 1);
+			//  Content exclusion
+			$this->util->add_filter('pre_process_links', $this->m('exclude_content'));
+			$this->util->add_filter('pre_exclude_content', $this->m('exclude_shortcodes'));
+			$this->util->add_filter('post_process_links', $this->m('restore_excluded_content'));
 			
-			//Gallery wrapping
-			add_filter('the_content', $this->m('gallery_wrap'), 1);
-			add_filter('the_content', $this->m('gallery_unwrap'), $priority + 1);
+			//Grouping
+			if ( $this->options->get_bool('group_post') ) {
+				$this->util->add_filter('get_group_id', $this->m('post_group_id'), 1);	
+			}
+			
+			//Shortcode grouping
+			if ( $this->options->get_bool('group_gallery') ) {
+				add_filter('the_content', $this->m('group_shortcodes'), 1);
+			}
 			
 			//Widgets
-			add_filter('sidebars_widgets', $this->m('sidebars_widgets'));
+			add_filter('dynamic_sidebar_params', $this->m('widget_process_setup'), PHP_INT_MAX);
 		}
 	}
 	
 	/**
+	 * Add post ID to link group ID
+	 * @uses `SLB::get_group_id` filter
+	 * @param array $group_segments Group ID segments
+	 * @return array Modified group ID segments
+	 */
+	public function post_group_id($group_segments) {
+		$post = get_post();
+		//Prepend post ID to group ID
+		array_unshift($group_segments, $post->ID);
+		return $group_segments;
+	}
+	
+	/**
 	 * Init options
-	 * 
 	 */
 	protected function _options() {
 		//Setup options
@@ -172,7 +234,7 @@ class SLB_Lightbox extends SLB_Base {
 			'items'	=> array (
 				'enabled'					=> array('title' => __('Enable Lightbox Functionality', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 10)),
 				'enabled_home'				=> array('title' => __('Enable on Home page', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 20)),
-				'enabled_post'				=> array('title' => __('Enable on Posts', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 30)),
+				'enabled_post'				=> array('title' => __('Enable on Single Posts', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 30)),
 				'enabled_page'				=> array('title' => __('Enable on Pages', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 40)),
 				'enabled_archive'			=> array('title' => __('Enable on Archive Pages (tags, categories, etc.)', 'simple-lightbox'), 'default' => true, 'group' => array('activation', 50)),
 				'enabled_widget'			=> array('title' => __('Enable for Widgets', 'simple-lightbox'), 'default' => false, 'group' => array('activation', 60)),
@@ -186,13 +248,14 @@ class SLB_Lightbox extends SLB_Base {
 				'slideshow_duration'		=> array('title' => __('Slide Duration (Seconds)', 'simple-lightbox'), 'default' => '6', 'attr' => array('size' => 3, 'maxlength' => 3), 'group' => array('ui', 40), 'in_client' => true),
 				'group_loop'				=> array('title' => __('Loop through items', 'simple-lightbox'),'default' => true, 'group' => array('ui', 50), 'in_client' => true),
 				'ui_overlay_opacity'		=> array('title' => __('Overlay Opacity (0 - 1)', 'simple-lightbox'), 'default' => '0.8', 'attr' => array('size' => 3, 'maxlength' => 3), 'group' => array('ui', 60), 'in_client' => true),
+				'ui_title_default'			=> array('title' => __('Enable default title', 'simple-lightbox'), 'default' => false, 'group' => array('ui', 70), 'in_client' => true),		
 				'txt_loading'				=> array('title' => __('Loading indicator', 'simple-lightbox'), 'default' => 'Loading', 'group' => array('labels', 20)),
 				'txt_close'					=> array('title' => __('Close button', 'simple-lightbox'), 'default' => 'Close', 'group' => array('labels', 10)),
 				'txt_nav_next'				=> array('title' => __('Next Item button', 'simple-lightbox'), 'default' => 'Next', 'group' => array('labels', 30)),
 				'txt_nav_prev'				=> array('title' => __('Previous Item button', 'simple-lightbox'), 'default' => 'Previous', 'group' => array('labels', 40)),
 				'txt_slideshow_start'		=> array('title' => __('Start Slideshow button', 'simple-lightbox'), 'default' => 'Start slideshow', 'group' => array('labels', 50)),
 				'txt_slideshow_stop'		=> array('title' => __('Stop Slideshow button', 'simple-lightbox'),'default' => 'Stop slideshow', 'group' => array('labels', 60)),
-				'txt_group_status'			=> array('title' => __('Slideshow status format', 'simple-lightbox'), 'default' => 'Item %current% of %total%', 'group' => array('labels', 70))		
+				'txt_group_status'			=> array('title' => __('Slideshow status format', 'simple-lightbox'), 'default' => 'Item %current% of %total%', 'group' => array('labels', 70))
 			),
 			'legacy' => array (
 				'header_activation'			=> null,
@@ -253,7 +316,7 @@ class SLB_Lightbox extends SLB_Base {
 		//Add Support information
 		$support = $this->util->get_plugin_info('SupportURI');
 		if ( !empty($support) ) {
-			$pg_opts->add_content('support', __('Support', 'simple-lightbox'), $this->m('theme_page_callback_support'), 'secondary');
+			$pg_opts->add_content('support', __('Feedback & Support', 'simple-lightbox'), $this->m('theme_page_callback_support'), 'secondary');
 		}
 		
 		//Add Actions
@@ -270,13 +333,22 @@ class SLB_Lightbox extends SLB_Base {
 	 * Support information
 	 */
 	public function theme_page_callback_support() {
-		echo '<p>';
-		_e("Getting support is easy!  Whether you're experiencing an issue or have a feature request, click the button below to get support right now!", 'simple-lightbox');
-		echo '</p>';
-		
-		$lnk_txt = __('Get Support', 'simple-lightbox');
+		// Description
+		$desc = __("<p>Simple Lightbox thrives on your feedback!</p><p>Click the button below to <strong>get help</strong>, <strong>request a feature</strong>, or <strong>provide some feedback</strong>!</p>", 'simple-lightbox');
+		echo $desc;
+		// Link
 		$lnk_uri = $this->util->get_plugin_info('SupportURI');
-		printf('<a href="%s" title="%s" target="_blank" class="button">%s</a>', $lnk_uri, esc_attr($lnk_txt), $lnk_txt);
+		$lnk_txt = __('Get Support &amp; Provide Feedback', 'simple-lightbox');
+		echo $this->util->build_html_link($lnk_uri, $lnk_txt, array('target' => '_blank', 'class' => 'button'));
+	}
+	
+	/**
+	 * Filter support link text in plugin metadata
+	 * @param string $text Original link text
+	 * @return string Modified link text
+	 */
+	public function admin_plugin_row_meta_support($text) {
+		return "Feedback &amp; Support";
 	}
 
 	/*-** Functionality **-*/
@@ -288,17 +360,19 @@ class SLB_Lightbox extends SLB_Base {
 	function is_enabled() {
 		static $ret = null;
 		if ( is_null($ret) ) {
-			$ret = ( $this->options->get_bool('enabled') && !is_feed() ) ? true : false;
+			$ret = ( !is_admin() && $this->options->get_bool('enabled') && !is_feed() ) ? true : false;
 			if ( $ret ) {
 				$opt = '';
 				//Determine option to check
-				if ( is_home() )
+				if ( is_home() ) {
 					$opt = 'home';
+				}
 				elseif ( is_singular() ) {
 					$opt = ( is_page() ) ? 'page' : 'post';
 				}
-				elseif ( is_archive() || is_search() )
+				elseif ( is_archive() || is_search() ) {
 					$opt = 'archive';
+				}
 				//Check sub-option
 				if ( !empty($opt) && ( $opt = 'enabled_' . $opt ) && $this->options->has($opt) ) {
 					$ret = $this->options->get_bool($opt);
@@ -348,46 +422,16 @@ class SLB_Lightbox extends SLB_Base {
 	 * @param $content
 	 * @return string Post content
 	 */
-	function activate_links($content) {
-		$groups = array();
-		$w = $this->group_get_wrapper();
-		$g_ph_f = '[%s]';
-
-		//Strip groups
-		if ( $this->options->get_bool('group_gallery') ) {
-			$groups = array();
-			static $g_idx = 1;
-			$g_end_idx = 0;
-			//Iterate through galleries
-			while ( ($g_start_idx = strpos($content, $w->open, $g_end_idx)) && $g_start_idx !== false 
-					&& ($g_end_idx = strpos($content, $w->close, $g_start_idx)) && $g_end_idx != false ) {
-				$g_start_idx += strlen($w->open);
-				//Extract gallery content & save for processing
-				$g_len = $g_end_idx - $g_start_idx;
-				$groups[$g_idx] = substr($content, $g_start_idx, $g_len);
-				//Replace content with placeholder
-				$g_ph = sprintf($g_ph_f, $g_idx);
-				$content = substr_replace($content, $g_ph, $g_start_idx, $g_len);
-				//Increment gallery count
-				$g_idx++;
-				//Update end index
-				$g_end_idx = $g_start_idx + strlen($w->open);
-			}
-		}
+	public function activate_links($content) {
+		// Filter content before processing links
+		$content = $this->util->apply_filters('pre_process_links', $content);
 		
-		//General link processing
+		// Process links
 		$content = $this->process_links($content);
 		
-		//Reintegrate Groups
-		foreach ( $groups as $group => $g_content ) {
-			$g_ph = $w->open . sprintf($g_ph_f, $group) . $w->close;
-			//Skip group if placeholder does not exist in content
-			if ( strpos($content, $g_ph) === false ) {
-				continue;
-			}
-			//Replace placeholder with processed content
-			$content = str_replace($g_ph, $w->open . $this->process_links($g_content, 'gallery_' . $group) . $w->close, $content);
-		}
+		// Filter content after processing links
+		$content = $this->util->apply_filters('post_process_links', $content);
+		
 		return $content;
 	}
 	
@@ -401,7 +445,7 @@ class SLB_Lightbox extends SLB_Base {
 	 */
 	function process_links($content, $group = null) {
 		//Validate
-		if ( !is_string($content) || empty($content) ) {
+		if ( !is_string($content) || empty($content) || ( !!$this->widget_processing && !$this->options->get_bool('enabled_widget') ) ) {
 			return $content;
 		}
 		//Extract links
@@ -412,7 +456,8 @@ class SLB_Lightbox extends SLB_Base {
 		}
 		//Process links
 		$protocol = array('http://', 'https://');
-		$domain = str_replace($protocol, '', strtolower(get_bloginfo('url')));
+		$uri_home = strtolower(home_url());
+		$domain = str_replace($protocol, '', $uri_home);
 		$qv_att = 'attachment_id';
 		
 		//Setup group properties
@@ -433,89 +478,72 @@ class SLB_Lightbox extends SLB_Base {
 		}
 		
 		//Iterate through and activate supported links
+		$uri_proto = array('raw' => '', 'source' => '');
+		
 		foreach ( $links as $link ) {
 			//Init vars
 			$pid = 0;
 			$link_new = $link;
 			$internal = false;
 			$q = null;
-			$uri = (object) array('raw' => '', 'base' => '', 'source' => '');
+			$uri = (object) $uri_proto;
 			$type = false;
+			$props_extra = array();
 			
 			//Parse link attributes
 			$attrs = $this->util->parse_attribute_string($link_new, array('href' => ''));
-			$attrs_legacy = ( isset($attrs['rel']) && !empty($attrs['rel']) ) ? explode(' ', trim($attrs['rel'])) : array();
 			//Get URI
-			$uri->raw = $uri->base = $uri->source = $attrs['href'];
+			$uri->raw = $uri->source = $attrs['href'];
 			
 			//Stop processing invalid links
 			if ( !$this->validate_uri($uri->raw)
 				|| $this->has_attribute($attrs, 'active', false) //Previously-processed
-				|| in_array($this->add_prefix('off'), $attrs_legacy) //Disabled (legacy)
 				) {
 				continue;
 			}
 			
-			//Process legacy attributes
-			if ( !empty($attrs_legacy) ) {
-				//Group
-				if ( $g_props->enabled ) {
-					foreach ( $attrs_legacy as $attr ) {
-						if ( 0 === strpos($attr, $g_props->legacy_prefix) && substr($attr, -1) == $g_props->legacy_suffix ) {
-							$this->set_attribute($attrs, $g_props->attr, substr($attr, strlen($g_props->legacy_prefix), -1));
-							break;
-						}
-					}
-					unset($attr);
-				}
-			}
-			
 			//Check if item links to internal media (attachment)
-			$uri_dom = str_replace($protocol, '', strtolower($uri->raw));
-			if ( strpos($uri_dom, $domain) === 0 ) {
-				//Save URL for further processing
+			if ( 0 === strpos($uri->raw, '/') ) {
+				//Relative URIs are always internal
 				$internal = true;
+				$uri->source = $uri_home . $uri->raw;
+			} else {
+				//Absolute URI
+				$uri_dom = str_replace($protocol, '', strtolower($uri->raw));
+				if ( strpos($uri_dom, $domain) === 0 ) {
+					$internal = true;
+				}
+				unset($uri_dom);
 			}
 			
-			//Sanitize URI
-			$qpos = strpos($uri->raw, '?');
-			if ( $qpos !== false ) {
-				$uri->base = substr($uri->raw, 0, $qpos);
-				if ( $internal ) {
-					//Extract query string
-					$q = substr($uri->raw, $qpos + 1);
-					//Check for attachment ID
-					if ( strpos($q, $qv_att . '=') !== false ) {
-						//Parse query string
-						wp_parse_str($q, $q);
-						//Strip other variables from query string
-						$uri->base = add_query_arg($qv_att, $q[$qv_att], $uri->base);
-					}
-				}
-			}
-						
-			//Get source URI
-			$uri->source = $uri->base;
+			//Get source URI (e.g. attachments)
 			if ( $internal && is_local_attachment($uri->source) ) {
-				$pid = url_to_postid($uri->base);
+				$pid = url_to_postid($uri->source);
 				$src = wp_get_attachment_url($pid);
 				if ( !!$src ) {
 					$uri->source = $src;
+					$props_extra['id'] = $pid;
 				}
 				unset($src);
 			}
 			
-			/* Determine link type */
+			/* Determine content type */
 			
 			//Check if URI has already been processed
-			if ( $this->media_item_cached($uri->base) ) {
-				$i = $this->get_cached_media_item($uri->base);
+			if ( $this->media_item_cached($uri->source) ) {
+				$i = $this->get_cached_media_item($uri->source);
 				$type = $i->type;
 			} else {
 				//Get handler match
-				$handler = $this->handlers->match($uri->source);
-				if ( !!$handler ) {
-					$type = $handler->get_id();
+				$hdl_result = $this->handlers->match($uri->source);
+				if ( !!$hdl_result->handler ) {
+					$type = $hdl_result->handler->get_id();
+					$props_extra = $hdl_result->props;
+					//Updated source URI
+					if ( isset($props_extra['uri']) ) {
+						$uri->source = $props_extra['uri'];
+						unset($props_extra['uri']);
+					}
 				}
 			}
 			
@@ -526,23 +554,24 @@ class SLB_Lightbox extends SLB_Base {
 				continue;
 			}
 			
-			//Set group (if necessary)
+			//Set group (if enabled)
 			if ( $g_props->enabled ) {
+				$group = array();
 				//Get preset group attribute
-				$g = ( $this->has_attribute($attrs, $g_props->attr) ) ? $this->get_attribute($attrs, $g_props->attr) : ''; 
+				$g = ( $this->has_attribute($attrs, $g_props->attr) ) ? $this->get_attribute($attrs, $g_props->attr) : '';
 				if ( is_string($g) && ($g = trim($g)) && !empty($g) ) {
-					$group = $g;
-				} else {
-					$group = $g_props->base;
+					$group[] = $g;
+				} elseif ( !empty($g_props->base) ) {
+					$group[] = $g_props->base;
 				}
-				//Group links by post?
-				if ( !$this->widget_processing && $this->options->get_bool('group_post') ) {
-					global $post;
-					$group = ( !empty($group) ) ? implode('_', array($post->ID, $group)) : $post->ID;
-				}
+				
+				$group = $this->util->apply_filters('get_group_id', $group);
+				
 				//Default group
-				if ( empty($group) ) {
+				if ( empty($group) || !is_array($group) ) {
 					$group = $this->get_prefix();
+				} else {
+					$group = implode('_', $group);
 				}
 				
 				//Set group attribute
@@ -560,12 +589,20 @@ class SLB_Lightbox extends SLB_Base {
 			}
 			
 			//Cache item attributes
-			$this->cache_media_item($uri, $type, $internal, $pid);
+			$this->cache_media_item($uri, $type, $internal, $props_extra);
+			
+			//Filter attributes
+			$attrs = $this->util->apply_filters('process_link_attributes', $attrs);
 			
 			//Update link in content
 			$link_new = '<a ' . $this->util->build_attribute_string($attrs) . '>';
 			$content = str_replace($link, $link_new, $content);
 		}
+		//Handle widget content
+		if ( !!$this->widget_processing && 'the_content' == current_filter() ) {
+			$content = $this->exclude_wrap($content);
+		}
+		
 		return $content;
 	}
 
@@ -679,10 +716,7 @@ class SLB_Lightbox extends SLB_Base {
 		add_action('wp_print_footer_scripts', $this->m('client_footer_script'));
 		
 		//Build client output
-		
-		echo '<!-- SLB -->' . PHP_EOL;
 		$this->util->do_action('footer');
-		echo PHP_EOL . '<!-- /SLB -->' . PHP_EOL;
 	}
 	
 	/**
@@ -711,19 +745,11 @@ class SLB_Lightbox extends SLB_Base {
 		$props_map = array('description' => 'post_content', 'title' => 'post_title', 'caption' => 'post_excerpt');
 
 		//Separate media into buckets by type
-		$m_bucket = array();
 		$m_internals = array();
 		$type = $id = null;
 		
 		$m_items = $this->media_items = $this->get_cached_media_items();
 		foreach ( $m_items as $uri => $p ) {
-			$type = $p->{$props->type};
-			//Initialize bucket (if necessary)
-			if ( !isset($m_bucket[$type]) ) {
-				$m_bucket[$type] = array();
-			}
-			//Add item to bucket
-			$m_bucket[$type][$uri] =& $m_items[$uri];
 			//Set aside internal links for additional processing
 			if ( $p->internal && !isset($m_internals[$uri]) ) {
 				$m_internals[$uri] =& $m_items[$uri];
@@ -758,7 +784,7 @@ class SLB_Lightbox extends SLB_Base {
 				}
 			}
 			//Destroy worker vars
-			unset($uris_base, $uris_flat, $q, $pids, $pd);
+			unset($uris_base, $uris_flat, $q, $pids, $pd, $file);
 		}
 		
 		//Process items with attachment IDs
@@ -803,6 +829,7 @@ class SLB_Lightbox extends SLB_Base {
 				foreach ( $atts as $att ) {
 					//Set post data
 					$m = array();
+					
 					//Remap post data to properties
 					foreach ( $props_map as $prop_key => $prop_source ) {
 						$m[$props->{$prop_key}] = $att->{$prop_source};
@@ -834,13 +861,35 @@ class SLB_Lightbox extends SLB_Base {
 					}
 					
 					//Save attachment data (post & meta) to original object(s)
-					foreach ( $pids[$att->ID] as $uri ) {
-						$this->media_items[$uri] = (object) array_merge( (array) $m_items[$uri], $m);
+					if ( isset($pids[$att->ID]) ) {
+						foreach ( $pids[$att->ID] as $uri ) {
+							$this->media_items[$uri] = array_merge( (array) $m_items[$uri], $m);
+						}
 					}
+					
 				}
 			}
 			unset($atts, $atts_meta, $m, $a, $uri, $pids, $pids_flat);
 		}
+
+		// Filter media item properties
+		foreach ( $this->media_items as $key => $props ) {
+			$this->media_items[$key] =  $this->util->apply_filters('media_item_properties', (object) $props);
+		}
+
+		//Expand URI variants
+		foreach ( $m_items as $uri => $p ) {
+			if ( empty($p->_entries) ) {
+				continue;
+			}
+			foreach ( $p->_entries as $uri_variant ) {
+				if ( isset($this->media_items[$uri_variant]) ) {
+					continue;
+				}
+				$this->media_items[$uri_variant] = array('_parent' => $uri);
+			}
+		}
+		unset($uri, $p, $uri_variant);
 		
 		//Build client output
 		$obj = 'View.assets';
@@ -855,30 +904,29 @@ class SLB_Lightbox extends SLB_Base {
 	 * @param object $uri URI to cache
 	 * Members
 	 * > raw: Raw Link URI
-	 * > base: Sanitized URI
 	 * > source: Source URI (e.g. for attachment URIs)
 	 * @param string $type Media type (image, attachment, etc.)
-	 * @param int $id (optional) ID of media item (for internal items) (Default: NULL)
+	 * @param bool $internal TRUE if media is internal (e.g. attachment)
+	 * @param array $props (optional) Properties to store for item (Default: NULL)
 	 */
-	private function cache_media_item($uri, $type, $internal, $id = null) {
+	private function cache_media_item($uri, $type, $internal, $props = null) {
 		//Validate
 		if ( !is_object($uri) || !is_string($type) ) {
 			return false;
 		}
-		if ( !$this->media_item_cached($uri->base) ) {
+		if ( !$this->media_item_cached($uri->source) ) {
 			//Set properties
-			$i = array('type' => $type, 'source' => $uri->source, 'internal' => $internal, 'id' => null, '_entries' => array());
-			//ID
-			if ( is_numeric($id) && !!$id ) {
-				$i['id'] = absint($id);
+			$i = array('id' => null, '_entries' => array());
+			if ( is_array($props) && !empty($props) ) {
+				$i = array_merge($i, $props);
 			}
+			$i = array_merge($i, array('type' => $type, 'source' => $uri->source, 'internal' => $internal));
 			//Cache media item
-			$this->media_items_raw[$uri->base] = (object) $i;
+			$this->media_items_raw[$uri->source] = (object) $i;
 		}
 		//Add URI variants
-		$entries =& $this->media_items_raw[$uri->base]->_entries;
-		if ( !in_array($uri->raw, $entries) ) {
-			$entries[] = $uri->raw;
+		if ( $uri->raw != $uri->source && !in_array($uri->raw, $this->media_items_raw[$uri->source]->_entries) ) {
+			$this->media_items_raw[$uri->source]->_entries[] = $uri->raw;
 		}
 	}
 	
@@ -916,149 +964,319 @@ class SLB_Lightbox extends SLB_Base {
 		return ( empty($this->media_items_raw) ) ? false : true; 
 	}
 	
-	/*-** Theme **-*/
+	/*-** Exclusion **-*/
 	
 	/**
-	 * Retrieve theme
-	 * @param string $id ID of theme to retrieve
-	 * @return SLB_Theme Theme instance
-	 * @TODO Refactor
+	 * Retrieve exclude object
+	 * Initialize object properties if necessary
+	 * @return object Exclude properties
 	 */
-	function get_theme($id = '') {
-		//Default: Get current theme if no theme specified
-		if ( !$this->themes->has_item($id) ) {
-			$id = $this->options->get_value('theme');
-			if ( !$this->themes->has_item($id) ) {
-				$id = $this->themes->get_default_id();
-			}
-		}
-		return $this->themes->get_item($id);
-	}
-
-	/*-** Grouping **-*/
-	
-	/**
-	 * Builds wrapper for grouping
-	 * @return object Wrapper properties
-	 *  > open
-	 *  > close
-	 */
-	function group_get_wrapper() {
-		static $wrapper = null;
-		if (  is_null($wrapper) ) {
-			$start = '<';
-			$end = '>';
-			$terminate = '/';
-			$val = $this->add_prefix('group');
-			//Build properties
-			$wrapper = array(
-				'open' => $start . $val . $end,
-				'close' => $start . $terminate . $val . $end
+	private function get_exclude() {
+		// Initialize exclude data
+		if ( !is_object($this->exclude) ) {
+			$this->exclude = (object) array (
+				'tags'			=> $this->get_exclude_tags(),
+				'ph'			=> $this->get_exclude_placeholder(),
+				'group_default'	=> 'default',
+				'cache'			=> array(),
 			);
-			//Convert to object
-			$wrapper = (object) $wrapper;
 		}
-		return $wrapper;
+		return $this->exclude;
 	}
 	
 	/**
-	 * Wraps galleries for grouping
-	 * @uses `the_content` Filter hook
-	 * @uses gallery_wrap_callback to Wrap shortcodes for grouping
-	 * @param string $content Post content
-	 * @return string Modified post content
+	 * Get exclusion tags (open/close)
+	 * Example: open => [slb_exclude], close => [/slb_exclude]
+	 * 
+	 * @return object Exclusion tags
 	 */
-	function gallery_wrap($content) {
-		//Stop processing if option not enabled
-		if ( !$this->options->get_bool('group_gallery') )
-			return $content;
-		global $shortcode_tags;
-		//Save default shortcode handlers to temp variable
-		$sc_temp = $shortcode_tags;
-		//Find gallery shortcodes
-		$shortcodes = array('gallery', 'nggallery');
-		$m = $this->m('gallery_wrap_callback');
-		$shortcode_tags = array();
-		foreach ( $shortcodes as $tag ) {
-			$shortcode_tags[$tag] = $m;
+	private function get_exclude_tags() {
+		static $tags = null;
+		if ( null == $tags ) {
+			$base = $this->add_prefix('exclude');
+			$tags = (object) array (
+				'base'	=> $base,
+				'open'	=> $this->util->add_wrapper($base),
+				'close'	=> $this->util->add_wrapper($base, '[/', ']')
+			);
+			$tags->search ='#' . preg_quote($tags->open) . '(.*?)' . preg_quote($tags->close) . '#s';
 		}
-		//Wrap gallery shortcodes
-		$content = do_shortcode($content);
-		//Restore default shortcode handlers
-		$shortcode_tags = $sc_temp;
+		return $tags;
+	}
+	
+	/**
+	 * Get exclusion tag ("[slb_exclude]")
+	 * @uses `get_exclude_tags()` to retrieve tag
+	 * 
+	 * @param string $type (optional) Tag to retrieve (open or close)
+	 * @return string Exclusion tag
+	 */
+	private function get_exclude_tag( $type = "open" ) {
+		//Validate
+		$tags = $this->get_exclude_tags();
+		if ( !isset($tags->{$type}) ) {
+			$type = "open";
+		}
+		return $tags->{$type};
+	}
+	
+	/**
+	 * Build exclude placeholder
+	 * @return object Exclude placeholder properties
+	 */
+	private function get_exclude_placeholder() {
+		static $ph;
+		if ( !is_object($ph) ) {
+			$ph = (object) array (
+				'base'	=> $this->add_prefix('exclude_temp'),
+				'open'	=> '{{',
+				'close'	=> '}}',
+				'attrs'	=> array ( 'group' => '', 'key' => '' ),
+			);
+			// Search Patterns
+			$sub = '(.+?)';
+			$ph->search = '#' . preg_quote($ph->open) . $ph->base . '\s+' . $sub . preg_quote($ph->close) . '#s';
+			$ph->search_group = str_replace($sub, '(group="%s"\s+.?)', $ph->search);
+			// Templates
+			$attr_string = '';
+			foreach ( $ph->attrs as $attr => $val ) {
+				$attr_string .= ' ' . $attr . '="%s"';
+			}
+			$ph->template = $ph->open . $ph->base . $attr_string . $ph->close;
+		}
+		return $ph;
+	}
+	
+	/**
+	 * Wrap content in exclusion tags
+	 * @uses `get_exclude_tag()` to wrap content with exclusion tag
+	 * @param string $content Content to exclude
+	 * @return string Content wrapped in exclusion tags
+	 */
+	private function exclude_wrap($content) {
+		//Validate
+		if ( !is_string($content) ) {
+			$content = "";
+		}
+		//Wrap
+		$tags = $this->get_exclude_tags();
+		return $tags->open . $content . $tags->close;
+	}
+	
+	/**
+	 * Remove excluded content
+	 * Caches content for restoring later
+	 * @param string $content Content to remove excluded content from
+	 * @return string Updated content
+	 */
+	public function exclude_content($content, $group = null) {
+		$ex = $this->get_exclude();
+		// Setup cache
+		if ( !is_string($group) || empty($group) ) {
+			$group = $ex->group_default;
+		}
+		if ( !isset($ex->cache[$group]) ) {
+			$ex->cache[$group] = array();
+		}
+		$cache =& $ex->cache[$group];
+
+		$content = $this->util->apply_filters('pre_exclude_content', $content);
+		
+		// Search content
+		$matches = null;
+		if ( false !== strpos($content, $ex->tags->open) && preg_match_all($ex->tags->search, $content, $matches) ) {
+			// Determine index
+			$idx = ( !!end($cache) ) ? key($cache) : -1;
+			$ph = array();
+			foreach ( $matches[1] as $midx => $match ) {
+				// Update index
+				$idx++;
+				// Cache content
+				$cache[$idx] = $match;
+				// Build placeholder
+				$ph[] =	sprintf($ex->ph->template, $group, $idx);
+			}
+			unset($midx, $match);
+			// Replace content with placeholder
+			$content = str_replace($matches[0], $ph, $content);
+			
+			// Cleanup
+			unset($matches, $ph);
+		}
 		
 		return $content;
 	}
 	
 	/**
-	 * Wraps gallery shortcodes for later processing
-	 * @param array $attr Shortcode attributes
-	 * @param string $content Content enclosed in shortcode
-	 * @param string $tag Shortcode name
-	 * @return string Wrapped gallery shortcode
+	 * Exclude shortcodes from link activation
+	 * @param string $content Content to exclude shortcodes from
+	 * @return string Content with shortcodes excluded
 	 */
-	function gallery_wrap_callback($attr, $content = null, $tag) {
-		//Rebuild shortcode
-		$sc = '[' . $tag . ' ' . $this->util->build_attribute_string($attr) . ']';
-		if ( !empty($content) )
-			$sc .= $content . '[/' . $tag .']';
-		//Wrap shortcode
-		$w = $this->group_get_wrapper();
-		$sc = $w->open . $sc . $w->close;
-		return $sc;
+	public function exclude_shortcodes($content) {
+		// Get shortcodes to exclude
+		$shortcodes = $this->util->apply_filters('exclude_shortcodes', array( $this->add_prefix('group') ));
+		// Set callback
+		$shortcodes = array_fill_keys($shortcodes, $this->m('exclude_shortcodes_handler'));
+		return $this->util->do_shortcode($content, $shortcodes);
 	}
 	
 	/**
-	 * Removes wrapping from galleries
-	 * @uses `the_content` filter hook
-	 * @param $content Post content
+	 * Wrap shortcode in exclude tags
+	 * @uses Util->make_shortcode() to rebuild original shortcode
+	 * 
+	 * @param array $attr Shortcode attributes
+	 * @param string $content Content enclosed in shortcode
+	 * @param string $tag Shortcode name
+	 * @return string Excluded shortcode
+	 */
+	public function exclude_shortcodes_handler($attr, $content, $tag) {
+		$code = $this->util->make_shortcode($tag, $attr, $content);
+		// Exclude shortcode
+		return $this->exclude_wrap($code);
+	}
+	
+	/**
+	 * Restore excluded content
+	 * @param string $content Content to restore excluded content to
+	 * @return string Content with excluded content restored
+	 */
+	public function restore_excluded_content($content, $group = null) {
+		$ex = $this->get_exclude();
+		// Setup cache
+		if ( !is_string($group) || empty($group) ) {
+			$group = $ex->group_default;
+		}
+		// Nothing to restore if cache group doesn't exist
+		if ( !isset($ex->cache[$group]) ) {
+			return $content;
+		}
+		$cache =& $ex->cache[$group];
+		
+		// Search content for placeholders
+		$matches = null;
+		if ( false !== strpos($content, $ex->ph->open . $ex->ph->base) && preg_match_all($ex->ph->search, $content, $matches) ) {
+			// Restore placeholders
+			foreach ( $matches[1] as $idx => $ph ) {
+				// Parse placeholder attributes
+				$attrs = $this->util->parse_attribute_string($ph, $ex->ph->attrs);
+				// Validate
+				if ( $attrs['group'] !== $group ) {
+					continue;
+				}
+				// Restore content
+				$key = $attrs['key'] = intval($attrs['key']);
+				if ( isset($cache[$key]) ) {
+					$content = str_replace($matches[0][$idx], $cache[$key], $content);
+				}
+			}
+			// Cleanup
+			unset($idx, $ph, $matches, $key);
+		}
+		
+		return $content;
+	}
+	
+	/*-** Grouping **-*/
+	
+	/**
+	 * Builds wrapper for grouping
+	 * @return string Format for wrapping content in group
+	 */
+	function group_get_wrapper() {
+		static $fmt = null;
+		if ( is_null($fmt) ) {
+			$fmt = $this->util->make_shortcode($this->add_prefix('group'), null, '%s');
+		}
+		return $fmt;
+	}
+	
+	/**
+	 * Wraps shortcodes for automatic grouping
+	 * @uses `the_content` Filter hook
+	 * @uses group_shortcodes_handler to Wrap shortcodes for grouping
+	 * @param string $content Post content
 	 * @return string Modified post content
 	 */
-	function gallery_unwrap($content) {
-		//Stop processing if option not enabled
-		if ( !$this->options->get_bool('group_gallery') )
-			return $content;
-		$w = $this->group_get_wrapper();
-		if ( strpos($content, $w->open) !== false ) {
-			$content = str_replace($w->open, '', $content);
-			$content = str_replace($w->close, '', $content);
+	function group_shortcodes($content) {
+		// Setup shortcodes to wrap
+		$shortcodes = $this->util->apply_filters('group_shortcodes', array( 'gallery', 'nggallery' ));
+		// Set custom callback
+		$shortcodes = array_fill_keys($shortcodes, $this->m('group_shortcodes_handler'));
+		// Process gallery shortcodes
+		return $this->util->do_shortcode($content, $shortcodes);
+	}
+	
+	/**
+	 * Groups shortcodes for later processing
+	 * @param array $attr Shortcode attributes
+	 * @param string $content Content enclosed in shortcode
+	 * @param string $tag Shortcode name
+	 * @return string Grouped shortcode
+	 */
+	function group_shortcodes_handler($attr, $content, $tag) {
+		$code = $this->util->make_shortcode($tag, $attr, $content);
+		//Wrap shortcode
+		return sprintf( $this->group_get_wrapper(), $code);
+	}
+	
+	/**
+	 * Activate groups in content
+	 * @param string $content Content to activate
+	 * @return string Updated content
+	 */
+	public function activate_groups($content) {
+		return $this->util->do_shortcode($content, array( $this->add_prefix('group') => $this->m('activate_groups_handler') ) );
+	}
+
+	/**
+	 * Groups shortcodes for later processing
+	 * @param array $attr Shortcode attributes
+	 * @param string $content Content enclosed in shortcode
+	 * @param string $tag Shortcode name
+	 * @return string Grouped shortcode
+	 */
+	function activate_groups_handler($attr, $content, $tag) {
+		// Get Group ID
+		//  Custom group
+		if ( isset($attr['id']) ) {
+			$group = $attr['id'];
+			trim($group);
 		}
-		return $content;
+		//  Automatically-generated group
+		if ( empty($group) ) {
+			$group = 'auto_' . ++$this->groups['auto'];
+		}
+		return $this->process_links($content, $group);
 	}
 	
 	/*-** Widgets **-*/
 	
 	/**
-	 * Reroute widget display handlers to internal method
-	 * @param array $sidebar_widgets List of sidebars & their widgets
-	 * @uses WP Hook `sidebars_widgets` to intercept widget list
-	 * @global $wp_registered_widgets to reroute display callback
-	 * @return array Sidebars and widgets (unmodified)
+	 * Reroute widget display callback to internal method
+	 * No widget parameters are modified
+	 * 
+	 * @param array $params Widget parameters
+	 * @global $wp_registered_widgets to update display callback
+	 * @return array Updated parameters
 	 */
-	function sidebars_widgets($sidebars_widgets) {
+	function widget_process_setup($params) {
 		global $wp_registered_widgets;
-		static $widgets_processed = false;
-		if ( is_admin() || empty($wp_registered_widgets) || $widgets_processed || !is_object($this->options) || !$this->options->get_bool('enabled_widget') )
-			return $sidebars_widgets; 
-		$widgets_processed = true;
-		//Fetch active widgets from all sidebars
-		foreach ( $sidebars_widgets as $sb => $ws ) {
-			//Skip inactive widgets and empty sidebars
-			if ( 'wp_inactive_widgets' == $sb || empty($ws) || !is_array($ws) )
-				continue;
-			foreach ( $ws as $w ) {
-				if ( isset($wp_registered_widgets[$w]) && isset($wp_registered_widgets[$w][$this->widget_callback]) ) {
-					$wref =& $wp_registered_widgets[$w];
-					//Backup original callback
-					$wref[$this->widget_callback_orig] = $wref[$this->widget_callback];
-					//Reroute callback
-					$wref[$this->widget_callback] = $this->m('widget_callback');
-					unset($wref);
-				}
-			}
+		$p =& $params[0];
+		$wid = $p['widget_id'];
+		//Validate request
+		if ( !$this->is_enabled() || empty($wp_registered_widgets) || array_key_exists($wid, $this->widgets_processed) ) {
+			return $params;
 		}
-
-		return $sidebars_widgets;
+		$this->widgets_processed[$wid] = true;
+		//Update callback
+		$wref =& $wp_registered_widgets[$wid];
+		// Backup original callback
+		$wref[$this->widget_callback_orig] = $wref[$this->widget_callback];
+		// Reroute callback
+		$wref[$this->widget_callback] = $this->m('widget_callback');
+		unset($wref);
+		
+		return $params;
 	}
 	
 	/**
@@ -1082,18 +1300,57 @@ class SLB_Lightbox extends SLB_Base {
 		if ( !isset($w[$this->widget_callback_orig]) || !($cb = $w[$this->widget_callback_orig]) || !is_callable($cb) )
 			return false;
 		$params = func_get_args();
-		$this->widget_processing = true;
-		//Start output buffer
-		ob_start();
-		//Call original callback
-		call_user_func_array($cb, $params);
-		//Flush output buffer
-		echo $this->widget_process_links(ob_get_clean(), $wid);
+		//Start processing widget output
+		$this->widget_processing = $wid;
+		// Buffer output for further processing if enabled
+		if ( $this->options->get_bool('enabled_widget') ) {
+			//Set Group ID filter
+			$filter = (object) array (
+				'hook'	=> 'get_group_id',
+				'cb'	=> $this->m('widget_group_id'),
+			);
+			$this->util->add_filter($filter->hook, $filter->cb);
+			//Start output buffer
+			ob_start();
+			//Call original callback
+			call_user_func_array($cb, $params);
+			//Flush output buffer
+			$out = $this->activate_links(ob_get_clean());
+			//Unset Group ID filter
+			$this->util->remove_filter($filter->hook, $filter->cb);
+			//Output widget
+			echo $out;
+		}
+		// Simply execute widget's original callback if processing disabled
+		else {
+			call_user_func_array($cb, $params);
+		}
+		//Stop processing widget
 		$this->widget_processing = false;
 	}
 	
 	/**
+	 * Generate group ID for widget
+	 * Should only be called when widget is being processed
+	 * @param array $group_segments Strings used to build group ID
+	 * @return array Group segments with Current Widget ID added
+	 */
+	public function widget_group_id($group_segments) {
+		//Only process when widget is being processed
+		if ( !!$this->widget_processing ) {
+			//Clear group segments
+			$group_segments = array();
+			//Add group ID
+			if ( $this->options->get_bool('group_widget') ) {
+				$group_segments[] = $this->widget_processing;
+			}
+		}
+		return $group_segments;
+	}
+	
+	/**
 	 * Process links in widget content
+	 * @deprecated
 	 * @param string $content Widget content
 	 * @return string Processed widget content
 	 * @uses process_links() to process links

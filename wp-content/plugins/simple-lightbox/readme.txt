@@ -3,13 +3,15 @@ Contributors: Archetyped
 Donate link: http://gum.co/slb-donate
 License: GPLv2
 Tags: lightbox, gallery, photography, images, theme, template, style
-Requires at least: 3.6.1
-Tested up to: 3.7
+Requires at least: 3.8.1
+Tested up to: 3.9
 Stable tag: trunk
 
 The highly customizable lightbox for WordPress
 
 == Description ==
+[**New: Simple Lightbox 2.4 is here - Get the Beta Now!**](http://archetyped.com/?p=1517)
+
 Simple Lightbox is a very simple and customizable lightbox that is easy to add to your WordPress website.
 
 #### Features
@@ -56,6 +58,86 @@ Get more information on [Simple Lightbox's official page](http://archetyped.com/
 3. Dark Theme
 
 == Changelog ==
+
+= 2.3.1 =
+* Fix: WordPress version requirement
+* Optimize: Field collection group parsing
+
+= 2.3.0 =
+[Full Release Notes](http://archetyped.com/lab/slb-2-3-0 "Simple Lightbox 2.3.0")
+
+* Update: WordPress 3.9 support
+* Update: Support URI, content
+* Add: Enhanced grouping support
+* Add: Shortcode: `[slb_group]`
+* Add: Shortcode: `[slb_exclude]`
+* Add: Filter: `slb_pre_process_links`
+* Add: Filter: `slb_post_process_links`
+* Add: Filter: `slb_process_link_attributes`
+* Add: Filter: `slb_media_item_properties`
+* Add: Filter: `slb_pre_exclude_content`
+* Add: Filter: `slb_exclude_shortcodes`
+* Add: Filter: `slb_group_shortcodes`
+* Add: Template Tag: `slb_activate()` - Manually activate content
+* Add: Option to enable/disable usage of WordPress-generated media title
+* Add: Dev mode
+* Add: Theme breakpoints
+* Optimize: Remove deprecated code
+* Optimize: Remove deprecated legacy support
+* Optimize: Content exclusion performance
+* Optimize: Content grouping performance
+* Optimize: Harden code against third-party post query modifications
+* Optimize: Utility code
+* Optimize: Loading process
+* Optimize: Client-side code
+* Optimize: Client-side: Code loading
+* Optimize: Client-side: Simplified dependency detection
+* Optimize: Client-side: Default Theme transitions
+* Optimize: Grunt: Cleanup
+* Optimize: Grunt: Path abstraction
+* Optimize: Grunt: Task loading
+* Optimize: Grunt: Selective file compilation
+
+= 2.2.2 =
+* Optimize: Widget processing
+* Optimize: Remove call-time-pass-by-references
+
+= 2.2.1 =
+* Fix: Enable/Disable lightbox on certain requests (Danny the Enabler)
+* Fix: Widget links grouped with post links (Rafa's Widgetarian Adventure)
+* Optimize: Client-side loading
+* Optimize: Theme validation
+* Optimize: Widget processing
+
+= 2.2.0 =
+* Update: WordPress 3.8 support
+* Add: Add-on support
+* Add: Load external data for item
+* Add: Unloading process for viewer
+* Add: Relative links marked as "internal"
+* Add: Grunt build workflow
+* Optimize: Initialization process
+* Optimize: Client-side output (JavaScript, CSS)
+* Optimize: Improved URI handling (variants, query strings, etc.)
+* Optimize: Improved support for content types (video, etc.)
+* Optimize: Improved File contents retrieval
+* Optimize: Plugin metadata cleanup
+* Optimize: Use absolute paths for file includes (props k3davis)
+
+= 2.1.3 =
+* Fix: PHP configuration issue on some web hosts (Tim's got (config) issues)
+* Optimize: Hide overlapping elements when lightbox is displayed (e.g. Flash, etc.)
+
+= 2.1.2 =
+* Fix: Incorrect paths when WP in subdirectory (Kim's Van Repair)
+
+= 2.1.1 =
+* Fix: Automatic resizing
+* Fix: Compatibility with non-standard wp-content location (On the Path of the Wijdemans)
+* Optimize: jQuery dependency handling
+* Optimize: Plugin initialization
+* Optimize: Deferred component stylesheet loading
+* Optimize: Code cleanup
 
 = 2.1 =
 * Update: Finalized Theme API
