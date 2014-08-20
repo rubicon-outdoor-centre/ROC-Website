@@ -491,12 +491,12 @@ body {
   margin-bottom: 1.5em;
   float: right; }
   .secondary-nav .menu {
-    display: inline-block;
+    display: inline;
     vertical-align: top; }
   .secondary-nav ul {
     background-color: transparent;
     border-bottom: none;
-    display: inline-block;
+    display: inline;
     list-style: none;
     margin: 0;
     padding: 0;
