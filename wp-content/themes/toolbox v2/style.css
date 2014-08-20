@@ -490,6 +490,9 @@ body {
 .secondary-nav {
   margin-bottom: 1.5em;
   float: right; }
+  .secondary-nav .menu {
+    display: inline-block;
+    vertical-align: top; }
   .secondary-nav ul {
     background-color: transparent;
     border-bottom: none;
