@@ -497,10 +497,10 @@ body {
   .secondary-nav a:hover,
   .secondary-nav a:focus {
     background-color: transparent;
-    color: #83c377; }
+    color: #90b5e6; }
   .secondary-nav .current-menu-item a {
     background-color: transparent;
-    color: #83c377;
+    color: #90b5e6;
     cursor: default;
     font-weight: bold; }
   .secondary-nav .back-to-top {
@@ -571,7 +571,7 @@ body {
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
   .home .banner, .error404 .banner {
-    background-image: url("/wp-content/themes/toolbox/img/header.jpg");
+    background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;

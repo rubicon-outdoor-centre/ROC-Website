@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post();
 ?>
 
 			<div class="banner">
-				<img src="/wp-content/themes/toolbox/img/banners/<?php echo $slug; ?>.jpg" alt="Banner Image">
+				<img src="/wp-content/themes/toolbox%20v2/img/banners/<?php echo $slug; ?>.jpg" alt="Banner Image">
 				<div class="container">
 					<h2><?php the_title(); ?></h2>
 				</div>

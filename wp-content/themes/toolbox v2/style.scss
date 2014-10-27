@@ -559,11 +559,11 @@ body {
 	a:hover,
 	a:focus {
 		background-color: transparent;
-		color: lighten($green, 10%);
+		color: lighten($blue, 10%);
 	}
 	.current-menu-item a {
 		background-color: transparent;
-		color: lighten($green, 10%);
+		color: lighten($blue, 10%);
 		cursor: default;
 		font-weight: bold;
 	}
@@ -659,7 +659,7 @@ body {
 	}
 	.home &,
 	.error404 & {
-		background-image: url('/wp-content/themes/toolbox/img/header.jpg');
+		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
