@@ -403,7 +403,7 @@ body {
 .primary-nav {
   clear: both; }
   .primary-nav ul {
-    background-color: #63b453;
+    background-color: #6699dd;
     border-bottom: 0.375em solid white;
     margin: 0 -9999em;
     padding: 0 9999em 1px;
@@ -422,9 +422,9 @@ body {
     text-decoration: none; }
   .primary-nav a:hover,
   .primary-nav a:focus {
-    background-color: #58a548; }
+    background-color: #518bd8; }
   .primary-nav .current-menu-item a {
-    background-color: #4e9440;
+    background-color: #3c7dd4;
     cursor: default;
     position: relative; }
   .primary-nav #openMenu {
@@ -435,34 +435,33 @@ body {
     margin-left: -1.5em;
     margin-right: -1.5em; }
     .primary-nav ul {
-      border-top: 2px solid #a3d39a; }
+      background-color: #6699dd;
+      border-bottom: 0; }
     .primary-nav li {
-      border-top: 1px solid #a3d39a;
       display: block;
       margin-left: -1.5em;
       margin-right: -1.5em; }
       .primary-nav li:first-child {
         border-top: 0; }
       .primary-nav li a {
-        background-color: #e4f2e1;
-        color: #444444; }
+        color: white; }
         .primary-nav li a:hover, .primary-nav li a:focus {
-          background-color: #c4e2be; }
+          background-color: #518bd8; }
     .primary-nav .current-menu-item a,
     .primary-nav .current-menu-item a:hover,
     .primary-nav .current-menu-item a:focus {
-      background-color: white; }
+      background-color: #3c7dd4; }
     .primary-nav #openMenu {
-      background-color: #63b453;
-      border-bottom: 1px solid #325e29;
-      border-top: 1px solid #458239;
+      background-color: #6699dd;
+      border-bottom: 0.375em solid white;
+      border-top: 0.375em solid white;
       color: white;
       display: block;
       font-weight: bold;
       text-align: left;
       text-transform: uppercase; }
       .primary-nav #openMenu:hover, .primary-nav #openMenu:focus {
-        background-color: #83c377; }
+        background-color: #3c7dd4; }
       .primary-nav #openMenu:before {
         content: 'Open Menu'; }
       .primary-nav #openMenu.open:before {
@@ -565,6 +564,12 @@ body {
     margin: 0 -999em;
     padding: 0 999.09375em 0.075em;
     text-align: right; }
+    @media (max-width: 40em) {
+      .banner h2 {
+        border-top: 0.125em solid white;
+        font-size: 3em;
+        padding: 0.125em 999.09375em 0.125em;
+        text-align: center; } }
   .home .banner, .error404 .banner {
     background-image: url("/wp-content/themes/toolbox/img/header.jpg");
     background-position: 50% 100%;
@@ -596,6 +601,9 @@ body {
   list-style: none;
   margin: -4.5em 0 1.5em;
   padding: 0 !important; }
+  @media (max-width: 40em) {
+    .home-links {
+      margin-top: 1.5em; } }
   .home-links li {
     text-align: center; }
     @media (max-width: 40em) {

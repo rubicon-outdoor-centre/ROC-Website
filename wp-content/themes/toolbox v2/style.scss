@@ -433,7 +433,7 @@ body {
 	clear: both;
 
 	ul {
-		background-color: $green;
+		background-color: $blue;
 		border-bottom: ($baseline / 4) solid $white;
 		margin: 0 -9999em;
 		padding: 0 9999em 1px;
@@ -456,10 +456,10 @@ body {
 	}
 	a:hover,
 	a:focus {
-		background-color: darken($green, 5%);
+		background-color: darken($blue, 5%);
 	}
 	.current-menu-item a {
-		background-color: darken($green, 10%);
+		background-color: darken($blue, 10%);
 		cursor: default;
 		position: relative;
 	}
@@ -474,10 +474,10 @@ body {
 		margin-right: ($baseline * -1);
 
 		ul {
-			border-top: 2px solid lighten($green, 20%);
+			background-color: $blue;
+			border-bottom: 0;
 		}
 		li {
-			border-top: 1px solid lighten($green, 20%);
 			display: block;
 			margin-left: -$baseline;
 			margin-right: -$baseline;
@@ -486,24 +486,23 @@ body {
 				border-top: 0;
 			}
 			a {
-				background-color: lighten($green, 40%);
-				color: $black;
+				color: $white;
 
 				&:hover,
 				&:focus {
-					background-color: lighten($green, 30%);
+					background-color: darken($blue, 5%);
 				}
 			}
 		}
 		.current-menu-item a,
 		.current-menu-item a:hover,
 		.current-menu-item a:focus {
-			background-color: $white;
+			background-color: darken($blue, 10%);
 		}
 		#openMenu {
-			background-color: $green;
-			border-bottom: 1px solid darken($green, 25%);
-			border-top: 1px solid darken($green, 15%);
+			background-color: $blue;
+			border-bottom: ($baseline / 4) solid $white;
+			border-top: ($baseline / 4) solid $white;
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -512,7 +511,7 @@ body {
 
 			&:hover,
 			&:focus {
-				background-color: lighten($green, 10%);
+				background-color: darken($blue, 10%);
 			}
 			&:before {
 				content: 'Open Menu';
@@ -650,6 +649,13 @@ body {
 		margin: 0 -999em;
 		padding: 0 (999em + ($baseline / 16)) (($baseline / 4) / 5);
 		text-align: right;
+
+		@media (max-width: 40em) {
+			border-top: (($baseline / 4) / 3) solid $white;
+			font-size: 3em;
+			padding: (($baseline / 4) / 3) (999em + ($baseline / 16)) (($baseline / 4) / 3);
+			text-align: center;
+		}
 	}
 	.home &,
 	.error404 & {
@@ -696,6 +702,10 @@ body {
 	list-style: none;
 	margin: (($baseline * 3) * -1) 0 $baseline;
 	padding: 0 !important;
+
+	@media (max-width: 40em) {
+		margin-top: $baseline;
+	}
 
 	li {
 		text-align: center;
