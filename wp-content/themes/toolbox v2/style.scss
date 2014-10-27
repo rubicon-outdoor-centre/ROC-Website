@@ -34,9 +34,9 @@ $black: #444;
 $white: #fff;
 $grey: #f4f4f4;
 $blue: #69d;
-$blue: #24c4d1;
+// $blue: #24c4d1;
 $orange: #d96;
-$orange: #d77c5b;
+// $orange: #d77c5b;
 $red: #d66;
 $green: #9d6;
 $green: #63b453;
@@ -266,7 +266,7 @@ blockquote {
 }
 p a,
 dd a {
-	border-bottom: 2px solid $green;
+	border-bottom: 2px solid $blue;
 	color: $black;
 	text-decoration: none;
 	-webkit-transition: .1s;
@@ -279,7 +279,7 @@ p a:hover,
 p a:focus,
 dd a:hover,
 dd a:focus {
-	color: $green;
+	color: $blue;
 }
 p a:active,
 dd a:active {
@@ -329,6 +329,7 @@ html {
 }
 body {
 	background-color: darken($grey, 2.5%);
+	background-color: $green;
 	overflow-x: hidden;
 	position: relative;
 	padding: 0;
@@ -433,10 +434,9 @@ body {
 
 	ul {
 		background-color: $green;
-		border-bottom: ($baseline / 8) solid darken($green, 25%);
-		// border-color: $white;
-		margin: 0 (-9999em + (-$baseline));
-		padding: 0 9999em;
+		border-bottom: ($baseline / 4) solid $white;
+		margin: 0 -9999em;
+		padding: 0 9999em 1px;
 		position: relative;
 		z-index: 999;
 	}
@@ -448,16 +448,18 @@ body {
 	a {
 		color: $white;
 		display: block;
+		font-size: 1.2em;
+		font-weight: bold;
 		padding: ($baseline/2) $baseline;
 		text-decoration: none;
-		text-shadow: 0 -1px 1px hsla(0,0%,0%,.25);
+		// text-transform: uppercase;
 	}
 	a:hover,
 	a:focus {
-		background-color: hsla(0,0%,100%,.15);
+		background-color: darken($green, 5%);
 	}
 	.current-menu-item a {
-		background-color: hsla(0,0%,0%,.15);
+		background-color: darken($green, 10%);
 		cursor: default;
 		position: relative;
 	}
@@ -497,13 +499,11 @@ body {
 		.current-menu-item a:hover,
 		.current-menu-item a:focus {
 			background-color: $white;
-			box-shadow: none;
 		}
 		#openMenu {
 			background-color: $green;
 			border-bottom: 1px solid darken($green, 25%);
 			border-top: 1px solid darken($green, 15%);
-			box-shadow: inset 0 1px 0 hsla(0,0%,100%,.25);
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -544,7 +544,6 @@ body {
 		vertical-align: top;
 	}
 	li {
-		border-right: .125em solid darken($grey, 40%);
 		display: inline-block;
 		margin-right: -.25em;
 		position: relative;
@@ -555,9 +554,8 @@ body {
 		display: block;
 		font-size: .875em;
 		line-height: 1.714285714;
-		padding: 0 .5em;
+		padding: 0 .5em 0 .75em;
 		text-decoration: none;
-		text-shadow: 0 1px 1px hsla(0,0%,0%,.25);
 	}
 	a:hover,
 	a:focus {
@@ -574,32 +572,25 @@ body {
 		display: inline-block;
 		font-size: .875em;
 		line-height: 1.714285714;
+		padding-left: .5em;
 		vertical-align: top;
 	}
 }
 .side-nav {
-	background-color: $white;
-	box-shadow: 0 0 0 1px hsla(0,0%,0%,.25),
-				0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
+	background-color: $blue;
+	border: ($baseline / 4) solid $white;
+	border-top: 0;
 	margin-bottom: $baseline;
+	margin-top: (($baseline * -1) + (($baseline / 4) * -1));
+	position: relative;
+	z-index: 1;
 
-	h4 {
-		background-color: $green;
-		box-shadow: 0 0 0 1px darken($green, 15%),
-					inset 0 1px 0 hsla(0,0%,100%,.25);
-		color: $white;
-		margin-bottom: 1px;
-		padding: .571428571em 1.142857142em;
-		text-shadow: 0 -1px 1px hsla(0,0%,0%,.25);
-		text-transform: uppercase;
-	}
 	ul {
 		list-style: none;
 		margin-bottom: 0;
 	}
 	a {
-		border-top: 1px solid darken($grey, 10%);
-		color: lighten($black, 10%);
+		color: $white;
 		display: block;
 		font-weight: bold;
 		padding: ($baseline/2) $baseline;
@@ -607,8 +598,7 @@ body {
 
 		&:hover,
 		&:focus {
-			background-color: lighten($green, 40%);
-			color: $black;
+			background-color: darken($blue, 10%) !important;
 		}
 	}
 	li:first-child a {
@@ -643,21 +633,23 @@ body {
 	}
 }
 .banner {
-	margin-bottom: ($baseline * 2);
+	border-bottom: ($baseline / 4) solid $white;
+	margin-bottom: $baseline;
 	position: relative;
 
-	&:after {
-		bottom: 0;
-		box-shadow: inset 0 -1px 0 hsla(0,0%,0%,.3),
-					inset 0 (($baseline / 8) * -1) ($baseline / 8) hsla(0,0%,0%,.1);
-		content: '';
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
 	img {
 		width: 100%;
+	}
+	.container {
+		padding: 0;
+	}
+	h2 {
+		background-color: $blue;
+		border-top: (($baseline / 4) / 5) solid $white;
+		font-size: 5em;
+		margin: 0 -999em;
+		padding: 0 (999em + ($baseline / 16)) (($baseline / 4) / 5);
+		text-align: right;
 	}
 	.home &,
 	.error404 & {
@@ -665,7 +657,7 @@ body {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 26.75%;
+		padding-bottom: 30%;
 		position: relative;
 
 		h2 {
@@ -702,7 +694,7 @@ body {
 }
 .home-links {
 	list-style: none;
-	margin: 0 0 $baseline;
+	margin: (($baseline * 3) * -1) 0 $baseline;
 	padding: 0 !important;
 
 	li {
@@ -715,9 +707,7 @@ body {
 		a {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
-			border: .3em solid $white;
-			box-shadow: 0 0 0 1px hsla(0,0%,0%,.35),
-						0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
+			border: ($baseline / 4) solid $white;
 			color: $white;
 			display: block;
 			font-size: 1.25em;
@@ -746,8 +736,8 @@ body {
 			&:focus {
 
 				p {
-					background-color: hsla(0,0%,0%,.8);
-					padding-bottom: $baseline;
+					background-color: darken($blue, 10%);
+					// padding-bottom: $baseline;
 				}
 			}
 			img {
@@ -755,7 +745,9 @@ body {
 				width: 100%;
 			}
 			p {
-				background-color: hsla(0,0%,0%,.6);
+				// background-color: hsla(0,0%,0%,.6);
+				background-color: $blue;
+				border-top: ($baseline / 4) solid $white;
 				bottom: 0;
 				left: 0;
 				margin-bottom: 0;
@@ -779,8 +771,6 @@ body {
 
 	a {
 		background-color: $white;
-		border: 1px solid hsla(0,0%,0%,.4);
-		box-shadow: 0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
 		display: block;
 		padding: $baseline;
 	}
@@ -816,12 +806,11 @@ body {
 
 			a {
 				border: .3em solid $white;
-				box-shadow: 0 0 0 1px hsla(0,0%,0%,.15);
 				display: block;
 
 				&:hover,
 				&:focus {
-					box-shadow: 0 0 0 2px hsla(0,0%,0%,.4);
+
 				}
 			}
 			img {
@@ -838,21 +827,18 @@ body {
 }
 .content-section {
 	background-color: $white;
-	box-shadow: 0 0 0 1px hsla(0,0%,0%,.25),
-				0 ($baseline / 8) ($baseline / 8) hsla(0,0%,0%,.1);
+	border: ($baseline / 4) solid $white;
 	margin-bottom: $baseline;
 	padding: $baseline $baseline .01em;
 	position: relative;
 
 	h2 {
 		background-color: $orange;
-		box-shadow: 0 0 0 1px darken($orange, 15%),
-					inset 0 1px 0 hsla(0,0%,100%,.25);
+		border-bottom: (($baseline / 4) / 2.25) solid $white;
 		color: $white;
 		margin: -.666666666em -.666666666em .666666666em;
 		padding: .333333333em 2em .333333333em .666666666em;
 		position: relative;
-		text-shadow: 0 -1px 1px hsla(0,0%,0%,.25);
 		text-transform: uppercase;
 	}
 	hr {
@@ -928,12 +914,11 @@ body {
 		}
 		a {
 			border: .3em solid $white;
-			box-shadow: 0 0 0 1px hsla(0,0%,0%,.15);
 			display: block;
 
 			&:hover,
 			&:focus {
-				box-shadow: 0 0 0 2px hsla(0,0%,0%,.4);
+
 			}
 		}
 		img {
@@ -1108,7 +1093,6 @@ body {
 	background-color: #69d;
 }
 .map {
-	box-shadow: 0 0 0 1px hsla(0,0%,0%,.4);
 	height: 350px;
 	margin-bottom: $baseline;
 	width: 100%;
@@ -1193,27 +1177,14 @@ th {
 /* Footer */
 
 footer {
-	background-color: darken($grey, 50%);
-	background-image: url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.2), transparent),
-					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -moz-linear-gradient(hsla(0,0%,0%,.2), transparent),
-					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -ms-linear-gradient(hsla(0,0%,0%,.2), transparent),
-					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: -o-linear-gradient(hsla(0,0%,0%,.2), transparent),
-					  url('/wp-content/themes/toolbox/img/background.png');
-	background-image: linear-gradient(hsla(0,0%,0%,.2), transparent),
-					  url('/wp-content/themes/toolbox/img/background.png');
-	box-shadow: inset 0 1px 0 hsla(0,0%,0%,.35),
-				inset 0 ($baseline / 6) ($baseline / 6) hsla(0,0%,0%,.05);
+	background-color: darken($green, 25%);
+	border-top: ($baseline / 4) solid $white;
 	margin: 0 -9999em;
 	overflow: hidden;
 	padding: $baseline 9999em 0;
 
 	p {
 		color: $white;
-		text-shadow: 0 1px 1px hsla(0,0%,0%,.25);
 	}
 }
 @media (max-width: 40em) {
@@ -1241,10 +1212,7 @@ footer {
 /* Buttons */
 
 .button {
-	background-color: $green;
-	box-shadow: 0 0 0 1px darken($green, 15%),
-				inset 0 1px 0 hsla(0,0%,100%,.25),
-				inset 0 -1px 0 hsla(0,0%,0%,.15);
+	background-color: $blue;
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
@@ -1255,11 +1223,10 @@ footer {
 
 	&:hover,
 	&:focus {
-		background-color: lighten($green, 10%);
+		background-color: darken($blue, 10%);
 	}
 	&:active {
-		box-shadow: 0 0 0 1px darken($green, 15%),
-					inset 0 1px 0 hsla(0,0%,0%,.15);
+
 	}
 }
 .application-button {
