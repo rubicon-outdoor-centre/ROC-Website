@@ -578,9 +578,9 @@ body {
 .side-nav {
 	background-color: $blue;
 	border: ($baseline / 4) solid $white;
-	border-top: 0;
+	// border-top: 0;
 	margin-bottom: $baseline;
-	margin-top: (($baseline * -1) + (($baseline / 4) * -1));
+	// margin-top: (($baseline * -1) + (($baseline / 4) * -1));
 	position: relative;
 	z-index: 1;
 
@@ -643,12 +643,13 @@ body {
 		padding: 0;
 	}
 	h2 {
-		background-color: $blue;
+		background-color: $white;
 		border-top: (($baseline / 4) / 5) solid $white;
+		color: $green;
 		font-size: 5em;
 		margin: 0 -999em;
 		padding: 0 (999em + ($baseline / 16)) (($baseline / 4) / 5);
-		text-align: right;
+		text-align: center;
 
 		@media (max-width: 40em) {
 			border-top: (($baseline / 4) / 3) solid $white;

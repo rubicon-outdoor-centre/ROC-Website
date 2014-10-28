@@ -513,9 +513,7 @@ body {
 .side-nav {
   background-color: #6699dd;
   border: 0.375em solid white;
-  border-top: 0;
   margin-bottom: 1.5em;
-  margin-top: -1.875em;
   position: relative;
   z-index: 1; }
   .side-nav ul {
@@ -558,12 +556,13 @@ body {
   .banner .container {
     padding: 0; }
   .banner h2 {
-    background-color: #6699dd;
+    background-color: white;
     border-top: 0.075em solid white;
+    color: #63b453;
     font-size: 5em;
     margin: 0 -999em;
     padding: 0 999.09375em 0.075em;
-    text-align: right; }
+    text-align: center; }
     @media (max-width: 40em) {
       .banner h2 {
         border-top: 0.125em solid white;
