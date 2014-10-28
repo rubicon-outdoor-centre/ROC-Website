@@ -324,7 +324,7 @@ a {
 /* Container */
 
 html {
-	background-color: darken($grey, 50%);
+	background-color: darken($green, 25%);
 	overflow-y: scroll;
 }
 body {
@@ -664,7 +664,7 @@ body {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 30%;
+		padding-bottom: 26.5%;
 		position: relative;
 
 		h2 {
@@ -701,7 +701,7 @@ body {
 }
 .home-links {
 	list-style: none;
-	margin: (($baseline * 3) * -1) 0 $baseline;
+	margin: (($baseline * 6) * -1) 0 $baseline;
 	padding: 0 !important;
 
 	@media (max-width: 40em) {
@@ -1307,4 +1307,11 @@ footer {
 }
 @keyframes back-to-top {
 	50% { line-height: 1.75; }
+}
+.error404 {
+
+	h2 {
+		background-color: transparent;
+		margin-bottom: 0 !important;
+	}
 }
