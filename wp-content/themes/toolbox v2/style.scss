@@ -643,9 +643,9 @@ body {
 		padding: 0;
 	}
 	h2 {
-		background-color: $white;
+		background-color: darken($green, 20%);
 		border-top: (($baseline / 4) / 5) solid $white;
-		color: $green;
+		color: $white;
 		font-size: 5em;
 		margin: 0 -999em;
 		padding: 0 (999em + ($baseline / 16)) (($baseline / 4) / 5);

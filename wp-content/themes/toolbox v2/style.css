@@ -556,9 +556,9 @@ body {
   .banner .container {
     padding: 0; }
   .banner h2 {
-    background-color: white;
+    background-color: #3b7031;
     border-top: 0.075em solid white;
-    color: #63b453;
+    color: white;
     font-size: 5em;
     margin: 0 -999em;
     padding: 0 999.09375em 0.075em;
