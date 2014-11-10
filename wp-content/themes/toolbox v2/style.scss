@@ -867,13 +867,14 @@ body {
 .content-section {
 	background-color: $white;
 	border: ($baseline / 4) solid $white;
+	// border-color: darken($green, 10%);
 	margin-bottom: $baseline;
 	padding: $baseline $baseline .01em;
 	position: relative;
 
 	h2 {
 		background-color: $orange;
-		border-bottom: (($baseline / 4) / 2.25) solid $white;
+		// border-bottom: (($baseline / 4) / 2.25) solid $white;
 		color: $white;
 		margin: -.666666666em -.666666666em .666666666em;
 		padding: .333333333em 2em .333333333em .666666666em;
@@ -1014,6 +1015,7 @@ body {
 		margin: (-$baseline) (-$baseline) 0;
 	}
 	.activity-image {
+		border-top: ($baseline / 4) solid $white;
 		width: 100%;
 	}
 	.sustainability-image {
@@ -1028,7 +1030,7 @@ body {
 		font-weight: bold;
 		height: 2em;
 		line-height: 2;
-		opacity: .5;
+		opacity: .75;
 		position: absolute;
 		right: 0;
 		text-align: center;
