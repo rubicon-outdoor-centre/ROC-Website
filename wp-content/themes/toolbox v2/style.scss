@@ -351,7 +351,7 @@ body {
 .social-links {
 	position: absolute;
 	right: ($baseline / 1.55);
-	top: ($baseline / 1.5);
+	top: ($baseline / 2.5);
 
 	a {
 		font-size: 2em;
@@ -959,12 +959,17 @@ body {
 			}
 		}
 		a {
-			border: .3em solid $white;
+			border: .3em solid (lighten($blue, 25%));
 			display: block;
+			-webkit-transition: .1s;
+			   -moz-transition: .1s;
+				-ms-transition: .1s;
+				 -o-transition: .1s;
+					transition: .1s;
 
 			&:hover,
 			&:focus {
-
+				border-color: lighten($blue, 10%);
 			}
 		}
 		img {

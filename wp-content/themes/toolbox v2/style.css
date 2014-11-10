@@ -341,7 +341,7 @@ body {
 .social-links {
   position: absolute;
   right: 0.96774em;
-  top: 1em; }
+  top: 0.6em; }
   .social-links a {
     font-size: 2em;
     margin-left: .3125em;
@@ -776,8 +776,15 @@ body {
         .content-section .photo-list li {
           max-width: 100%; } }
     .content-section .photo-list a {
-      border: 0.3em solid white;
-      display: block; }
+      border: 0.3em solid #cedff4;
+      display: block;
+      -webkit-transition: .1s;
+      -moz-transition: .1s;
+      -ms-transition: .1s;
+      -o-transition: .1s;
+      transition: .1s; }
+      .content-section .photo-list a:hover, .content-section .photo-list a:focus {
+        border-color: #90b5e6; }
     .content-section .photo-list img {
       margin-bottom: 0;
       margin-right: 0; }
