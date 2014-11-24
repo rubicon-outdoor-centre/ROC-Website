@@ -512,6 +512,7 @@ body {
 .side-nav {
   background-color: #6699dd;
   border: 0.375em solid white;
+  border-radius: 0.25em;
   margin-bottom: 1.5em;
   position: relative;
   z-index: 1; }
@@ -522,7 +523,7 @@ body {
     color: white;
     display: block;
     font-weight: bold;
-    padding: 0.75em 1.5em;
+    padding: 0.75em 1em;
     text-decoration: none; }
     .side-nav a:hover, .side-nav a:focus {
       background-color: #3c7dd4 !important; }
@@ -629,6 +630,7 @@ body {
       background-repeat: no-repeat;
       background-size: 100% 100%;
       border: 0.375em solid white;
+      border-radius: 0.25em;
       color: white;
       display: block;
       font-size: 1.25em;
@@ -673,8 +675,11 @@ body {
   text-align: center; }
   .home-logos a {
     background-color: white;
+    border-radius: 0.25em;
     display: block;
     padding: 1.5em; }
+    .home-logos a:hover, .home-logos a:focus {
+      opacity: 0.75; }
   .home-logos img {
     margin: 0;
     max-height: 62px; }
@@ -708,14 +713,16 @@ body {
 .content-section {
   background-color: white;
   border: 0.375em solid white;
+  border-radius: 0.25em;
   margin-bottom: 1.5em;
   padding: 1.5em 1.5em 0.01em;
   position: relative; }
   .content-section h2 {
     background-color: #dd9966;
     color: white;
-    margin: -.666666666em -.666666666em .666666666em;
-    padding: .333333333em 2em .333333333em .666666666em;
+    font-size: 2.0em;
+    margin: -.75em -.75em .75em;
+    padding: .375em 2em .375em .75em;
     position: relative;
     text-transform: uppercase; }
   .content-section hr {
@@ -776,7 +783,8 @@ body {
         .content-section .photo-list li {
           max-width: 100%; } }
     .content-section .photo-list a {
-      border: 0.3em solid #cedff4;
+      border: 0.3em solid white;
+      border-radius: 0.25em;
       display: block;
       -webkit-transition: .1s;
       -moz-transition: .1s;
@@ -784,7 +792,7 @@ body {
       -o-transition: .1s;
       transition: .1s; }
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
-        border-color: #90b5e6; }
+        border-color: #cecece; }
     .content-section .photo-list img {
       margin-bottom: 0;
       margin-right: 0; }
@@ -895,9 +903,6 @@ body {
   opacity: 1;
   width: 32px; }
 
-.page-id-10 .form-list__anchor {
-  margin-left: 52px; }
-
 .form-list__anchor:hover,
 .form-list__anchor:focus {
   opacity: .8; }
@@ -1001,7 +1006,7 @@ th {
     vertical-align: top; } }
 /* Footer */
 footer {
-  background-color: #325e29;
+  background-color: #444444;
   border-top: 0.375em solid white;
   margin: 0 -9999em;
   overflow: hidden;
@@ -1027,6 +1032,7 @@ footer {
 /* Buttons */
 .button {
   background-color: #6699dd;
+  border-radius: 0.25em;
   color: white;
   display: inline-block;
   margin-bottom: 1.5em;

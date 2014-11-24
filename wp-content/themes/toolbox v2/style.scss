@@ -578,6 +578,7 @@ body {
 .side-nav {
 	background-color: $blue;
 	border: ($baseline / 4) solid $white;
+	border-radius: ($baseline / 6);
 	// border-top: 0;
 	margin-bottom: $baseline;
 	// margin-top: (($baseline * -1) + (($baseline / 4) * -1));
@@ -592,7 +593,7 @@ body {
 		color: $white;
 		display: block;
 		font-weight: bold;
-		padding: ($baseline/2) $baseline;
+		padding: ($baseline/2) ($baseline/1.5);
 		text-decoration: none;
 
 		&:hover,
@@ -747,6 +748,7 @@ body {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			border: ($baseline / 4) solid $white;
+			border-radius: ($baseline / 6);
 			color: $white;
 			display: block;
 			font-size: 1.25em;
@@ -810,8 +812,14 @@ body {
 
 	a {
 		background-color: $white;
+		border-radius: ($baseline / 6);
 		display: block;
 		padding: $baseline;
+
+		&:hover,
+		&:focus {
+			opacity: 0.75;
+		}
 	}
 	img {
 		margin: 0;
@@ -867,6 +875,7 @@ body {
 .content-section {
 	background-color: $white;
 	border: ($baseline / 4) solid $white;
+	border-radius: ($baseline / 6);
 	// border-color: darken($green, 10%);
 	margin-bottom: $baseline;
 	padding: $baseline $baseline .01em;
@@ -876,8 +885,9 @@ body {
 		background-color: $orange;
 		// border-bottom: (($baseline / 4) / 2.25) solid $white;
 		color: $white;
-		margin: -.666666666em -.666666666em .666666666em;
-		padding: .333333333em 2em .333333333em .666666666em;
+		font-size: ($baseline*1.333333333);
+		margin: -.75em -.75em .75em;
+		padding: .375em 2em .375em .75em;
 		position: relative;
 		text-transform: uppercase;
 	}
@@ -959,7 +969,8 @@ body {
 			}
 		}
 		a {
-			border: .3em solid (lighten($blue, 25%));
+			border: .3em solid $white;
+			border-radius: ($baseline / 6);
 			display: block;
 			-webkit-transition: .1s;
 			   -moz-transition: .1s;
@@ -969,7 +980,7 @@ body {
 
 			&:hover,
 			&:focus {
-				border-color: lighten($blue, 10%);
+				border-color: darken($grey, 15%);
 			}
 		}
 		img {
@@ -1115,7 +1126,7 @@ body {
 	width: 32px;
 }
 .page-id-10 .form-list__anchor {
-	margin-left: 52px;
+	// margin-left: 52px;
 }
 .form-list__anchor:hover,
 .form-list__anchor:focus {
@@ -1233,7 +1244,7 @@ th {
 /* Footer */
 
 footer {
-	background-color: darken($green, 25%);
+	background-color: $black;
 	border-top: ($baseline / 4) solid $white;
 	margin: 0 -9999em;
 	overflow: hidden;
@@ -1269,6 +1280,7 @@ footer {
 
 .button {
 	background-color: $blue;
+	border-radius: ($baseline / 6);
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
