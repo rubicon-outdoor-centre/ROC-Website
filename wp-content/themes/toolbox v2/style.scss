@@ -434,7 +434,7 @@ body {
 
 	ul {
 		background-color: $blue;
-		border-bottom: ($baseline / 4) solid $white;
+		border-bottom: ($baseline / 6) solid $white;
 		margin: 0 -9999em;
 		padding: 0 9999em 1px;
 		position: relative;
@@ -502,7 +502,7 @@ body {
 		#openMenu {
 			background-color: $blue;
 			// border-bottom: ($baseline / 4) solid $white;
-			border-top: ($baseline / 4) solid $white;
+			border-top: ($baseline / 6) solid $white;
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -577,7 +577,7 @@ body {
 }
 .side-nav {
 	background-color: $blue;
-	border: ($baseline / 4) solid $white;
+	border: ($baseline / 6) solid $white;
 	border-radius: ($baseline / 6);
 	// border-top: 0;
 	margin-bottom: $baseline;
@@ -649,7 +649,7 @@ body {
 	}
 }
 .banner {
-	border-bottom: ($baseline / 4) solid $white;
+	border-bottom: ($baseline / 6) solid $white;
 	margin-bottom: $baseline;
 	position: relative;
 
@@ -681,7 +681,7 @@ body {
 		}
 
 		@media (max-width: 40em) {
-			border-top: (($baseline / 4) / 3) solid $white;
+			border-top: (($baseline / 6) / 3) solid $white;
 			font-size: 3em;
 			padding: (($baseline / 4) / 3) (999em + ($baseline / 16)) (($baseline / 4) / 3);
 			text-align: center;
@@ -747,7 +747,7 @@ body {
 		a {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
-			border: ($baseline / 4) solid $white;
+			border: ($baseline / 6) solid $white;
 			border-radius: ($baseline / 6);
 			color: $white;
 			display: block;
@@ -788,7 +788,7 @@ body {
 			p {
 				// background-color: hsla(0,0%,0%,.6);
 				background-color: $blue;
-				border-top: ($baseline / 4) solid $white;
+				border-top: ($baseline / 6) solid $white;
 				bottom: 0;
 				left: 0;
 				margin-bottom: 0;
@@ -818,7 +818,7 @@ body {
 
 		&:hover,
 		&:focus {
-			opacity: 0.75;
+			opacity: 0.8;
 		}
 	}
 	img {
@@ -874,7 +874,7 @@ body {
 }
 .content-section {
 	background-color: $white;
-	border: ($baseline / 4) solid $white;
+	border: ($baseline / 6) solid $white;
 	border-radius: ($baseline / 6);
 	// border-color: darken($green, 10%);
 	margin-bottom: $baseline;
@@ -892,7 +892,8 @@ body {
 		text-transform: uppercase;
 	}
 	hr {
-		border: 1px solid darken($grey, 8%);
+		border: 0;
+		border-top: ($baseline / 6) solid darken($grey, 5%);
 		margin-bottom: $baseline;
 	}
 	ol,
@@ -1037,7 +1038,7 @@ body {
 		margin: (-$baseline) (-$baseline) 0;
 	}
 	.activity-image {
-		border-top: ($baseline / 4) solid $white;
+		border-top: ($baseline / 6) solid $white;
 		width: 100%;
 	}
 	.sustainability-image {
@@ -1075,20 +1076,21 @@ body {
 	}
 	.stepTitle {
 		margin-bottom: .25em;
-		margin-left: 96px;
+		margin-left: 44px;
 	}
 	.step {
 		color: $green;
 		display: inline-block;
-		margin-left: -96px;
+		margin-left: -44px;
 		margin-right: -.25em;
-		width: 96px;
+		width: 44px;
 		vertical-align: top;
 	}
 	.timeline {
 		display: block;
 		margin-bottom: 1.5em;
-		margin-left: 6.1em;
+		margin-left: 46px;
+		opacity: 0.8;
 	}
 }
 .form-list {
@@ -1105,14 +1107,14 @@ body {
 }
 .form-list__list-item__title {
 	margin-bottom: 0;
-	margin-left: 100px;
+	margin-left: 48px;
 }
 .form-list__list-item__title--single {
 	margin-left: 52px;
 }
 .form-list__list-item__description {
 	margin-bottom: 0;
-	margin-left: 100px;
+	margin-left: 48px;
 }
 .form-list__list-item__description--single {
 	margin-left: 52px;
@@ -1193,8 +1195,8 @@ table {
 th,
 td {
 	background-color: darken($white, 1%);
-	border: 2px solid darken($grey, 25%);
-	padding: ($baseline / 4) ($baseline / 2);
+	border: 2px solid darken($grey, 15%);
+	padding: ($baseline / 6) ($baseline / 3);
 	vertical-align: top;
 
 	p {
@@ -1245,7 +1247,7 @@ th {
 
 footer {
 	background-color: $black;
-	border-top: ($baseline / 4) solid $white;
+	border-top: ($baseline / 6) solid $white;
 	margin: 0 -9999em;
 	overflow: hidden;
 	padding: $baseline 9999em 0;
@@ -1280,6 +1282,7 @@ footer {
 
 .button {
 	background-color: $blue;
+	border: ($baseline / 6) solid darken($blue, 10%);
 	border-radius: ($baseline / 6);
 	color: $white;
 	display: inline-block;
