@@ -590,6 +590,7 @@ body {
 		margin-bottom: 0;
 	}
 	a {
+		border-top: ($baseline / 6) solid $white;
 		color: $white;
 		display: block;
 		font-weight: bold;

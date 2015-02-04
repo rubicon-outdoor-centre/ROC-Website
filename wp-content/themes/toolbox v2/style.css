@@ -520,6 +520,7 @@ body {
     list-style: none;
     margin-bottom: 0; }
   .side-nav a {
+    border-top: 0.25em solid white;
     color: white;
     display: block;
     font-weight: bold;
