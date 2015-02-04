@@ -1283,19 +1283,20 @@ footer {
 
 .button {
 	background-color: $blue;
-	border: ($baseline / 6) solid darken($blue, 10%);
+	border: ($baseline / 6) solid $blue;
 	border-radius: ($baseline / 6);
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
 	margin-right: ($baseline - .25em);
-	padding: ($baseline/2) $baseline;
+	padding: ($baseline / 2) $baseline;
 	text-decoration: none;
 	vertical-align: baseline;
 
 	&:hover,
 	&:focus {
 		background-color: darken($blue, 10%);
+		border-color: darken($blue, 10%);
 	}
 	&:active {
 
