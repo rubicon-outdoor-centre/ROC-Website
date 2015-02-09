@@ -585,11 +585,11 @@ body {
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
   .home .banner, .error404 .banner {
-    background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
+    background-image: url("/wp-content/themes/toolbox%20v2/img/header-blurred.jpg");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-bottom: 26.5%;
+    padding-bottom: 20%;
     position: relative; }
     .home .banner h2, .error404 .banner h2 {
       color: white;
@@ -633,6 +633,29 @@ body {
       padding-bottom: 75%;
       position: relative;
       text-decoration: none; }
+      .home-links li a:after {
+        background-color: rgba(0, 0, 0, 0.375);
+        border-radius: 0.08333em 0.08333em 0.125em 0.125em;
+        bottom: 0;
+        color: white;
+        content: "\f0a9";
+        font-family: "awesome";
+        font-size: 4.5em;
+        font-style: normal;
+        font-weight: normal;
+        left: 0;
+        line-height: 2.375;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        visibility: hidden;
+        -webkit-transition: .1s;
+        -moz-transition: .1s;
+        -ms-transition: .1s;
+        -o-transition: .1s;
+        transition: .1s; }
       .home-links li a.apply {
         background-image: url("/wp-content/themes/toolbox/img/link-1.jpg"); }
       .home-links li a.facebook {
@@ -644,6 +667,9 @@ body {
           background-position: 50% 25%;
           background-size: 100% 200%;
           padding-bottom: 37.5%; } }
+      .home-links li a:hover:after, .home-links li a:focus:after {
+        opacity: 1;
+        visibility: visible; }
       .home-links li a:hover p, .home-links li a:focus p {
         background-color: #3c7dd4; }
       .home-links li a img {
@@ -658,6 +684,7 @@ body {
         padding: 0.75em;
         position: absolute;
         right: 0;
+        z-index: 99;
         -webkit-transition: .1s;
         -moz-transition: .1s;
         -ms-transition: .1s;
@@ -673,9 +700,8 @@ body {
     background-color: white;
     border-radius: 0.375em;
     display: block;
-    padding: 1.5em; }
-    .home-logos a:hover, .home-logos a:focus {
-      opacity: 0.8; }
+    padding: 1.5em;
+    position: relative; }
   .home-logos img {
     margin: 0;
     max-height: 62px; }
@@ -1051,7 +1077,7 @@ footer {
 .button {
   background-color: #6699dd;
   border: 0.25em solid #6699dd;
-  border-radius: 0.25em;
+  border-radius: 1.875em;
   color: white;
   display: inline-block;
   margin-bottom: 1.5em;
@@ -1072,7 +1098,6 @@ footer {
 
 /* Other */
 .error404 .entry-title {
-  margin-bottom: 1.125em;
   text-align: center; }
 
 .wpcf7-form p {
@@ -1102,6 +1127,9 @@ footer {
 
 .icon-font--external-link:before {
   content: '\f08e'; }
+
+.icon-font--arrow-circle-right:before {
+  content: "\f0a9"; }
 
 /* Animations */
 @-webkit-keyframes back-to-top {

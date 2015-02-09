@@ -687,11 +687,11 @@ body {
 	}
 	.home &,
 	.error404 & {
-		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
+		background-image: url('/wp-content/themes/toolbox%20v2/img/header-blurred.jpg');
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 26.5%;
+		padding-bottom: 20%;
 		position: relative;
 
 		h2 {
@@ -754,6 +754,30 @@ body {
 			position: relative;
 			text-decoration: none;
 
+			&:after {
+				background-color: hsla(0,0%,0%,.375);
+				border-radius: (($baseline / 4) / 4.5) (($baseline / 4) / 4.5) (($baseline / 4) / 3) (($baseline / 4) / 3);
+				bottom: 0;
+				color: $white;
+				content: "\f0a9";
+				font-family: "awesome";
+				font-size: ($baseline * 3);
+				font-style: normal;
+				font-weight: normal;
+				left: 0;
+				line-height: 2.375;
+				opacity: 0;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+				visibility: hidden;
+				-webkit-transition: .1s;
+				   -moz-transition: .1s;
+				    -ms-transition: .1s;
+				     -o-transition: .1s;
+				        transition: .1s;
+			}
 			&.apply {
 				background-image: url('/wp-content/themes/toolbox/img/link-1.jpg');
 			}
@@ -774,6 +798,10 @@ body {
 			&:hover,
 			&:focus {
 
+				&:after {
+					opacity: 1;
+					visibility: visible;
+				}
 				p {
 					background-color: darken($blue, 10%);
 					// padding-bottom: $baseline;
@@ -794,11 +822,12 @@ body {
 				padding: ($baseline / 2);
 				position: absolute;
 				right: 0;
+				z-index: 99;
 				-webkit-transition: .1s;
 				   -moz-transition: .1s;
-					-ms-transition: .1s;
-					 -o-transition: .1s;
-						transition: .1s;
+				    -ms-transition: .1s;
+				     -o-transition: .1s;
+				        transition: .1s;
 			}
 		}
 	}
@@ -814,10 +843,11 @@ body {
 		border-radius: ($baseline / 4);
 		display: block;
 		padding: $baseline;
+		position: relative;
 
 		&:hover,
 		&:focus {
-			opacity: 0.8;
+			// opacity: 0.8;
 		}
 	}
 	img {
@@ -1316,7 +1346,7 @@ footer {
 .button {
 	background-color: $blue;
 	border: ($baseline / 6) solid $blue;
-	border-radius: ($baseline / 6);
+	border-radius: ($baseline * 1.25);
 	color: $white;
 	display: inline-block;
 	margin-bottom: $baseline;
@@ -1347,7 +1377,6 @@ footer {
 .error404 {
 
 	.entry-title {
-		margin-bottom: ($baseline / 1.333333);
 		text-align: center;
 	}
 }
@@ -1383,6 +1412,9 @@ footer {
 }
 .icon-font--external-link:before {
 	content: '\f08e';
+}
+.icon-font--arrow-circle-right:before {
+	content: "\f0a9";
 }
 
 /* Animations */
