@@ -22,6 +22,11 @@
 
 				<p class="copyright">© 1978&ndash;<?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
 
+				<div class="social-links">
+					<a class="facebook-link" href="http://www.facebook.com/pages/Rubicon-Outdoor-Centre/109253632438926"><i class="icon-font  icon-font--facebook"></i></a>
+					<a class="instagram-link" href="http://instagram.com/rubicon.oc"><i class="icon-font  icon-font--instagram"></i></a>
+				</div>
+
 			</div>
 		</footer>
 

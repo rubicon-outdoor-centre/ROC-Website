@@ -44,11 +44,6 @@
 
 		<header class="header" role="banner">
 
-		<div class="social-links">
-			<a class="facebook-link" href="http://www.facebook.com/pages/Rubicon-Outdoor-Centre/109253632438926"><i class="icon-font  icon-font--facebook"></i></a>
-			<a class="instagram-link" href="http://instagram.com/rubicon.oc"><i class="icon-font  icon-font--instagram"></i></a>
-		</div>
-
 			<div class="container">
 
 				<h1 class="site-title">
