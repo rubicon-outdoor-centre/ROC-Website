@@ -523,7 +523,7 @@ body {
 	ul {
 		background-color: transparent;
 		border-bottom: none;
-		display: inline;
+		display: inline-block;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -531,36 +531,35 @@ body {
 	}
 	li {
 		display: inline-block;
-		margin-right: -.25em;
-		padding-top: .75em;
+		padding-top: .25em;
 		position: relative;
 		vertical-align: top;
 	}
 	a {
+		border-radius: 1.5em;
 		color: $white;
 		display: block;
 		font-size: .875em;
 		line-height: 1.714285714;
-		padding: 0 .5em 0 .75em;
+		padding: .5em 1em;
 		text-decoration: none;
 	}
 	a:hover,
 	a:focus {
 		background-color: transparent;
-		color: lighten($blue, 10%);
+		background-color: hsla(0,0%,0%,.1);
 	}
 	.current-menu-item a {
-		background-color: transparent;
-		color: lighten($blue, 10%);
+		background-color: hsla(0,0%,0%,.25);
 		cursor: default;
-		font-weight: bold;
+		// font-weight: bold;
 	}
 	.back-to-top {
 		display: inline-block;
 		font-size: .875em;
 		line-height: 1.714285714;
-		padding-left: .5em;
-		padding-top: .75em;
+		position: relative;
+		top: .25em;
 		vertical-align: top;
 	}
 }
@@ -1256,7 +1255,7 @@ footer {
 	// border-top: ($baseline / 6) solid $white;
 	margin: 0 -9999em;
 	overflow: hidden;
-	padding: $baseline 9999em .75em;
+	padding: $baseline 9999em .25em;
 
 	p {
 		color: $white;
