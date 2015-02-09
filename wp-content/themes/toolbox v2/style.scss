@@ -271,9 +271,9 @@ dd a {
 	text-decoration: none;
 	-webkit-transition: .1s;
 	   -moz-transition: .1s;
-		-ms-transition: .1s;
-		 -o-transition: .1s;
-			transition: .1s;
+	    -ms-transition: .1s;
+	     -o-transition: .1s;
+	        transition: .1s;
 }
 p a:hover,
 p a:focus,
@@ -566,7 +566,6 @@ body {
 }
 .side-nav {
 	background-color: $white;
-	background-color: hsla(0,0%,100%,.5);
 	//border: ($baseline / 6) solid $white;
 	border-radius: ($baseline / 4);
 	// border-top: 0;
@@ -587,6 +586,11 @@ body {
 		font-weight: bold;
 		padding: ($baseline / 2) ($baseline);
 		text-decoration: none;
+		-webkit-transition: .15s;
+		   -moz-transition: .15s;
+		    -ms-transition: .15s;
+		     -o-transition: .15s;
+		        transition: .15s;
 
 		&:hover,
 		&:focus {

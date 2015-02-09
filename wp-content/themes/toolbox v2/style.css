@@ -504,7 +504,6 @@ body {
 
 .side-nav {
   background-color: white;
-  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.375em;
   margin-bottom: 1.5em;
   padding: 0.6em 0;
@@ -518,7 +517,12 @@ body {
     display: block;
     font-weight: bold;
     padding: 0.75em 1.5em;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -ms-transition: .15s;
+    -o-transition: .15s;
+    transition: .15s; }
     .side-nav a:hover, .side-nav a:focus {
       color: #3c7dd4 !important;
       padding-left: 1.875em; }
