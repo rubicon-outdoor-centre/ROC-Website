@@ -543,7 +543,7 @@ body {
     top: 0; }
 
 .home .search-wrapper {
-  background-color: #dd9966;
+  background-color: #63b453;
   border-radius: 0.375em 0.375em 0 0;
   margin: -8.85em 0.75em 0;
   padding: 1.5em 0;
@@ -691,7 +691,7 @@ body {
         font-style: normal;
         font-weight: normal;
         left: 0;
-        line-height: 2.375;
+        line-height: 2.4;
         opacity: 0;
         position: absolute;
         right: 0;
