@@ -627,10 +627,16 @@ body {
 }
 .home .search-wrapper {
 	background-color: $orange;
-	border-radius: ($baseline /4);
-	margin: 0 ($baseline /2);
+	border-radius: ($baseline / 4) ($baseline / 4) 0 0;
+	margin: (($baseline * 5.9) * -1) ($baseline /2) 0;
 	padding: $baseline 0;
+	position: relative;
+	z-index: 999999;
 
+	@media (max-width: 40em) {
+		border-radius: ($baseline / 4);
+		margin: 0;
+	}
 	.search-form {
 		font-size: 1.25em;
 		position: relative;
@@ -655,10 +661,10 @@ body {
 	}
 	.search-submit {
 		appearance: none;
-		background-color: $orange;
+		background-color: $blue;
 		border: 0;
 		border-radius: ($baseline * 1.25);
-		line-height: 1.5;
+		line-height: 1.6;
 		margin: 0;
 		padding: ($baseline / 2.5) $baseline;
 		position: absolute;
@@ -672,7 +678,7 @@ body {
 
 		&:hover,
 		&:focus {
-			background-color: darken($orange, 10%);
+			background-color: darken($blue, 10%);
 		}
 	}
 }
@@ -739,10 +745,10 @@ body {
 	.home &,
 	.error404 & {
 		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
-		background-position: 50% 25%;
+		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 20%;
+		padding-bottom: 26.5%;
 		position: relative;
 
 		h2 {

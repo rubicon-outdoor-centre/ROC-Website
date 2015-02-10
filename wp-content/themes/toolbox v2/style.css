@@ -544,9 +544,15 @@ body {
 
 .home .search-wrapper {
   background-color: #dd9966;
-  border-radius: 0.375em;
-  margin: 0 0.75em;
-  padding: 1.5em 0; }
+  border-radius: 0.375em 0.375em 0 0;
+  margin: -8.85em 0.75em 0;
+  padding: 1.5em 0;
+  position: relative;
+  z-index: 999999; }
+  @media (max-width: 40em) {
+    .home .search-wrapper {
+      border-radius: 0.375em;
+      margin: 0; } }
   .home .search-wrapper .search-form {
     font-size: 1.25em;
     position: relative;
@@ -569,10 +575,10 @@ body {
     transition: .1s; }
   .home .search-wrapper .search-submit {
     appearance: none;
-    background-color: #dd9966;
+    background-color: #6699dd;
     border: 0;
     border-radius: 1.875em;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
     padding: 0.6em 1.5em;
     position: absolute;
@@ -584,7 +590,7 @@ body {
     -o-transition: .1s;
     transition: .1s; }
     .home .search-wrapper .search-submit:hover, .home .search-wrapper .search-submit:focus {
-      background-color: #d47d3c; }
+      background-color: #3c7dd4; }
 
 /* Content */
 .content {
@@ -630,10 +636,10 @@ body {
         text-align: center; } }
   .home .banner, .error404 .banner {
     background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
-    background-position: 50% 25%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-bottom: 20%;
+    padding-bottom: 26.5%;
     position: relative; }
     .home .banner h2, .error404 .banner h2 {
       color: white;
