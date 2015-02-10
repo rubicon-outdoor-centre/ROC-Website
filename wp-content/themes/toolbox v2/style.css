@@ -543,7 +543,9 @@ body {
     top: 0; }
 
 .home .search-wrapper {
-  background-color: #6699dd;
+  background-color: #dd9966;
+  border-radius: 0.375em;
+  margin: 0 0.75em;
   padding: 1.5em 0; }
   .home .search-wrapper .search-form {
     font-size: 1.25em;
@@ -557,7 +559,7 @@ body {
     box-sizing: border-box;
     line-height: 2;
     outline: 0;
-    padding: 0.75em 6.75em 0.75em 1.5em;
+    padding: 0.75em 7.5em 0.75em 1.5em;
     transition: .1s;
     width: 100%;
     -webkit-transition: .1s;
@@ -567,20 +569,22 @@ body {
     transition: .1s; }
   .home .search-wrapper .search-submit {
     appearance: none;
+    background-color: #dd9966;
+    border: 0;
     border-radius: 1.875em;
-    line-height: 1.55;
+    line-height: 1.5;
     margin: 0;
-    padding: 0.375em 0.75em;
+    padding: 0.6em 1.5em;
     position: absolute;
     right: 0.375em;
-    top: 0.36364em;
+    top: 0.375em;
     -webkit-transition: .1s;
     -moz-transition: .1s;
     -ms-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
     .home .search-wrapper .search-submit:hover, .home .search-wrapper .search-submit:focus {
-      border-color: #3c7dd4; }
+      background-color: #d47d3c; }
 
 /* Content */
 .content {
@@ -594,6 +598,7 @@ body {
     text-transform: uppercase; }
 
 .banner {
+  margin-bottom: 1.5em;
   position: relative; }
   .banner img {
     width: 100%; }
@@ -624,8 +629,8 @@ body {
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
   .home .banner, .error404 .banner {
-    background-image: url("/wp-content/themes/toolbox%20v2/img/header-blurred.jpg");
-    background-position: 50% 100%;
+    background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
+    background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: 20%;

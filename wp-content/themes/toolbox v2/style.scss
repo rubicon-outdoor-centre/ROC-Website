@@ -626,7 +626,9 @@ body {
 	}
 }
 .home .search-wrapper {
-	background-color: $blue;
+	background-color: $orange;
+	border-radius: ($baseline /4);
+	margin: 0 ($baseline /2);
 	padding: $baseline 0;
 
 	.search-form {
@@ -642,7 +644,7 @@ body {
 		box-sizing: border-box;
 		line-height: 2;
 		outline: 0;
-		padding: ($baseline / 2) ($baseline * 4.5) ($baseline / 2) $baseline;
+		padding: ($baseline / 2) ($baseline * 5) ($baseline / 2) $baseline;
 		transition: .1s;
 		width: 100%;
 		-webkit-transition: .1s;
@@ -653,13 +655,15 @@ body {
 	}
 	.search-submit {
 		appearance: none;
+		background-color: $orange;
+		border: 0;
 		border-radius: ($baseline * 1.25);
-		line-height: 1.55;
+		line-height: 1.5;
 		margin: 0;
-		padding: ($baseline / 4) ($baseline / 2);
+		padding: ($baseline / 2.5) $baseline;
 		position: absolute;
 		right: ($baseline / 4);
-		top: ($baseline / 4.125);
+		top: ($baseline / 4);
 		-webkit-transition: .1s;
 		   -moz-transition: .1s;
 		    -ms-transition: .1s;
@@ -668,7 +672,7 @@ body {
 
 		&:hover,
 		&:focus {
-			border-color: darken($blue, 10%);
+			background-color: darken($orange, 10%);
 		}
 	}
 }
@@ -695,7 +699,7 @@ body {
 }
 .banner {
 	// border-bottom: ($baseline / 6) solid $white;
-	// margin-bottom: $baseline;
+	margin-bottom: $baseline;
 	position: relative;
 
 	img {
@@ -734,8 +738,8 @@ body {
 	}
 	.home &,
 	.error404 & {
-		background-image: url('/wp-content/themes/toolbox%20v2/img/header-blurred.jpg');
-		background-position: 50% 100%;
+		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
+		background-position: 50% 25%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		padding-bottom: 20%;
