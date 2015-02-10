@@ -474,6 +474,7 @@ body {
     vertical-align: top; }
   .secondary-nav li {
     display: inline-block;
+    margin-left: .25em;
     padding-top: .25em;
     position: relative;
     vertical-align: top; }
@@ -544,6 +545,7 @@ body {
 
 .home .search-wrapper {
   background-color: #63b453;
+  background-size: 100% 100%;
   border-radius: 0.375em 0.375em 0 0;
   margin: -8.85em 0.75em 0;
   padding: 1.5em 0;
@@ -673,7 +675,7 @@ body {
     .home-links li a {
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      border-radius: 0.375em 0.375em 0.75em 0.75em;
+      border-radius: 0.375em 0.375em;
       color: white;
       display: block;
       font-size: 1.25em;
@@ -687,7 +689,7 @@ body {
         color: white;
         content: "\f0a9";
         font-family: "awesome";
-        font-size: 4.5em;
+        font-size: 4.35em;
         font-style: normal;
         font-weight: normal;
         left: 0;
@@ -715,6 +717,7 @@ body {
           background-size: 100% 200%;
           padding-bottom: 37.5%; } }
       .home-links li a:hover:after, .home-links li a:focus:after {
+        font-size: 4.5em;
         opacity: 1;
         visibility: visible; }
       .home-links li a:hover p, .home-links li a:focus p {

@@ -531,6 +531,7 @@ body {
 	}
 	li {
 		display: inline-block;
+		margin-left: .25em;
 		padding-top: .25em;
 		position: relative;
 		vertical-align: top;
@@ -627,6 +628,7 @@ body {
 }
 .home .search-wrapper {
 	background-color: $green;
+	background-size: 100% 100%;
 	border-radius: ($baseline / 4) ($baseline / 4) 0 0;
 	margin: (($baseline * 5.9) * -1) ($baseline /2) 0;
 	padding: $baseline 0;
@@ -800,7 +802,7 @@ body {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			//border: ($baseline / 6) solid $white;
-			border-radius: ($baseline / 4) ($baseline / 4) ($baseline / 2) ($baseline / 2);
+			border-radius: ($baseline / 4) ($baseline / 4);
 			color: $white;
 			display: block;
 			font-size: 1.25em;
@@ -815,7 +817,7 @@ body {
 				color: $white;
 				content: "\f0a9";
 				font-family: "awesome";
-				font-size: ($baseline * 3);
+				font-size: ($baseline * 2.9);
 				font-style: normal;
 				font-weight: normal;
 				left: 0;
@@ -853,6 +855,7 @@ body {
 			&:focus {
 
 				&:after {
+					font-size: ($baseline * 3);
 					opacity: 1;
 					visibility: visible;
 				}
