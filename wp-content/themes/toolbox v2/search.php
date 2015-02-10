@@ -2,49 +2,50 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Toolbox
- * @since Toolbox 0.1
+ * @package Default
  */
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-			<?php if ( have_posts() ) : ?>
+		<?php get_search_form(); ?>
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'toolbox' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header>
+		<?php if ( have_posts() ) : ?>
 
-				<?php toolbox_content_nav( 'nav-above' ); ?>
+			<ol class="loop-archive">
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'search' ); ?>
+				<li <?php post_class(); // output a post article ?>>
 
-				<?php endwhile; ?>
+				<?php
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'content', 'search' );
+				?>
 
-				<?php toolbox_content_nav( 'nav-below' ); ?>
+				</li>
 
-			<?php else : ?>
+			<?php endwhile; ?>
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'toolbox' ); ?></h1>
-					</header><!-- .entry-header -->
+			</ol>
 
-					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'toolbox' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
+			<?php //default_paging_nav(); ?>
 
-			<?php endif; ?>
+		<?php else : ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary -->
+			<?php get_template_part( 'content', 'none' ); ?>
 
-<?php get_sidebar(); ?>
+		<?php endif; ?>
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
