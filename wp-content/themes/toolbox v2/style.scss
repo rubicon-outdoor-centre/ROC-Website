@@ -1060,6 +1060,10 @@ body {
 	.video-wrapper {
 		margin-bottom: 0 !important;
 		margin-top: 0 !important;
+
+		& + .grid + hr {
+			margin-top: 0;
+		}
 	}
 	.fluid-video {
 		padding-bottom: 56.12%;
@@ -1077,19 +1081,28 @@ body {
 		}
 	}
 	.video-download {
-		margin: 1em 0 2em;
+		margin: 1.5em 0;
 	}
 	.mp4-download {
-		margin-right: 1.25em;
+		border: 0;
+		border-radius: ($baseline / 4);
+		display: block;
+		font-weight: bold;
+		margin-right: 0;
+		padding: ($baseline / 3) $baseline ($baseline / 1.1);
 
+		&:hover,
+		&:focus {
+			background-color: darken($grey, 5%);
+			color: $black;
+		}
 		&:before {
-			background-color: $white;
 			content: url('/wp-content/themes/toolbox/img/icons/mp4.png');
 			margin-left: -.25em;
 			opacity: 1;
-			padding-right: ($baseline / 2);
+			padding-right: ($baseline / 1.5);
 			position: relative;
-			top: .75em;
+			top: .675em;
 		}
 	}
 	.form-list,
