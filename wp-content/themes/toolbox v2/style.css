@@ -546,10 +546,9 @@ body {
 .home .search-wrapper,
 .search-results .search-wrapper {
   background-color: #63b453;
-  background-size: 100% 100%;
   border-radius: 0.375em 0.375em 0 0;
-  margin: -8.85em 0.75em 0;
-  padding: 1.5em 0;
+  margin: 0;
+  padding: 1.5em;
   position: relative;
   z-index: 999999; }
   @media (max-width: 40em) {
@@ -566,7 +565,7 @@ body {
   .search-results .search-wrapper .search-field {
     appearance: none;
     background-color: white;
-    border: 0;
+    border: 0.1875em solid #63b453;
     border-radius: 2.25em;
     box-sizing: border-box;
     color: #444444;
@@ -580,6 +579,9 @@ body {
     -ms-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
+    .home .search-wrapper .search-field:focus,
+    .search-results .search-wrapper .search-field:focus {
+      border-color: #4e9440; }
   .home .search-wrapper .search-submit,
   .search-results .search-wrapper .search-submit {
     appearance: none;
@@ -590,8 +592,8 @@ body {
     margin: 0;
     padding: 0.6em 1.5em;
     position: absolute;
-    right: 0.375em;
-    top: 0.375em;
+    right: 0.5em;
+    top: 0.5em;
     -webkit-transition: .1s;
     -moz-transition: .1s;
     -ms-transition: .1s;
@@ -605,6 +607,8 @@ body {
 .search-results .loop-archive {
   list-style: none;
   margin-bottom: 0; }
+  .search-results .loop-archive .grid__col--100 {
+    padding: 0; }
 .search-results .content-section {
   background-color: transparent;
   padding: 0; }
@@ -614,7 +618,7 @@ body {
     background-color: white;
     color: #6699dd;
     display: block;
-    padding: 1em;
+    padding: 1.2em;
     text-decoration: none;
     -webkit-transition: .1s;
     -moz-transition: .1s;
@@ -622,6 +626,7 @@ body {
     -o-transition: .1s;
     transition: .1s; }
     .search-results .entry-title a:hover, .search-results .entry-title a:focus {
+      background-color: #f9f9f9;
       color: #3c7dd4; }
 
 /* Content */
@@ -666,14 +671,16 @@ body {
         font-size: 3em;
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
-  .home .banner, .error404 .banner {
+  .home .banner, .error404 .banner, .search-results .banner {
     background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
-    background-position: 50% 100%;
+    background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-bottom: 25%;
+    padding-top: 18%;
     position: relative; }
-    .home .banner h2, .error404 .banner h2 {
+    .home .banner .grid, .error404 .banner .grid, .search-results .banner .grid {
+      margin: 0; }
+    .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
       color: white;
       font-size: 3.5em;
       font-style: italic;
@@ -681,10 +688,10 @@ body {
       right: 0.75em;
       top: 0.375em; }
     @media (max-width: 40em) {
-      .home .banner h2, .error404 .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
         font-size: 3em; } }
     @media (max-width: 30em) {
-      .home .banner h2, .error404 .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
         font-size: 1.8em; } }
   .error404 .banner {
     background-position: 50% 75.3%;
@@ -719,11 +726,11 @@ body {
         color: white;
         content: "\f0a9";
         font-family: "awesome";
-        font-size: 4.35em;
+        font-size: 3.75em;
         font-style: normal;
         font-weight: normal;
         left: 0;
-        line-height: 2.4;
+        line-height: 2.75;
         opacity: 0;
         position: absolute;
         right: 0;
@@ -748,6 +755,7 @@ body {
           padding-bottom: 37.5%; } }
       .home-links li a:hover:after, .home-links li a:focus:after {
         font-size: 4.5em;
+        line-height: 2.4;
         opacity: 1;
         visibility: visible; }
       .home-links li a:hover p, .home-links li a:focus p {
@@ -780,8 +788,11 @@ body {
     background-color: white;
     border-radius: 0.375em;
     display: block;
+    opacity: 1;
     padding: 1.5em;
     position: relative; }
+    .home-logos a:hover, .home-logos a:focus {
+      opacity: 0.9; }
   .home-logos img {
     margin: 0;
     max-height: 62px; }

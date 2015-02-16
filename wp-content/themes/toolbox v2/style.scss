@@ -629,10 +629,9 @@ body {
 .home .search-wrapper,
 .search-results .search-wrapper {
 	background-color: $green;
-	background-size: 100% 100%;
 	border-radius: ($baseline / 4) ($baseline / 4) 0 0;
-	margin: (($baseline * 5.9) * -1) ($baseline /2) 0;
-	padding: $baseline 0;
+	margin: 0;
+	padding: $baseline;
 	position: relative;
 	z-index: 999999;
 
@@ -648,7 +647,7 @@ body {
 	.search-field {
 		appearance: none;
 		background-color: $white;
-		border: 0;
+		border: ($baseline / 8) solid $green;
 		border-radius: ($baseline * 1.5);
 		box-sizing: border-box;
 		color: $black;
@@ -662,6 +661,10 @@ body {
 		    -ms-transition: .1s;
 		     -o-transition: .1s;
 		        transition: .1s;
+
+		&:focus {
+			border-color: darken($green, 10%);
+		}
 	}
 	.search-submit {
 		appearance: none;
@@ -672,8 +675,8 @@ body {
 		margin: 0;
 		padding: ($baseline / 2.5) $baseline;
 		position: absolute;
-		right: ($baseline / 4);
-		top: ($baseline / 4);
+		right: ($baseline / 3);
+		top: ($baseline / 3);
 		-webkit-transition: .1s;
 		   -moz-transition: .1s;
 		    -ms-transition: .1s;
@@ -691,6 +694,10 @@ body {
 	.loop-archive {
 		list-style: none;
 		margin-bottom: 0;
+
+		.grid__col--100 {
+			padding: 0;
+		}
 	}
 	.content-section {
 		background-color: transparent;
@@ -703,7 +710,7 @@ body {
 			background-color: $white;
 			color: $blue;
 			display: block;
-			padding: ($baseline / 1.5);
+			padding: ($baseline / 1.25);
 			text-decoration: none;
 			-webkit-transition: .1s;
 			   -moz-transition: .1s;
@@ -713,6 +720,7 @@ body {
 
 			&:hover,
 			&:focus {
+				background-color: darken($white, 2.5%);
 				color: darken($blue, 10%);
 			}
 		}
@@ -779,14 +787,18 @@ body {
 		}
 	}
 	.home &,
-	.error404 & {
+	.error404 &,
+	.search-results & {
 		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
-		background-position: 50% 100%;
+		background-position: 50% 0%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 25%;
+		padding-top: 18%;
 		position: relative;
 
+		.grid {
+			margin: 0;
+		}
 		h2 {
 			color: $white;
 			font-size: 3.5em;
@@ -851,11 +863,11 @@ body {
 				color: $white;
 				content: "\f0a9";
 				font-family: "awesome";
-				font-size: ($baseline * 2.9);
+				font-size: ($baseline * 2.5);
 				font-style: normal;
 				font-weight: normal;
 				left: 0;
-				line-height: 2.4;
+				line-height: 2.75;
 				opacity: 0;
 				position: absolute;
 				right: 0;
@@ -890,6 +902,7 @@ body {
 
 				&:after {
 					font-size: ($baseline * 3);
+					line-height: 2.4;
 					opacity: 1;
 					visibility: visible;
 				}
@@ -933,12 +946,13 @@ body {
 		background-color: $white;
 		border-radius: ($baseline / 4);
 		display: block;
+		opacity: 1;
 		padding: $baseline;
 		position: relative;
 
 		&:hover,
 		&:focus {
-			// opacity: 0.8;
+			 opacity: 0.9;
 		}
 	}
 	img {

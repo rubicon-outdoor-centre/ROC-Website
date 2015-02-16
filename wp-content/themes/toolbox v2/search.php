@@ -13,17 +13,17 @@ get_header(); ?>
 		<?php // get_search_form(); ?>
 
 		<div class="banner">
-			<img src="/wp-content/themes/toolbox%20v2/img/header-blurred.jpg" alt="Banner Image">
-		</div>
-
-		<div class="container">
-
-		<div class="search-wrapper grid__col--100">
 			<div class="container">
-				<form role="search" method="get" class="search-form" action="http://test.rubicon.vic.edu.au/">
-					<input id="search" type="search" class="search-field" placeholder="Enter a search term..." value="<?php the_search_query(); ?>" name="s">
-					<input type="submit" class="search-submit button" value="Search">
-				</form>
+				<div class="grid">
+					<div class="search-wrapper grid__col--100">
+						<div class="container">
+							<form role="search" method="get" class="search-form" action="http://test.rubicon.vic.edu.au/">
+								<input id="search" type="search" class="search-field" placeholder="Enter a search term..." value="<?php the_search_query(); ?>" name="s">
+								<input type="submit" class="search-submit button" value="Search">
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
