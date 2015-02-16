@@ -516,7 +516,7 @@ body {
 	}
 }
 .secondary-nav {
-	margin-bottom: $baseline;
+	margin-bottom: (($baseline / 4) * 3);
 	float: right;
 
 	.menu {
@@ -545,6 +545,7 @@ body {
 		display: block;
 		font-size: .875em;
 		line-height: 1.714285714;
+		margin-bottom: ($baseline / 4);
 		padding: ($baseline / 3) ($baseline / 1.25);
 		text-decoration: none;
 	}
@@ -639,6 +640,7 @@ body {
 	z-index: 999999;
 
 	@media (max-width: 40em) {
+		background-color: transparent;
 		border-radius: 0;
 		margin: 0;
 	}
@@ -791,7 +793,7 @@ body {
 		}
 
 		@media (max-width: 40em) {
-			border-top: (($baseline / 6) / 3) solid $white;
+			//border-top: (($baseline / 6) / 3) solid $white;
 			font-size: 3em;
 			padding: (($baseline / 4) / 3) (999em + ($baseline / 16)) (($baseline / 4) / 3);
 			text-align: center;
@@ -807,6 +809,9 @@ body {
 		padding-top: 15%;
 		position: relative;
 
+		@media (max-width: 40em) {
+			padding-top: 0;
+		}
 		.grid {
 			margin: 0;
 		}
@@ -890,6 +895,10 @@ body {
 				    -ms-transition: .1s;
 				     -o-transition: .1s;
 				        transition: .1s;
+
+				@media (max-width: 40em) {
+					content: '';
+				}
 			}
 			&.apply {
 				background-image: url('/wp-content/themes/toolbox/img/link-1.jpg');
