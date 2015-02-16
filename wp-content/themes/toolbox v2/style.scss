@@ -758,6 +758,7 @@ body {
 	}
 }
 .banner {
+	background-color: darken($black, 5%);
 	// border-bottom: ($baseline / 6) solid $white;
 	margin-bottom: $baseline;
 	position: relative;
@@ -873,11 +874,11 @@ body {
 				color: $white;
 				content: "\f0a9";
 				font-family: "awesome";
-				font-size: ($baseline * 2.5);
+				font-size: ($baseline * 2.8);
 				font-style: normal;
 				font-weight: normal;
 				left: 0;
-				line-height: 2.75;
+				line-height: 2.5;
 				opacity: 0;
 				position: absolute;
 				right: 0;

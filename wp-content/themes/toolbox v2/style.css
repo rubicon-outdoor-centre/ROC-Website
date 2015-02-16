@@ -646,6 +646,7 @@ body {
     text-transform: uppercase; }
 
 .banner {
+  background-color: #373737;
   margin-bottom: 1.5em;
   position: relative; }
   .banner img {
@@ -731,11 +732,11 @@ body {
         color: white;
         content: "\f0a9";
         font-family: "awesome";
-        font-size: 3.75em;
+        font-size: 4.2em;
         font-style: normal;
         font-weight: normal;
         left: 0;
-        line-height: 2.75;
+        line-height: 2.5;
         opacity: 0;
         position: absolute;
         right: 0;
