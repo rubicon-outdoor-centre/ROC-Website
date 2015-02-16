@@ -444,7 +444,6 @@ body {
     .primary-nav #openMenu {
       background-color: #63b453;
       border-radius: 0;
-      border-top: 0.25em solid white;
       color: white;
       display: block;
       font-weight: bold;
@@ -454,6 +453,8 @@ body {
         background-color: #4e9440; }
       .primary-nav #openMenu:before {
         content: 'Open Menu'; }
+      .primary-nav #openMenu.open {
+        background-color: #4e9440; }
       .primary-nav #openMenu.open:before {
         content: 'Close Menu'; }
       .primary-nav #openMenu i {
@@ -554,7 +555,7 @@ body {
   @media (max-width: 40em) {
     .home .search-wrapper,
     .search-results .search-wrapper {
-      border-radius: 0.375em;
+      border-radius: 0;
       margin: 0; } }
   .home .search-wrapper .search-form,
   .search-results .search-wrapper .search-form {
@@ -680,7 +681,7 @@ body {
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-top: 18%;
+    padding-top: 15%;
     position: relative; }
     .home .banner .grid, .error404 .banner .grid, .search-results .banner .grid {
       margin: 0; }

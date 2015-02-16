@@ -487,9 +487,9 @@ body {
 		}
 		#openMenu {
 			background-color: $green;
-		border-radius: 0;
+			border-radius: 0;
 			// border-bottom: ($baseline / 4) solid $white;
-			border-top: ($baseline / 6) solid $white;
+			// border-top: ($baseline / 6) solid $white;
 			color: $white;
 			display: block;
 			font-weight: bold;
@@ -502,6 +502,9 @@ body {
 			}
 			&:before {
 				content: 'Open Menu';
+			}
+			&.open {
+				background-color: darken($green, 10%);
 			}
 			&.open:before {
 				content: 'Close Menu';
@@ -636,7 +639,7 @@ body {
 	z-index: 999999;
 
 	@media (max-width: 40em) {
-		border-radius: ($baseline / 4);
+		border-radius: 0;
 		margin: 0;
 	}
 	.search-form {
@@ -800,7 +803,7 @@ body {
 		background-position: 50% 0%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-top: 18%;
+		padding-top: 15%;
 		position: relative;
 
 		.grid {
