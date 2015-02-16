@@ -650,6 +650,7 @@ body {
 		border: 0;
 		border-radius: ($baseline * 1.5);
 		box-sizing: border-box;
+		color: $black;
 		line-height: 2;
 		outline: 0;
 		padding: ($baseline / 2) ($baseline * 5) ($baseline / 2) $baseline;
@@ -750,7 +751,7 @@ body {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		padding-bottom: 26.5%;
+		padding-bottom: 25%;
 		position: relative;
 
 		h2 {

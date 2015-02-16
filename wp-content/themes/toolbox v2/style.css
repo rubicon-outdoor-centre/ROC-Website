@@ -565,6 +565,7 @@ body {
     border: 0;
     border-radius: 2.25em;
     box-sizing: border-box;
+    color: #444444;
     line-height: 2;
     outline: 0;
     padding: 0.75em 7.5em 0.75em 1.5em;
@@ -641,7 +642,7 @@ body {
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-bottom: 26.5%;
+    padding-bottom: 25%;
     position: relative; }
     .home .banner h2, .error404 .banner h2 {
       color: white;
