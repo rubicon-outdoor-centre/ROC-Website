@@ -700,14 +700,22 @@ body {
 		}
 	}
 	.content-section {
-		background-color: transparent;
 		padding: 0;
+		-webkit-transition: .1s;
+		   -moz-transition: .1s;
+		    -ms-transition: .1s;
+		     -o-transition: .1s;
+		        transition: .1s;
+
+		&:hover,
+		&:focus {
+			background-color: darken($white, 2.5%);
+		}
 	}
 	.entry-title {
 		margin: 0;
 
 		a {
-			background-color: $white;
 			color: $blue;
 			display: block;
 			padding: ($baseline / 1.25);
@@ -720,7 +728,6 @@ body {
 
 			&:hover,
 			&:focus {
-				background-color: darken($white, 2.5%);
 				color: darken($blue, 10%);
 			}
 		}
@@ -848,7 +855,7 @@ body {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			//border: ($baseline / 6) solid $white;
-			border-radius: ($baseline / 4) ($baseline / 4);
+			border-radius: ($baseline / 4);
 			color: $white;
 			display: block;
 			font-size: 1.25em;
