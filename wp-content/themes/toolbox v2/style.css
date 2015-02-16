@@ -545,7 +545,7 @@ body {
     top: 0; }
 
 .home .search-wrapper,
-.search-results .search-wrapper {
+.search .search-wrapper {
   background-color: #63b453;
   border-radius: 0.375em 0.375em 0 0;
   margin: 0;
@@ -554,16 +554,16 @@ body {
   z-index: 999999; }
   @media (max-width: 40em) {
     .home .search-wrapper,
-    .search-results .search-wrapper {
+    .search .search-wrapper {
       border-radius: 0;
       margin: 0; } }
   .home .search-wrapper .search-form,
-  .search-results .search-wrapper .search-form {
+  .search .search-wrapper .search-form {
     font-size: 1.25em;
     position: relative;
     z-index: 99; }
   .home .search-wrapper .search-field,
-  .search-results .search-wrapper .search-field {
+  .search .search-wrapper .search-field {
     appearance: none;
     background-color: white;
     border: 0.1875em solid #63b453;
@@ -581,10 +581,10 @@ body {
     -o-transition: .1s;
     transition: .1s; }
     .home .search-wrapper .search-field:focus,
-    .search-results .search-wrapper .search-field:focus {
+    .search .search-wrapper .search-field:focus {
       border-color: #4e9440; }
   .home .search-wrapper .search-submit,
-  .search-results .search-wrapper .search-submit {
+  .search .search-wrapper .search-submit {
     appearance: none;
     background-color: #6699dd;
     border: 0;
@@ -601,27 +601,27 @@ body {
     -o-transition: .1s;
     transition: .1s; }
     .home .search-wrapper .search-submit:hover, .home .search-wrapper .search-submit:focus,
-    .search-results .search-wrapper .search-submit:hover,
-    .search-results .search-wrapper .search-submit:focus {
+    .search .search-wrapper .search-submit:hover,
+    .search .search-wrapper .search-submit:focus {
       background-color: #3c7dd4; }
 
-.search-results .loop-archive {
+.search .loop-archive {
   list-style: none;
   margin-bottom: 0; }
-  .search-results .loop-archive .grid__col--100 {
+  .search .loop-archive .grid__col--100 {
     padding: 0; }
-.search-results .content-section {
+.search .content-section {
   padding: 0;
   -webkit-transition: .1s;
   -moz-transition: .1s;
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s; }
-  .search-results .content-section:hover, .search-results .content-section:focus {
+  .search .content-section:hover, .search .content-section:focus {
     background-color: #f9f9f9; }
-.search-results .entry-title {
+.search .entry-title {
   margin: 0; }
-  .search-results .entry-title a {
+  .search .entry-title a {
     color: #6699dd;
     display: block;
     padding: 1.2em;
@@ -631,7 +631,7 @@ body {
     -ms-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
-    .search-results .entry-title a:hover, .search-results .entry-title a:focus {
+    .search .entry-title a:hover, .search .entry-title a:focus {
       color: #3c7dd4; }
 
 /* Content */
@@ -677,16 +677,16 @@ body {
         font-size: 3em;
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
-  .home .banner, .error404 .banner, .search-results .banner {
+  .home .banner, .error404 .banner, .search .banner {
     background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-top: 15%;
     position: relative; }
-    .home .banner .grid, .error404 .banner .grid, .search-results .banner .grid {
+    .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
       margin: 0; }
-    .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
+    .home .banner h2, .error404 .banner h2, .search .banner h2 {
       color: white;
       font-size: 3.5em;
       font-style: italic;
@@ -694,10 +694,10 @@ body {
       right: 0.75em;
       top: 0.375em; }
     @media (max-width: 40em) {
-      .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search .banner h2 {
         font-size: 3em; } }
     @media (max-width: 30em) {
-      .home .banner h2, .error404 .banner h2, .search-results .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search .banner h2 {
         font-size: 1.8em; } }
   .error404 .banner {
     background-position: 50% 75.3%;
