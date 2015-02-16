@@ -10,16 +10,34 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php get_search_form(); ?>
+		<?php // get_search_form(); ?>
+
+		<div class="banner">
+			<img src="/wp-content/themes/toolbox%20v2/img/header-blurred.jpg" alt="Banner Image">
+		</div>
+
+		<div class="container">
+
+		<div class="search-wrapper grid__col--100">
+			<div class="container">
+				<form role="search" method="get" class="search-form" action="http://test.rubicon.vic.edu.au/">
+					<input id="search" type="search" class="search-field" placeholder="Enter a search term..." value="<?php the_search_query(); ?>" name="s">
+					<input type="submit" class="search-submit button" value="Search">
+				</form>
+			</div>
+		</div>
 
 		<?php if ( have_posts() ) : ?>
 
+			<div class="grid container">
 			<ol class="loop-archive">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<li <?php post_class(); // output a post article ?>>
+				<div class="grid__col--100">
+				<div class="content-section">
 
 				<?php
 				/**
@@ -30,13 +48,16 @@ get_header(); ?>
 				get_template_part( 'content', 'search' );
 				?>
 
+				</div>
+				</div>
 				</li>
 
 			<?php endwhile; ?>
 
 			</ol>
+			</div>
 
-			<?php //default_paging_nav(); ?>
+			<?php // default_paging_nav(); ?>
 
 		<?php else : ?>
 

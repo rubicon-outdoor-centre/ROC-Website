@@ -6,29 +6,37 @@
  * @since Toolbox 0.1
  */
 
-get_header(); ?>
+get_header();
+
+$post_data = get_post($post->post_parent);
+
+$slug = $post_data->post_name;
+
+?>
 
 		<div id="primary">
 			<div id="content" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="grid container">
 
-				<?php toolbox_content_nav( 'nav-above' ); ?>
+					<div class="grid__col--100">
 
-				<?php get_template_part( 'content', 'single' ); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php toolbox_content_nav( 'nav-below' ); ?>
+							<div class="content-section">
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template( '', true );
-				?>
+								<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+							</div>
+
+						<?php endwhile; // end of the loop. ?>
+
+					</div>
+
+				</div>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 <?php get_footer(); ?>

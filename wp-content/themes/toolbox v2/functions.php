@@ -309,7 +309,6 @@ add_filter( 'attachment_link', 'toolbox_enhanced_image_navigation' );
  */
 
 // Get post slug
-
 function the_slug() {
 	$post_data = get_post($post->ID, ARRAY_A);
 	$slug = $post_data['post_name'];

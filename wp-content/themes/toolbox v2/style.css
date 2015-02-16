@@ -543,7 +543,8 @@ body {
     right: 0;
     top: 0; }
 
-.home .search-wrapper {
+.home .search-wrapper,
+.search-results .search-wrapper {
   background-color: #63b453;
   background-size: 100% 100%;
   border-radius: 0.375em 0.375em 0 0;
@@ -552,14 +553,17 @@ body {
   position: relative;
   z-index: 999999; }
   @media (max-width: 40em) {
-    .home .search-wrapper {
+    .home .search-wrapper,
+    .search-results .search-wrapper {
       border-radius: 0.375em;
       margin: 0; } }
-  .home .search-wrapper .search-form {
+  .home .search-wrapper .search-form,
+  .search-results .search-wrapper .search-form {
     font-size: 1.25em;
     position: relative;
     z-index: 99; }
-  .home .search-wrapper .search-field {
+  .home .search-wrapper .search-field,
+  .search-results .search-wrapper .search-field {
     appearance: none;
     background-color: white;
     border: 0;
@@ -576,7 +580,8 @@ body {
     -ms-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
-  .home .search-wrapper .search-submit {
+  .home .search-wrapper .search-submit,
+  .search-results .search-wrapper .search-submit {
     appearance: none;
     background-color: #6699dd;
     border: 0;
@@ -592,8 +597,32 @@ body {
     -ms-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
-    .home .search-wrapper .search-submit:hover, .home .search-wrapper .search-submit:focus {
+    .home .search-wrapper .search-submit:hover, .home .search-wrapper .search-submit:focus,
+    .search-results .search-wrapper .search-submit:hover,
+    .search-results .search-wrapper .search-submit:focus {
       background-color: #3c7dd4; }
+
+.search-results .loop-archive {
+  list-style: none;
+  margin-bottom: 0; }
+.search-results .content-section {
+  background-color: transparent;
+  padding: 0; }
+.search-results .entry-title {
+  margin: 0; }
+  .search-results .entry-title a {
+    background-color: white;
+    color: #6699dd;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s; }
+    .search-results .entry-title a:hover, .search-results .entry-title a:focus {
+      color: #3c7dd4; }
 
 /* Content */
 .content {
@@ -943,6 +972,9 @@ body {
     margin-bottom: 1.5em;
     margin-left: 46px;
     opacity: 0.8; }
+
+.single .content-section {
+  margin-top: 1.5em; }
 
 .form-list {
   list-style: none;
