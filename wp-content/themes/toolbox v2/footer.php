@@ -20,12 +20,15 @@
 					<a class="back-to-top" href="#top"><i class="icon-font  icon-font--up-arrow"></i></a>
 				</nav>
 
-				<p class="copyright">© 1978&ndash;<?php echo date('Y') ?> <?php bloginfo('name'); ?></p>
+				<?php get_search_form(); ?>
 
-				<div class="social-links">
-					<a class="facebook-link" href="http://www.facebook.com/pages/Rubicon-Outdoor-Centre/109253632438926"><i class="icon-font  icon-font--facebook"></i></a>
-					<a class="instagram-link" href="http://instagram.com/rubicon.oc"><i class="icon-font  icon-font--instagram"></i></a>
-				</div>
+				<p class="copyright">
+					<span class="copyright-info">© 1978&ndash;<?php echo date('Y') ?> <?php bloginfo('name'); ?></span>
+					<span class="social-links">
+						<a class="facebook-link" href="http://www.facebook.com/pages/Rubicon-Outdoor-Centre/109253632438926"><i class="icon-font  icon-font--facebook"></i></a>
+						<a class="instagram-link" href="http://instagram.com/rubicon.oc"><i class="icon-font  icon-font--instagram"></i></a>
+					</span>
+				</p>
 
 			</div>
 		</footer>
