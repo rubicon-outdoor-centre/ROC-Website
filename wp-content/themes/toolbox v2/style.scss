@@ -691,7 +691,7 @@ body {
 			border-color: $white;
 
 			&:focus {
-				border-color: darken($white, 25%);
+				border-color: $blue;
 			}
 		}
 	}
@@ -725,7 +725,7 @@ body {
 		margin-bottom: 0;
 		padding: 0 ($baseline / 2);
 
-		@media (max-width: 72.5em) {
+		@media (max-width: 40em) {
 			padding: 0;
 		}
 		.grid__col--100 {
@@ -795,7 +795,7 @@ body {
 }
 .banner {
 	background-color: darken($black, 5%);
-	// border-bottom: ($baseline / 6) solid $white;
+	//border-bottom: ($baseline / 4) solid $green;
 	margin-bottom: $baseline;
 	position: relative;
 
@@ -837,15 +837,17 @@ body {
 	.home &,
 	.error404 &,
 	.search & {
-		background-image: url('img/header.jpg');
-		background-position: 50% 0%;
+		background-attachment: fixed;
+		background-image: url('img/header-full.jpg');
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-size: cover;
+		border-bottom: ($baseline / 4) solid $green;
 		padding-top: 15%;
 		position: relative;
 
 		&:after {
-			background-color: hsla(0,0%,0%,.125);
+			background-color: hsla(0,0%,0%,.15);
 			bottom: 0;
 			content: '';
 			left: 0;
@@ -854,6 +856,7 @@ body {
 			top: 0;
 		}
 		@media (max-width: 40em) {
+			border-bottom: 0;
 			padding-top: 0;
 		}
 		.grid {
@@ -888,6 +891,15 @@ body {
 			}
 		}
 	}
+	.home & {
+
+		.search-wrapper {
+
+			@media (max-width: 40em) {
+				display: none;
+			}
+		}
+	}
 	.error404 & {
 		background-position: 50% 75.3%;
 		padding-bottom: 15%;
@@ -901,7 +913,7 @@ body {
 	margin: $baseline 0;
 	padding: 0 ($baseline / 2);
 
-	@media (max-width: 72.5em) {
+	@media (max-width: 40em) {
 		margin-top: $baseline;
 		padding: 0;
 	}
@@ -1015,7 +1027,7 @@ body {
 	padding: 0 ($baseline / 2);
 	text-align: center;
 
-	@media (max-width: 72.5em) {
+	@media (max-width: 40em) {
 		padding: 0;
 	}
 	a {

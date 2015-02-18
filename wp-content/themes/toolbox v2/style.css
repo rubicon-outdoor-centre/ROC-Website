@@ -599,7 +599,7 @@ body {
       .search-wrapper .search-field {
         border-color: white; }
         .search-wrapper .search-field:focus {
-          border-color: #bfbfbf; } }
+          border-color: #00bbcc; } }
   .search-wrapper .search-submit {
     appearance: none;
     background-color: #00bbcc;
@@ -623,7 +623,7 @@ body {
   list-style: none;
   margin-bottom: 0;
   padding: 0 0.75em; }
-  @media (max-width: 72.5em) {
+  @media (max-width: 40em) {
     .search .loop-archive {
       padding: 0; } }
   .search .loop-archive .grid__col--100 {
@@ -699,14 +699,16 @@ body {
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
   .home .banner, .error404 .banner, .search .banner {
-    background-image: url("img/header.jpg");
-    background-position: 50% 0%;
+    background-attachment: fixed;
+    background-image: url("img/header-full.jpg");
+    background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    border-bottom: 0.375em solid #63b453;
     padding-top: 15%;
     position: relative; }
     .home .banner:after, .error404 .banner:after, .search .banner:after {
-      background-color: rgba(0, 0, 0, 0.125);
+      background-color: rgba(0, 0, 0, 0.15);
       bottom: 0;
       content: '';
       left: 0;
@@ -715,6 +717,7 @@ body {
       top: 0; }
     @media (max-width: 40em) {
       .home .banner, .error404 .banner, .search .banner {
+        border-bottom: 0;
         padding-top: 0; } }
     .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
       margin: 0;
@@ -738,6 +741,9 @@ body {
     @media (max-width: 30em) {
       .home .banner h2, .error404 .banner h2, .search .banner h2 {
         font-size: 1.8em; } }
+  @media (max-width: 40em) {
+    .home .banner .search-wrapper {
+      display: none; } }
   .error404 .banner {
     background-position: 50% 75.3%;
     padding-bottom: 15%; }
@@ -746,7 +752,7 @@ body {
   list-style: none;
   margin: 1.5em 0;
   padding: 0 0.75em; }
-  @media (max-width: 72.5em) {
+  @media (max-width: 40em) {
     .home-links {
       margin-top: 1.5em;
       padding: 0; } }
@@ -833,7 +839,7 @@ body {
   margin: 0 0 1.65em;
   padding: 0 0.75em;
   text-align: center; }
-  @media (max-width: 72.5em) {
+  @media (max-width: 40em) {
     .home-logos {
       padding: 0; } }
   .home-logos a {
