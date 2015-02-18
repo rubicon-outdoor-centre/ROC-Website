@@ -340,7 +340,7 @@ body {
 .site-title {
   margin: 0; }
   .site-title a {
-    background-image: url("/wp-content/themes/toolbox/img/rubicon-logo.png");
+    background-image: url("img/rubicon-logo.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border: 0.5em solid transparent;
@@ -556,7 +556,8 @@ body {
     .search-wrapper {
       background-color: transparent;
       border-radius: 0;
-      margin: 0; } }
+      margin: 0;
+      padding: 1.5em 0.75em; } }
   .search-wrapper .search-form {
     font-size: 1.25em;
     position: relative;
@@ -580,6 +581,11 @@ body {
     transition: .1s; }
     .search-wrapper .search-field:focus {
       border-color: #4e9440; }
+    @media (max-width: 40em) {
+      .search-wrapper .search-field {
+        border-color: white; }
+        .search-wrapper .search-field:focus {
+          border-color: #bfbfbf; } }
   .search-wrapper .search-submit {
     appearance: none;
     background-color: #00bbcc;
@@ -603,6 +609,9 @@ body {
   list-style: none;
   margin-bottom: 0;
   padding: 0 0.75em; }
+  @media (max-width: 40em) {
+    .search .loop-archive {
+      padding: 0; } }
   .search .loop-archive .grid__col--100 {
     padding: 0; }
 .search .content-section {
@@ -675,7 +684,7 @@ body {
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
   .home .banner, .error404 .banner, .search .banner {
-    background-image: url("/wp-content/themes/toolbox%20v2/img/header.jpg");
+    background-image: url("img/header.jpg");
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -710,7 +719,8 @@ body {
   padding: 0 0.75em; }
   @media (max-width: 40em) {
     .home-links {
-      margin-top: 1.5em; } }
+      margin-top: 1.5em;
+      padding: 0; } }
   .home-links li {
     text-align: center; }
     @media (max-width: 40em) {
@@ -753,11 +763,11 @@ body {
           .home-links li a:after {
             content: ''; } }
       .home-links li a.apply {
-        background-image: url("/wp-content/themes/toolbox/img/link-1.jpg"); }
+        background-image: url("img/link-1.jpg"); }
       .home-links li a.facebook {
-        background-image: url("/wp-content/themes/toolbox/img/link-2.jpg"); }
+        background-image: url("img/link-2.jpg"); }
       .home-links li a.venue {
-        background-image: url("/wp-content/themes/toolbox/img/link-3.jpg"); }
+        background-image: url("img/link-3.jpg"); }
       @media (max-width: 40em) {
         .home-links li a {
           background-position: 50% 25%;
@@ -794,6 +804,9 @@ body {
   margin: 0 0 1.65em;
   padding: 0 0.75em;
   text-align: center; }
+  @media (max-width: 40em) {
+    .home-logos {
+      padding: 0; } }
   .home-logos a {
     background-color: white;
     border-radius: 0.375em;
@@ -892,7 +905,7 @@ body {
       background-color: #e7e7e7;
       color: #444444; }
     .content-section .mp4-download:before {
-      content: url("/wp-content/themes/toolbox/img/icons/mp4.png");
+      content: url("img/icons/mp4.png");
       margin-left: -.25em;
       opacity: 1;
       padding-right: 1em;

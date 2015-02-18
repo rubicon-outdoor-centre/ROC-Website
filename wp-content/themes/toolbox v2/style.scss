@@ -351,7 +351,7 @@ body {
 	margin: 0;
 
 	a {
-		background-image: url('/wp-content/themes/toolbox/img/rubicon-logo.png');
+		background-image: url('img/rubicon-logo.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		border: ($baseline / 3) solid transparent;
@@ -642,6 +642,7 @@ body {
 		background-color: transparent;
 		border-radius: 0;
 		margin: 0;
+		padding: $baseline ($baseline / 2);
 	}
 	.search-form {
 		font-size: 1.25em;
@@ -668,6 +669,13 @@ body {
 
 		&:focus {
 			border-color: darken($green, 10%);
+		}
+		@media (max-width: 40em) {
+			border-color: $white;
+
+			&:focus {
+				border-color: darken($white, 25%);
+			}
 		}
 	}
 	.search-submit {
@@ -700,6 +708,9 @@ body {
 		margin-bottom: 0;
 		padding: 0 ($baseline / 2);
 
+		@media (max-width: 40em) {
+			padding: 0;
+		}
 		.grid__col--100 {
 			padding: 0;
 		}
@@ -808,7 +819,7 @@ body {
 	.home &,
 	.error404 &,
 	.search & {
-		background-image: url('/wp-content/themes/toolbox%20v2/img/header.jpg');
+		background-image: url('img/header.jpg');
 		background-position: 50% 0%;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
@@ -858,6 +869,7 @@ body {
 
 	@media (max-width: 40em) {
 		margin-top: $baseline;
+		padding: 0;
 	}
 
 	li {
@@ -908,13 +920,13 @@ body {
 				}
 			}
 			&.apply {
-				background-image: url('/wp-content/themes/toolbox/img/link-1.jpg');
+				background-image: url('img/link-1.jpg');
 			}
 			&.facebook {
-				background-image: url('/wp-content/themes/toolbox/img/link-2.jpg');
+				background-image: url('img/link-2.jpg');
 			}
 			&.venue {
-				background-image: url('/wp-content/themes/toolbox/img/link-3.jpg');
+				background-image: url('img/link-3.jpg');
 			}
 			@media (max-width: 40em) {
 
@@ -969,6 +981,9 @@ body {
 	padding: 0 ($baseline / 2);
 	text-align: center;
 
+	@media (max-width: 40em) {
+		padding: 0;
+	}
 	a {
 		background-color: $white;
 		border-radius: ($baseline / 4);
@@ -1114,7 +1129,7 @@ body {
 			color: $black;
 		}
 		&:before {
-			content: url('/wp-content/themes/toolbox/img/icons/mp4.png');
+			content: url('img/icons/mp4.png');
 			margin-left: -.25em;
 			opacity: 1;
 			padding-right: ($baseline / 1.5);
