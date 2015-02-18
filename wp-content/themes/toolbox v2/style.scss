@@ -36,7 +36,7 @@ $grey: #f4f4f4;
 $blue: #69d;
 $blue: #0bc;
 $orange: #d96;
-// $orange: #d77c5b;
+$orange: #e74;
 $red: #d66;
 $green: #9d6;
 $green: #63b453;
@@ -1093,7 +1093,7 @@ body {
 	overflow: hidden;
 
 	h2 {
-		background-color: $orange;
+		background-color: lighten($orange, 5%);
 		border-radius: ($baseline / 8) ($baseline / 8) 0 0;
 		// border-bottom: (($baseline / 4) / 2.25) solid $white;
 		color: $white;
