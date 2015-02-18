@@ -49,7 +49,7 @@
 				<h1 class="site-title">
 					<a href="<?php echo home_url( '/' ); ?>" rel="home">
 						<?php bloginfo( 'name' ); ?>
-						<em><?php bloginfo( 'description' ); ?></em>
+						<em><?php //bloginfo( 'description' ); ?></em>
 					</a>
 				</h1>
 

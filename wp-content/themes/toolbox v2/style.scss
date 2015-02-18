@@ -364,7 +364,7 @@ body {
 		border: ($baseline / 3) solid transparent;
 		display: inline-block;
 		height: 150px;
-		margin: (($baseline / 3) * -1) 0 0 0;
+		margin: (($baseline / 4) * -1) 0 ($baseline / 8) 0;
 		text-decoration: none;
 		text-transform: uppercase;
 		width: 210px;
@@ -374,6 +374,11 @@ body {
 		overflow: hidden;
 		text-indent: 100%;
 		white-space: nowrap;
+
+		&:hover,
+		&:focus {
+			opacity: 0.9;
+		}
 	}
 	em {
 		color: lighten($green, 25%);
@@ -700,11 +705,14 @@ body {
 		background-color: $blue;
 		border: 0;
 		border-radius: ($baseline * 1.25);
+		font-weight: bold;
+		letter-spacing: .025em;
 		line-height: 1.6;
 		margin: 0;
 		padding: ($baseline / 2.5) $baseline;
 		position: absolute;
 		right: ($baseline / 3);
+		text-transform: uppercase;
 		top: ($baseline / 3);
 		-webkit-transition: .1s;
 		   -moz-transition: .1s;
@@ -1658,6 +1666,7 @@ footer {
 	border-radius: ($baseline * 1.5);
 	display: inline-block;
 	font-weight: bold;
+	letter-spacing: .025em;
 	padding: ($baseline / 1.5) ($baseline * 2);
 	text-transform: uppercase;
 }
@@ -1700,6 +1709,7 @@ footer {
 }
 .icon-font--external-link:before {
 	content: '\f08e';
+	margin-left: .25em;
 }
 .icon-font--arrow-circle-right:before {
 	content: "\f0a9";

@@ -352,7 +352,7 @@ body {
     border: 0.5em solid transparent;
     display: inline-block;
     height: 150px;
-    margin: -0.5em 0 0 0;
+    margin: -0.375em 0 0.1875em 0;
     text-decoration: none;
     text-transform: uppercase;
     width: 210px;
@@ -360,6 +360,8 @@ body {
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap; }
+    .site-title a:hover, .site-title a:focus {
+      opacity: 0.9; }
   .site-title em {
     color: #b4dbac;
     font-size: .75em;
@@ -605,11 +607,14 @@ body {
     background-color: #00bbcc;
     border: 0;
     border-radius: 1.875em;
+    font-weight: bold;
+    letter-spacing: .025em;
     line-height: 1.6;
     margin: 0;
     padding: 0.6em 1.5em;
     position: absolute;
     right: 0.5em;
+    text-transform: uppercase;
     top: 0.5em;
     -webkit-transition: .1s;
     -moz-transition: .1s;
@@ -1301,6 +1306,7 @@ footer {
   border-radius: 2.25em;
   display: inline-block;
   font-weight: bold;
+  letter-spacing: .025em;
   padding: 1em 3em;
   text-transform: uppercase; }
 
@@ -1331,7 +1337,8 @@ footer {
   content: '\f16d'; }
 
 .icon-font--external-link:before {
-  content: '\f08e'; }
+  content: '\f08e';
+  margin-left: .25em; }
 
 .icon-font--arrow-circle-right:before {
   content: "\f0a9"; }
