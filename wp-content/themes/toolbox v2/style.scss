@@ -337,6 +337,13 @@ body {
 	margin: 0 auto;
 	max-width: 69.85em;
 	padding: 0 $baseline;
+
+	@media (max-width: 72.5em) {
+		padding: 0 ($baseline / 2);
+	}
+	@media (max-width: 40em) {
+		padding: 0 $baseline;
+	}
 }
 
 /* Header */
@@ -718,7 +725,7 @@ body {
 		margin-bottom: 0;
 		padding: 0 ($baseline / 2);
 
-		@media (max-width: 40em) {
+		@media (max-width: 72.5em) {
 			padding: 0;
 		}
 		.grid__col--100 {
@@ -852,6 +859,13 @@ body {
 		.grid {
 			margin: 0;
 			padding: 0 ($baseline / 2);
+
+			@media (max-width: 72.5em) {
+				padding: 0 $baseline;
+			}
+			@media (max-width: 40em) {
+				padding: 0 ($baseline / 2);
+			}
 		}
 		h2 {
 			color: $white;
@@ -887,7 +901,7 @@ body {
 	margin: $baseline 0;
 	padding: 0 ($baseline / 2);
 
-	@media (max-width: 40em) {
+	@media (max-width: 72.5em) {
 		margin-top: $baseline;
 		padding: 0;
 	}
@@ -1001,7 +1015,7 @@ body {
 	padding: 0 ($baseline / 2);
 	text-align: center;
 
-	@media (max-width: 40em) {
+	@media (max-width: 72.5em) {
 		padding: 0;
 	}
 	a {

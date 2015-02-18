@@ -329,6 +329,12 @@ body {
   margin: 0 auto;
   max-width: 69.85em;
   padding: 0 1.5em; }
+  @media (max-width: 72.5em) {
+    .container {
+      padding: 0 0.75em; } }
+  @media (max-width: 40em) {
+    .container {
+      padding: 0 1.5em; } }
 
 /* Header */
 .header {
@@ -617,7 +623,7 @@ body {
   list-style: none;
   margin-bottom: 0;
   padding: 0 0.75em; }
-  @media (max-width: 40em) {
+  @media (max-width: 72.5em) {
     .search .loop-archive {
       padding: 0; } }
   .search .loop-archive .grid__col--100 {
@@ -713,6 +719,12 @@ body {
     .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
       margin: 0;
       padding: 0 0.75em; }
+      @media (max-width: 72.5em) {
+        .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
+          padding: 0 1.5em; } }
+      @media (max-width: 40em) {
+        .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
+          padding: 0 0.75em; } }
     .home .banner h2, .error404 .banner h2, .search .banner h2 {
       color: white;
       font-size: 3.5em;
@@ -734,7 +746,7 @@ body {
   list-style: none;
   margin: 1.5em 0;
   padding: 0 0.75em; }
-  @media (max-width: 40em) {
+  @media (max-width: 72.5em) {
     .home-links {
       margin-top: 1.5em;
       padding: 0; } }
@@ -821,7 +833,7 @@ body {
   margin: 0 0 1.65em;
   padding: 0 0.75em;
   text-align: center; }
-  @media (max-width: 40em) {
+  @media (max-width: 72.5em) {
     .home-logos {
       padding: 0; } }
   .home-logos a {
