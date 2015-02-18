@@ -1588,10 +1588,10 @@ footer {
 	}
 }
 .application-button {
+	border-radius: ($baseline * 1.5);
 	display: inline-block;
 	font-weight: bold;
-	padding-left: ($baseline * 1.5);
-	padding-right: ($baseline * 1.5);
+	padding: ($baseline / 1.5) ($baseline * 2);
 	text-transform: uppercase;
 }
 

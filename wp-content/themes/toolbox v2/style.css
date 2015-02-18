@@ -1250,10 +1250,10 @@ footer {
     border-color: #008c99; }
 
 .application-button {
+  border-radius: 2.25em;
   display: inline-block;
   font-weight: bold;
-  padding-left: 2.25em;
-  padding-right: 2.25em;
+  padding: 1em 3em;
   text-transform: uppercase; }
 
 /* Other */
