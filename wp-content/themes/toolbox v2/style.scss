@@ -1116,7 +1116,7 @@ body {
 		margin: 1.5em 0;
 	}
 	.mp4-download {
-		border: 0;
+		border: solid ($baseline / 10) darken($grey, 5%);
 		border-radius: ($baseline / 4);
 		display: block;
 		font-weight: bold;
@@ -1162,7 +1162,7 @@ body {
 		}
 		a {
 			border: .3em solid $white;
-			border-radius: ($baseline / 6);
+			border-radius: ($baseline / 4);
 			display: block;
 			-webkit-transition: .1s;
 			   -moz-transition: .1s;
@@ -1176,6 +1176,7 @@ body {
 			}
 		}
 		img {
+			border-radius: ($baseline / 8);
 			margin-bottom: 0;
 			margin-right: 0;
 		}
@@ -1293,6 +1294,19 @@ body {
 }
 .form-list__list-item {
 	margin-bottom: $baseline;
+
+	a {
+		border: solid ($baseline / 10) darken($grey, 5%);
+		border-radius: ($baseline / 4);
+		display: block;
+		padding: ($baseline / 2) ($baseline / 1.25) (($baseline / 2) * 1.1);
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background-color: darken($grey, 5%);
+		}
+	}
 }
 .form-list__list-item--attention {
 	background-color: #f6f6d6;
@@ -1300,6 +1314,7 @@ body {
 	padding: .5em 1.4em;
 }
 .form-list__list-item__title {
+	color: $black;
 	margin-bottom: 0;
 	margin-left: 48px;
 }
@@ -1318,7 +1333,7 @@ body {
 	height: 32px;
 	margin-right: 16px;
 	margin-top: 8px;
-	opacity: 1;
+	// opacity: 1;
 	width: 32px;
 }
 .page-id-10 .form-list__anchor {
@@ -1326,7 +1341,7 @@ body {
 }
 .form-list__anchor:hover,
 .form-list__anchor:focus {
-	opacity: .8;
+	// opacity: .8;
 }
 .form-list__anchor--doc {
 	background-image: url('img/icons/doc.png');
@@ -1510,6 +1525,41 @@ footer {
 		&.instagram-link:hover,
 		&.instagram-link:focus {
 			//color: #3f729b;
+		}
+	}
+}
+.contact-social {
+
+	a {
+		border: solid ($baseline / 10) darken($grey, 5%);
+		border-radius: ($baseline / 4);
+		color: $black;
+		display: block;
+		font-weight: bold;
+		margin-bottom: $baseline;
+		padding: ($baseline / 2) $baseline (($baseline / 2) * 1.1);
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background-color: darken($grey, 5%);
+		}
+		i {
+			font-size: 2em;
+			margin-right: .675em;
+			padding-left: .075em;
+			vertical-align: middle;
+
+			&.icon-font--facebook {
+				color: #3b5998;
+			}
+			&.icon-font--instagram {
+				color: #3f729b;
+			}
+		}
+		span {
+			position: relative;
+			top: .125em;
 		}
 	}
 }

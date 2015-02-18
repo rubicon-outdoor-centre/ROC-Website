@@ -895,7 +895,7 @@ body {
   .content-section .video-download {
     margin: 1.5em 0; }
   .content-section .mp4-download {
-    border: 0;
+    border: solid 0.15em #e7e7e7;
     border-radius: 0.375em;
     display: block;
     font-weight: bold;
@@ -931,7 +931,7 @@ body {
           max-width: 100%; } }
     .content-section .photo-list a {
       border: 0.3em solid white;
-      border-radius: 0.25em;
+      border-radius: 0.375em;
       display: block;
       -webkit-transition: .1s;
       -moz-transition: .1s;
@@ -941,6 +941,7 @@ body {
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
         border-color: #cecece; }
     .content-section .photo-list img {
+      border-radius: 0.1875em;
       margin-bottom: 0;
       margin-right: 0; }
   .content-section .podcast-list h3 {
@@ -1025,6 +1026,14 @@ body {
 
 .form-list__list-item {
   margin-bottom: 1.5em; }
+  .form-list__list-item a {
+    border: solid 0.15em #e7e7e7;
+    border-radius: 0.375em;
+    display: block;
+    padding: 0.75em 1.2em 0.825em;
+    text-decoration: none; }
+    .form-list__list-item a:hover, .form-list__list-item a:focus {
+      background-color: #e7e7e7; }
 
 .form-list__list-item--attention {
   background-color: #f6f6d6;
@@ -1032,6 +1041,7 @@ body {
   padding: .5em 1.4em; }
 
 .form-list__list-item__title {
+  color: #444444;
   margin-bottom: 0;
   margin-left: 48px; }
 
@@ -1050,12 +1060,7 @@ body {
   height: 32px;
   margin-right: 16px;
   margin-top: 8px;
-  opacity: 1;
   width: 32px; }
-
-.form-list__anchor:hover,
-.form-list__anchor:focus {
-  opacity: .8; }
 
 .form-list__anchor--doc {
   background-image: url("img/icons/doc.png"); }
@@ -1203,6 +1208,30 @@ footer {
     text-decoration: none; }
     .social-links a:hover, .social-links a:focus {
       color: #00bbcc; }
+
+.contact-social a {
+  border: solid 0.15em #e7e7e7;
+  border-radius: 0.375em;
+  color: #444444;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+  padding: 0.75em 1.5em 0.825em;
+  text-decoration: none; }
+  .contact-social a:hover, .contact-social a:focus {
+    background-color: #e7e7e7; }
+  .contact-social a i {
+    font-size: 2em;
+    margin-right: .675em;
+    padding-left: .075em;
+    vertical-align: middle; }
+    .contact-social a i.icon-font--facebook {
+      color: #3b5998; }
+    .contact-social a i.icon-font--instagram {
+      color: #3f729b; }
+  .contact-social a span {
+    position: relative;
+    top: .125em; }
 
 /* Buttons */
 .button {
