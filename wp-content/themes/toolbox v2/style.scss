@@ -579,9 +579,19 @@ body {
 	position: relative;
 	z-index: 1;
 
+	h5 {
+		margin-bottom: 0;
+		padding: .75em 1.333em .666em;
+	}
+	hr {
+		border: 0;
+		border-top: ($baseline / 8) solid darken($grey, 5%);
+		margin: ($baseline / 2) $baseline;
+	}
 	ul {
 		list-style: none;
 		margin-bottom: 0;
+		padding-bottom: ($baseline / 4);
 	}
 	a {
 		//border-top: ($baseline / 6) solid $white;
@@ -1071,7 +1081,7 @@ body {
 	}
 	hr {
 		border: 0;
-		border-top: ($baseline / 6) solid darken($grey, 5%);
+		border-top: ($baseline / 8) solid darken($grey, 5%);
 		margin-bottom: $baseline;
 	}
 	ol,

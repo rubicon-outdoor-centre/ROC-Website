@@ -29,6 +29,8 @@ while ( have_posts() ) : the_post();
 				<div class="grid__col--33">
 					<nav class="side-nav">
 						<ul>
+							<h5>Page Sections:</h5>
+							<hr>
 							<?php get_template_part( 'nav', 'secondary' ); ?>
 						</ul>
 					</nav>

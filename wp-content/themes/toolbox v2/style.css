@@ -510,9 +510,17 @@ body {
   padding: 0.6em 0;
   position: relative;
   z-index: 1; }
+  .side-nav h5 {
+    margin-bottom: 0;
+    padding: .75em 1.333em .666em; }
+  .side-nav hr {
+    border: 0;
+    border-top: 0.1875em solid #e7e7e7;
+    margin: 0.75em 1.5em; }
   .side-nav ul {
     list-style: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-bottom: 0.375em; }
   .side-nav a {
     color: #00bbcc;
     display: block;
@@ -864,7 +872,7 @@ body {
     text-transform: uppercase; }
   .content-section hr {
     border: 0;
-    border-top: 0.25em solid #e7e7e7;
+    border-top: 0.1875em solid #e7e7e7;
     margin-bottom: 1.5em; }
   .content-section ol,
   .content-section ul {
