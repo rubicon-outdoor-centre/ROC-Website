@@ -799,7 +799,7 @@ body {
 		padding: 0;
 	}
 	h2 {
-		background-color: hsla(0,0%,0%,.25);
+		background-color: hsla(0,0%,0%,.125);
 		bottom: 0;
 		color: $white;
 		font-size: 5em;
@@ -809,6 +809,7 @@ body {
 		position: absolute;
 		right: 0;
 		text-align: center;
+		text-shadow: 0 0 .5em hsla(0,0%,0%,.25);
 		top: 0;
 
 		span {
@@ -836,6 +837,15 @@ body {
 		padding-top: 15%;
 		position: relative;
 
+		&:after {
+			background-color: hsla(0,0%,0%,.125);
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 		@media (max-width: 40em) {
 			padding-top: 0;
 		}
@@ -930,13 +940,13 @@ body {
 				}
 			}
 			&.apply {
-				background-image: url('img/link-1.jpg');
-			}
-			&.facebook {
-				background-image: url('img/link-2.jpg');
+				background-image: url('img/apply-link.jpg');
 			}
 			&.venue {
-				background-image: url('img/link-3.jpg');
+				background-image: url('img/venue-link.jpg');
+			}
+			&.facebook {
+				background-image: url('img/facebook-link.jpg');
 			}
 			@media (max-width: 40em) {
 

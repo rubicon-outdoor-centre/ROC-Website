@@ -669,7 +669,7 @@ body {
   .banner .container {
     padding: 0; }
   .banner h2 {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.125);
     bottom: 0;
     color: white;
     font-size: 5em;
@@ -679,6 +679,7 @@ body {
     position: absolute;
     right: 0;
     text-align: center;
+    text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
     top: 0; }
     .banner h2 span {
       left: 0;
@@ -698,6 +699,14 @@ body {
     background-size: 100% auto;
     padding-top: 15%;
     position: relative; }
+    .home .banner:after, .error404 .banner:after, .search .banner:after {
+      background-color: rgba(0, 0, 0, 0.125);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
     @media (max-width: 40em) {
       .home .banner, .error404 .banner, .search .banner {
         padding-top: 0; } }
@@ -771,11 +780,11 @@ body {
           .home-links li a:after {
             content: ''; } }
       .home-links li a.apply {
-        background-image: url("img/link-1.jpg"); }
-      .home-links li a.facebook {
-        background-image: url("img/link-2.jpg"); }
+        background-image: url("img/apply-link.jpg"); }
       .home-links li a.venue {
-        background-image: url("img/link-3.jpg"); }
+        background-image: url("img/venue-link.jpg"); }
+      .home-links li a.facebook {
+        background-image: url("img/facebook-link.jpg"); }
       @media (max-width: 40em) {
         .home-links li a {
           background-position: 50% 25%;
