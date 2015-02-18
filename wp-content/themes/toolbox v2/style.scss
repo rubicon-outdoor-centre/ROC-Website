@@ -653,7 +653,7 @@ body {
 	margin: 0;
 	padding: $baseline;
 	position: relative;
-	z-index: 999999;
+	z-index: 999;
 
 	@media (max-width: 40em) {
 		background-color: transparent;
@@ -766,6 +766,26 @@ body {
 		}
 	}
 }
+.entry-content {
+
+	.search-wrapper {
+		background-color: transparent !important;
+		margin-bottom: ($baseline / 2) !important;
+		max-width: 30em;
+		padding: 0 0 .75em !important;
+
+		.search-form {
+			font-size: .875em !important;
+		}
+		.search-field {
+			border-color: darken($grey, 20%) !important;
+
+			&:focus {
+				border-color: darken($grey, 40%) !important;
+			}
+		}
+	}
+}
 .search-no-results {
 
 	.content-section {
@@ -836,13 +856,14 @@ body {
 	}
 	.home &,
 	.error404 &,
-	.search & {
+	.search &,
+	.single & {
 		background-attachment: fixed;
 		background-image: url('img/header-full.jpg');
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border-bottom: ($baseline / 4) solid $green;
+		//border-bottom: ($baseline / 4) solid $green;
 		padding-top: 15%;
 		position: relative;
 
@@ -899,10 +920,6 @@ body {
 				display: none;
 			}
 		}
-	}
-	.error404 & {
-		background-position: 50% 75.3%;
-		padding-bottom: 15%;
 	}
 }
 @media (max-width: 40em) {
@@ -1229,6 +1246,18 @@ body {
 	}
 	.podcast-list {
 
+		a {
+			border: solid ($baseline / 10) darken($grey, 5%);
+			border-radius: ($baseline / 4);
+			display: block;
+			padding: ($baseline / 2) ($baseline / 1.25) (($baseline / 2) * 1.1);
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background-color: darken($grey, 5%);
+			}
+		}
 		h3 {
 			color: #d96;
 			font-size: 2em;
@@ -1238,38 +1267,27 @@ body {
 		li {
 			margin-bottom: $baseline;
 		}
-		a {
+		i {
 			background-image: url('img/icons/mp3.png');
 			float: left;
 			height: 32px;
-			margin-right: 16px;
-			margin-top: 8px;
-			opacity: 1;
+			margin-right: 20px;
+			margin-top: 9px;
 			width: 32px;
-
-			&:hover,
-			&:focus {
-				opacity: .8;
-			}
 		}
 		h6 {
+			color: $black;
 			margin-bottom: 0;
+		}
+		p {
+			color: $black;
 		}
 	}
 	.vt-activity-list {
 
 		h6 {
-			margin-bottom: (($baseline / 4) * -1);
-			margin-top: ($baseline / 2);
-		}
-		@media (max-width: 40em) {
-
-			.form-list__list-item {
-				overflow: hidden;
-			}
-			h6 {
-				margin-bottom: 0;
-			}
+			line-height: 1.5;
+			padding: ($baseline / 2) 0;
 		}
 	}
 	.activity-image-wrapper {
@@ -1313,26 +1331,28 @@ body {
 		font-weight: bold;
 	}
 	.stepTitle {
+		color: $green;
 		margin-bottom: .25em;
+		margin-top: ($baseline * 1.5);
 		margin-left: 44px;
+	}
+	h2 + .stepTitle {
+		margin-top: 0;
 	}
 	.step {
 		color: $green;
 		display: inline-block;
 		margin-left: -44px;
 		margin-right: -.25em;
-		width: 44px;
+		width: 32px;
 		vertical-align: top;
 	}
 	.timeline {
 		display: block;
 		margin-bottom: 1.5em;
-		margin-left: 46px;
+		margin-left: 34px;
 		opacity: 0.8;
 	}
-}
-.single .content-section {
-	margin-top: $baseline;
 }
 .form-list {
 	list-style: none;
@@ -1368,6 +1388,7 @@ body {
 	margin-left: 52px;
 }
 .form-list__list-item__description {
+	color: $black;
 	margin-bottom: 0;
 	margin-left: 48px;
 }
@@ -1378,7 +1399,7 @@ body {
 	float: left;
 	height: 32px;
 	margin-right: 16px;
-	margin-top: 8px;
+	margin-top: 9px;
 	// opacity: 1;
 	width: 32px;
 }
@@ -1645,9 +1666,7 @@ footer {
 
 .error404 {
 
-	.entry-title {
-		text-align: center;
-	}
+
 }
 .wpcf7-form {
 
@@ -1702,11 +1721,4 @@ footer {
 }
 @keyframes back-to-top {
 	50% { line-height: 1.75; }
-}
-.error404 {
-
-	h2 {
-		background-color: transparent;
-		margin-bottom: 0 !important;
-	}
 }

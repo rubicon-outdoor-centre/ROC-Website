@@ -565,7 +565,7 @@ body {
   margin: 0;
   padding: 1.5em;
   position: relative;
-  z-index: 999999; }
+  z-index: 999; }
   @media (max-width: 40em) {
     .search-wrapper {
       background-color: transparent;
@@ -652,6 +652,18 @@ body {
     .search .entry-title a:hover, .search .entry-title a:focus {
       color: #008c99; }
 
+.entry-content .search-wrapper {
+  background-color: transparent !important;
+  margin-bottom: 0.75em !important;
+  max-width: 30em;
+  padding: 0 0 .75em !important; }
+  .entry-content .search-wrapper .search-form {
+    font-size: .875em !important; }
+  .entry-content .search-wrapper .search-field {
+    border-color: #c1c1c1 !important; }
+    .entry-content .search-wrapper .search-field:focus {
+      border-color: #8e8e8e !important; }
+
 .search-no-results .content-section {
   padding: 1.5em 1.5em 0.01em; }
 
@@ -698,16 +710,15 @@ body {
         font-size: 3em;
         padding: 0.125em 999.09375em 0.125em;
         text-align: center; } }
-  .home .banner, .error404 .banner, .search .banner {
+  .home .banner, .error404 .banner, .search .banner, .single .banner {
     background-attachment: fixed;
     background-image: url("img/header-full.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 0.375em solid #63b453;
     padding-top: 15%;
     position: relative; }
-    .home .banner:after, .error404 .banner:after, .search .banner:after {
+    .home .banner:after, .error404 .banner:after, .search .banner:after, .single .banner:after {
       background-color: rgba(0, 0, 0, 0.15);
       bottom: 0;
       content: '';
@@ -716,19 +727,19 @@ body {
       right: 0;
       top: 0; }
     @media (max-width: 40em) {
-      .home .banner, .error404 .banner, .search .banner {
+      .home .banner, .error404 .banner, .search .banner, .single .banner {
         border-bottom: 0;
         padding-top: 0; } }
-    .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
+    .home .banner .grid, .error404 .banner .grid, .search .banner .grid, .single .banner .grid {
       margin: 0;
       padding: 0 0.75em; }
       @media (max-width: 72.5em) {
-        .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
+        .home .banner .grid, .error404 .banner .grid, .search .banner .grid, .single .banner .grid {
           padding: 0 1.5em; } }
       @media (max-width: 40em) {
-        .home .banner .grid, .error404 .banner .grid, .search .banner .grid {
+        .home .banner .grid, .error404 .banner .grid, .search .banner .grid, .single .banner .grid {
           padding: 0 0.75em; } }
-    .home .banner h2, .error404 .banner h2, .search .banner h2 {
+    .home .banner h2, .error404 .banner h2, .search .banner h2, .single .banner h2 {
       color: white;
       font-size: 3.5em;
       font-style: italic;
@@ -736,17 +747,14 @@ body {
       right: 0.75em;
       top: 0.375em; }
     @media (max-width: 40em) {
-      .home .banner h2, .error404 .banner h2, .search .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search .banner h2, .single .banner h2 {
         font-size: 3em; } }
     @media (max-width: 30em) {
-      .home .banner h2, .error404 .banner h2, .search .banner h2 {
+      .home .banner h2, .error404 .banner h2, .search .banner h2, .single .banner h2 {
         font-size: 1.8em; } }
   @media (max-width: 40em) {
     .home .banner .search-wrapper {
       display: none; } }
-  .error404 .banner {
-    background-position: 50% 75.3%;
-    padding-bottom: 15%; }
 
 .home-links {
   list-style: none;
@@ -979,6 +987,14 @@ body {
       border-radius: 0.1875em;
       margin-bottom: 0;
       margin-right: 0; }
+  .content-section .podcast-list a {
+    border: solid 0.15em #e7e7e7;
+    border-radius: 0.375em;
+    display: block;
+    padding: 0.75em 1.2em 0.825em;
+    text-decoration: none; }
+    .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
+      background-color: #e7e7e7; }
   .content-section .podcast-list h3 {
     color: #d96;
     font-size: 2em;
@@ -986,26 +1002,21 @@ body {
     margin-bottom: .75em; }
   .content-section .podcast-list li {
     margin-bottom: 1.5em; }
-  .content-section .podcast-list a {
+  .content-section .podcast-list i {
     background-image: url("img/icons/mp3.png");
     float: left;
     height: 32px;
-    margin-right: 16px;
-    margin-top: 8px;
-    opacity: 1;
+    margin-right: 20px;
+    margin-top: 9px;
     width: 32px; }
-    .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
-      opacity: .8; }
   .content-section .podcast-list h6 {
+    color: #444444;
     margin-bottom: 0; }
+  .content-section .podcast-list p {
+    color: #444444; }
   .content-section .vt-activity-list h6 {
-    margin-bottom: -0.375em;
-    margin-top: 0.75em; }
-  @media (max-width: 40em) {
-    .content-section .vt-activity-list .form-list__list-item {
-      overflow: hidden; }
-    .content-section .vt-activity-list h6 {
-      margin-bottom: 0; } }
+    line-height: 1.5;
+    padding: 0.75em 0; }
   .content-section .activity-image-wrapper {
     margin: -1.5em -1.5em 0; }
   .content-section .activity-image {
@@ -1037,23 +1048,24 @@ body {
   .content-section dt {
     font-weight: bold; }
   .content-section .stepTitle {
+    color: #63b453;
     margin-bottom: .25em;
+    margin-top: 2.25em;
     margin-left: 44px; }
+  .content-section h2 + .stepTitle {
+    margin-top: 0; }
   .content-section .step {
     color: #63b453;
     display: inline-block;
     margin-left: -44px;
     margin-right: -.25em;
-    width: 44px;
+    width: 32px;
     vertical-align: top; }
   .content-section .timeline {
     display: block;
     margin-bottom: 1.5em;
-    margin-left: 46px;
+    margin-left: 34px;
     opacity: 0.8; }
-
-.single .content-section {
-  margin-top: 1.5em; }
 
 .form-list {
   list-style: none;
@@ -1084,6 +1096,7 @@ body {
   margin-left: 52px; }
 
 .form-list__list-item__description {
+  color: #444444;
   margin-bottom: 0;
   margin-left: 48px; }
 
@@ -1094,7 +1107,7 @@ body {
   float: left;
   height: 32px;
   margin-right: 16px;
-  margin-top: 8px;
+  margin-top: 9px;
   width: 32px; }
 
 .form-list__anchor--doc {
@@ -1292,9 +1305,6 @@ footer {
   text-transform: uppercase; }
 
 /* Other */
-.error404 .entry-title {
-  text-align: center; }
-
 .wpcf7-form p {
   margin-bottom: 0; }
 .wpcf7-form .ajax-loader {
@@ -1346,7 +1356,3 @@ footer {
 @keyframes back-to-top {
   50% {
     line-height: 1.75; } }
-
-.error404 h2 {
-  background-color: transparent;
-  margin-bottom: 0 !important; }

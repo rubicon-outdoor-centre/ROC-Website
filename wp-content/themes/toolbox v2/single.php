@@ -8,6 +8,8 @@
 
 get_header();
 
+remove_filter ('the_content', 'wpautop');
+
 $post_data = get_post($post->post_parent);
 
 $slug = $post_data->post_name;
@@ -16,6 +18,7 @@ $slug = $post_data->post_name;
 
 		<div id="primary">
 			<div id="content" role="main">
+			<div class="banner"></div>
 
 				<div class="grid container">
 
