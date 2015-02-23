@@ -530,7 +530,7 @@ body {
   .side-nav ul {
     list-style: none;
     margin-bottom: 0;
-    padding-bottom: 0.375em; }
+    padding-bottom: 0.1875em; }
   .side-nav a {
     color: #00bbcc;
     display: block;
