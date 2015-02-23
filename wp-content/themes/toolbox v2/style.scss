@@ -660,6 +660,8 @@ body {
 		z-index: 99;
 	}
 	.search-field {
+		-webkit-appearance: none;
+		-moz-appearance: none;
 		appearance: none;
 		background-color: $white;
 		border: ($baseline / 8) solid $green;
@@ -684,6 +686,8 @@ body {
 		}
 	}
 	.search-submit {
+		-webkit-appearance: none;
+		-moz-appearance: none;
 		appearance: none;
 		background-color: $blue;
 		border: 0;

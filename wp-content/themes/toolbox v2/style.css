@@ -562,6 +562,8 @@ body {
     position: relative;
     z-index: 99; }
   .search-wrapper .search-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: white;
     border: 0.1875em solid #63b453;
@@ -581,6 +583,8 @@ body {
         .search-wrapper .search-field:focus {
           border-color: #00bbcc; } }
   .search-wrapper .search-submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: #00bbcc;
     border: 0;
