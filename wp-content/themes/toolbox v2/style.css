@@ -925,6 +925,8 @@ body {
     margin-right: 1em; }
     .content-section img + img {
       margin-right: 0; }
+  .content-section .content-image {
+    border-radius: 0.375em; }
   .content-section .video-wrapper {
     margin-bottom: 0 !important;
     margin-top: 0 !important; }
@@ -952,6 +954,7 @@ body {
     padding: 0.5em 1.5em 1.36364em; }
     .content-section .mp4-download:hover, .content-section .mp4-download:focus {
       background-color: #e7e7e7;
+      border-color: #dbdbdb;
       color: #444444; }
     .content-section .mp4-download:before {
       content: url("img/icons/mp4.png");
@@ -979,8 +982,8 @@ body {
         .content-section .photo-list li {
           max-width: 100%; } }
     .content-section .photo-list a {
-      border: 0.3em solid white;
-      border-radius: 0.375em;
+      border: 0.1875em solid white;
+      border-radius: 0.6em;
       display: block;
       -webkit-transition: .1s;
       -moz-transition: .1s;
@@ -988,9 +991,9 @@ body {
       -o-transition: .1s;
       transition: .1s; }
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
-        border-color: #cecece; }
+        border-color: #00bbcc; }
     .content-section .photo-list img {
-      border-radius: 0.1875em;
+      border-radius: 0.375em;
       margin-bottom: 0;
       margin-right: 0; }
   .content-section .podcast-list a {
@@ -1000,7 +1003,8 @@ body {
     padding: 0.75em 1.2em 0.825em;
     text-decoration: none; }
     .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
-      background-color: #e7e7e7; }
+      background-color: #e7e7e7;
+      border-color: #dbdbdb; }
   .content-section .podcast-list h3 {
     color: #d96;
     font-size: 2em;
@@ -1086,7 +1090,8 @@ body {
     padding: 0.75em 1.2em 0.825em;
     text-decoration: none; }
     .form-list__list-item a:hover, .form-list__list-item a:focus {
-      background-color: #e7e7e7; }
+      background-color: #e7e7e7;
+      border-color: #dbdbdb; }
 
 .form-list__list-item--attention {
   background-color: #f6f6d6;
@@ -1273,7 +1278,8 @@ footer {
   padding: 0.75em 1.5em 0.825em;
   text-decoration: none; }
   .contact-social a:hover, .contact-social a:focus {
-    background-color: #e7e7e7; }
+    background-color: #e7e7e7;
+    border-color: #dbdbdb; }
   .contact-social a i {
     font-size: 2em;
     margin-right: .675em;
