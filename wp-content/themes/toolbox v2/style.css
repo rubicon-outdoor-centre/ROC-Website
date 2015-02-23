@@ -351,9 +351,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border: 0.5em solid transparent;
+    border-bottom-width: 0.6875em;
     display: inline-block;
     height: 150px;
-    margin: -0.375em 0 0.1875em 0;
+    margin: -0.375em 0 0;
     text-decoration: none;
     text-transform: uppercase;
     width: 210px;

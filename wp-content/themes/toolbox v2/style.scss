@@ -365,9 +365,10 @@ body {
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		border: ($baseline / 3) solid transparent;
+		border-bottom-width: (($baseline / 3) + ($baseline / 8));
 		display: inline-block;
 		height: 150px;
-		margin: (($baseline / 4) * -1) 0 ($baseline / 8) 0;
+		margin: (($baseline / 4) * -1) 0 0;
 		text-decoration: none;
 		text-transform: uppercase;
 		width: 210px;
