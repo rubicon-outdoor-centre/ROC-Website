@@ -175,8 +175,6 @@ table {
     /* Fix for IE7 */
     *display: inline;
     /* Fix for IE7 */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     /* Enables the use of padding without breaking the grid */ }
 
@@ -265,10 +263,6 @@ dd a {
   border-bottom: 2px solid #00bbcc;
   color: #444444;
   text-decoration: none;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
   transition: .1s; }
 
 p a:hover,
@@ -281,10 +275,6 @@ p a:active,
 dd a:active {
   position: relative;
   top: 1px;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
   transition: none; }
 
 dl,
@@ -308,10 +298,6 @@ em {
 /* General Styles */
 /******************/
 a {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
   transition: .1s; }
 
 /* Container */
@@ -536,10 +522,6 @@ body {
     font-weight: bold;
     padding: 0.75em 1.5em;
     text-decoration: none;
-    -webkit-transition: .15s;
-    -moz-transition: .15s;
-    -ms-transition: .15s;
-    -o-transition: .15s;
     transition: .15s; }
     .side-nav a:hover, .side-nav a:focus {
       color: #008c99 !important;
@@ -590,12 +572,7 @@ body {
     outline: 0;
     padding: 0.75em 7.5em 0.75em 1.5em;
     transition: .1s;
-    width: 100%;
-    -webkit-transition: .1s;
-    -moz-transition: .1s;
-    -ms-transition: .1s;
-    -o-transition: .1s;
-    transition: .1s; }
+    width: 100%; }
     .search-wrapper .search-field:focus {
       border-color: #4e9440; }
     @media (max-width: 40em) {
@@ -617,10 +594,6 @@ body {
     right: 0.5em;
     text-transform: uppercase;
     top: 0.5em;
-    -webkit-transition: .1s;
-    -moz-transition: .1s;
-    -ms-transition: .1s;
-    -o-transition: .1s;
     transition: .1s; }
     .search-wrapper .search-submit:hover, .search-wrapper .search-submit:focus {
       background-color: #008c99; }
@@ -636,10 +609,6 @@ body {
     padding: 0; }
 .search .content-section {
   padding: 0;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
   transition: .1s; }
   .search .content-section:hover, .search .content-section:focus {
     background-color: #f9f9f9; }
@@ -650,10 +619,6 @@ body {
     display: block;
     padding: 1.2em;
     text-decoration: none;
-    -webkit-transition: .1s;
-    -moz-transition: .1s;
-    -ms-transition: .1s;
-    -o-transition: .1s;
     transition: .1s; }
     .search .entry-title a:hover, .search .entry-title a:focus {
       color: #008c99; }
@@ -803,10 +768,6 @@ body {
         text-align: center;
         top: 0;
         visibility: hidden;
-        -webkit-transition: .1s;
-        -moz-transition: .1s;
-        -ms-transition: .1s;
-        -o-transition: .1s;
         transition: .1s; }
         @media (max-width: 71em) {
           .home-links li a:after {
@@ -842,10 +803,6 @@ body {
         position: absolute;
         right: 0;
         z-index: 99;
-        -webkit-transition: .1s;
-        -moz-transition: .1s;
-        -ms-transition: .1s;
-        -o-transition: .1s;
         transition: .1s; }
 
 .home-logos {
@@ -883,8 +840,6 @@ body {
       margin-bottom: 1.5em;
       padding: 0 0.75em;
       width: 25%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box; }
       .instagram-photos .si_feed .si_item a {
         border: 0.3em solid white;
@@ -985,10 +940,6 @@ body {
       border: 0.1875em solid white;
       border-radius: 0.6em;
       display: block;
-      -webkit-transition: .1s;
-      -moz-transition: .1s;
-      -ms-transition: .1s;
-      -o-transition: .1s;
       transition: .1s; }
       .content-section .photo-list a:hover, .content-section .photo-list a:focus {
         border-color: #00bbcc; }
@@ -1051,9 +1002,7 @@ body {
     .content-section .back-to-top:hover, .content-section .back-to-top:focus {
       opacity: 1;
       -webkit-animation: back-to-top 1s infinite ease;
-      -moz-animation: back-to-top 1s infinite ease;
       -ms-animation: back-to-top 1s infinite ease;
-      -o-animation: back-to-top 1s infinite ease;
       animation: back-to-top 1s infinite ease; }
   .content-section dt {
     font-weight: bold; }
@@ -1355,15 +1304,7 @@ footer {
   50% {
     line-height: 1.75; } }
 
-@-moz-keyframes back-to-top {
-  50% {
-    line-height: 1.75; } }
-
 @-ms-keyframes back-to-top {
-  50% {
-    line-height: 1.75; } }
-
-@-o-keyframes back-to-top {
   50% {
     line-height: 1.75; } }
 
