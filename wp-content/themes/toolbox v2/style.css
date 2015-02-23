@@ -321,7 +321,6 @@ html {
 
 body {
   background-color: #cecece;
-  background-image: url("img/background.png");
   overflow-x: hidden;
   position: relative;
   padding: 0; }
