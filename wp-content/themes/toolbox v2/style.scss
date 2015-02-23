@@ -962,7 +962,7 @@ body {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			//border: ($baseline / 6) solid $white;
-			border-radius: ($baseline / 4);
+			border-radius: ($baseline / 4) ($baseline / 4) ($baseline / 2) ($baseline / 2);
 			color: $white;
 			display: block;
 			font-size: 1.25em;
