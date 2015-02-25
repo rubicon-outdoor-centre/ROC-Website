@@ -86,6 +86,7 @@ body {
 /* Addresses `outline` inconsistency between Chrome and other browsers. */
 a:focus {
 	outline: thin dotted;
+	outline: 0;
 }
 /* Improves readability when focused and also mouse hovered in all browsers. */
 a:active,
@@ -698,6 +699,7 @@ body {
 		&:hover,
 		&:focus {
 			background-color: darken($blue, 10%);
+			outline: 0;
 		}
 	}
 }
@@ -1662,23 +1664,6 @@ footer {
 
 /* Other */
 
-.error404 {
-
-
-}
-.wpcf7-form {
-
-	p {
-		margin-bottom: 0;
-	}
-	.ajax-loader {
-		display: none !important;
-	}
-	.wpcf7-response-output {
-		background-color: $white;
-		margin: 0 0 $baseline !important;
-	}
-}
 .icon-font:before {
 	font-family: 'awesome';
 	font-style: normal;

@@ -63,7 +63,8 @@ body {
 
 /* Addresses `outline` inconsistency between Chrome and other browsers. */
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+  outline: 0; }
 
 /* Improves readability when focused and also mouse hovered in all browsers. */
 a:active,
@@ -594,7 +595,8 @@ body {
     top: 0.5em;
     transition: .1s; }
     .search-wrapper .search-submit:hover, .search-wrapper .search-submit:focus {
-      background-color: #008c99; }
+      background-color: #008c99;
+      outline: 0; }
 
 .search .loop-archive {
   list-style: none;
@@ -1282,14 +1284,6 @@ footer {
   text-transform: uppercase; }
 
 /* Other */
-.wpcf7-form p {
-  margin-bottom: 0; }
-.wpcf7-form .ajax-loader {
-  display: none !important; }
-.wpcf7-form .wpcf7-response-output {
-  background-color: white;
-  margin: 0 0 1.5em !important; }
-
 .icon-font:before {
   font-family: 'awesome';
   font-style: normal;
