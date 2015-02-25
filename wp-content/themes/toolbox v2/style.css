@@ -916,12 +916,14 @@ body {
       border-color: #dbdbdb;
       color: #444444; }
     .content-section .mp4-download:before {
-      content: url("img/icons/mp4.png");
-      margin-left: -.25em;
+      color: #00bbcc;
+      content: '\f008';
+      font-family: awesome;
+      font-size: 2em;
       opacity: 1;
-      padding-right: 1em;
+      padding-right: 18px;
       position: relative;
-      top: .6275em; }
+      top: 6px; }
   .content-section .form-list,
   .content-section .photo-list,
   .content-section .podcast-list,
@@ -955,7 +957,7 @@ body {
     border: solid 0.15em #e7e7e7;
     border-radius: 0.375em;
     display: block;
-    padding: 0.75em 1.2em 0.825em;
+    padding: 0.75em 1.5em 0.825em;
     text-decoration: none; }
     .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
       background-color: #e7e7e7;
@@ -968,12 +970,17 @@ body {
   .content-section .podcast-list li {
     margin-bottom: 1.5em; }
   .content-section .podcast-list i {
-    background-image: url("img/icons/mp3.png");
     float: left;
     height: 32px;
-    margin-right: 20px;
-    margin-top: 9px;
+    margin-right: 16px;
+    margin-top: 1px;
     width: 32px; }
+    .content-section .podcast-list i:after {
+      color: #00bbcc;
+      content: '\f001';
+      font-family: awesome;
+      font-size: 2em;
+      font-style: normal; }
   .content-section .podcast-list h6 {
     color: #444444;
     margin-bottom: 0; }
@@ -1040,7 +1047,7 @@ body {
     border: solid 0.15em #e7e7e7;
     border-radius: 0.375em;
     display: block;
-    padding: 0.75em 1.2em 0.825em;
+    padding: 0.75em 1.5em 0.825em;
     text-decoration: none; }
     .form-list__list-item a:hover, .form-list__list-item a:focus {
       background-color: #e7e7e7;
@@ -1071,14 +1078,22 @@ body {
   float: left;
   height: 32px;
   margin-right: 16px;
-  margin-top: 9px;
+  margin-top: 1px;
   width: 32px; }
 
-.form-list__anchor--doc {
-  background-image: url("img/icons/doc.png"); }
+.form-list__anchor--doc:after {
+  color: #00bbcc;
+  content: '\f1c2';
+  font-family: awesome;
+  font-size: 2em;
+  font-style: normal; }
 
-.form-list__anchor--pdf {
-  background-image: url("img/icons/pdf.png"); }
+.form-list__anchor--pdf:after {
+  color: #00bbcc;
+  content: '\f1c1';
+  font-family: awesome;
+  font-size: 2em;
+  font-style: normal; }
 
 .form-list__anchor--xls {
   background-image: url("img/icons/xls.png"); }
@@ -1301,7 +1316,7 @@ footer {
   margin-left: .25em; }
 
 .icon-font--arrow-circle-right:before {
-  content: "\f0a9"; }
+  content: '\f0a9'; }
 
 /* Animations */
 @-webkit-keyframes back-to-top {

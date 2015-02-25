@@ -1172,12 +1172,14 @@ body {
 			color: $black;
 		}
 		&:before {
-			content: url('img/icons/mp4.png');
-			margin-left: -.25em;
+			color: $blue;
+			content: '\f008';
+			font-family: awesome;
+			font-size: 2em;
 			opacity: 1;
-			padding-right: ($baseline / 1.5);
+			padding-right: 18px;
 			position: relative;
-			top: .6275em;
+			top: 6px;
 		}
 	}
 	.form-list,
@@ -1226,7 +1228,7 @@ body {
 			border: solid ($baseline / 10) darken($grey, 5%);
 			border-radius: ($baseline / 4);
 			display: block;
-			padding: ($baseline / 2) ($baseline / 1.25) (($baseline / 2) * 1.1);
+			padding: ($baseline / 2) ($baseline / 1) (($baseline / 2) * 1.1);
 			text-decoration: none;
 
 			&:hover,
@@ -1245,12 +1247,19 @@ body {
 			margin-bottom: $baseline;
 		}
 		i {
-			background-image: url('img/icons/mp3.png');
 			float: left;
 			height: 32px;
-			margin-right: 20px;
-			margin-top: 9px;
+			margin-right: 16px;
+			margin-top: 1px;
 			width: 32px;
+
+			&:after {
+				color: $blue;
+				content: '\f001';
+				font-family: awesome;
+				font-size: 2em;
+				font-style: normal;
+			}
 		}
 		h6 {
 			color: $black;
@@ -1340,7 +1349,7 @@ body {
 		border: solid ($baseline / 10) darken($grey, 5%);
 		border-radius: ($baseline / 4);
 		display: block;
-		padding: ($baseline / 2) ($baseline / 1.25) (($baseline / 2) * 1.1);
+		padding: ($baseline / 2) ($baseline / 1) (($baseline / 2) * 1.1);
 		text-decoration: none;
 
 		&:hover,
@@ -1375,7 +1384,7 @@ body {
 	float: left;
 	height: 32px;
 	margin-right: 16px;
-	margin-top: 9px;
+	margin-top: 1px;
 	// opacity: 1;
 	width: 32px;
 }
@@ -1387,10 +1396,24 @@ body {
 	// opacity: .8;
 }
 .form-list__anchor--doc {
-	background-image: url('img/icons/doc.png');
+
+	&:after {
+		color: $blue;
+		content: '\f1c2';
+		font-family: awesome;
+		font-size: 2em;
+		font-style: normal;
+	}
 }
 .form-list__anchor--pdf {
-	background-image: url('img/icons/pdf.png');
+
+	&:after {
+		color: $blue;
+		content: '\f1c1';
+		font-family: awesome;
+		font-size: 2em;
+		font-style: normal;
+	}
 }
 .form-list__anchor--xls {
 	background-image: url('img/icons/xls.png');
@@ -1682,7 +1705,7 @@ footer {
 	margin-left: .25em;
 }
 .icon-font--arrow-circle-right:before {
-	content: "\f0a9";
+	content: '\f0a9';
 }
 
 /* Animations */
