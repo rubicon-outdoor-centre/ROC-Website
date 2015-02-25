@@ -1324,7 +1324,7 @@ body {
 		margin-top: 0;
 	}
 	.step {
-		color: $green;
+		color: darken($grey, 20%);
 		display: inline-block;
 		margin-left: -44px;
 		margin-right: -.25em;
