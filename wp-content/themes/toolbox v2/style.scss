@@ -388,14 +388,6 @@ body {
 	.header {
 		overflow: hidden;
 	}
-	.deecd-logo {
-		float: none;
-		margin-right: 0;
-
-		img {
-			padding-top: 0;
-		}
-	}
 	footer p,
 	footer nav {
 		padding-left: $baseline;
@@ -1332,10 +1324,14 @@ body {
 		vertical-align: top;
 	}
 	.timeline {
+		color: darken($grey, 50%);
 		display: block;
 		margin-bottom: 1.5em;
 		margin-left: 34px;
-		opacity: 0.8;
+
+		strong {
+			font-weight: bold;
+		}
 	}
 }
 .form-list {
