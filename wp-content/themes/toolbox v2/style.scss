@@ -1655,11 +1655,14 @@ footer {
 }
 .application-button {
 	border-radius: ($baseline * 1.5);
+	box-sizing: border-box;
 	display: inline-block;
 	font-weight: bold;
 	letter-spacing: .025em;
 	padding: ($baseline / 1.5) ($baseline * 2);
+	text-align: center;
 	text-transform: uppercase;
+	width: 100%
 }
 
 /* Other */
