@@ -264,7 +264,7 @@ dd a {
   border-bottom: 2px solid #00bbcc;
   color: #444444;
   text-decoration: none;
-  transition: .1s; }
+  transition: .15s; }
 
 p a:hover,
 p a:focus,
@@ -299,7 +299,7 @@ em {
 /* General Styles */
 /******************/
 a {
-  transition: .1s; }
+  transition: .15s; }
 
 /* Container */
 html {
@@ -568,7 +568,7 @@ body {
     line-height: 2;
     outline: 0;
     padding: 0.75em 7.5em 0.75em 1.5em;
-    transition: .1s;
+    transition: .15s;
     width: 100%; }
     .search-wrapper .search-field:focus {
       border-color: #4e9440; }
@@ -593,7 +593,7 @@ body {
     right: 0.5em;
     text-transform: uppercase;
     top: 0.5em;
-    transition: .1s; }
+    transition: .15s; }
     .search-wrapper .search-submit:hover, .search-wrapper .search-submit:focus {
       background-color: #008c99;
       outline: 0; }
@@ -609,7 +609,7 @@ body {
     padding: 0; }
 .search .content-section {
   padding: 0;
-  transition: .1s; }
+  transition: .15s; }
   .search .content-section:hover, .search .content-section:focus {
     background-color: #f9f9f9; }
 .search .entry-title {
@@ -619,7 +619,7 @@ body {
     display: block;
     padding: 1.2em;
     text-decoration: none;
-    transition: .1s; }
+    transition: .15s; }
     .search .entry-title a:hover, .search .entry-title a:focus {
       color: #008c99; }
 
@@ -768,7 +768,7 @@ body {
         text-align: center;
         top: 0;
         visibility: hidden;
-        transition: .1s; }
+        transition: .15s; }
         @media (max-width: 71em) {
           .home-links li a:after {
             content: ''; } }
@@ -803,7 +803,7 @@ body {
         position: absolute;
         right: 0;
         z-index: 99;
-        transition: .1s; }
+        transition: .15s; }
 
 .home-logos {
   list-style: none;
@@ -939,14 +939,14 @@ body {
         .content-section .photo-list li {
           max-width: 100%; } }
     .content-section .photo-list a {
-      border: 0.1875em solid white;
-      border-radius: 0.6em;
-      display: block;
-      transition: .1s; }
-      .content-section .photo-list a:hover, .content-section .photo-list a:focus {
-        border-color: #00bbcc; }
-    .content-section .photo-list img {
       border-radius: 0.375em;
+      display: block;
+      opacity: 1;
+      transition: .15s; }
+      .content-section .photo-list a:hover, .content-section .photo-list a:focus {
+        opacity: 0.9; }
+    .content-section .photo-list img {
+      border-radius: 0.1875em;
       margin-bottom: 0;
       margin-right: 0; }
   .content-section .podcast-list a {
@@ -999,11 +999,12 @@ body {
     font-weight: bold;
     height: 2em;
     line-height: 2;
-    opacity: .75;
+    opacity: .5;
     position: absolute;
     right: .15em;
     text-align: center;
     text-decoration: none;
+    transition: .15s;
     top: .15em;
     width: 2em; }
     .content-section .back-to-top:hover, .content-section .back-to-top:focus {

@@ -268,7 +268,7 @@ dd a {
 	border-bottom: 2px solid $blue;
 	color: $black;
 	text-decoration: none;
-	transition: .1s;
+	transition: .15s;
 }
 p a:hover,
 p a:focus,
@@ -305,7 +305,7 @@ em {
 /******************/
 
 a {
-	transition: .1s;
+	transition: .15s;
 }
 
 /* Container */
@@ -664,7 +664,7 @@ body {
 		line-height: 2;
 		outline: 0;
 		padding: ($baseline / 2) ($baseline * 5) ($baseline / 2) $baseline;
-		transition: .1s;
+		transition: .15s;
 		width: 100%;
 
 		&:focus {
@@ -694,7 +694,7 @@ body {
 		right: ($baseline / 3);
 		text-transform: uppercase;
 		top: ($baseline / 3);
-		transition: .1s;
+		transition: .15s;
 
 		&:hover,
 		&:focus {
@@ -719,7 +719,7 @@ body {
 	}
 	.content-section {
 		padding: 0;
-		transition: .1s;
+		transition: .15s;
 
 		&:hover,
 		&:focus {
@@ -734,7 +734,7 @@ body {
 			display: block;
 			padding: ($baseline / 1.25);
 			text-decoration: none;
-			transition: .1s;
+			transition: .15s;
 
 			&:hover,
 			&:focus {
@@ -952,7 +952,7 @@ body {
 				text-align: center;
 				top: 0;
 				visibility: hidden;
-				transition: .1s;
+				transition: .15s;
 
 				@media (max-width: 71em) {
 					content: '';
@@ -1005,7 +1005,7 @@ body {
 				position: absolute;
 				right: 0;
 				z-index: 99;
-				transition: .1s;
+				transition: .15s;
 			}
 		}
 	}
@@ -1200,18 +1200,20 @@ body {
 			}
 		}
 		a {
-			border: ($baseline / 8) solid $white;
-			border-radius: ($baseline / 2.5);
+			//border: ($baseline / 8) solid $white;
+			border-radius: ($baseline / 4);
 			display: block;
-			transition: .1s;
+			opacity: 1;
+			transition: .15s;
 
 			&:hover,
 			&:focus {
-				border-color: $blue;
+				//border-color: $blue;
+				opacity: 0.9;
 			}
 		}
 		img {
-			border-radius: ($baseline / 4);
+			border-radius: ($baseline / 8);
 			margin-bottom: 0;
 			margin-right: 0;
 		}
@@ -1289,11 +1291,12 @@ body {
 		font-weight: bold;
 		height: 2em;
 		line-height: 2;
-		opacity: .75;
+		opacity: .5;
 		position: absolute;
 		right: .15em;
 		text-align: center;
 		text-decoration: none;
+		transition: .15s;
 		top: .15em;
 		width: 2em;
 
