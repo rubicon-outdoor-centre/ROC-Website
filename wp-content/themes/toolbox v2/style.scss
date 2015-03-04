@@ -1161,7 +1161,7 @@ body {
 
 		&:hover,
 		&:focus {
-			background-color: darken($grey, 5%);
+			background-color: darken($grey, 2.5%);
 			border-color: darken($grey, 10%);
 			color: $black;
 		}
@@ -1227,7 +1227,7 @@ body {
 
 			&:hover,
 			&:focus {
-				background-color: darken($grey, 5%);
+				background-color: darken($grey, 2.5%);
 				border-color: darken($grey, 10%);
 			}
 		}
@@ -1352,7 +1352,7 @@ body {
 
 		&:hover,
 		&:focus {
-			background-color: darken($grey, 5%);
+			background-color: darken($grey, 2.5%);
 			border-color: darken($grey, 10%);
 		}
 	}
@@ -1607,7 +1607,7 @@ footer {
 
 		&:hover,
 		&:focus {
-			background-color: darken($grey, 5%);
+			background-color: darken($grey, 2.5%);
 			border-color: darken($grey, 10%);
 		}
 		i {

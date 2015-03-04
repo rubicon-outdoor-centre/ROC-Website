@@ -908,7 +908,7 @@ body {
     margin-right: 0;
     padding: 0.5em 1.5em 1.36364em; }
     .content-section .mp4-download:hover, .content-section .mp4-download:focus {
-      background-color: #e7e7e7;
+      background-color: #eeeeee;
       border-color: #dbdbdb;
       color: #444444; }
     .content-section .mp4-download:before {
@@ -956,7 +956,7 @@ body {
     padding: 0.75em 1.5em 0.825em;
     text-decoration: none; }
     .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
-      background-color: #e7e7e7;
+      background-color: #eeeeee;
       border-color: #dbdbdb; }
   .content-section .podcast-list h3 {
     color: #d96;
@@ -1048,7 +1048,7 @@ body {
     padding: 0.75em 1.5em 0.825em;
     text-decoration: none; }
     .form-list__list-item a:hover, .form-list__list-item a:focus {
-      background-color: #e7e7e7;
+      background-color: #eeeeee;
       border-color: #dbdbdb; }
 
 .form-list__list-item--attention {
@@ -1244,7 +1244,7 @@ footer {
   padding: 0.75em 1.5em 0.825em;
   text-decoration: none; }
   .contact-social a:hover, .contact-social a:focus {
-    background-color: #e7e7e7;
+    background-color: #eeeeee;
     border-color: #dbdbdb; }
   .contact-social a i {
     font-size: 2em;
