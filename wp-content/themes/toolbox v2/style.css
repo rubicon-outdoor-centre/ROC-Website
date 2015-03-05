@@ -328,7 +328,9 @@ body {
   background-color: white;
   margin: 0 -9999em;
   padding: 1.5em 9999em 0;
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  z-index: 10; }
 
 .site-title {
   margin: 0; }
@@ -687,7 +689,8 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 15%;
+    overflow: hidden;
+    padding-top: 30%;
     position: relative; }
     .home .banner:after, .error404 .banner:after, .search .banner:after, .single .banner:after {
       background-color: rgba(0, 0, 0, 0.15);
@@ -701,6 +704,15 @@ body {
       .home .banner, .error404 .banner, .search .banner, .single .banner {
         border-bottom: 0;
         padding-top: 0; } }
+    .home .banner video, .error404 .banner video, .search .banner video, .single .banner video {
+      margin-bottom: -20%;
+      margin-top: -35%;
+      position: relative;
+      width: 100%;
+      z-index: 1; }
+      @media (max-width: 40em) {
+        .home .banner video, .error404 .banner video, .search .banner video, .single .banner video {
+          display: none; } }
     .home .banner .grid, .error404 .banner .grid, .search .banner .grid, .single .banner .grid {
       margin: 0;
       padding: 0 0.75em; }

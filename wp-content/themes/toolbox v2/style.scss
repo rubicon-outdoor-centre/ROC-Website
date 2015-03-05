@@ -342,7 +342,9 @@ body {
 	//background-image: url('img/background.png');
 	margin: 0 -9999em;
 	padding: $baseline 9999em 0;
+	position: relative;
 	text-align: center;
+	z-index: 10;
 }
 .site-title {
 	margin: 0;
@@ -844,7 +846,8 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		//border-bottom: ($baseline / 4) solid $green;
-		padding-top: 15%;
+		overflow: hidden;
+		padding-top: 30%;
 		position: relative;
 
 		&:after {
@@ -859,6 +862,17 @@ body {
 		@media (max-width: 40em) {
 			border-bottom: 0;
 			padding-top: 0;
+		}
+		video {
+			margin-bottom: -20%;
+			margin-top: -35%;
+			position: relative;
+			width: 100%;
+			z-index: 1;
+
+			@media (max-width: 40em) {
+				display: none;
+			}
 		}
 		.grid {
 			margin: 0;
