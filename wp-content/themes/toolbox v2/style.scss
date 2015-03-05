@@ -750,7 +750,7 @@ body {
 	.search-wrapper {
 		background-color: transparent !important;
 		margin-bottom: ($baseline / 2) !important;
-		max-width: 30em;
+		// max-width: 30em;
 		padding: 0 0 .75em !important;
 
 		.search-form {
@@ -847,7 +847,7 @@ body {
 		background-size: cover;
 		//border-bottom: ($baseline / 4) solid $green;
 		overflow: hidden;
-		padding-top: 30%;
+		padding-top: 15%;
 		position: relative;
 
 		&:after {
@@ -907,6 +907,7 @@ body {
 		}
 	}
 	.home & {
+		padding-top: 30%;
 
 		.search-wrapper {
 

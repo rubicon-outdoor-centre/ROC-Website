@@ -628,7 +628,6 @@ body {
 .entry-content .search-wrapper {
   background-color: transparent !important;
   margin-bottom: 0.75em !important;
-  max-width: 30em;
   padding: 0 0 .75em !important; }
   .entry-content .search-wrapper .search-form {
     font-size: .875em !important; }
@@ -690,7 +689,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding-top: 30%;
+    padding-top: 15%;
     position: relative; }
     .home .banner:after, .error404 .banner:after, .search .banner:after, .single .banner:after {
       background-color: rgba(0, 0, 0, 0.15);
@@ -735,9 +734,11 @@ body {
     @media (max-width: 30em) {
       .home .banner h2, .error404 .banner h2, .search .banner h2, .single .banner h2 {
         font-size: 1.8em; } }
-  @media (max-width: 40em) {
-    .home .banner .search-wrapper {
-      display: none; } }
+  .home .banner {
+    padding-top: 30%; }
+    @media (max-width: 40em) {
+      .home .banner .search-wrapper {
+        display: none; } }
 
 .home-links {
   list-style: none;
