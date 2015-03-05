@@ -737,6 +737,10 @@ body {
   .home .banner {
     padding-top: 30%; }
     @media (max-width: 40em) {
+      .home .banner {
+        height: 0;
+        padding-top: 0; } }
+    @media (max-width: 40em) {
       .home .banner .search-wrapper {
         display: none; } }
 
