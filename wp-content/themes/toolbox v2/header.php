@@ -65,7 +65,7 @@
 						wp_nav_menu( $args );
 
 					?>
-					<a href="#" id="openMenu"><i class="icon-font  icon-font--bars"></i></a>
+					<a href="#" id="openMenu"><i class="icon-font"></i></a>
 				</nav>
 
 				<script>

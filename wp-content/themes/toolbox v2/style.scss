@@ -509,6 +509,16 @@ body {
 			}
 			i {
 				float: right;
+				font-family: awesome;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 1.5;
+			}
+			i:after {
+				content: '\f0c9';
+			}
+			&.open i:after {
+				content: '\f00d';
 			}
 		}
 	}
@@ -840,14 +850,14 @@ body {
 	.error404 &,
 	.search &,
 	.single & {
-		background-attachment: fixed;
+		//background-attachment: fixed;
 		background-image: url('img/header-full.jpg');
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		//border-bottom: ($baseline / 4) solid $green;
 		overflow: hidden;
-		padding-top: 15%;
+		padding-top: 20%;
 		position: relative;
 
 		&:after {
@@ -956,11 +966,12 @@ body {
 			text-decoration: none;
 
 			&:after {
-				background-color: hsla(0,0%,0%,.375);
+				background-color: hsla(0,0%,0%,.25);
 				border-radius: (($baseline / 4) / 4.5) (($baseline / 4) / 4.5) (($baseline / 4) / 3) (($baseline / 4) / 3);
 				bottom: 0;
 				color: $white;
-				content: "\f0a9";
+				//content: "\f0a9";
+				content: '';
 				font-family: "awesome";
 				font-size: ($baseline * 3);
 				font-style: normal;
