@@ -20,6 +20,14 @@
 		);
 	}
 
+	if ($slug == "positions") {
+		$args = array(
+			'post_type' => $slug,
+			'order' => 'ASC',
+			'orderby' => 'title'
+		);
+	}
+
 	$nav_query = new WP_Query($args);
 	while ($nav_query->have_posts()) : $nav_query->the_post();
 

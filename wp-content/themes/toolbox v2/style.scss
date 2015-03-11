@@ -863,7 +863,8 @@ body {
 			border-bottom: 0;
 			padding-top: 0;
 		}
-		video {
+		#video {
+			background-color: transparent !important;
 			margin-bottom: -20%;
 			margin-top: -35%;
 			position: relative;
@@ -985,7 +986,8 @@ body {
 			&.venue {
 				background-image: url('img/venue-link.jpg');
 			}
-			&.facebook {
+			&.facebook,
+			&.positions {
 				background-image: url('img/facebook-link.jpg');
 			}
 			@media (max-width: 40em) {

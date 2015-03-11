@@ -703,14 +703,15 @@ body {
       .home .banner, .error404 .banner, .search .banner, .single .banner {
         border-bottom: 0;
         padding-top: 0; } }
-    .home .banner video, .error404 .banner video, .search .banner video, .single .banner video {
+    .home .banner #video, .error404 .banner #video, .search .banner #video, .single .banner #video {
+      background-color: transparent !important;
       margin-bottom: -20%;
       margin-top: -35%;
       position: relative;
       width: 100%;
       z-index: 1; }
       @media (max-width: 40em) {
-        .home .banner video, .error404 .banner video, .search .banner video, .single .banner video {
+        .home .banner #video, .error404 .banner #video, .search .banner #video, .single .banner #video {
           display: none; } }
     .home .banner .grid, .error404 .banner .grid, .search .banner .grid, .single .banner .grid {
       margin: 0;
@@ -795,7 +796,7 @@ body {
         background-image: url("img/apply-link.jpg"); }
       .home-links li a.venue {
         background-image: url("img/venue-link.jpg"); }
-      .home-links li a.facebook {
+      .home-links li a.facebook, .home-links li a.positions {
         background-image: url("img/facebook-link.jpg"); }
       @media (max-width: 40em) {
         .home-links li a {
