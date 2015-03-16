@@ -1350,3 +1350,7 @@ footer {
 @keyframes back-to-top {
   50% {
     line-height: 1.75; } }
+
+/* Other */
+#wpadminbar {
+  position: fixed !important; }
