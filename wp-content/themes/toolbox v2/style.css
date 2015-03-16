@@ -1050,7 +1050,11 @@ body {
         line-height: 2.8;
         right: 0;
         top: 0;
-        width: 2.8em; } }
+        width: 2.8em; }
+        .content-section .back-to-top:hover, .content-section .back-to-top:focus {
+          -webkit-animation: back-to-top-small 1s infinite ease;
+          -ms-animation: back-to-top-small 1s infinite ease;
+          animation: back-to-top-small 1s infinite ease; } }
   .content-section dt {
     font-weight: bold; }
   .content-section .stepTitle {
@@ -1371,6 +1375,18 @@ footer {
 @keyframes back-to-top {
   50% {
     line-height: 1.75; } }
+
+@-webkit-keyframes back-to-top-small {
+  50% {
+    line-height: 2.5; } }
+
+@-ms-keyframes back-to-top-small {
+  50% {
+    line-height: 2.5; } }
+
+@keyframes back-to-top-small {
+  50% {
+    line-height: 2.5; } }
 
 /* Other */
 #wpadminbar {

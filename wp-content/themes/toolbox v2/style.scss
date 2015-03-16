@@ -1361,6 +1361,13 @@ body {
 			right: 0;
 			top: 0;
 			width: 2.8em;
+
+			&:hover,
+			&:focus {
+				-webkit-animation: back-to-top-small 1s infinite ease;
+					-ms-animation: back-to-top-small 1s infinite ease;
+						animation: back-to-top-small 1s infinite ease;
+			}
 		}
 	}
 	dt {
@@ -1771,6 +1778,15 @@ footer {
 }
 @keyframes back-to-top {
 	50% { line-height: 1.75; }
+}
+@-webkit-keyframes back-to-top-small {
+	50% { line-height: 2.5; }
+}
+@-ms-keyframes back-to-top-small {
+	50% { line-height: 2.5; }
+}
+@keyframes back-to-top-small {
+	50% { line-height: 2.5; }
 }
 
 /* Other */
