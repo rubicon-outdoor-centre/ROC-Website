@@ -73,21 +73,31 @@
 					$(function() {
 
 						var openMenu = $('#openMenu'),
-							primaryMenu = $('#primaryMenu');
+							primaryMenu = $('#primaryMenu'),
+							menuStatus = 'closed';
 
 						// open menu when clicking on 'open menu' button and close menu when clicking on 'close menu' button
 						$(openMenu).on('click', function(e) {
 
 							e.preventDefault();
 
-							openMenu.toggleClass('open');
-							primaryMenu.slideToggle();
+							if (menuStatus === 'closed') {
+								openMenu.addClass('open');
+								primaryMenu.slideDown();
+								menuStatus = 'open';
+							}
+
+							else if (menuStatus === 'open') {
+								openMenu.removeClass('open');
+								primaryMenu.slideUp();
+								menuStatus = 'closed';
+							}
 						});
 
 						// When the window is resized, check for size and show/hide menu accordingly
 						$(window).resize( function() {
 
-							if ($(window).width() <= 626) {
+							if ($(window).width() <= 626 && menuStatus === 'closed') {
 
 								primaryMenu.hide();
 							}
@@ -96,6 +106,7 @@
 
 								primaryMenu.show();
 							}
+
 						}).trigger('resize');
 					});
 				</script>
