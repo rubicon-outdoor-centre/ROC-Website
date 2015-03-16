@@ -434,19 +434,16 @@ body {
     .primary-nav .current-menu-item a:focus {
       background-color: #4e9440; }
     .primary-nav #openMenu {
-      background-color: #63b453;
+      background-color: white;
       border-radius: 0;
-      color: white;
+      border-top: 0.1875em solid #63b453;
+      color: #63b453;
       display: block;
       font-weight: bold;
       text-align: left;
       text-transform: uppercase; }
-      .primary-nav #openMenu:hover, .primary-nav #openMenu:focus {
-        background-color: #4e9440; }
       .primary-nav #openMenu:before {
         content: 'Open Menu'; }
-      .primary-nav #openMenu.open {
-        background-color: #4e9440; }
       .primary-nav #openMenu.open:before {
         content: 'Close Menu'; }
       .primary-nav #openMenu i {
@@ -746,11 +743,7 @@ body {
     padding-top: 30%; }
     @media (max-width: 40em) {
       .home .banner {
-        height: 0;
         padding-top: 0; } }
-    @media (max-width: 40em) {
-      .home .banner .search-wrapper {
-        display: none; } }
 
 .home-links {
   list-style: none;
@@ -1043,22 +1036,21 @@ body {
   .content-section .stepTitle {
     color: #63b453;
     margin-bottom: .25em;
-    margin-top: 2.25em;
-    margin-left: 44px; }
+    margin-left: 1.5em;
+    margin-top: 2.25em; }
   .content-section h2 + .stepTitle {
     margin-top: 0; }
   .content-section .step {
     color: #8e8e8e;
     display: inline-block;
-    margin-left: -44px;
-    margin-right: -.25em;
-    width: 32px;
+    margin-left: -1.5em;
+    width: 1.5em;
     vertical-align: top; }
   .content-section .timeline {
     color: #757575;
     display: block;
     margin-bottom: 1.5em;
-    margin-left: 34px; }
+    margin-left: 2.25em; }
     .content-section .timeline strong {
       font-weight: bold; }
 

@@ -484,25 +484,22 @@ body {
 			background-color: darken($green, 10%);
 		}
 		#openMenu {
-			background-color: $green;
+			background-color: $white;
 			border-radius: 0;
-			// border-bottom: ($baseline / 4) solid $white;
-			// border-top: ($baseline / 6) solid $white;
-			color: $white;
+			border-top: ($baseline / 8) solid $green;
+			color: $green;
 			display: block;
 			font-weight: bold;
 			text-align: left;
 			text-transform: uppercase;
 
 			&:hover,
-			&:focus {
-				background-color: darken($green, 10%);
+			&:focus,
+			&.open {
+				//background-color: darken($white, 5%);
 			}
 			&:before {
 				content: 'Open Menu';
-			}
-			&.open {
-				background-color: darken($green, 10%);
 			}
 			&.open:before {
 				content: 'Close Menu';
@@ -921,13 +918,13 @@ body {
 		padding-top: 30%;
 
 		@media (max-width: 40em) {
-			height: 0;
+			//height: 0;
 			padding-top: 0;
 		}
 		.search-wrapper {
 
 			@media (max-width: 40em) {
-				display: none;
+				//display: none;
 			}
 		}
 	}
@@ -1347,8 +1344,8 @@ body {
 	.stepTitle {
 		color: $green;
 		margin-bottom: .25em;
+		margin-left: ($baseline * 1);
 		margin-top: ($baseline * 1.5);
-		margin-left: 44px;
 	}
 	h2 + .stepTitle {
 		margin-top: 0;
@@ -1356,16 +1353,15 @@ body {
 	.step {
 		color: darken($grey, 40%);
 		display: inline-block;
-		margin-left: -44px;
-		margin-right: -.25em;
-		width: 32px;
+		margin-left: (($baseline * 1) * -1);
+		width: ($baseline * 1);
 		vertical-align: top;
 	}
 	.timeline {
 		color: darken($grey, 50%);
 		display: block;
 		margin-bottom: 1.5em;
-		margin-left: 34px;
+		margin-left: ($baseline * 1.5);
 
 		strong {
 			font-weight: bold;
