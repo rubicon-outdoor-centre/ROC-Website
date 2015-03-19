@@ -449,6 +449,7 @@ body {
 		ul {
 			background-color: $green;
 			border-bottom: 0;
+			margin-bottom: $baseline;
 		}
 		li {
 			display: block;
@@ -477,24 +478,33 @@ body {
 		}
 		#openMenu {
 			background-color: $white;
-			border-radius: 0;
-			border-top: ($baseline / 8) solid $green;
+			border-radius: ($baseline / 4);
+			border: ($baseline / 8) solid $green;
+			//border-width: ($baseline / 10);
 			color: $green;
 			display: block;
 			font-weight: bold;
+			margin: 0 $baseline $baseline;
+			padding-bottom: ($baseline / 1.5);
+			padding-top: ($baseline / 1.5);
 			text-align: left;
 			text-transform: uppercase;
 
 			&:hover,
 			&:focus,
 			&.open {
-				//background-color: darken($white, 5%);
+				//background-color: darken($grey, 2.5%);
 			}
 			&:before {
 				content: 'Open Menu';
 			}
-			&.open:before {
-				content: 'Close Menu';
+			&.open {
+				border-color: $red;
+				color: $red;
+
+				&:before {
+					content: 'Close Menu';
+				}
 			}
 			i {
 				float: right;
@@ -587,7 +597,7 @@ body {
 .side-nav {
 	background-color: $white;
 	//border: ($baseline / 6) solid $white;
-	border-radius: ($baseline / 4);
+	border-radius: ($baseline / 2);
 	// border-top: 0;
 	margin-bottom: $baseline;
 	// margin-top: (($baseline * -1) + (($baseline / 4) * -1));
@@ -596,6 +606,7 @@ body {
 	z-index: 1;
 
 	h5 {
+		font-size: 1.25em;
 		margin-bottom: 0;
 		padding: .75em 1.333em .666em;
 	}
@@ -655,7 +666,7 @@ body {
 .search-wrapper {
 	background-color: $green;
 	//background-image: url('img/background.png');
-	border-radius: ($baseline / 4) ($baseline / 4) 0 0;
+	border-radius: ($baseline / 2) ($baseline / 2) 0 0;
 	margin: 0;
 	padding: $baseline;
 	position: relative;
@@ -666,6 +677,10 @@ body {
 		border-radius: 0;
 		margin: 0;
 		padding: $baseline ($baseline / 2);
+
+		.search-form {
+			font-size: .875em !important;
+		}
 	}
 	.search-form {
 		font-size: 1.25em;
@@ -965,7 +980,7 @@ body {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			//border: ($baseline / 6) solid $white;
-			border-radius: ($baseline / 4) ($baseline / 4) ($baseline / 2) ($baseline / 2);
+			border-radius: ($baseline / 2) ($baseline / 2) $baseline $baseline;
 			color: $white;
 			display: block;
 			font-size: 1.25em;
@@ -975,7 +990,7 @@ body {
 
 			&:after {
 				background-color: hsla(0,0%,0%,.25);
-				border-radius: (($baseline / 4) / 4.5) (($baseline / 4) / 4.5) (($baseline / 4) / 3) (($baseline / 4) / 3);
+				border-radius: (($baseline / 2) / 4.5) (($baseline / 2) / 4.5) (($baseline / 2) / 3) (($baseline / 2) / 3);
 				bottom: 0;
 				color: $white;
 				//content: "\f0a9";
@@ -1012,9 +1027,9 @@ body {
 			@media (max-width: 40em) {
 
 				& {
-					background-position: 50% 25%;
-					background-size: 100% 200%;
-					padding-bottom: 37.5%;
+					background-position: 50% 10%;
+					background-size: 100% 130%;
+					padding-bottom: 60%;
 				}
 			}
 			&:hover,
@@ -1037,7 +1052,7 @@ body {
 			p {
 				// background-color: hsla(0,0%,0%,.6);
 				background-color: $blue;
-				border-radius: 0 0 ($baseline / 4) ($baseline / 4);
+				border-radius: 0 0 ($baseline / 2) ($baseline / 2);
 				// border-top: ($baseline / 6) solid $white;
 				bottom: 0;
 				left: 0;
@@ -1062,7 +1077,7 @@ body {
 	}
 	a {
 		background-color: $white;
-		border-radius: ($baseline / 4);
+		border-radius: ($baseline / 2);
 		display: block;
 		opacity: 1;
 		padding: $baseline;
@@ -1125,7 +1140,7 @@ body {
 .content-section {
 	background-color: $white;
 	// border: ($baseline / 6) solid $white;
-	border-radius: ($baseline / 4);
+	border-radius: ($baseline / 2);
 	// border-color: darken($green, 10%);
 	margin-bottom: $baseline;
 	padding: $baseline $baseline .01em;
@@ -1201,6 +1216,7 @@ body {
 	}
 	.mp4-download {
 		border: solid ($baseline / 10) darken($grey, 5%);
+		border-width: ($baseline / 8);
 		border-radius: ($baseline / 4);
 		display: block;
 		font-weight: bold;
@@ -1270,6 +1286,7 @@ body {
 
 		a {
 			border: solid ($baseline / 10) darken($grey, 5%);
+			border-width: ($baseline / 8);
 			border-radius: ($baseline / 4);
 			display: block;
 			padding: ($baseline / 2) ($baseline / 1) (($baseline / 2) * 1.1);
@@ -1409,6 +1426,7 @@ body {
 
 	a {
 		border: solid ($baseline / 10) darken($grey, 5%);
+		border-width: ($baseline / 8);
 		border-radius: ($baseline / 4);
 		display: block;
 		padding: ($baseline / 2) ($baseline / 1) (($baseline / 2) * 1.1);
@@ -1536,7 +1554,7 @@ table {
 th,
 td {
 	background-color: darken($white, 1%);
-	border: 2px solid darken($grey, 15%);
+	border: ($baseline / 10) solid darken($grey, 15%);
 	padding: ($baseline / 6) ($baseline / 3);
 	vertical-align: top;
 
@@ -1673,6 +1691,7 @@ footer {
 
 	a {
 		border: solid ($baseline / 10) darken($grey, 5%);
+		border-width: ($baseline / 8);
 		border-radius: ($baseline / 4);
 		color: $black;
 		display: block;
