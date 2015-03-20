@@ -976,11 +976,50 @@ body {
       display: inline-block;
       margin-bottom: 1.5em;
       margin-left: 1.5em;
-      max-width: 29.8%;
+      width: 21.5%;
       vertical-align: top; }
+      @media (max-width: 72em) {
+        .content-section .photo-list li {
+          width: 29.5%; } }
+      @media (max-width: 66em) {
+        .content-section .photo-list li {
+          width: 29%; } }
+      @media (max-width: 60em) {
+        .content-section .photo-list li {
+          width: 28.5%; } }
+      @media (max-width: 54em) {
+        .content-section .photo-list li {
+          width: 28%; } }
+      @media (max-width: 50em) {
+        .content-section .photo-list li {
+          width: 44.5%; } }
+      @media (max-width: 48em) {
+        .content-section .photo-list li {
+          width: 43.5%; } }
+      @media (max-width: 42em) {
+        .content-section .photo-list li {
+          width: 42.5%; } }
       @media (max-width: 40em) {
         .content-section .photo-list li {
-          max-width: 100%; } }
+          width: 28.5%; } }
+      @media (max-width: 37em) {
+        .content-section .photo-list li {
+          width: 27.5%; } }
+      @media (max-width: 32em) {
+        .content-section .photo-list li {
+          width: 43.5%; } }
+      @media (max-width: 29em) {
+        .content-section .photo-list li {
+          width: 42.5%; } }
+      @media (max-width: 26em) {
+        .content-section .photo-list li {
+          width: 41.5%; } }
+      @media (max-width: 21em) {
+        .content-section .photo-list li {
+          width: 40.5%; } }
+      @media (max-width: 20em) {
+        .content-section .photo-list li {
+          width: 100%; } }
     .content-section .photo-list a {
       border-radius: 0.375em;
       display: block;

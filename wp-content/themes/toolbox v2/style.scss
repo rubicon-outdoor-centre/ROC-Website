@@ -1255,12 +1255,50 @@ body {
 			display: inline-block;
 			margin-bottom: $baseline;
 			margin-left: 1.5em;
-			max-width: 29.8%;
+			width: 21.5%;
 			vertical-align: top;
 
+			@media (max-width: 72em) {
+				width: 29.5%;
+			}
+			@media (max-width: 66em) {
+				width: 29%;
+			}
+			@media (max-width: 60em) {
+				width: 28.5%;
+			}
+			@media (max-width: 54em) {
+				width: 28%;
+			}
+			@media (max-width: 50em) {
+				width: 44.5%;
+			}
+			@media (max-width: 48em) {
+				width: 43.5%;
+			}
+			@media (max-width: 42em) {
+				width: 42.5%;
+			}
 			@media (max-width: 40em) {
-
-				max-width: 100%;
+				width: 28.5%;
+			}
+			@media (max-width: 37em) {
+				width: 27.5%;
+			}
+			@media (max-width: 32em) {
+				width: 43.5%;
+			}
+			@media (max-width: 29em) {
+				width: 42.5%;
+			}
+			@media (max-width: 26em) {
+				width: 41.5%;
+			}
+			@media (max-width: 21em) {
+				width: 40.5%;
+			}
+			@media (max-width: 20em) {
+				width: 100%;
 			}
 		}
 		a {
