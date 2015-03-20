@@ -429,11 +429,11 @@ body {
     .primary-nav #openMenu {
       background-color: white;
       border-radius: 0.375em;
-      border: 0.1875em solid #63b453;
+      border: 0.16667em solid #63b453;
       color: #63b453;
       display: block;
       font-weight: bold;
-      margin: 0 1.5em 1.5em;
+      margin: 0 1.25em 1.25em;
       padding-bottom: 1em;
       padding-top: 1em;
       text-align: left;
