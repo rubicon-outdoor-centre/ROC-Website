@@ -656,7 +656,7 @@ body {
   .entry-content .search-wrapper .search-field {
     border-color: #c1c1c1 !important; }
     .entry-content .search-wrapper .search-field:focus {
-      border-color: #8e8e8e !important; }
+      border-color: #00bbcc !important; }
 
 .search-no-results .content-section {
   padding: 1.5em 1.5em 0.01em; }
@@ -1263,9 +1263,9 @@ footer {
     footer .search-wrapper .search-form {
       font-size: .875em !important; }
     footer .search-wrapper .search-field {
-      border-color: #444444 !important; }
+      border-color: white !important; }
       footer .search-wrapper .search-field:focus {
-        border-color: #2b2b2b !important; }
+        border-color: #00bbcc !important; }
   footer .container {
     max-width: 68.35em; }
   footer p {

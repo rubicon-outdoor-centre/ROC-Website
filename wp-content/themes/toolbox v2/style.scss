@@ -793,7 +793,7 @@ body {
 			border-color: darken($grey, 20%) !important;
 
 			&:focus {
-				border-color: darken($grey, 40%) !important;
+				border-color: $blue !important;
 			}
 		}
 	}
@@ -1627,10 +1627,10 @@ footer {
 			font-size: .875em !important;
 		}
 		.search-field {
-			border-color: $black !important;
+			border-color: $white !important;
 
 			&:focus {
-				border-color: darken($black, 10%) !important;
+				border-color: $blue !important;
 			}
 		}
 	}
