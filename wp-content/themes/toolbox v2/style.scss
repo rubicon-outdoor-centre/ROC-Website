@@ -668,6 +668,7 @@ body {
 	//background-image: url('img/background.png');
 	border-radius: ($baseline / 2) ($baseline / 2) 0 0;
 	margin: 0;
+	max-width: 30em;
 	padding: $baseline;
 	position: relative;
 	z-index: 999;
@@ -681,6 +682,10 @@ body {
 		.search-form {
 			font-size: .875em !important;
 		}
+	}
+
+	.home & {
+		max-width: 100%;
 	}
 	.search-form {
 		font-size: 1.25em;
@@ -1656,7 +1661,6 @@ footer {
 		margin-bottom: ($baseline / 2) !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
-		max-width: 30em;
 		padding: .675em 0 !important;
 
 		@media (max-width: 40em) {

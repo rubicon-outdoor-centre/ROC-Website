@@ -566,6 +566,7 @@ body {
   background-color: #63b453;
   border-radius: 0.75em 0.75em 0 0;
   margin: 0;
+  max-width: 30em;
   padding: 1.5em;
   position: relative;
   z-index: 999; }
@@ -577,6 +578,8 @@ body {
       padding: 1.5em 0.75em; }
       .search-wrapper .search-form {
         font-size: .875em !important; } }
+  .home .search-wrapper {
+    max-width: 100%; }
   .search-wrapper .search-form {
     font-size: 1.25em;
     position: relative;
@@ -1296,7 +1299,6 @@ footer {
     margin-bottom: 0.75em !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 30em;
     padding: .675em 0 !important; }
     @media (max-width: 40em) {
       footer .search-wrapper {
