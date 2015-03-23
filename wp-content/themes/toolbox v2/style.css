@@ -1019,7 +1019,8 @@ body {
           width: 40.5%; } }
       @media (max-width: 20em) {
         .content-section .photo-list li {
-          width: 100%; } }
+          max-width: 100%;
+          width: auto; } }
     .content-section .photo-list a {
       border-radius: 0.375em;
       display: block;
