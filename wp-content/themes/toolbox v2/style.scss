@@ -498,6 +498,7 @@ body {
 				content: 'Open Menu';
 			}
 			&.open {
+				background-color: lighten($red, 32.5%);
 				border-color: $red;
 				color: $red;
 

@@ -441,6 +441,7 @@ body {
       .primary-nav #openMenu:before {
         content: 'Open Menu'; }
       .primary-nav #openMenu.open {
+        background-color: #fbeeee;
         border-color: #dd6666;
         color: #dd6666; }
         .primary-nav #openMenu.open:before {
