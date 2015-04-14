@@ -1071,6 +1071,8 @@ body {
     margin-bottom: 0; }
   .content-section .podcast-list p {
     color: #444444; }
+  .content-section .podcast-list em {
+    color: #757575; }
   .content-section .vt-activity-list h6 {
     line-height: 1.5;
     padding: 0.75em 0; }

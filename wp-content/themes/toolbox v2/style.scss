@@ -1373,6 +1373,9 @@ body {
 		p {
 			color: $black;
 		}
+		em {
+			color: darken($grey, 50%);
+		}
 	}
 	.vt-activity-list {
 
