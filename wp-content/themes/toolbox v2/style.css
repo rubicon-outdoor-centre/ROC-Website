@@ -861,8 +861,26 @@ body {
     opacity: 1;
     padding: 1.5em;
     position: relative; }
-    .home-logos a:hover, .home-logos a:focus {
-      opacity: 0.9; }
+    .home-logos a:after {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 0.6em;
+      bottom: 0;
+      color: #444444;
+      content: attr(data-title);
+      font-size: 1.25em;
+      font-weight: bold;
+      left: 0;
+      line-height: 5.5em;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      text-shadow: 0 0 0.25em white;
+      top: 0;
+      transition: .15s;
+      visibility: hidden; }
+    .home-logos a:hover:after, .home-logos a:focus:after {
+      opacity: 1;
+      visibility: visible; }
   .home-logos img {
     margin: 0;
     max-height: 62px; }

@@ -1089,9 +1089,32 @@ body {
 		padding: $baseline;
 		position: relative;
 
+		&:after {
+			background-color: hsla(0,0%,100%,.9);
+			border-radius: (($baseline / 2) / 1.25);
+			bottom: 0;
+			color: $black;
+			content: attr(data-title);
+			font-size: 1.25em;
+			font-weight: bold;
+			left: 0;
+			line-height: 5.5em;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			text-shadow: 0 0 .25em $white;
+			top: 0;
+			transition: .15s;
+			visibility: hidden;
+		}
 		&:hover,
 		&:focus {
-			 opacity: 0.9;
+			//opacity: 0.9;
+
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	img {
