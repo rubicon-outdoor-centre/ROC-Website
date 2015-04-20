@@ -1330,10 +1330,10 @@ footer {
       border-color: white !important; }
       footer .search-wrapper .search-field:focus {
         border-color: #00bbcc !important; }
-  .home footer .search-wrapper {
+  .home footer .search-wrapper, .search-results footer .search-wrapper {
     max-width: 30em; }
     @media (max-width: 40em) {
-      .home footer .search-wrapper {
+      .home footer .search-wrapper, .search-results footer .search-wrapper {
         max-width: 100%; } }
   footer .container {
     max-width: 68.35em; }

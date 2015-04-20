@@ -1704,7 +1704,8 @@ footer {
 			}
 		}
 	}
-	.home & .search-wrapper {
+	.home & .search-wrapper,
+	.search-results & .search-wrapper {
 		max-width: 30em;
 
 		@media (max-width: 40em) {
