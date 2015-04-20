@@ -861,7 +861,7 @@ body {
     opacity: 1;
     padding: 1.5em;
     position: relative; }
-    .home-logos a:after {
+    .home-logos a .logo-title {
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 0.6em;
       bottom: 0;
@@ -878,7 +878,7 @@ body {
       top: 0;
       transition: .15s;
       visibility: hidden; }
-    .home-logos a:hover:after, .home-logos a:focus:after {
+    .home-logos a:hover .logo-title, .home-logos a:focus .logo-title {
       opacity: 1;
       visibility: visible; }
   .home-logos img {

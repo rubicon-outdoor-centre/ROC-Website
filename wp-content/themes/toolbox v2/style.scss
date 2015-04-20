@@ -1089,7 +1089,7 @@ body {
 		padding: $baseline;
 		position: relative;
 
-		&:after {
+		& .logo-title {
 			background-color: hsla(0,0%,100%,.9);
 			border-radius: (($baseline / 2) / 1.25);
 			bottom: 0;
@@ -1111,7 +1111,7 @@ body {
 		&:focus {
 			//opacity: 0.9;
 
-			&:after {
+			& .logo-title {
 				opacity: 1;
 				visibility: visible;
 			}
