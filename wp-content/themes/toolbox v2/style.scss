@@ -1093,7 +1093,7 @@ body {
 			background-color: hsla(0,0%,100%,.9);
 			border-radius: (($baseline / 2) / 1.25);
 			bottom: 0;
-			color: $black;
+			color: darken($blue, 10%);
 			content: attr(data-title);
 			font-size: 1.25em;
 			font-weight: bold;
