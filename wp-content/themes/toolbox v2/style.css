@@ -1208,7 +1208,7 @@ body {
   font-style: normal; }
 
 .form-list__anchor--pdf:after {
-  color: #00bbcc;
+  color: #dd6666;
   content: '\f1c1';
   font-family: awesome;
   font-size: 2em;
