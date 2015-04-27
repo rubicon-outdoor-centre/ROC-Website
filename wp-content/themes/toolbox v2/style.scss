@@ -1517,12 +1517,9 @@ body {
 			}
 		}
 		@media (max-width: 40em) {
-			.form-list__list-item a {
-				padding-bottom: $baseline;
-				padding-top: $baseline;
-			}
-			.form-list__list-item i {
-				line-height: $baseline;
+			.form-list__list-item h6 {
+				padding-bottom: ($baseline / 2);
+				padding-top: ($baseline / 2);
 			}
 		}
 	}

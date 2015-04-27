@@ -1183,11 +1183,9 @@ body {
         padding: 0.75em;
         text-transform: uppercase; }
     @media (max-width: 40em) {
-      .form-list ul.room-pairs .form-list__list-item a {
-        padding-bottom: 1.5em;
-        padding-top: 1.5em; }
-      .form-list ul.room-pairs .form-list__list-item i {
-        line-height: 1.5em; } }
+      .form-list ul.room-pairs .form-list__list-item h6 {
+        padding-bottom: 0.75em;
+        padding-top: 0.75em; } }
 
 .form-list__list-item {
   margin-bottom: 1.5em; }
