@@ -1503,17 +1503,20 @@ body {
 			font-weight: bold;
 			text-align: center;
 
-			@media (max-width: 40em) {
-				line-height: 0;
-				margin-bottom: ($baseline * 1.5);
-				margin-top: ($baseline * 1.5);
-			}
 			span {
-				background-color: $green;
+				background-color: $white;
+				border: solid ($baseline / 8) $green;
 				border-radius: 50%;
-				color: $white;
+				color: $green;
+				margin-left: (($baseline / 8) * -1);
 				padding: ($baseline / 2);
 				text-transform: uppercase;
+			}
+			@media (max-width: 40em) {
+				line-height: 0;
+				margin-bottom: ($baseline / 2.5);
+				margin-left: 0;
+				margin-top: (($baseline / 1.5) * -1);
 			}
 		}
 		@media (max-width: 40em) {
