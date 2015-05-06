@@ -1145,8 +1145,6 @@ body {
     color: #63b453;
     margin-bottom: .25em;
     margin-left: 1.5em;
-    margin-top: 2.25em; }
-  .content-section h2 + .stepTitle {
     margin-top: 0; }
   .content-section .step {
     color: #8e8e8e;
@@ -1162,34 +1160,31 @@ body {
     .content-section .timeline strong {
       font-weight: bold; }
 
-.form-list {
+.room-pairs {
   list-style: none;
-  margin: 0; }
-  .form-list ul.room-pairs {
-    list-style: none;
-    padding: 0; }
-    .form-list ul.room-pairs .or {
-      line-height: 6em;
-      font-weight: bold;
-      text-align: center; }
-      .form-list ul.room-pairs .or span {
-        background-color: white;
-        border: solid 0.1875em #63b453;
-        border-radius: 50%;
-        color: #63b453;
-        margin-left: -0.1875em;
-        padding: 0.75em;
-        text-transform: uppercase; }
-      @media (max-width: 40em) {
-        .form-list ul.room-pairs .or {
-          line-height: 0;
-          margin-bottom: 0.6em;
-          margin-left: 0;
-          margin-top: -1em; } }
+  padding: 0 !important; }
+  .room-pairs .or {
+    line-height: 6em;
+    font-weight: bold;
+    text-align: center; }
+    .room-pairs .or span {
+      background-color: #ecf6ea;
+      border: solid 0.1875em #63b453;
+      border-radius: 50%;
+      color: #63b453;
+      margin-left: -0.1875em;
+      padding: 0.75em;
+      text-transform: uppercase; }
     @media (max-width: 40em) {
-      .form-list ul.room-pairs .form-list__list-item h6 {
-        padding-bottom: 0.75em;
-        padding-top: 0.75em; } }
+      .room-pairs .or {
+        line-height: 0;
+        margin-bottom: 0.6em;
+        margin-left: 0;
+        margin-top: -1em; } }
+  @media (max-width: 40em) {
+    .room-pairs .form-list__list-item h6 {
+      padding-bottom: 0.75em;
+      padding-top: 0.75em; } }
 
 .form-list__list-item {
   margin-bottom: 1.5em; }
@@ -1490,10 +1485,14 @@ footer {
     background-color: #eeeeee;
     border-color: #dbdbdb; }
 
-.complex-button--short .complex-button__content h6 {
-  padding-bottom: 0.75em;
-  padding-top: 0.75em; }
+ /*
+.complex-button--short {
 
+	.complex-button__content h6 {
+		padding-bottom: ($baseline / 2);
+		padding-top: ($baseline / 2);
+	}
+}*/
 .complex-button__icon {
   display: table-cell;
   width: 3em;
@@ -1520,7 +1519,7 @@ footer {
 .complex-button__content {
   display: table-cell;
   width: 100%;
-  vertical-align: top; }
+  vertical-align: middle; }
   .complex-button__content h6 {
     margin-bottom: 0; }
   .complex-button__content p {

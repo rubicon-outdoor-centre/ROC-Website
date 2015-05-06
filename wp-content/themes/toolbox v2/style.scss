@@ -1468,9 +1468,6 @@ body {
 		color: $green;
 		margin-bottom: .25em;
 		margin-left: ($baseline * 1);
-		margin-top: ($baseline * 1.5);
-	}
-	h2 + .stepTitle {
 		margin-top: 0;
 	}
 	.step {
@@ -1491,40 +1488,35 @@ body {
 		}
 	}
 }
-.form-list {
+.room-pairs {
 	list-style: none;
-	margin: 0;
+	padding: 0 !important;
 
-	ul.room-pairs {
-		list-style: none;
-		padding: 0;
+	.or {
+		line-height: ($baseline * 4);
+		font-weight: bold;
+		text-align: center;
 
-		.or {
-			line-height: ($baseline * 4);
-			font-weight: bold;
-			text-align: center;
-
-			span {
-				background-color: $white;
-				border: solid ($baseline / 8) $green;
-				border-radius: 50%;
-				color: $green;
-				margin-left: (($baseline / 8) * -1);
-				padding: ($baseline / 2);
-				text-transform: uppercase;
-			}
-			@media (max-width: 40em) {
-				line-height: 0;
-				margin-bottom: ($baseline / 2.5);
-				margin-left: 0;
-				margin-top: (($baseline / 1.5) * -1);
-			}
+		span {
+			background-color: lighten($green, 42.5%);
+			border: solid ($baseline / 8) $green;
+			border-radius: 50%;
+			color: $green;
+			margin-left: (($baseline / 8) * -1);
+			padding: ($baseline / 2);
+			text-transform: uppercase;
 		}
 		@media (max-width: 40em) {
-			.form-list__list-item h6 {
-				padding-bottom: ($baseline / 2);
-				padding-top: ($baseline / 2);
-			}
+			line-height: 0;
+			margin-bottom: ($baseline / 2.5);
+			margin-left: 0;
+			margin-top: (($baseline / 1.5) * -1);
+		}
+	}
+	@media (max-width: 40em) {
+		.form-list__list-item h6 {
+			padding-bottom: ($baseline / 2);
+			padding-top: ($baseline / 2);
 		}
 	}
 }
@@ -1903,14 +1895,14 @@ footer {
 		background-color: darken($grey, 2.5%);
 		border-color: darken($grey, 10%);
 	}
-}
+}/*
 .complex-button--short {
 
 	.complex-button__content h6 {
 		padding-bottom: ($baseline / 2);
 		padding-top: ($baseline / 2);
 	}
-}
+}*/
 .complex-button__icon {
 	display: table-cell;
 	width: ($baseline * 2);
@@ -1943,7 +1935,7 @@ footer {
 .complex-button__content {
 	display: table-cell;
 	width: 100%;
-	vertical-align: top;
+	vertical-align: middle;
 
 	h6 {
 		margin-bottom: 0;
