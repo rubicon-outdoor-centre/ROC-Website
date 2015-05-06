@@ -1491,12 +1491,13 @@ footer {
     border-color: #dbdbdb; }
 
 .complex-button--short .complex-button__content h6 {
+  padding-bottom: 0.75em;
   padding-top: 0.75em; }
 
 .complex-button__icon {
   display: table-cell;
   width: 3em;
-  vertical-align: top; }
+  vertical-align: middle; }
   .complex-button__icon i {
     display: block;
     font-size: 2em;

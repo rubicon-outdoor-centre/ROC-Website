@@ -1907,13 +1907,14 @@ footer {
 .complex-button--short {
 
 	.complex-button__content h6 {
+		padding-bottom: ($baseline / 2);
 		padding-top: ($baseline / 2);
 	}
 }
 .complex-button__icon {
 	display: table-cell;
 	width: ($baseline * 2);
-	vertical-align: top;
+	vertical-align: middle;
 
 	i {
 		display: block;
