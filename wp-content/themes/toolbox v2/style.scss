@@ -1228,6 +1228,7 @@ body {
 		}
 	}
 	.fluid-video {
+		margin-bottom: $baseline;
 		padding-bottom: 56.12%;
 		position: relative;
 
@@ -1565,7 +1566,7 @@ body {
 }
 .form-list__list-item__description--single {
 	margin-left: 52px;
-}
+}/*
 .form-list__anchor {
 	float: left;
 	height: 32px;
@@ -1603,7 +1604,7 @@ body {
 }
 .form-list__anchor--xls {
 	background-image: url('img/icons/xls.png');
-}
+}*/
 .form-list__anchor--submit {
 	background-color: #9d6;
 	color: #fff;
@@ -1879,6 +1880,12 @@ footer {
 	li {
 		margin-bottom: $baseline;
 	}
+	&.no-bottom-margin {
+
+		li {
+			margin-bottom: 0;
+		}
+	}
 }
 .complex-button {
 	border: solid ($baseline / 8) darken($grey, 5%);
@@ -1886,7 +1893,7 @@ footer {
 	box-sizing: border-box;
 	color: $black;
 	display: table;
-	padding: $baseline;
+	padding: ($baseline / 2);
 	text-decoration: none;
 	transition: .15s;
 	width: 100%;
@@ -1898,8 +1905,6 @@ footer {
 	}
 }
 .complex-button--short {
-	padding-bottom: ($baseline / 2);
-	padding-top: ($baseline / 2);
 
 	.complex-button__content h6 {
 		padding-top: ($baseline / 2);
@@ -1914,7 +1919,7 @@ footer {
 		display: block;
 		font-size: 2em;
 		height: $baseline;
-		margin-right: ($baseline / 2);
+		margin-right: ($baseline / 4);
 		text-align: center;
 		width: $baseline;
 		vertical-align: middle;
@@ -1924,6 +1929,14 @@ footer {
 	}
 	.icon-font--instagram {
 		color: #3f729b;
+	}
+	.icon-font--pdf {
+		color: $red;
+	}
+	.icon-font--doc,
+	.icon-font--mp3,
+	.icon-font--mp4 {
+		color: $blue;
 	}
 }
 .complex-button__content {
@@ -1945,6 +1958,18 @@ footer {
 	font-family: 'awesome';
 	font-style: normal;
 	font-weight: normal;
+}
+.icon-font--pdf:before {
+	content: '\f1c1';
+}
+.icon-font--doc:before {
+	content: '\f1c2';
+}
+.icon-font--mp3:before {
+	content: '\f001';
+}
+.icon-font--mp4:before {
+	content: '\f008';
 }
 .icon-font--bars:before {
 	content: '\f0c9';
