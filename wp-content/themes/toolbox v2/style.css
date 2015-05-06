@@ -993,15 +993,11 @@ body {
       padding-right: 18px;
       position: relative;
       top: 6px; }
-  .content-section .form-list,
-  .content-section .photo-list,
-  .content-section .podcast-list,
-  .content-section .podcast-list ul {
-    list-style: none;
-    padding-left: 0; }
   .content-section .photo-list {
+    list-style: none;
     margin-bottom: 0;
-    margin-left: -1.5em; }
+    margin-left: -1.5em;
+    padding-left: 0; }
     .content-section .photo-list li {
       display: inline-block;
       margin-bottom: 1.5em;
@@ -1062,45 +1058,6 @@ body {
       border-radius: 0.1875em;
       margin-bottom: 0;
       margin-right: 0; }
-  .content-section .podcast-list a {
-    border: solid 0.15em #e7e7e7;
-    border-width: 0.1875em;
-    border-radius: 0.375em;
-    display: block;
-    padding: 0.75em 1.5em 0.825em;
-    text-decoration: none; }
-    .content-section .podcast-list a:hover, .content-section .podcast-list a:focus {
-      background-color: #eeeeee;
-      border-color: #dbdbdb; }
-  .content-section .podcast-list h3 {
-    color: #d96;
-    font-size: 2em;
-    line-height: .75;
-    margin-bottom: .75em; }
-  .content-section .podcast-list li {
-    margin-bottom: 1.5em; }
-  .content-section .podcast-list i {
-    float: left;
-    height: 32px;
-    margin-right: 16px;
-    margin-top: 1px;
-    width: 32px; }
-    .content-section .podcast-list i:after {
-      color: #00bbcc;
-      content: '\f001';
-      font-family: awesome;
-      font-size: 2em;
-      font-style: normal; }
-  .content-section .podcast-list h6 {
-    color: #444444;
-    margin-bottom: 0; }
-  .content-section .podcast-list p {
-    color: #444444; }
-  .content-section .podcast-list em {
-    color: #757575; }
-  .content-section .vt-activity-list h6 {
-    line-height: 1.5;
-    padding: 0.75em 0; }
   .content-section .activity-image-wrapper {
     margin: -1.5em -1.5em 0; }
   .content-section .activity-image {
@@ -1181,100 +1138,6 @@ body {
         margin-bottom: 0.6em;
         margin-left: 0;
         margin-top: -1em; } }
-  @media (max-width: 40em) {
-    .room-pairs .form-list__list-item h6 {
-      padding-bottom: 0.75em;
-      padding-top: 0.75em; } }
-
-.form-list__list-item {
-  margin-bottom: 1.5em; }
-  .form-list__list-item a {
-    border: solid 0.15em #e7e7e7;
-    border-width: 0.1875em;
-    border-radius: 0.375em;
-    display: block;
-    padding: 0.75em 1.5em 0.825em;
-    text-decoration: none; }
-    .form-list__list-item a:hover, .form-list__list-item a:focus {
-      background-color: #eeeeee;
-      border-color: #dbdbdb; }
-
-.form-list__list-item--attention {
-  background-color: #f6f6d6;
-  margin: -.5em -1.4em 1em;
-  padding: .5em 1.4em; }
-
-.form-list__list-item__title {
-  color: #444444;
-  margin-bottom: 0;
-  margin-left: 48px; }
-
-.form-list__list-item__title--single {
-  margin-left: 52px; }
-
-.form-list__list-item__description {
-  color: #444444;
-  margin-bottom: 0;
-  margin-left: 48px; }
-
-.form-list__list-item__description--single {
-  margin-left: 52px; }
-
- /*
-.form-list__anchor {
-	float: left;
-	height: 32px;
-	margin-right: 16px;
-	margin-top: 1px;
-	// opacity: 1;
-	width: 32px;
-}
-.page-id-10 .form-list__anchor {
-	// margin-left: 52px;
-}
-.form-list__anchor:hover,
-.form-list__anchor:focus {
-	// opacity: .8;
-}
-.form-list__anchor--doc {
-
-	&:after {
-		color: $blue;
-		content: '\f1c2';
-		font-family: awesome;
-		font-size: 2em;
-		font-style: normal;
-	}
-}
-.form-list__anchor--pdf {
-
-	&:after {
-		color: $red;
-		content: '\f1c1';
-		font-family: awesome;
-		font-size: 2em;
-		font-style: normal;
-	}
-}
-.form-list__anchor--xls {
-	background-image: url('img/icons/xls.png');
-}*/
-.form-list__anchor--submit {
-  background-color: #9d6;
-  color: #fff;
-  font-size: .75em;
-  font-weight: bold;
-  height: 32px;
-  line-height: 32px;
-  opacity: 1;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 80px; }
-
-.form-list__anchor--submit:hover,
-.form-list__anchor--submit:focus {
-  background-color: #69d; }
 
 .map {
   height: 350px;
