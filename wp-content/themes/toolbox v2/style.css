@@ -1083,7 +1083,6 @@ body {
     .content-section .back-to-top:hover, .content-section .back-to-top:focus {
       opacity: 1;
       -webkit-animation: back-to-top 1s infinite ease;
-      -ms-animation: back-to-top 1s infinite ease;
       animation: back-to-top 1s infinite ease; }
     @media (max-width: 40em) {
       .content-section .back-to-top {
@@ -1094,7 +1093,6 @@ body {
         width: 2.8em; }
         .content-section .back-to-top:hover, .content-section .back-to-top:focus {
           -webkit-animation: back-to-top-small 1s infinite ease;
-          -ms-animation: back-to-top-small 1s infinite ease;
           animation: back-to-top-small 1s infinite ease; } }
   .content-section dt {
     font-weight: bold; }
@@ -1430,19 +1428,11 @@ footer {
   50% {
     line-height: 1.75; } }
 
-@-ms-keyframes back-to-top {
-  50% {
-    line-height: 1.75; } }
-
 @keyframes back-to-top {
   50% {
     line-height: 1.75; } }
 
 @-webkit-keyframes back-to-top-small {
-  50% {
-    line-height: 2.5; } }
-
-@-ms-keyframes back-to-top-small {
   50% {
     line-height: 2.5; } }
 
@@ -1453,3 +1443,67 @@ footer {
 /* Other */
 #wpadminbar {
   position: fixed !important; }
+
+/* Program Focus */
+.program-focus--overview .program-focus--content {
+  overflow: visible; }
+.program-focus--overview .program-link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  transition: .15s; }
+  .program-focus--overview .program-link .program-focus--content {
+    transition: .15s; }
+  .program-focus--overview .program-link h3 {
+    text-align: center; }
+  .program-focus--overview .program-link:hover .program-focus--content, .program-focus--overview .program-link:focus .program-focus--content {
+    color: white; }
+  .program-focus--overview .program-link:hover .program-focus--challenge, .program-focus--overview .program-link:focus .program-focus--challenge {
+    background-color: #00bbcc; }
+  .program-focus--overview .program-link:hover .program-focus--leadership, .program-focus--overview .program-link:focus .program-focus--leadership {
+    background-color: #ee7744; }
+  .program-focus--overview .program-link:hover .program-focus--teamwork, .program-focus--overview .program-link:focus .program-focus--teamwork {
+    background-color: #63b453; }
+@media (min-width: 40em) {
+  .program-focus--overview p {
+    padding-left: 0.75em;
+    padding-right: 0.75em; } }
+
+.program-focus--content {
+  border: 0.25em solid;
+  border-radius: 0.375em;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+  padding: 1.5em 1em 0; }
+  .program-focus--content h4 {
+    color: white;
+    margin: -1.3125em -1.3125em 0.875em;
+    padding: 0.875em 1.3125em; }
+  .program-focus--content ul {
+    margin-bottom: 1em; }
+  .program-focus--content li {
+    color: #444444; }
+  .program-focus--content.program-focus--challenge {
+    background-color: #e5fdff;
+    border-color: #00bbcc;
+    color: #00bbcc; }
+    .program-focus--content.program-focus--challenge h4 {
+      background-color: #00bbcc; }
+  .program-focus--content.program-focus--leadership {
+    background-color: #fef6f3;
+    border-color: #ee7744;
+    color: #ee7744; }
+    .program-focus--content.program-focus--leadership h4 {
+      background-color: #ee7744; }
+  .program-focus--content.program-focus--teamwork {
+    background-color: #ecf6ea;
+    border-color: #63b453;
+    color: #63b453; }
+    .program-focus--content.program-focus--teamwork h4 {
+      background-color: #63b453; }
+  .program-focus--content.program-focus--common {
+    background-color: #eaeaea;
+    border-color: #5e5e5e;
+    color: #5e5e5e; }
+    .program-focus--content.program-focus--common h4 {
+      background-color: #5e5e5e; }
