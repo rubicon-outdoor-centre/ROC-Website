@@ -1481,8 +1481,12 @@ footer {
     padding: 0.875em 1.3125em; }
   .program-focus--content ul {
     margin-bottom: 1em; }
-  .program-focus--content li {
+  .program-focus--content li,
+  .program-focus--content p {
     color: #444444; }
+  .program-focus--content p {
+    padding-left: 0.375em;
+    padding-right: 0.375em; }
   .program-focus--content.program-focus--challenge {
     background-color: #e5fdff;
     border-color: #00bbcc;
