@@ -266,7 +266,8 @@ blockquote {
   hyphens: auto; }
 
 p a,
-dd a {
+dd a,
+.content-section li a {
   border-bottom: 2px solid #00bbcc;
   color: #444444;
   text-decoration: none;
@@ -275,11 +276,14 @@ dd a {
 p a:hover,
 p a:focus,
 dd a:hover,
-dd a:focus {
+dd a:focus,
+.content-section li a:hover,
+.content-section li a:focus {
   color: #00bbcc; }
 
 p a:active,
-dd a:active {
+dd a:active,
+.content-section li a:active {
   position: relative;
   top: 1px;
   transition: none; }
