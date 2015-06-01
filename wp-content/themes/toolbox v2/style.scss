@@ -1723,7 +1723,7 @@ footer {
 	}
 	&.no-bottom-margin {
 
-		li {
+		li + li {
 			margin-bottom: 0;
 		}
 	}

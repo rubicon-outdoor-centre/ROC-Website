@@ -1344,7 +1344,7 @@ footer {
   padding: 0 !important; }
   .complex-button-list li {
     margin-bottom: 1.5em; }
-  .complex-button-list.no-bottom-margin li {
+  .complex-button-list.no-bottom-margin li + li {
     margin-bottom: 0; }
 
 .complex-button {
