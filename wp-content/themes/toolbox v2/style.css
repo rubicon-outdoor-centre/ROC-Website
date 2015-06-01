@@ -1208,7 +1208,7 @@ th {
     left: -9999em; }
 
   tbody tr {
-    border-bottom: 1px solid #a8a8a8;
+    border-bottom: 0.15em solid #cecece;
     margin-bottom: 1.5em; }
 
   td {

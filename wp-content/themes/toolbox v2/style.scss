@@ -1526,7 +1526,7 @@ th {
 		left: -9999em;
 	}
 	tbody tr {
-		border-bottom: 1px solid darken($grey, 30%);
+		border-bottom: ($baseline / 10) solid darken($grey, 15%);
 		margin-bottom: $baseline;
 	}
 	td {
