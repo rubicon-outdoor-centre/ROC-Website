@@ -31,7 +31,6 @@
 ?></title>
 
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic'>
-<!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic'>-->
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 
 <!-- Favicon -->
