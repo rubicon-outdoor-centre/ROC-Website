@@ -1204,6 +1204,7 @@ body {
 		border: 0;
 		border-top: ($baseline / 8) solid darken($grey, 5%);
 		margin-bottom: $baseline;
+		margin-top: 0;
 	}
 	ol,
 	ul {
