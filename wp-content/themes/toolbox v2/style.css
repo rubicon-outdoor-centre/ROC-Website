@@ -267,7 +267,7 @@ blockquote {
 
 p a,
 dd a,
-.content-section li a {
+li a {
   border-bottom: 2px solid #00bbcc;
   color: #444444;
   text-decoration: none;
@@ -277,13 +277,13 @@ p a:hover,
 p a:focus,
 dd a:hover,
 dd a:focus,
-.content-section li a:hover,
-.content-section li a:focus {
+li a:hover,
+li a:focus {
   color: #00bbcc; }
 
 p a:active,
 dd a:active,
-.content-section li a:active {
+li a:active {
   position: relative;
   top: 1px;
   transition: none; }
@@ -394,6 +394,7 @@ body {
     .primary-nav li:first-child {
       margin-left: 0; }
   .primary-nav a {
+    border: 0;
     border-radius: 1.5em;
     color: white;
     display: block;
@@ -403,7 +404,8 @@ body {
     text-decoration: none; }
   .primary-nav a:hover,
   .primary-nav a:focus {
-    background-color: #58a548; }
+    background-color: #58a548;
+    color: white; }
   .primary-nav .current-menu-item a {
     background-color: #4e9440;
     cursor: default;
@@ -496,6 +498,7 @@ body {
         display: block;
         margin: 0; } }
   .secondary-nav a {
+    border: 0;
     border-radius: 1.5em;
     color: white;
     display: block;
@@ -511,7 +514,8 @@ body {
   .secondary-nav a:hover,
   .secondary-nav a:focus {
     background-color: transparent;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white; }
   .secondary-nav .current-menu-item a {
     background-color: rgba(0, 0, 0, 0.25);
     cursor: default; }
@@ -546,6 +550,7 @@ body {
     margin-bottom: 0;
     padding-bottom: 0.1875em; }
   .side-nav a {
+    border: 0;
     color: #00bbcc;
     display: block;
     font-weight: bold;
@@ -794,6 +799,7 @@ body {
     .home-links li a {
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      border: 0;
       border-radius: 0.6em 0.6em 1.2em 1.2em;
       color: white;
       display: block;
@@ -866,6 +872,7 @@ body {
       padding: 0; } }
   .home-logos a {
     background-color: white;
+    border: 0;
     border-radius: 0.75em;
     display: block;
     opacity: 1;
@@ -888,9 +895,11 @@ body {
       top: 0;
       transition: .15s;
       visibility: hidden; }
-    .home-logos a:hover .logo-title, .home-logos a:focus .logo-title {
-      opacity: 1;
-      visibility: visible; }
+    .home-logos a:hover, .home-logos a:focus {
+      color: #008c99; }
+      .home-logos a:hover .logo-title, .home-logos a:focus .logo-title {
+        opacity: 1;
+        visibility: visible; }
   .home-logos img {
     margin: 0;
     max-height: 62px; }
@@ -1349,7 +1358,8 @@ footer {
   width: 100%; }
   .complex-button:hover, .complex-button:focus {
     background-color: #eeeeee;
-    border-color: #dbdbdb; }
+    border-color: #dbdbdb;
+    color: #444444; }
 
  /*
 .complex-button--short {
