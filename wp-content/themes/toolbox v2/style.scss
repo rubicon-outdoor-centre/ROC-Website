@@ -1441,7 +1441,7 @@ body {
 	padding: 0 !important;
 
 	.or {
-		line-height: ($baseline * 4);
+		line-height: ($baseline * 3.333);
 		font-weight: bold;
 		text-align: center;
 
@@ -1451,7 +1451,7 @@ body {
 			border-radius: 50%;
 			color: $green;
 			margin-left: (($baseline / 8) * -1);
-			padding: ($baseline / 2);
+			padding: ($baseline / 3);
 			text-transform: uppercase;
 		}
 		@media (max-width: 40em) {
