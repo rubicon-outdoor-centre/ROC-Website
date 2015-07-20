@@ -659,6 +659,7 @@ body {
 .search .entry-title {
   margin: 0; }
   .search .entry-title a {
+    border: 0;
     color: #00bbcc;
     display: block;
     padding: 1.2em;
