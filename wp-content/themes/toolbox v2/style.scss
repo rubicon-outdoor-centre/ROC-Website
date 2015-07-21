@@ -323,7 +323,8 @@ html {
 }
 body {
 	background-color: darken($grey, 15%);
-	//background-image: url('img/background.png');
+	background-image: url('img/background.png');
+	background-position: 0% 0%;
 	overflow-x: hidden;
 	position: relative;
 	padding: 0;
