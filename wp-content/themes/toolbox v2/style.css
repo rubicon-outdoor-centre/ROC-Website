@@ -842,8 +842,8 @@ body {
       @media (max-width: 40em) {
         .home-links li a {
           background-position: 50% 10%;
-          background-size: 100% 130%;
-          padding-bottom: 60%; } }
+          background-size: 100% 155%;
+          padding-bottom: 50%; } }
       .home-links li a:hover:after, .home-links li a:focus:after {
         opacity: 1;
         text-indent: 0;
@@ -1160,13 +1160,20 @@ body {
   margin-bottom: 1.5em;
   width: 100%;
   vertical-align: top; }
+  @media (max-width: 40em) {
+    .map {
+      height: 250px; } }
 
 .last-map {
-  margin-bottom: 0; }
+  margin-bottom: -0.01em; }
 
-@media (max-width: 40em) {
-  .map {
-    height: 250px; } }
+#wpgmza_map {
+  margin-bottom: 1.5em;
+  margin-top: -1.5em; }
+  @media (max-width: 40em) {
+    #wpgmza_map {
+      height: 250px !important; } }
+
 .info-centres {
   margin-left: -3em; }
 

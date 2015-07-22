@@ -1048,8 +1048,8 @@ body {
 
 				& {
 					background-position: 50% 10%;
-					background-size: 100% 130%;
-					padding-bottom: 60%;
+					background-size: 100% 155%;
+					padding-bottom: 50%;
 				}
 			}
 			&:hover,
@@ -1470,14 +1470,20 @@ body {
 	margin-bottom: $baseline;
 	width: 100%;
 	vertical-align: top;
+
+	@media (max-width: 40em) {
+		height: 250px;
+	}
 }
 .last-map {
-	margin-bottom: 0;
+	margin-bottom: -0.01em;
 }
-@media (max-width: 40em) {
+#wpgmza_map {
+	margin-bottom: $baseline;
+	margin-top: ($baseline * -1);
 
-	.map {
-		height: 250px;
+	@media (max-width: 40em) {
+		height: 250px !important;
 	}
 }
 .info-centres {
