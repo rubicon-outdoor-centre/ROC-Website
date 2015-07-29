@@ -1758,8 +1758,8 @@ footer {
 
 		&:hover,
 		&:focus {
-			background-color: darken($grey, 0%);
-			border-color: darken($grey, 0%);
+			background-color: $white;
+			border-color: darken($grey, 5%);
 		}
 	}
 }/*
