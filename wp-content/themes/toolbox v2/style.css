@@ -1371,6 +1371,11 @@ footer {
     background-color: #eeeeee;
     border-color: #dbdbdb;
     color: #444444; }
+  .complex-button.no-link {
+    opacity: 0.6; }
+    .complex-button.no-link:hover, .complex-button.no-link:focus {
+      background-color: #f4f4f4;
+      border-color: #f4f4f4; }
 
  /*
 .complex-button--short {

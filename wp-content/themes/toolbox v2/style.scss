@@ -1753,6 +1753,15 @@ footer {
 		border-color: darken($grey, 10%);
 		color: $black;
 	}
+	&.no-link {
+		opacity: 0.6;
+
+		&:hover,
+		&:focus {
+			background-color: darken($grey, 0%);
+			border-color: darken($grey, 0%);
+		}
+	}
 }/*
 .complex-button--short {
 
