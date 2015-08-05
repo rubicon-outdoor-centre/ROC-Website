@@ -31,7 +31,7 @@
 ?></title>
 
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic'>
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=2">
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">

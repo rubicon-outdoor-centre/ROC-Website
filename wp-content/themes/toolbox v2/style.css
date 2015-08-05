@@ -1550,7 +1550,8 @@ footer {
   margin-bottom: 1.5em; }
 
 .alert-bar {
-  margin: -1.5em 0 1.5em; }
+  margin: -1.5em 0 1.5em;
+  position: relative; }
   .alert-bar a {
     background-color: #ee7744;
     background-image: linear-gradient(135deg, transparent 25%, rgba(0, 0, 0, 0.025) 25%, rgba(0, 0, 0, 0.025) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.025) 75%);
@@ -1559,14 +1560,34 @@ footer {
     display: block;
     font-size: 1.125em;
     padding: 0.75em;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.15s; }
+    @media (min-width: 40em) {
+      .alert-bar a {
+        -webkit-animation: alert 0.5s ease-out 1s 1 both;
+        animation: alert 0.5s ease-out 1s 1 both; } }
     .alert-bar a:hover, .alert-bar a:focus {
       background-color: #ec662d; }
   .alert-bar .icon-font--alert {
     font-size: 1.5em;
+    line-height: 1;
     margin-right: 0.5em;
     position: relative;
     top: -1px;
     vertical-align: middle; }
+
+@-webkit-keyframes alert {
+  0% {
+    top: -4em; }
+
+  100% {
+    top: 0; } }
+
+@keyframes alert {
+  0% {
+    top: -4em; }
+
+  100% {
+    top: 0; } }

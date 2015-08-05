@@ -1984,6 +1984,7 @@ footer {
 }
 .alert-bar {
 	margin: ($baseline * -1) 0 $baseline;
+	position: relative;
 
 	a {
 		background-color: $orange;
@@ -1994,10 +1995,15 @@ footer {
 		font-size: 1.125em;
 		//font-weight: bold;
 		padding: ($baseline * 0.5);
+		position: relative;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: 0.15s;
 
+		@media (min-width: 40em) {
+			-webkit-animation: alert 0.5s ease-out 1s 1 both;
+					animation: alert 0.5s ease-out 1s 1 both;
+		}
 		&:hover,
 		&:focus {
 			background-color: darken($orange, 5%);
@@ -2005,9 +2011,18 @@ footer {
 	}
 	.icon-font--alert {
 		font-size: 1.5em;
+		line-height: 1;
 		margin-right: 0.5em;
 		position: relative;
 		top: -1px;
 		vertical-align: middle;
 	}
+}
+@-webkit-keyframes alert {
+	0% { top: -4em; }
+	100% { top: 0; }
+}
+@keyframes alert {
+	0% { top: -4em; }
+	100% { top: 0; }
 }
