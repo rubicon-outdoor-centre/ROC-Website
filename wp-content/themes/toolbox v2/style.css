@@ -1380,10 +1380,10 @@ footer {
  /*
 .complex-button--short {
 
-	.complex-button__content h6 {
-		padding-bottom: ($baseline / 2);
-		padding-top: ($baseline / 2);
-	}
+    .complex-button__content h6 {
+        padding-bottom: ($baseline / 2);
+        padding-top: ($baseline / 2);
+    }
 }*/
 .complex-button__icon {
   display: table-cell;
@@ -1488,7 +1488,10 @@ footer {
   transition: .15s; }
   .program-focus--overview .program-link .program-focus--content {
     transition: .15s; }
-  .program-focus--overview .program-link h4 {
+  .program-focus--overview .program-link h3 {
+    font-size: 1.3125em;
+    line-height: 1.142857143;
+    margin-bottom: 1.142857143em;
     text-align: center; }
   .program-focus--overview .program-link:hover .program-focus--content, .program-focus--overview .program-link:focus .program-focus--content {
     color: white; }
