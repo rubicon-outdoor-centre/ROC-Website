@@ -1488,7 +1488,7 @@ footer {
   transition: .15s; }
   .program-focus--overview .program-link .program-focus--content {
     transition: .15s; }
-  .program-focus--overview .program-link h3 {
+  .program-focus--overview .program-link h4 {
     text-align: center; }
   .program-focus--overview .program-link:hover .program-focus--content, .program-focus--overview .program-link:focus .program-focus--content {
     color: white; }
