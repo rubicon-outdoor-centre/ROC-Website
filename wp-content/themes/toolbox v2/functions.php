@@ -330,3 +330,9 @@ function modify_jquery() {
 	}
 }
 add_action('init', 'modify_jquery');
+
+// Add favicon to WordPress admin
+add_action('admin_head', 'show_favicon');
+function show_favicon() {
+echo '<link href="/favicons/favicon-admin.png" rel="shortcut icon">';
+}
