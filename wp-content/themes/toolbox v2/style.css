@@ -1564,10 +1564,6 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.15s; }
-    @media (min-width: 40em) {
-      .alert-bar a {
-        -webkit-animation: alert 0.5s ease-out 1s 1 both;
-        animation: alert 0.5s ease-out 1s 1 both; } }
     .alert-bar a:hover, .alert-bar a:focus {
       background-color: #ec662d; }
   .alert-bar .icon-font--alert {
@@ -1577,6 +1573,11 @@ footer {
     position: relative;
     top: -1px;
     vertical-align: middle; }
+
+@media (min-width: 40em) {
+  body.home .alert-bar a {
+    -webkit-animation: alert 0.5s ease-out 1s 1 both;
+    animation: alert 0.5s ease-out 1s 1 both; } }
 
 @-webkit-keyframes alert {
   0% {

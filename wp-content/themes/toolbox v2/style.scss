@@ -2000,10 +2000,6 @@ footer {
 		text-transform: uppercase;
 		transition: 0.15s;
 
-		@media (min-width: 40em) {
-			-webkit-animation: alert 0.5s ease-out 1s 1 both;
-					animation: alert 0.5s ease-out 1s 1 both;
-		}
 		&:hover,
 		&:focus {
 			background-color: darken($orange, 5%);
@@ -2016,6 +2012,12 @@ footer {
 		position: relative;
 		top: -1px;
 		vertical-align: middle;
+	}
+}
+body.home .alert-bar a {
+	@media (min-width: 40em) {
+		-webkit-animation: alert 0.5s ease-out 1s 1 both;
+				animation: alert 0.5s ease-out 1s 1 both;
 	}
 }
 @-webkit-keyframes alert {
