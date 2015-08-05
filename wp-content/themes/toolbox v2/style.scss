@@ -1850,6 +1850,9 @@ footer {
 .icon-font--arrow-circle-right:before {
 	content: '\f0a9';
 }
+.icon-font--alert:before {
+	content: "\f071";
+}
 
 /* Animations */
 
@@ -1978,4 +1981,33 @@ footer {
 }
 .page-id-13 .map {
 	margin-bottom: $baseline;
+}
+.alert-bar {
+	margin: ($baseline * -1) 0 $baseline;
+
+	a {
+		background-color: $orange;
+		background-image: linear-gradient(135deg, transparent 25%, hsla(0,0%,0%,0.025) 25%, hsla(0,0%,0%,0.025) 50%, transparent 50%, transparent 75%, hsla(0,0%,0%,0.025) 75%);
+		background-size: $baseline $baseline;
+		color: $white;
+		display: block;
+		font-size: 1.125em;
+		//font-weight: bold;
+		padding: ($baseline * 0.5);
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: 0.15s;
+
+		&:hover,
+		&:focus {
+			background-color: darken($orange, 5%);
+		}
+	}
+	.icon-font--alert {
+		font-size: 1.5em;
+		margin-right: 0.5em;
+		position: relative;
+		top: -1px;
+		vertical-align: middle;
+	}
 }

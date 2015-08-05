@@ -1454,6 +1454,9 @@ footer {
 .icon-font--arrow-circle-right:before {
   content: '\f0a9'; }
 
+.icon-font--alert:before {
+  content: "\f071"; }
+
 /* Animations */
 @-webkit-keyframes back-to-top {
   50% {
@@ -1545,3 +1548,25 @@ footer {
 
 .page-id-13 .map {
   margin-bottom: 1.5em; }
+
+.alert-bar {
+  margin: -1.5em 0 1.5em; }
+  .alert-bar a {
+    background-color: #ee7744;
+    background-image: linear-gradient(135deg, transparent 25%, rgba(0, 0, 0, 0.025) 25%, rgba(0, 0, 0, 0.025) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.025) 75%);
+    background-size: 1.5em 1.5em;
+    color: white;
+    display: block;
+    font-size: 1.125em;
+    padding: 0.75em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.15s; }
+    .alert-bar a:hover, .alert-bar a:focus {
+      background-color: #ec662d; }
+  .alert-bar .icon-font--alert {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+    position: relative;
+    top: -1px;
+    vertical-align: middle; }
