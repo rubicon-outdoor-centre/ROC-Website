@@ -64,9 +64,9 @@
 
 		<header class="header" role="banner">
 
-			<div class="alert-bar">
+			<!--<div class="alert-bar">
 				<a href="http://apps.rubicon.vic.edu.au/fmi/webd#webROC"><i class="icon-font icon-font--alert"></i> Applications for 2016 are now open. Click here to apply.</a>
-			</div>
+			</div>-->
 
 			<div class="container">
 
