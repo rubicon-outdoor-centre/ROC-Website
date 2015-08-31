@@ -1725,8 +1725,8 @@ footer {
 .closed,
 .closed:hover,
 .closed:focus {
-    background-color: $blue;
-    color: $blue;
+    background-color: $blue !important;
+    color: $blue !important;
 }
 .complex-button-list {
     list-style: none;
