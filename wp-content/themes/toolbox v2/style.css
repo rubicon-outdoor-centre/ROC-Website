@@ -1352,8 +1352,9 @@ footer {
 .closed,
 .closed:hover,
 .closed:focus {
-  background-color: #00bbcc !important;
-  color: #00bbcc !important; }
+  background-color: white;
+  border-color: #00bbcc;
+  color: #00bbcc; }
 
 .complex-button-list {
   list-style: none;
