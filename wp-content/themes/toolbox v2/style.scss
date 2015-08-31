@@ -1722,6 +1722,12 @@ footer {
     text-transform: uppercase;
     width: 100%
 }
+.closed,
+.closed:hover,
+.closed:focus {
+    background-color: $blue;
+    color: $blue;
+}
 .complex-button-list {
     list-style: none;
     padding: 0 !important;
