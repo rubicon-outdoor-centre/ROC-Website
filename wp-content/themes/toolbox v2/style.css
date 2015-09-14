@@ -596,7 +596,7 @@ body {
       padding: 1.5em 0.75em; }
       .search-wrapper .search-form {
         font-size: .875em !important; } }
-  .home .search-wrapper, .search-results .search-wrapper {
+  .home .search-wrapper, .search-results .search-wrapper, .search-no-results .search-wrapper {
     max-width: 100%; }
   .search-wrapper .search-form {
     font-size: 1.25em;

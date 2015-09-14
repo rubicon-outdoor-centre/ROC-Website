@@ -697,7 +697,8 @@ body {
         }
     }
     .home &,
-    .search-results & {
+    .search-results &,
+    .search-no-results & {
         max-width: 100%;
     }
     .search-form {
