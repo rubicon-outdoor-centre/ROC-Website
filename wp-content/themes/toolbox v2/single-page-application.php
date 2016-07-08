@@ -23,7 +23,14 @@ get_header();
         <div class="grid__col--100">
             <div class="content-section">
                 <h2>Apply For a 2017 Booking</h2>
-                <form class="application-form">
+                <form class="application-form" name="application-form" method="post" action="http://203.56.246.77/RESTfm/Summit/layout/WebApp">
+                    <!-- RESTfm tags -->
+                    <input type="hidden" name="RFMkey" value="Tx0axpIPAi5H">
+                    <input type="hidden" name="RFMsuppressData" value="1">
+                    <input type="hidden" name="RFMurlencoded" value="1">
+                    <input type="hidden" name="RFMscript" value="ManageOnlineApplications">
+                    <input type="hidden" name="RFMscriptParam" value="ConvertToApplication">
+                    <!-- end RESTfm tags -->
                     <div class="grid">
                         <div class="grid__col--66">
                             <p>Welcome to the Rubicon Outdoor Centre 2017 Application page.</p>
