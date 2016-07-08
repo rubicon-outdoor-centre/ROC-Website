@@ -23,7 +23,7 @@ get_header();
         <div class="grid__col--100">
             <div class="content-section">
                 <h2>Apply For a 2017 Booking</h2>
-                <form class="application-form" name="application-form" method="post" action="http://203.56.246.77/RESTfm/Summit/layout/WebApp">
+                <form class="application-form" name="application-form" method="post" action="http://203.113.215.85/RESTfm/Summit/layout/WebApp">
                     <!-- RESTfm tags -->
                     <input type="hidden" name="RFMkey" value="Tx0axpIPAi5H">
                     <input type="hidden" name="RFMsuppressData" value="1">
