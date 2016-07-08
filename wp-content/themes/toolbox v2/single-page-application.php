@@ -97,13 +97,13 @@ get_header();
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>What year level students would be attending?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="yearLevelPrimary" name="yearLevelPrimary" type="checkbox" value="primary" required> <label for="yearLevelPrimary">Primary</label></div>
-                            <div class="form-radio-input"><input id="yearLevel7" name="yearLevel7" type="checkbox" value="7" required> <label for="yearLevel7">7</label></div>
-                            <div class="form-radio-input"><input id="yearLevel8" name="yearLevel8" type="checkbox" value="8" required> <label for="yearLevel8">8</label></div>
-                            <div class="form-radio-input"><input id="yearLevel9" name="yearLevel9" type="checkbox" value="9" required> <label for="yearLevel9">9</label></div>
-                            <div class="form-radio-input"><input id="yearLevel10" name="yearLevel10" type="checkbox" value="10" required> <label for="yearLevel10">10</label></div>
-                            <div class="form-radio-input"><input id="yearLevel11" name="yearLevel11" type="checkbox" value="11" required> <label for="yearLevel11">11</label></div>
-                            <div class="form-radio-input"><input id="yearLevel12" name="yearLevel12" type="checkbox" value="12" required> <label for="yearLevel12">12</label></div>
+                            <div class="form-radio-input"><input id="yearLevelPrimary" name="yearLevelPrimary" type="checkbox" value="primary"> <label for="yearLevelPrimary">Primary</label></div>
+                            <div class="form-radio-input"><input id="yearLevel7" name="yearLevel7" type="checkbox" value="7"> <label for="yearLevel7">7</label></div>
+                            <div class="form-radio-input"><input id="yearLevel8" name="yearLevel8" type="checkbox" value="8"> <label for="yearLevel8">8</label></div>
+                            <div class="form-radio-input"><input id="yearLevel9" name="yearLevel9" type="checkbox" value="9"> <label for="yearLevel9">9</label></div>
+                            <div class="form-radio-input"><input id="yearLevel10" name="yearLevel10" type="checkbox" value="10"> <label for="yearLevel10">10</label></div>
+                            <div class="form-radio-input"><input id="yearLevel11" name="yearLevel11" type="checkbox" value="11"> <label for="yearLevel11">11</label></div>
+                            <div class="form-radio-input"><input id="yearLevel12" name="yearLevel12" type="checkbox" value="12"> <label for="yearLevel12">12</label></div>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>How are students selected from your school?<span class="required">*</span></label>
