@@ -35,28 +35,28 @@ get_header();
                         </div><div class="grid__col--33">
                         </div><div class="grid__col--50">
                             <label for="firstName">What is your first name?<span class="required">*</span></label>
-                            <input id="firstName" name="firstName" type="text">
+                            <input id="firstName" name="firstName" type="text" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="lastName">What is your last name?<span class="required">*</span></label>
-                            <input id="lastName" name="lastName" type="text">
+                            <input id="lastName" name="lastName" type="text" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="email">What is your work email?<span class="required">*</span></label>
-                            <input id="email" name="email" type="email">
+                            <input id="email" name="email" type="email" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="school">What school are you applying for?<span class="required">*</span></label>
-                            <input id="school" name="school" type="text">
+                            <input id="school" name="school" type="text" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="phone">What is the school’s phone number?<span class="required">*</span></label>
-                            <input id="phone" name="phone" type="text">
+                            <input id="phone" name="phone" type="text" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>Has your school been to Rubicon before?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="attendedBeforeYes" name="attendedBefore" type="radio" value="yes"> <label for="attendedBeforeYes">Yes</label></div>
-                            <div class="form-radio-input"><input id="attendedBeforeNo" name="attendedBefore" type="radio" value="no"> <label for="attendedBeforeNo">No</label></div>
+                            <div class="form-radio-input"><input id="attendedBeforeYes" name="attendedBefore" type="radio" value="yes" required> <label for="attendedBeforeYes">Yes</label></div>
+                            <div class="form-radio-input"><input id="attendedBeforeNo" name="attendedBefore" type="radio" value="no" required> <label for="attendedBeforeNo">No</label></div>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="attendedBeforeComments">Comments?</label>
@@ -68,7 +68,7 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                             <label for="whyInformation">Why does your school want to come to Rubicon?<span class="required">*</span></label>
-                            <textarea id="whyInformation" name="whyInformation"></textarea>
+                            <textarea id="whyInformation" name="whyInformation" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
                             <h6>For example:</h6>
@@ -76,7 +76,7 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                             <label for="focus">What would you see as the curriculum focus?<span class="required">*</span></label>
-                            <textarea id="focus" name="focus"></textarea>
+                            <textarea id="focus" name="focus" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
                             <h6>For example:</h6>
@@ -85,7 +85,7 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                             <label for="integration">How is your time at Rubicon currently integrated into your existing curriculum? If it isn't, how are you planning on doing this?<span class="required">*</span></label>
-                            <textarea id="integration" name="integration"></textarea>
+                            <textarea id="integration" name="integration" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
                             <h6>For example:</h6>
@@ -93,37 +93,37 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                             <label for="estimatedNumbers">How many students would you plan on bringing?<span class="required">*</span></label>
-                            <input id="estimatedNumbers" name="estimatedNumbers" type="number">
+                            <input id="estimatedNumbers" name="estimatedNumbers" type="number" required>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>What year level students would be attending?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="yearLevelPrimary" name="yearLevelPrimary" type="checkbox" value="primary"> <label for="yearLevelPrimary">Primary</label></div>
-                            <div class="form-radio-input"><input id="yearLevel7" name="yearLevel7" type="checkbox" value="7"> <label for="yearLevel7">7</label></div>
-                            <div class="form-radio-input"><input id="yearLevel8" name="yearLevel8" type="checkbox" value="8"> <label for="yearLevel8">8</label></div>
-                            <div class="form-radio-input"><input id="yearLevel9" name="yearLevel9" type="checkbox" value="9"> <label for="yearLevel9">9</label></div>
-                            <div class="form-radio-input"><input id="yearLevel10" name="yearLevel10" type="checkbox" value="10"> <label for="yearLevel10">10</label></div>
-                            <div class="form-radio-input"><input id="yearLevel11" name="yearLevel11" type="checkbox" value="11"> <label for="yearLevel11">11</label></div>
-                            <div class="form-radio-input"><input id="yearLevel12" name="yearLevel12" type="checkbox" value="12"> <label for="yearLevel12">12</label></div>
+                            <div class="form-radio-input"><input id="yearLevelPrimary" name="yearLevelPrimary" type="checkbox" value="primary" required> <label for="yearLevelPrimary">Primary</label></div>
+                            <div class="form-radio-input"><input id="yearLevel7" name="yearLevel7" type="checkbox" value="7" required> <label for="yearLevel7">7</label></div>
+                            <div class="form-radio-input"><input id="yearLevel8" name="yearLevel8" type="checkbox" value="8" required> <label for="yearLevel8">8</label></div>
+                            <div class="form-radio-input"><input id="yearLevel9" name="yearLevel9" type="checkbox" value="9" required> <label for="yearLevel9">9</label></div>
+                            <div class="form-radio-input"><input id="yearLevel10" name="yearLevel10" type="checkbox" value="10" required> <label for="yearLevel10">10</label></div>
+                            <div class="form-radio-input"><input id="yearLevel11" name="yearLevel11" type="checkbox" value="11" required> <label for="yearLevel11">11</label></div>
+                            <div class="form-radio-input"><input id="yearLevel12" name="yearLevel12" type="checkbox" value="12" required> <label for="yearLevel12">12</label></div>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>How are students selected from your school?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="studentSelectionSelected" name="studentSelection" type="radio" value="selected"> <label for="studentSelectionSelected">They are selected</label></div>
-                            <div class="form-radio-input"><input id="studentSelectionElect" name="studentSelection" type="radio" value="elect"> <label for="studentSelectionElect">They elect to come</label></div>
-                            <div class="form-radio-input"><input id="studentSelectionSubject" name="studentSelection" type="radio" value="subject"> <label for="studentSelectionSubject">It’s subject specific</label></div>
-                            <div class="form-radio-input form-other"><input id="studentSelectionOther" name="studentSelection" type="radio" value="other"> <label for="studentSelectionOther">Other:</label><input name="studentSelectionOtherText" type="text"></div>
+                            <div class="form-radio-input"><input id="studentSelectionSelected" name="studentSelection" type="radio" value="selected" required> <label for="studentSelectionSelected">They are selected</label></div>
+                            <div class="form-radio-input"><input id="studentSelectionElect" name="studentSelection" type="radio" value="elect" required> <label for="studentSelectionElect">They elect to come</label></div>
+                            <div class="form-radio-input"><input id="studentSelectionSubject" name="studentSelection" type="radio" value="subject" required> <label for="studentSelectionSubject">It’s subject specific</label></div>
+                            <div class="form-radio-input form-other"><input id="studentSelectionOther" name="studentSelection" type="radio" value="other" required> <label for="studentSelectionOther">Other:</label><input name="studentSelectionOtherText" type="text"></div>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>How long would you like your program to be?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="lengthOfProgram1" name="lengthOfProgram" type="radio" value="1"> <label for="lengthOfProgram1">1 Day</label></div>
-                            <div class="form-radio-input"><input id="lengthOfProgram2" name="lengthOfProgram" type="radio" value="2"> <label for="lengthOfProgram2">2 Days</label></div>
-                            <div class="form-radio-input"><input id="lengthOfProgram3" name="lengthOfProgram" type="radio" value="3"> <label for="lengthOfProgram3">3 Days</label></div>
-                            <div class="form-radio-input"><input id="lengthOfProgram4" name="lengthOfProgram" type="radio" value="4"> <label for="lengthOfProgram4">4 Days</label></div>
-                            <div class="form-radio-input"><input id="lengthOfProgram5" name="lengthOfProgram" type="radio" value="5"> <label for="lengthOfProgram5">5 Days</label></div>
-                            <div class="form-radio-input form-other"><input id="lengthOfProgramOther" name="lengthOfProgram" type="radio" value="other"> <label for="lengthOfProgramOther">Other:</label><input name="lengthOfProgramOtherText" type="text"></div>
+                            <div class="form-radio-input"><input id="lengthOfProgram1" name="lengthOfProgram" type="radio" value="1" required> <label for="lengthOfProgram1">1 Day</label></div>
+                            <div class="form-radio-input"><input id="lengthOfProgram2" name="lengthOfProgram" type="radio" value="2" required> <label for="lengthOfProgram2">2 Days</label></div>
+                            <div class="form-radio-input"><input id="lengthOfProgram3" name="lengthOfProgram" type="radio" value="3" required> <label for="lengthOfProgram3">3 Days</label></div>
+                            <div class="form-radio-input"><input id="lengthOfProgram4" name="lengthOfProgram" type="radio" value="4" required> <label for="lengthOfProgram4">4 Days</label></div>
+                            <div class="form-radio-input"><input id="lengthOfProgram5" name="lengthOfProgram" type="radio" value="5" required> <label for="lengthOfProgram5">5 Days</label></div>
+                            <div class="form-radio-input form-other"><input id="lengthOfProgramOther" name="lengthOfProgram" type="radio" value="other" required> <label for="lengthOfProgramOther">Other:</label><input name="lengthOfProgramOtherText" type="text"></div>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="date1">What date would you like to attend?<span class="required">*</span></label>
-                            <div class="form-date-input"><input id="date1" name="date1" type="date"> <label for="date1">1st priority</label></div>
+                            <div class="form-date-input"><input id="date1" name="date1" type="date" required> <label for="date1">1st priority</label></div>
                             <div class="form-date-input"><input id="date2" name="date2" type="date"> <label for="date2">2nd priority</label></div>
                             <div class="form-date-input"><input id="date3" name="date3" type="date"> <label for="date3">3rd priority</label></div>
                             <div class="form-date-input"><input id="date4" name="date4" type="date"> <label for="date4">4th priority</label></div>
@@ -131,9 +131,9 @@ get_header();
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label>What accommodation style would be preferred?<span class="required">*</span></label>
-                            <div class="form-radio-input"><input id="accommodationStyleResidential" name="accommodationStyle" type="radio" value="residential"> <label for="accommodationStyleResidential">Residential</label></div>
-                            <div class="form-radio-input"><input id="accommodationStyleBaseCamp" name="accommodationStyle" type="radio" value="basecamp"> <label for="accommodationStyleBaseCamp">Base Camp</label></div>
-                            <div class="form-radio-input"><input id="accommodationStyleJourney" name="accommodationStyle" type="radio" value="journey"> <label for="accommodationStyleJourney">Journey Based</label></div>
+                            <div class="form-radio-input"><input id="accommodationStyleResidential" name="accommodationStyle" type="radio" value="residential" required> <label for="accommodationStyleResidential">Residential</label></div>
+                            <div class="form-radio-input"><input id="accommodationStyleBaseCamp" name="accommodationStyle" type="radio" value="basecamp" required> <label for="accommodationStyleBaseCamp">Base Camp</label></div>
+                            <div class="form-radio-input"><input id="accommodationStyleJourney" name="accommodationStyle" type="radio" value="journey" required> <label for="accommodationStyleJourney">Journey Based</label></div>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info form-extra-info--accommodation">
                             <p><strong>Residential:</strong> Dormitory based accommodation.</p>
@@ -142,7 +142,7 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                          <label for="accommodationWhy">Why would this accommodation style best meet your requirements?<span class="required">*</span></label>
-                            <textarea id="accommodationWhy" name="accommodationWhy"></textarea>
+                            <textarea id="accommodationWhy" name="accommodationWhy" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
                             <h6>For example:</h6>
