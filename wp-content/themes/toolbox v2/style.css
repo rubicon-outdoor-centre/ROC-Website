@@ -1753,9 +1753,6 @@ footer {
 .application-form h6 {
     margin-bottom: 0.46875em;
 }
-div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
-    margin-top: -32px !important;
-}
 .ui-datepicker-trigger {
     border-radius: 0 0.125em 0.125em 0;
     border: 0.09375em solid #00bbcc;
