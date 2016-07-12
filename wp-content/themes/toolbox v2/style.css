@@ -1751,3 +1751,23 @@ footer {
 .application-form h6 {
     margin-bottom: 0.46875em;
 }
+div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+    margin-top: -30px !important;
+}
+.ui-datepicker-trigger {
+    border-radius: 0.125em;
+    border: 1px solid #bbb;
+    background: #ddd;
+    margin-left: 6px;
+    position: relative;
+}
+.ui-datepicker-trigger:before {
+    color: #757575;
+    display: inline-block;
+    font: normal normal normal 14px/1 awesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f073";
+}

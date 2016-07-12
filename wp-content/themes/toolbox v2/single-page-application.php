@@ -78,25 +78,25 @@ get_header();
                             <textarea id="whyInformation" name="whyInformation" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
-                            <h6>For example:</h6>
-                            <p>Our school is currently undertaking a focus on Positive Behaviour Support and our students would benefit from developing their understanding of what respect and integrity look like as a community.</p>
+                                <h6>For example:</h6>
+                                <p>Our school is currently undertaking a focus on Positive Behaviour Support and our students would benefit from developing their understanding of what respect and integrity look like as a community.</p>
                             </div>
                         </div><div class="grid__col--50">
                             <label for="focus">What would you see as the curriculum focus?<span class="required">*</span></label>
                             <textarea id="focus" name="focus" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
-                            <h6>For example:</h6>
-                            <p>We would like a focus on the benefits of relationships and the impact this has on a student's own, and other's, wellbeing.</p>
-                            <p>Note: This should be based on the Victorian Curriculum.</p>
+                                <h6>For example:</h6>
+                                <p>We would like a focus on the benefits of relationships and the impact this has on a student's own, and other's, wellbeing.</p>
+                                <p>Note: This should be based on the Victorian Curriculum.</p>
                             </div>
                         </div><div class="grid__col--50">
                             <label for="integration">How is your time at Rubicon currently integrated into your existing curriculum? If it isn't, how are you planning on doing this?<span class="required">*</span></label>
                             <textarea id="integration" name="integration" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
-                            <h6>For example:</h6>
-                            <p>As noted previously, this curriculum will foster emphasis on Positive Behaviour Support being introduced at our school and is a part of that narrative.</p>
+                                <h6>For example:</h6>
+                                <p>As noted previously, this curriculum will foster emphasis on Positive Behaviour Support being introduced at our school and is a part of that narrative.</p>
                             </div>
                         </div><div class="grid__col--50">
                             <label for="estimatedNumbers">How many students would you plan on bringing?<span class="required">*</span></label>
@@ -136,6 +136,9 @@ get_header();
                             <div class="form-date-input"><input id="date4" name="date4" type="date"> <label for="date4">4th priority</label></div>
                             <div class="form-date-input"><input id="date5" name="date5" type="date"> <label for="date5">5th priority</label></div>
                         </div><div class="grid__col--50">
+                            <div class="form-extra-info form-extra-info--accommodation">
+                                <p><strong>Note:</strong> Please enter the date using the dd/mm/yyyy format.</p>
+                            </div>
                         </div><div class="grid__col--50">
                             <label>What accommodation style would be preferred?<span class="required">*</span></label>
                             <div class="form-radio-input"><input id="accommodationStyleResidential" name="accommodationStyle" type="radio" value="residential" required> <label for="accommodationStyleResidential">Residential</label></div>
@@ -143,17 +146,17 @@ get_header();
                             <div class="form-radio-input"><input id="accommodationStyleJourney" name="accommodationStyle" type="radio" value="journey" required> <label for="accommodationStyleJourney">Journey Based</label></div>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info form-extra-info--accommodation">
-                            <p><strong>Residential:</strong> Dormitory based accommodation.</p>
-                            <p><strong>Base Camp:</strong> Tent based accommodation at a fixed location.</p>
-                            <p><strong>Journey Based:</strong> Tent based accommodation at varying locations.</p>
+                                <p><strong>Residential:</strong> Dormitory based accommodation.</p>
+                                <p><strong>Base Camp:</strong> Tent based accommodation at a fixed location.</p>
+                                <p><strong>Journey Based:</strong> Tent based accommodation at varying locations.</p>
                             </div>
                         </div><div class="grid__col--50">
                          <label for="accommodationWhy">Why would this accommodation style best meet your requirements?<span class="required">*</span></label>
                             <textarea id="accommodationWhy" name="accommodationWhy" required></textarea>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info">
-                            <h6>For example:</h6>
-                            <p>Choosing base camp will focus on community living which will link back to fostering a respectful community.</p>
+                                <h6>For example:</h6>
+                                <p>Choosing base camp will focus on community living which will link back to fostering a respectful community.</p>
                             </div>
                         </div><div class="grid__col--50">
                             <label for="additionalInfo">Do you have any additional information that is relevant to your application?</label>
@@ -169,5 +172,36 @@ get_header();
         </div>
     </div>
 </div>
+
+<script src="/wp-content/themes/toolbox%20v2/js/jquery-ui/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    $("#date1").datepicker({
+        showOn: "button",
+        buttonText: "",
+        dateFormat: "dd/mm/yy"
+    });
+    $("#date2").datepicker({
+        showOn: "button",
+        buttonText: "",
+        dateFormat: "dd/mm/yy"
+    });
+    $("#date3").datepicker({
+        showOn: "button",
+        buttonText: "",
+        dateFormat: "dd/mm/yy"
+    });
+    $("#date4").datepicker({
+        showOn: "button",
+        buttonText: "",
+        dateFormat: "dd/mm/yy"
+    });
+    $("#date5").datepicker({
+        showOn: "button",
+        buttonText: "",
+        dateFormat: "dd/mm/yy"
+    });
+});
+</script>
 
 <?php get_footer(); ?>

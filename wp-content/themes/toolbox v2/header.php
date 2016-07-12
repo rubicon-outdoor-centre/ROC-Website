@@ -54,6 +54,10 @@
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+<?php if( $post->post_name == "application" ) { ?>
+    <link href="/wp-content/themes/toolbox%20v2/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+<?php } ?>
+
 <?php wp_head(); ?>
 
 </head>
