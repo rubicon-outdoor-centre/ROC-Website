@@ -1771,3 +1771,6 @@ div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearf
     -moz-osx-font-smoothing: grayscale;
     content: "\f073";
 }
+.application-form .form-extra-info p code {
+    font-style: normal;
+}

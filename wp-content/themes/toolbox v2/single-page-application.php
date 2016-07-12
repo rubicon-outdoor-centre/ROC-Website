@@ -137,7 +137,7 @@ get_header();
                             <div class="form-date-input"><input id="date5" name="date5" type="date"> <label for="date5">5th priority</label></div>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info form-extra-info--accommodation">
-                                <p><strong>Note:</strong> Please enter the date using the dd/mm/yyyy format.</p>
+                                <p><strong>Note:</strong> Please use the <code>dd/mm/yyyy</code> format.</p>
                             </div>
                         </div><div class="grid__col--50">
                             <label>What accommodation style would be preferred?<span class="required">*</span></label>
