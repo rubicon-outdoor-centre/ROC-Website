@@ -1684,6 +1684,8 @@ footer {
     margin-top: -1.125em;
 }
 .application-form .form-date-input input {
+    border-radius: 0.125em 0 0 0.125em;
+    border-right: 0;
     display: inline-block;
     margin-bottom: 0;
     min-width: 15em;
@@ -1752,17 +1754,24 @@ footer {
     margin-bottom: 0.46875em;
 }
 div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
-    margin-top: -30px !important;
+    margin-top: -32px !important;
 }
 .ui-datepicker-trigger {
-    border-radius: 0.125em;
-    border: 1px solid #bbb;
-    background: #ddd;
-    margin-left: 6px;
+    border-radius: 0 0.125em 0.125em 0;
+    border: 0.09375em solid #00bbcc;
+    border-left: 0;
+    background-color: #00bbcc;
     position: relative;
+    padding: 0.375em 0.75em;
+    transition: 0.15s;
+}
+.ui-datepicker-trigger:hover,
+.ui-datepicker-trigger:focus {
+    background-color: #008c99;
+    border-color: #008c99;
 }
 .ui-datepicker-trigger:before {
-    color: #757575;
+    color: #fff;
     display: inline-block;
     font: normal normal normal 14px/1 awesome;
     font-size: inherit;
