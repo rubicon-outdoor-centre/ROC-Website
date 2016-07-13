@@ -133,11 +133,11 @@ get_header();
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label for="date1">What date would you like to attend?<span class="required">*</span></label>
-                            <div class="form-date-input"><input id="date1" name="date1" type="date" data-validation="date" data-validation-format="dd/mm/yyyy" data-validation-require-leading-zero="false" data-validation-error-msg="You did not enter a valid first date preference"> <label for="date1">1st preference</label></div>
-                            <div class="form-date-input"><input id="date2" name="date2" type="date"> <label for="date2">2nd preference</label></div>
-                            <div class="form-date-input"><input id="date3" name="date3" type="date"> <label for="date3">3rd preference</label></div>
-                            <div class="form-date-input"><input id="date4" name="date4" type="date"> <label for="date4">4th preference</label></div>
-                            <div class="form-date-input"><input id="date5" name="date5" type="date"> <label for="date5">5th preference</label></div>
+                            <div class="form-date-input"><input id="date1" name="date1" type="text" data-validation="date" data-validation-format="dd/mm/yyyy" data-validation-require-leading-zero="false" data-validation-error-msg="You did not enter a valid first date preference"> <label for="date1">1st preference</label></div>
+                            <div class="form-date-input"><input id="date2" name="date2" type="text"> <label for="date2">2nd preference</label></div>
+                            <div class="form-date-input"><input id="date3" name="date3" type="text"> <label for="date3">3rd preference</label></div>
+                            <div class="form-date-input"><input id="date4" name="date4" type="text"> <label for="date4">4th preference</label></div>
+                            <div class="form-date-input"><input id="date5" name="date5" type="text"> <label for="date5">5th preference</label></div>
                         </div><div class="grid__col--50">
                             <div class="form-extra-info form-extra-info--accommodation">
                                 <p><strong>Note:</strong> Please use the <code>dd/mm/yyyy</code> format.</p>
