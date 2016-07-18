@@ -103,7 +103,7 @@ get_header();
                             </div>
                         </div><div class="grid__col--50">
                             <label for="estimatedNumbers">How many students would you plan on bringing?<span class="required">*</span></label>
-                            <input id="estimatedNumbers" name="estimatedNumbers" type="number" data-validation="number" data-validation-error-msg="You did not enter a valid number of students">
+                            <input id="estimatedNumbers" name="estimatedNumbers" type="number" data-validation="number" data-validation-allowing="range[1;999]" data-validation-error-msg="You did not enter a valid number of students">
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
                             <label class="yearLevelLabel">What year level students would be attending?<span class="required">*</span></label>
