@@ -56,7 +56,7 @@ get_header();
                             <input id="email" name="email" type="email" data-validation="email" data-validation-error-msg="You did not enter a valid email">
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
-                            <label for="school">What school are you applying for?<span class="required">*</span></label>
+                            <label for="school">What school are you applying from?<span class="required">*</span></label>
                             <input id="school" name="school" type="text" data-validation="required" data-validation-error-msg="You did not enter a school">
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
@@ -166,7 +166,7 @@ get_header();
                             <textarea id="additionalInfo" name="additionalInfo"></textarea>
                         </div><div class="grid__col--50">
                         </div><div class="grid__col--50">
-                            <p><span class="required">* Indicates a required field</span></p>
+                            <p><span class="required"><b>*</b> Indicates a required field</span></p>
                             <input type="submit" value="Submit Application for 2017">
                         </div>
                     </div>
